@@ -1,0 +1,44 @@
+﻿pyQCat.experiment.UnionSingleShotAnalysis
+=========================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: UnionSingleShotAnalysis
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~UnionSingleShotAnalysis.__init__
+      ~UnionSingleShotAnalysis.analyze
+      ~UnionSingleShotAnalysis.excute_loop
+      ~UnionSingleShotAnalysis.get_experiment
+      ~UnionSingleShotAnalysis.loop_control
+      ~UnionSingleShotAnalysis.save_result
+      ~UnionSingleShotAnalysis.single_qubit_usualness
+      ~UnionSingleShotAnalysis.slice_result
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~UnionSingleShotAnalysis.F0
+      ~UnionSingleShotAnalysis.F1
+      ~UnionSingleShotAnalysis.I
+      ~UnionSingleShotAnalysis.P0
+      ~UnionSingleShotAnalysis.P1
+      ~UnionSingleShotAnalysis.Q
+      ~UnionSingleShotAnalysis.amp
+      ~UnionSingleShotAnalysis.phase
+      ~UnionSingleShotAnalysis.probability_list
+      ~UnionSingleShotAnalysis.status
+   
+   

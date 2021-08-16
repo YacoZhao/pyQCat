@@ -1,0 +1,6 @@
+﻿pyQCat.flow.initial\_qubit\_node
+================================
+
+.. currentmodule:: pyQCat.flow
+
+.. autofunction:: initial_qubit_node

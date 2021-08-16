@@ -1,0 +1,6 @@
+﻿pyQCat.flow.cavity\_freq\_update\_node
+======================================
+
+.. currentmodule:: pyQCat.flow
+
+.. autofunction:: cavity_freq_update_node

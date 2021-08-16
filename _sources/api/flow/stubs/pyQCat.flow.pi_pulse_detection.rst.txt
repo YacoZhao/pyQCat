@@ -1,0 +1,33 @@
+﻿pyQCat.flow.pi\_pulse\_detection
+================================
+
+.. automodule:: pyQCat.flow.pi_pulse_detection
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      judge_background_noise
+      rabi_experiment
+      rabi_scan_amp
+      rabi_sweep_width
+      rabi_update_xpi
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

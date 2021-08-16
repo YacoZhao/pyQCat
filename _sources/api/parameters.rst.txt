@@ -1,0 +1,4 @@
+pyQCat.parameters
+=================
+
+.. automodule:: pyQCat.parameters

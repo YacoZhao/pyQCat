@@ -1,0 +1,33 @@
+﻿pyQCat.detection.DetectionBase
+==============================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: DetectionBase
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DetectionBase.__init__
+      ~DetectionBase.close
+      ~DetectionBase.fit_Q
+      ~DetectionBase.open
+      ~DetectionBase.save_file
+      ~DetectionBase.save_param
+      ~DetectionBase.set_file_config
+      ~DetectionBase.set_sweep_param
+      ~DetectionBase.status
+      ~DetectionBase.stock_config
+      ~DetectionBase.sweep
+      ~DetectionBase.sweep_S21
+   
+   
+
+   
+   
+   

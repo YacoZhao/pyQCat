@@ -1,0 +1,24 @@
+.. _Api :
+
+API 文档
+========
+
+此页面记录了 pyQCat API 文档说明，这个页面包含所有面向用户的模块的文档，
+大致将每个pyQCat子模块构成单独的一页，为了更加清晰的展示，对一些子模块进行了拆分。
+
+
+pyQCat API目录
+-------------
+
+.. toctree::
+   :maxdepth: 4
+   :includehidden:
+
+   detection/index
+   experiment/index
+   flow/index
+   instrument/index
+   pulse/index
+   qubit/index
+   tool/index
+   parameters

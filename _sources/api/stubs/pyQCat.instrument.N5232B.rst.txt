@@ -1,0 +1,29 @@
+﻿pyQCat.instrument.N5232B
+========================
+
+.. automodule:: pyQCat.instrument.N5232B
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      N5232B
+   
+   
+
+   
+   
+   
+
+
+

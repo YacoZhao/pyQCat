@@ -1,0 +1,639 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.qubit.Qubit &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.qubit.XYwave" href="pyQCat.qubit.XYwave.html" />
+    <link rel="prev" title="pyQCat.qubit" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">pyQCat.detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">pyQCat.experiment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">pyQCat.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">pyQCat.instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">pyQCat.pulse</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">pyQCat.qubit</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#id1">Qubit API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">pyQCat.tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">pyQCat.parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">pyQCat.qubit</a> &raquo;</li>
+        
+      <li>pyQCat.qubit.Qubit</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/api/qubit/stubs/pyQCat.qubit.Qubit.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-qubit-qubit">
+<h1>pyQCat.qubit.Qubit<a class="headerlink" href="#pyqcat-qubit-qubit" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.qubit.</span></span><span class="sig-name descname"><span class="pre">Qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>量子比特实体类</p>
+<p>量子比特的基类，包含自动化检测及校准流程的所有参数</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.bit">
+<span class="sig-name descname"><span class="pre">bit</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.bit" title="永久链接至目标">¶</a></dt>
+<dd><p>比特编号，用来区别不同的比特</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.tunable">
+<span class="sig-name descname"><span class="pre">tunable</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.tunable" title="永久链接至目标">¶</a></dt>
+<dd><p>比特是否可以调制标志位</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.goodness">
+<span class="sig-name descname"><span class="pre">goodness</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.goodness" title="永久链接至目标">¶</a></dt>
+<dd><p>比特是否可以正常工作标志位</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.probe_freq">
+<span class="sig-name descname"><span class="pre">probe_freq</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.probe_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>比特的读取频率</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.probe_power">
+<span class="sig-name descname"><span class="pre">probe_power</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.probe_power" title="永久链接至目标">¶</a></dt>
+<dd><p>比特的读取功率</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.drive_freq">
+<span class="sig-name descname"><span class="pre">drive_freq</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.drive_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>比特的驱动频率</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.drive_power">
+<span class="sig-name descname"><span class="pre">drive_power</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.drive_power" title="永久链接至目标">¶</a></dt>
+<dd><p>比特的驱动功率</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.tls_freq">
+<span class="sig-name descname"><span class="pre">tls_freq</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.tls_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>TODO</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.anharmonicity">
+<span class="sig-name descname"><span class="pre">anharmonicity</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.anharmonicity" title="永久链接至目标">¶</a></dt>
+<dd><p>TODO</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.dc">
+<span class="sig-name descname"><span class="pre">dc</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.dc" title="永久链接至目标">¶</a></dt>
+<dd><p>将比特调制到最佳工作点的 <cite>DC</cite> 电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.dc_max">
+<span class="sig-name descname"><span class="pre">dc_max</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.dc_max" title="永久链接至目标">¶</a></dt>
+<dd><p>施加到比特上的最大电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.dc_min">
+<span class="sig-name descname"><span class="pre">dc_min</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.dc_min" title="永久链接至目标">¶</a></dt>
+<dd><p>施加到比特上的最小电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.XYwave">
+<span class="sig-name descname"><span class="pre">XYwave</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.XYwave" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>XY</cite> 方向上的波形，一体机 <cite>RF</cite> 模块施加</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="pyQCat.qubit.XYwave.html#pyQCat.qubit.XYwave" title="pyQCat.qubit.XYwave">XYwave</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.Zwave">
+<span class="sig-name descname"><span class="pre">Zwave</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.Zwave" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>Z</cite> 方向上的波形，一体机 <cite>AWG</cite> 模块施加</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="pyQCat.qubit.Zwave.html#pyQCat.qubit.Zwave" title="pyQCat.qubit.Zwave">Zwave</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.Mwave">
+<span class="sig-name descname"><span class="pre">Mwave</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.Mwave" title="永久链接至目标">¶</a></dt>
+<dd><p>测量波形，一体机 <cite>ADDA</cite> 模块施加</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="pyQCat.qubit.Mwave.html#pyQCat.qubit.Mwave" title="pyQCat.qubit.Mwave">Mwave</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.T1">
+<span class="sig-name descname"><span class="pre">T1</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.T1" title="永久链接至目标">¶</a></dt>
+<dd><p>量子比特纵向弛豫时间</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.T2">
+<span class="sig-name descname"><span class="pre">T2</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.T2" title="永久链接至目标">¶</a></dt>
+<dd><p>量子比特横向弛豫时间</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.sample">
+<span class="sig-name descname"><span class="pre">sample</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.sample" title="永久链接至目标">¶</a></dt>
+<dd><p>比特标签，用于生成结果路径</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.xy_channel">
+<span class="sig-name descname"><span class="pre">xy_channel</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.xy_channel" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>XY</cite> 方向上波形施加的通道，对应一体机 <cite>RF</cite> 模块启动通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.z_flux_channel">
+<span class="sig-name descname"><span class="pre">z_flux_channel</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.z_flux_channel" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>Z</cite> 方向上波形施加的通道，对应一体机 <cite>AWG</cite> 模块启动通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.z_dc_channel">
+<span class="sig-name descname"><span class="pre">z_dc_channel</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.z_dc_channel" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>DC</cite> 电压施加通道，对应一体机 <cite>DC</cite> 模块启动通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.readout_channel">
+<span class="sig-name descname"><span class="pre">readout_channel</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.readout_channel" title="永久链接至目标">¶</a></dt>
+<dd><p>读取通道，对应一体机 <cite>ADDA</cite> 模块启动通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.sample_delay">
+<span class="sig-name descname"><span class="pre">sample_delay</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.sample_delay" title="永久链接至目标">¶</a></dt>
+<dd><p>当前比特读取通道的采样延时</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.sample_width">
+<span class="sig-name descname"><span class="pre">sample_width</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.sample_width" title="永久链接至目标">¶</a></dt>
+<dd><p>当前比特读取通道的采样带宽</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.union_readout">
+<span class="sig-name descname"><span class="pre">union_readout</span></span><a class="headerlink" href="#pyQCat.qubit.Qubit.union_readout" title="永久链接至目标">¶</a></dt>
+<dd><p>当联合读取时，传入特定的波形</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="pyQCat.qubit.union_readout.html#pyQCat.qubit.union_readout" title="pyQCat.qubit.union_readout">union_readout</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit.__init__" title="永久链接至目标">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.qubit.Qubit.__init__" title="pyQCat.qubit.Qubit.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(bit)</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.qubit.Qubit.export_qubit" title="pyQCat.qubit.Qubit.export_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_qubit</span></code></a>([export_path])</p></td>
+<td><p>导出 <cite>Qubit</cite> 参数信息，生成 <cite>yaml</cite> 文件保存</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.qubit.Qubit.get_qubit_by_time" title="pyQCat.qubit.Qubit.get_qubit_by_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_qubit_by_time</span></code></a>(create_time[, bit])</p></td>
+<td><p>从数据库中加载最新的 <cite>QubitStoreDoc</cite> 对象，将参数更新到当前的 <cite>Qubit</cite> 属性中</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.qubit.Qubit.import_qubit" title="pyQCat.qubit.Qubit.import_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_qubit</span></code></a>([json_file])</p></td>
+<td><p>导入比特参数，更新 <cite>Qubit</cite> 对象属性</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.qubit.Qubit.log_qubit" title="pyQCat.qubit.Qubit.log_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">log_qubit</span></code></a>(msg[, log_path])</p></td>
+<td><p>记录比特日志信息，可以通过此方法记录比特运行状态</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.qubit.Qubit.reset" title="pyQCat.qubit.Qubit.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>()</p></td>
+<td><p>比特初始化操作，如果你意外更新 <cite>Qubit</cite> 的某些参数，你可以用此方法，让比特恢复成初始状态</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.qubit.Qubit.save_by_yaml" title="pyQCat.qubit.Qubit.save_by_yaml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_by_yaml</span></code></a>(yaml_path)</p></td>
+<td><p>解析 <cite>yaml</cite> 文件中记录 <cite>Qubit</cite> 参数信息，然后加载到数据库中</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.qubit.Qubit.save_qubit" title="pyQCat.qubit.Qubit.save_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_qubit</span></code></a>()</p></td>
+<td><p>将比特参数信息保存到数据库中，如果比特参数发生了改变，则会在数据库中创建新的 <cite>QubitStoreDoc</cite> 对象</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.import_qubit">
+<span class="sig-name descname"><span class="pre">import_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit.import_qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>导入比特参数，更新 <cite>Qubit</cite> 对象属性</p>
+<p>当提供了 <cite>json_file</cite> 路径时，会加载指定 <cite>json</cite> 文件，将文件中的属性加载到当前的 <cite>Qubit</cite> 对象上</p>
+<p>如果没有提供 <cite>json_file</cite> ，则会去数据库中查询最近的 <cite>QubitStoreDoc</cite> 记录，
+如果查到结果了，将 <cite>QubitStoreDoc</cite> 对象参数更新到当前的 <cite>Qubit</cite> 对象上，
+如果没有查到结果，则会创建一个全新的 <cite>Qubit</cite> 对象</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>json_file</strong> – 指定 <cite>josn</cite> 文件位置</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.get_qubit_by_time">
+<span class="sig-name descname"><span class="pre">get_qubit_by_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">create_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit.get_qubit_by_time" title="永久链接至目标">¶</a></dt>
+<dd><p>从数据库中加载最新的 <cite>QubitStoreDoc</cite> 对象，将参数更新到当前的 <cite>Qubit</cite> 属性中</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>create_time</strong> – 创建时间，如 <cite>2021-03-26 15:23:38.442</cite></p></li>
+<li><p><strong>bit</strong> – 比特编号</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.export_qubit">
+<span class="sig-name descname"><span class="pre">export_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">export_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit.export_qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>导出 <cite>Qubit</cite> 参数信息，生成 <cite>yaml</cite> 文件保存</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>export_path</strong> – 导入比特信息后的 <cite>yaml</cite> 文件存储路径，默认为 <a href="#id1"><span class="problematic" id="id2">`</span></a>config/qubit_data’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.log_qubit">
+<span class="sig-name descname"><span class="pre">log_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit.log_qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>记录比特日志信息，可以通过此方法记录比特运行状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> – 记录的日志信息</p></li>
+<li><p><strong>log_path</strong> – 日志保存路径</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.save_qubit">
+<span class="sig-name descname"><span class="pre">save_qubit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit.save_qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>将比特参数信息保存到数据库中，如果比特参数发生了改变，则会在数据库中创建新的 <cite>QubitStoreDoc</cite> 对象</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.save_by_yaml">
+<span class="sig-name descname"><span class="pre">save_by_yaml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaml_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit.save_by_yaml" title="永久链接至目标">¶</a></dt>
+<dd><p>解析 <cite>yaml</cite> 文件中记录 <cite>Qubit</cite> 参数信息，然后加载到数据库中</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>yaml_path</strong> – <cite>yaml</cite> 文件路径，例如 <cite>{path}/config/q0.yaml</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.qubit.Qubit.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.qubit.Qubit.reset" title="永久链接至目标">¶</a></dt>
+<dd><p>比特初始化操作，如果你意外更新 <cite>Qubit</cite> 的某些参数，你可以用此方法，让比特恢复成初始状态</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.qubit.XYwave.html" class="btn btn-neutral float-right" title="pyQCat.qubit.XYwave" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="pyQCat.qubit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

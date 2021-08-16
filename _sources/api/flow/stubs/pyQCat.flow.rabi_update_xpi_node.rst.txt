@@ -1,0 +1,6 @@
+﻿pyQCat.flow.rabi\_update\_xpi\_node
+===================================
+
+.. currentmodule:: pyQCat.flow
+
+.. autofunction:: rabi_update_xpi_node

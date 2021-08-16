@@ -1,0 +1,6 @@
+.. _qubit_api :
+
+pyQCat.qubit
+============
+
+.. automodule:: pyQCat.qubit

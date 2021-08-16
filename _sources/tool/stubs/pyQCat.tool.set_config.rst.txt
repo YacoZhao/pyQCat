@@ -1,0 +1,38 @@
+﻿pyQCat.tool.set\_config
+=======================
+
+.. automodule:: pyQCat.tool.set_config
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      read_store_by_filename
+      save_config_to_store
+      write_file_to_store
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ConfigStoreMap
+      SetConfig
+   
+   
+
+   
+   
+   
+
+
+

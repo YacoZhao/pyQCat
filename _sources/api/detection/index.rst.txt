@@ -1,0 +1,6 @@
+.. _detection_api :
+
+pyQCat.detection
+================
+
+.. automodule:: pyQCat.detection

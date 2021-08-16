@@ -1,0 +1,6 @@
+.. _instrument_api :
+
+pyQCat.instrument
+=================
+
+.. automodule:: pyQCat.instrument

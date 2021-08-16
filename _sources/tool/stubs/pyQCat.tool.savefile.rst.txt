@@ -1,0 +1,36 @@
+﻿pyQCat.tool.savefile
+====================
+
+.. automodule:: pyQCat.tool.savefile
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      CFile
+      SaveFile
+   
+   
+
+   
+   
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   
+      SaveFileError
+   
+   
+
+
+

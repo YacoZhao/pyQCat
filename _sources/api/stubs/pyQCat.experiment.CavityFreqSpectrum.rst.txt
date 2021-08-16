@@ -1,0 +1,37 @@
+﻿pyQCat.experiment.CavityFreqSpectrum
+====================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: CavityFreqSpectrum
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CavityFreqSpectrum.__init__
+      ~CavityFreqSpectrum.acquire_pulse
+      ~CavityFreqSpectrum.bind_probe_inst
+      ~CavityFreqSpectrum.config_file_sys
+      ~CavityFreqSpectrum.init_readout
+      ~CavityFreqSpectrum.play_pulse
+      ~CavityFreqSpectrum.plot_schedule
+      ~CavityFreqSpectrum.register
+      ~CavityFreqSpectrum.run
+      ~CavityFreqSpectrum.save_data
+      ~CavityFreqSpectrum.save_parameters
+      ~CavityFreqSpectrum.set_multiple_IF
+      ~CavityFreqSpectrum.set_multiple_index
+      ~CavityFreqSpectrum.set_readout2q_params
+      ~CavityFreqSpectrum.set_readout_delay
+      ~CavityFreqSpectrum.set_sweep_order
+   
+   
+
+   
+   
+   

@@ -1,0 +1,6 @@
+﻿pyQCat.flow.initial\_store\_node
+================================
+
+.. currentmodule:: pyQCat.flow
+
+.. autofunction:: initial_store_node

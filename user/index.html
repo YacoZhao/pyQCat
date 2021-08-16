@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>用户指南 &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="开发指南" href="../community/index.html" />
+    <link rel="prev" title="获取帮助" href="../help/help.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../help/help.html">获取帮助</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">用户指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">执行实验</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">执行自动化校准流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#yaml">yaml文件形式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gui">界面GUI执行流程</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">配置文件介绍</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>用户指南</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/user/index.md.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>用户指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>这是给你的指南，你可以从这里知道怎么获取并使用<code class="docutils literal notranslate"><span class="pre">pyQCat</span></code>。</p>
+<div class="section" id="id2">
+<h2>安装<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>我们提供了<code class="docutils literal notranslate"><span class="pre">pyQCat</span></code>的<code class="docutils literal notranslate"><span class="pre">whl</span></code>安装包，你可以直接安装到你的本地环境。</p>
+<p><img alt="image-20210810120103116" src="../_images/image-20210810120103116.png" /></p>
+</div>
+<div class="section" id="id3">
+<h2>执行实验<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>pyQCat提供了丰富的实验接口，用户可以自由选择执行量子比特自动化校准及测试实验。我们以Ramsey实验为例，展示一下pyQCat执行实验的构建过程。</p>
+<p>在执行实验之前，你必须保证：</p>
+<ul class="simple">
+<li><p>你的Python环境中安装了pyQCat包；</p></li>
+<li><p>你的工作环境需要正常连接一体机，且当你执行需要用到商用仪器的实验（如网络分析仪<code class="docutils literal notranslate"><span class="pre">E5071</span></code>），需要保证相关仪器可以正常连接；</p></li>
+<li><p>你的工作环境需要安装mongoDB数据库，以便执行实验时记录相关操作；</p></li>
+</ul>
+<p>定义新的Python项目，用你喜欢的名字为项目进行命名，你需要创建存放实验配置文件的目录（如config目录），同时你需要创建编辑执行实验代码的路径（如experiment包）</p>
+<p><img alt="image-20210810092624180" src="https://gitee.com/espero/images/raw/master/img/image-20210810092624180.png" /></p>
+<p>config目录存放配置文件信息以及量子比特状态信息，当单独执行实验时，如果你的mongoDB数据库环境为空，则需要指定配置文件目录位置，且在config路径下定义好你的配置文件，那么实验会中配置文件中加载相关实验参数，否则会从数据库中读取实验参数。上图中experiment包可以用来编写一些用来执行实验的代码，当然你可以用你喜欢的名称。我们以Ramsey实验为例，实现代码为：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyQCat.experiment.ramsey</span> <span class="kn">import</span> <span class="n">Ramsey</span>
+<span class="kn">from</span> <span class="nn">pyQCat.parameters</span> <span class="kn">import</span> <span class="n">get_parameters</span><span class="p">,</span> <span class="n">corrected_dc</span>
+<span class="kn">from</span> <span class="nn">pyQCat.tool</span> <span class="kn">import</span> <span class="n">qarange</span><span class="p">,</span> <span class="n">remote_connection</span>
+
+
+<span class="nd">@remote_connection</span><span class="p">(</span><span class="s2">&quot;192.168.1.144&quot;</span><span class="p">)</span>      <span class="c1"># 服务器地址</span>
+<span class="k">def</span> <span class="nf">ramsey_test</span><span class="p">(</span><span class="n">bit</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">delay_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">fringe</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+    <span class="n">inst</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span>
+    <span class="n">qubit</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;qubit&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">compensate</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;compensate&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">dc</span> <span class="o">=</span> <span class="n">corrected_dc</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">sweet_qubit</span><span class="o">=</span><span class="n">bit</span><span class="p">)</span>
+    <span class="n">dcm</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;dcm&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+
+    <span class="n">ramsey_exp</span> <span class="o">=</span> <span class="n">Ramsey</span><span class="p">(</span><span class="n">inst</span><span class="p">,</span> <span class="n">qubit</span><span class="p">,</span> <span class="n">correct_dc</span><span class="o">=</span><span class="n">dc</span><span class="p">,</span> <span class="n">compensate</span><span class="o">=</span><span class="n">compensate</span><span class="p">,</span> <span class="n">discriminator</span><span class="o">=</span><span class="n">dcm</span><span class="p">)</span>
+    <span class="n">ramsey_exp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">delay_list</span><span class="p">,</span> <span class="n">fringe</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">delay</span> <span class="o">=</span> <span class="n">qarange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>   <span class="c1"># 输入参数：扫描延时列表</span>
+    <span class="n">fringe</span> <span class="o">=</span> <span class="mf">466.667</span> <span class="o">+</span> <span class="mi">40</span>        <span class="c1"># 输出参数：初始fringe频率</span>
+    <span class="n">ramsey_test</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">fringe</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>在执行实验的时候，你需要注意：</p>
+<ul class="simple">
+<li><p>根据不同实验需求，定义好实验参数并传入；</p></li>
+<li><p>你需要指定服务器地址，且保证可以正常连接，我们定义了<code class="docutils literal notranslate"><span class="pre">remote_connection</span></code>注解让你实现简单快速的连接；</p></li>
+<li><p>通常实验执行过程，必须具体比特对象（qubit）、设备对象（instrument），此外可能还需要波形补偿（compensate）、DC电压（dc）和IQ分类器（dcm），你需要通过<code class="docutils literal notranslate"><span class="pre">get_parameters</span></code>加载实验需要的参数，你只需要输出需要加载的对象名以及比特编号，就可以获取相应的实验参数，这些方法都定义在 <a class="reference external" href="../api/parameters.html">parameters</a>模块；</p>
+<ul>
+<li><p>instrument: 获取 Instrument 对象 <code class="docutils literal notranslate"><span class="pre">get_parameters(&quot;instrument&quot;)</span></code></p></li>
+<li><p>qubit：获取 Qubit 对象 <code class="docutils literal notranslate"><span class="pre">get_parameters(&quot;qubit&quot;,</span> <span class="pre">0)</span></code></p></li>
+<li><p>compensate: 获取 PulseCorrection 对象 <code class="docutils literal notranslate"><span class="pre">get_parameters(&quot;compensate&quot;,</span> <span class="pre">0)</span></code></p></li>
+<li><p>dcm: 获取IQ分类器 IQdiscriminator 对象 <code class="docutils literal notranslate"><span class="pre">get_parameters(&quot;dcm&quot;,</span> <span class="pre">0)</span></code></p></li>
+<li><p>获取施加到比特上的dc电压：<code class="docutils literal notranslate"><span class="pre">corrected_dc()</span></code></p></li>
+</ul>
+</li>
+<li><p>初始化Ramsey实验，实验初始化参数我们在 <code class="docutils literal notranslate"><span class="pre">pyQCat</span> <span class="pre">API</span> <span class="pre">Documents</span></code> 有详细的介绍；</p></li>
+<li><p>利用<code class="docutils literal notranslate"><span class="pre">run()</span></code>方法启动实验，各实验所需参数我们在 <code class="docutils literal notranslate"><span class="pre">pyQCat</span> <span class="pre">API</span> <span class="pre">Documents</span></code> 有详细的介绍；</p></li>
+</ul>
+<p>当然上述代码的前提必须保证数据库中存在你需要的信息。当数据库中不存在数据时，你需要自行指定配置文件位置，从配置文件中加载所需要的信息。</p>
+<p><img alt="image-20210810101112529" src="https://gitee.com/espero/images/raw/master/img/image-20210810101112529.png" /></p>
+<p>同样，我们执行其他实验还是按照一样的逻辑，如执行Rabi实验：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyQCat.experiment.rabi</span> <span class="kn">import</span> <span class="n">Rabi</span>
+<span class="kn">from</span> <span class="nn">pyQCat.parameters</span> <span class="kn">import</span> <span class="n">get_parameters</span><span class="p">,</span> <span class="n">corrected_dc</span>
+<span class="kn">from</span> <span class="nn">pyQCat.tool</span> <span class="kn">import</span> <span class="n">qarange</span><span class="p">,</span> <span class="n">remote_connection</span>
+
+
+<span class="nd">@remote_connection</span><span class="p">(</span><span class="s2">&quot;192.168.1.103&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">rabi_test</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">bit</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">amp_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">power</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="n">inst</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span>
+    <span class="n">qubit</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;qubit&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">compensate</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;compensate&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">dc</span> <span class="o">=</span> <span class="n">corrected_dc</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">dcm</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;dcm&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+
+    <span class="n">rabi_exp</span> <span class="o">=</span> <span class="n">Rabi</span><span class="p">(</span><span class="n">inst</span><span class="p">,</span> <span class="n">qubit</span><span class="p">,</span> <span class="n">correct_dc</span><span class="o">=</span><span class="n">dc</span><span class="p">,</span> <span class="n">compensate</span><span class="o">=</span><span class="n">compensate</span><span class="p">,</span> <span class="n">discriminator</span><span class="o">=</span><span class="n">dcm</span><span class="p">)</span>
+    <span class="n">rabi_exp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">amp_list</span><span class="p">,</span> <span class="n">drive_power</span><span class="o">=</span><span class="n">power</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">rabi_exp</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">Xpi</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">amp_list</span> <span class="o">=</span> <span class="n">qarange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">)</span>
+    <span class="n">width_list</span> <span class="o">=</span> <span class="n">qarange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">rabi_test</span><span class="p">(</span><span class="s2">&quot;Xpi&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">amp_list</span><span class="p">)</span>
+    <span class="n">rabi_test</span><span class="p">(</span><span class="s2">&quot;width&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">width_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>执行自动化校准流程<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>利用pyQCat可以实现超导量子芯片自动化测试及校准流程，而你只需要进行很简单的配置就可以实现丰富的功能，我们提供了两种形式实现自动化测试及校准流程。</p>
+<div class="section" id="yaml">
+<h3>yaml文件形式<a class="headerlink" href="#yaml" title="永久链接至标题">¶</a></h3>
+<p>利用ymal配置文件形式实现自动化校准流程时，我们需要自定义配置文件(如<code class="docutils literal notranslate"><span class="pre">exp.yaml</span></code>)，同时需要配置个比特的通道参数(<code class="docutils literal notranslate"><span class="pre">bit_channel.csv</span></code>)和仪器地址(<code class="docutils literal notranslate"><span class="pre">condif.ni</span></code>)</p>
+<p><strong>配置文件：</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bit_channel.csv</span></code>中定义了每个比特的XY通道、DC通道、Z通道、读取通道、初始读取频率、采样延时和采样带宽；</p></li>
+</ul>
+<p><img alt="image-20210810110309549" src="https://gitee.com/espero/images/raw/master/img/image-20210810110309549.png" /></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">condif.ini</span></code>中定义了商用仪器的地址</p></li>
+</ul>
+<p><img alt="image-20210810110332187" src="https://gitee.com/espero/images/raw/master/img/image-20210810110332187.png" /></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">exp.yaml</span></code> 中定义了执行自动化校准的流程，你可以通过更改此文件中的内容灵活更改实验流程</p></li>
+</ul>
+<p><img alt="image-20210810110358940" src="https://gitee.com/espero/images/raw/master/img/image-20210810110358940.png" /></p>
+<p><strong>代码实现：</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyQCat.flow.qtp</span> <span class="kn">import</span> <span class="n">qtp</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;E:\PythonProject\pyQCatDemo\config\exp.yaml&quot;</span>
+    <span class="n">qtp</span><span class="p">(</span><span class="n">yaml_path</span><span class="o">=</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>yaml文件说明：</strong></p>
+<p>我们在<code class="docutils literal notranslate"><span class="pre">yaml</span></code>文件中定义了四个部分，分别为<code class="docutils literal notranslate"><span class="pre">system</span></code>、<code class="docutils literal notranslate"><span class="pre">parameter</span></code>、<code class="docutils literal notranslate"><span class="pre">flows</span></code>和<code class="docutils literal notranslate"><span class="pre">experiments</span></code>。</p>
+<p><img alt="image-20210810115706381" src="../_images/image-20210810115706381.png" /></p>
+<p><strong>system 模块的基本配置:</strong></p>
+<p><img alt="image-20210810115830550" src="../_images/image-20210810115830550.png" /></p>
+<p><strong>parameter 模块的基本配置:</strong></p>
+<p><img alt="image-20210810115854647" src="../_images/image-20210810115854647.png" /></p>
+<p><strong>flow 模块的基本配置:</strong></p>
+<p><img alt="image-20210810115925534" src="../_images/image-20210810115925534.png" /></p>
+<p><strong>experiments</strong> 模块的基本配置:</p>
+<p><img alt="image-20210810115956445" src="../_images/image-20210810115956445.png" /></p>
+</div>
+<div class="section" id="gui">
+<h3>界面GUI执行流程<a class="headerlink" href="#gui" title="永久链接至标题">¶</a></h3>
+<p>在<code class="docutils literal notranslate"><span class="pre">yaml</span></code>配置文件的启动方式之外，我们额外新增了界面<code class="docutils literal notranslate"><span class="pre">GUI</span></code>执行自动化校准流程的功能，你只需要实现下面简单的代码即可</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyQCat.tool.gui.mainGui</span> <span class="kn">import</span> <span class="n">QMyGui</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">yaml</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;E:\PythonProject\pyQCatDemo\config\exp.yaml&#39;</span>
+    <span class="n">QMyGui</span><span class="o">.</span><span class="n">run_gui</span><span class="p">(</span><span class="n">yaml</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>执行上面的代码，<strong>你需要注意：</strong></p>
+<p>必须提前在配置文件目录中定义好标准的<code class="docutils literal notranslate"><span class="pre">exp.yaml</span></code>文件，并给出文件路径，界面演示如下：</p>
+<p><img alt="image-20210810113815427" src="https://gitee.com/espero/images/raw/master/img/image-20210810113815427.png" /></p>
+<p><img alt="image-20210810113856779" src="https://gitee.com/espero/images/raw/master/img/image-20210810113856779.png" /></p>
+<p><img alt="https://gitee.com/espero/images/raw/master/img/image-20210810114128050.png" src="https://gitee.com/espero/images/raw/master/img/image-20210810114128050.png" /></p>
+<p><img alt="image-20210810114325570" src="../_images/image-20210810114325570.png" /></p>
+<p><img alt="image-20210810114410457" src="../_images/image-20210810114410457.png" /></p>
+<p><img alt="image-20210810114451231" src="../_images/image-20210810114451231.png" /></p>
+<p><img alt="image-20210810114527032" src="../_images/image-20210810114527032.png" /></p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>配置文件介绍<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>在<strong>pyQCat</strong>中，有下面一些常见的配置文件，他们都可以各自的作用，具体可见下图；</p>
+<p><img alt="image-20210810115514897" src="../_images/image-20210810115514897.png" /></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../community/index.html" class="btn btn-neutral float-right" title="开发指南" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../help/help.html" class="btn btn-neutral float-left" title="获取帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.experiment.Distortion &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.experiment.Distortion</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/api/experiment/pyQCat.experiment.Distortion.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-experiment-distortion">
+<h1>pyQCat.experiment.Distortion<a class="headerlink" href="#pyqcat-experiment-distortion" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.experiment.</span></span><span class="sig-name descname"><span class="pre">Distortion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../instrument/stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.instrument_aio.Instrument"><span class="pre">pyQCat.instrument.instrument_aio.Instrument</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.IQdiscriminator" title="pyQCat.tool.iqprobability.IQdiscriminator"><span class="pre">pyQCat.tool.iqprobability.IQdiscriminator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.base_pulse.PulseCorrection"><span class="pre">pyQCat.pulse.base_pulse.PulseCorrection</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Distortion" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Z 线畸变校准实验</p>
+<p>Reference arXiv:1907.04818v1 (L.DiCarlo)
+Time-domain characterization and correction of on-chip distortion of
+control pulses in a quantum processor</p>
+<p>flux pulse 信号从 AWG 产生到到达比特，中途经历了很多线缆，微波器件和连接头，在这些位置都有可能产生衰减、反射造成
+波形畸变失真，我们可以将比特视为一个示波器，在 flux pulse 线上施加阶跃脉冲(加幅值)引起比特频率变化，由于 flux pulse
+和比特频率存在对应关系，如果我们能够测出在阶跃脉冲施加过程中比特频率随时间的变化，我们就能计算出阶跃脉冲经过线路达到比特
+的响应情况，然后通过反卷积的方法进行校准。</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.qubit">
+<span class="sig-name descname"><span class="pre">qubit</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>实验作用的比特对象</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.Qubit">Qubit</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.inst">
+<span class="sig-name descname"><span class="pre">inst</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.inst" title="永久链接至目标">¶</a></dt>
+<dd><p>设备对象，封装了实验相关参数的数据库映射对象，集成了各种数据交互操作</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../instrument/stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.Instrument">Instrument</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.discriminator">
+<span class="sig-name descname"><span class="pre">discriminator</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.discriminator" title="永久链接至目标">¶</a></dt>
+<dd><p>IQ分类器</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../tool/index.html#pyQCat.tool.IQdiscriminator" title="pyQCat.tool.IQdiscriminator">IQdiscriminator</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.width_list">
+<span class="sig-name descname"><span class="pre">width_list</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.width_list" title="永久链接至目标">¶</a></dt>
+<dd><p>扫描宽度列表</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.separation">
+<span class="sig-name descname"><span class="pre">separation</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.separation" title="永久链接至目标">¶</a></dt>
+<dd><p>畸变干扰时长</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.z_amp">
+<span class="sig-name descname"><span class="pre">z_amp</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.z_amp" title="永久链接至目标">¶</a></dt>
+<dd><p>比特 Z 线施加的幅值</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.correct_dc">
+<span class="sig-name descname"><span class="pre">correct_dc</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.correct_dc" title="永久链接至目标">¶</a></dt>
+<dd><p>施加到各个比特上的电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.compensate">
+<span class="sig-name descname"><span class="pre">compensate</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.compensate" title="永久链接至目标">¶</a></dt>
+<dd><p>脉冲校准对象，用于加载到比特对象上，默认为空，
+当设置参数时，它意味着 <cite>Z</cite> 通道打开，并且进行波形畸变、延时等修正</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.PulseCorrection">PulseCorrection</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.repeat">
+<span class="sig-name descname"><span class="pre">repeat</span></span><a class="headerlink" href="#pyQCat.experiment.Distortion.repeat" title="永久链接至目标">¶</a></dt>
+<dd><p>实验重复次数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../instrument/stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.instrument_aio.Instrument"><span class="pre">pyQCat.instrument.instrument_aio.Instrument</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.IQdiscriminator" title="pyQCat.tool.iqprobability.IQdiscriminator"><span class="pre">pyQCat.tool.iqprobability.IQdiscriminator</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.base_pulse.PulseCorrection"><span class="pre">pyQCat.pulse.base_pulse.PulseCorrection</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Distortion.__init__" title="永久链接至目标">¶</a></dt>
+<dd><p>Initialize method</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.experiment.Distortion.html#pyQCat.experiment.Distortion.__init__" title="pyQCat.experiment.Distortion.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(qubit, inst, discriminator, width_list)</p></td>
+<td><p>Initialize method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.experiment.Distortion.html#pyQCat.experiment.Distortion.demodulation" title="pyQCat.experiment.Distortion.demodulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">demodulation</span></code></a>([smooth_coef, win_length, …])</p></td>
+<td><p>相位解调和频率提取</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.experiment.Distortion.html#pyQCat.experiment.Distortion.get_amp" title="pyQCat.experiment.Distortion.get_amp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_amp</span></code></a>(fmax, detune, M, offset, d[, …])</p></td>
+<td><p>幅值响应提取</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.experiment.Distortion.html#pyQCat.experiment.Distortion.run" title="pyQCat.experiment.Distortion.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<td><p>执行畸变实验</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Distortion.run" title="永久链接至目标">¶</a></dt>
+<dd><p>执行畸变实验</p>
+<p>固定两个 half pi pulse 之间的间隔 separation 不变，改变 Z 线路方波的宽度 width (从0扫描到 separation/2)，
+对于每一个 width 值，分别使第二个 half pi pulse 为 X/2 和 Y/2，然后执行 singleshot 测量，获取一组比特处于0
+态和1态下的概率记为 <code class="docutils literal notranslate"><span class="pre">[P0x,</span> <span class="pre">P1x]</span></code> ， <code class="docutils literal notranslate"><span class="pre">[P0y,</span> <span class="pre">P1y]</span></code> 获取畸变参数 <code class="docutils literal notranslate"><span class="pre">sigam_x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">sigam_y</span></code> ， 计算公式为:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}sigma_x = 1 - 2 * P1x\\sigma_y = 1 - 2 * P1y\end{aligned}\end{align} \]</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.demodulation">
+<span class="sig-name descname"><span class="pre">demodulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smooth_coef</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0.08</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">win_length</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_switch</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Distortion.demodulation" title="永久链接至目标">¶</a></dt>
+<dd><p>相位解调和频率提取</p>
+<ul class="simple">
+<li><p>对 <code class="docutils literal notranslate"><span class="pre">sigma_x</span></code> 做傅里叶变换，得到频谱分量最大值对应的频率，记为 IF ，该频率即为 Z 波        形方波最后平稳饱和时对应的振荡频率（比特在该处频率与工作点的差值 detune）</p></li>
+<li><p>通过 <code class="docutils literal notranslate"><span class="pre">sigma_x</span></code> 和 <code class="docutils literal notranslate"><span class="pre">sigma_y</span></code> 计算相位</p></li>
+<li><p>相位下变频</p></li>
+<li><p>相位平滑微分处理</p></li>
+<li><p>根据相位微分得到频率，该频率的物理意义是 Z 波形方波在上升沿至平稳饱和过程中每一时刻处比特频率与工作点频率的差值</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>smooth_coef</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – <code class="docutils literal notranslate"><span class="pre">smooth</span></code> 函数窗口大小</p></li>
+<li><p><strong>win_length</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 相位参数微分处理时使用，表示滤波窗口的长度</p></li>
+<li><p><strong>freq_switch</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)"><em>bool</em></a>) – 是否处理 <code class="docutils literal notranslate"><span class="pre">IF</span></code>，默认为 False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.Distortion.get_amp">
+<span class="sig-name descname"><span class="pre">get_amp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmax</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cali_offset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Distortion.get_amp" title="永久链接至目标">¶</a></dt>
+<dd><p>幅值响应提取</p>
+<ul class="simple">
+<li><p>将前面计算得到的频率做平滑处理，再根据调制谱计算公式，计算得到幅值</p></li>
+<li><p>根据 IF 计算得到一个参考幅值，利用该参考幅值对前一步得到的幅值做归一，得到的我们想要幅值响应</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fmax</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 调制谱参数</p></li>
+<li><p><strong>detune</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 调制谱参数</p></li>
+<li><p><strong>M</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 调制谱参数</p></li>
+<li><p><strong>offset</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 调制谱参数</p></li>
+<li><p><strong>d</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 调制谱参数</p></li>
+<li><p><strong>cali_offset</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)"><em>bool</em></a>) – 是否进行调制谱参数校准，防止调制谱参数发生漂移，影响实验结果</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

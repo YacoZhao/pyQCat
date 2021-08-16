@@ -1,0 +1,37 @@
+﻿pyQCat.experiment.Rabi
+======================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: Rabi
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Rabi.__init__
+      ~Rabi.acquire_pulse
+      ~Rabi.bind_probe_inst
+      ~Rabi.config_file_sys
+      ~Rabi.init_readout
+      ~Rabi.play_pulse
+      ~Rabi.plot_schedule
+      ~Rabi.register
+      ~Rabi.run
+      ~Rabi.save_data
+      ~Rabi.save_parameters
+      ~Rabi.set_multiple_IF
+      ~Rabi.set_multiple_index
+      ~Rabi.set_readout2q_params
+      ~Rabi.set_readout_delay
+      ~Rabi.set_sweep_order
+   
+   
+
+   
+   
+   

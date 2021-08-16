@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="获取帮助" href="help/help.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat">
+<h1>pyQCat<a class="headerlink" href="#pyqcat" title="永久链接至标题">¶</a></h1>
+</div>
+<div class="section" id="logo">
+<h1><a class="reference internal" href="_images/pyQCat_logo.png"><img alt="qcodes logo" src="_images/pyQCat_logo.png" style="width: 858.0px; height: 289.0px;" /></a><a class="headerlink" href="#logo" title="永久链接至标题">¶</a></h1>
+<p>pyQCat是由本源量子开发的基于python的量子比特校准和测试框架，他可以实现量子芯片的表征流程。</p>
+<p>目标是一个自动量子位测试和校准的通用框架，因此:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>你不需要花很长时间来学习软件实现具体实验的流程；</p></li>
+<li><p>你必须为特定的部分编写自己的代码来实现属于自己的实验。</p></li>
+</ul>
+</div></blockquote>
+<p>为了方便用户使用，pyQCat为用户提供了详细的 <a class="reference external" href="api/index.rst">API文档</a> 。</p>
+<div class="section" id="id1">
+<h2>文档目录<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/index.html">用户指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/index.html#id2">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/index.html#id3">执行实验</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/index.html#id4">执行自动化校准流程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/index.html#id5">配置文件介绍</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/index.html">开发指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/index.html#id2">顶层接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/index.html#id3">自定义实验</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dataset/index.html">结构及数据流程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dataset/index.html#pyqcat">pyQCat组织结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataset/index.html#id2">pyQCat数据传递流程</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API 文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#pyqcat-api">pyQCat API目录</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changes/index.html">版本记录</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changes/index.html#version-0-0-2">version 0.0.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes/index.html#version-0-0-3">version 0.0.3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes/index.html#version-0-0-4">version 0.0.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes/index.html#version-0-0-5">version 0.0.5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes/index.html#version-0-0-6">version 0.0.6</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="help/help.html" class="btn btn-neutral float-right" title="获取帮助" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

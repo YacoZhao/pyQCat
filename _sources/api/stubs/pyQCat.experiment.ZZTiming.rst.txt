@@ -1,0 +1,40 @@
+﻿pyQCat.experiment.ZZTiming
+==========================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: ZZTiming
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ZZTiming.__init__
+      ~ZZTiming.acquire_pulse
+      ~ZZTiming.bind_probe_inst
+      ~ZZTiming.cal_xy_pulse
+      ~ZZTiming.config_file_sys
+      ~ZZTiming.get_xy_pulse
+      ~ZZTiming.get_z_pulse
+      ~ZZTiming.init_readout
+      ~ZZTiming.play_pulse
+      ~ZZTiming.plot_schedule
+      ~ZZTiming.register
+      ~ZZTiming.run
+      ~ZZTiming.save_data
+      ~ZZTiming.save_parameters
+      ~ZZTiming.set_multiple_IF
+      ~ZZTiming.set_multiple_index
+      ~ZZTiming.set_readout2q_params
+      ~ZZTiming.set_readout_delay
+      ~ZZTiming.set_sweep_order
+   
+   
+
+   
+   
+   

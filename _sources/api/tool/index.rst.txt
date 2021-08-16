@@ -1,0 +1,6 @@
+.. _tool_api :
+
+pyQCat.tool
+===========
+
+.. automodule:: pyQCat.tool

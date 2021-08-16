@@ -1,0 +1,1586 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.instrument &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="pyQCat.instrument.Instrument" href="stubs/pyQCat.instrument.Instrument.html" />
+    <link rel="prev" title="pyQCat.flow.common" href="../flow/stubs/pyQCat.flow.common.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../detection/index.html">pyQCat.detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../experiment/index.html">pyQCat.experiment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../flow/index.html">pyQCat.flow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">pyQCat.instrument</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#measureaio-instruments">MeasureAIO Instruments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#commercial-instruments">Commercial Instruments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../pulse/index.html">pyQCat.pulse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qubit/index.html">pyQCat.qubit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tool/index.html">pyQCat.tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../parameters.html">pyQCat.parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">API 文档</a> &raquo;</li>
+        
+      <li>pyQCat.instrument</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/api/instrument/index.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.instrument">
+<span id="pyqcat-instrument"></span><span id="instrument-api"></span><h1>pyQCat.instrument<a class="headerlink" href="#module-pyQCat.instrument" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code> 模块实现了一体机和商用仪器的通信及操作流程，用户可以直接通过调用接口实现数据传递。</p>
+<div class="section" id="measureaio-instruments">
+<h2>MeasureAIO Instruments<a class="headerlink" href="#measureaio-instruments" title="永久链接至标题">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.Instrument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Instrument</span></code></a>([support_qubit])</p></td>
+<td><p>一体机设备封装类</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="stubs/pyQCat.instrument.qaio.html#module-pyQCat.instrument.qaio" title="pyQCat.instrument.qaio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qaio</span></code></a></p></td>
+<td><p>一体机测试使用封装模块</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="commercial-instruments">
+<h2>Commercial Instruments<a class="headerlink" href="#commercial-instruments" title="永久链接至标题">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.INSTRUMENT.html#pyQCat.instrument.INSTRUMENT" title="pyQCat.instrument.INSTRUMENT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INSTRUMENT</span></code></a>([config_path])</p></td>
+<td><p>通过仪器名称获取指定仪器对象的通用接口</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.APMS12G.html#module-pyQCat.instrument.APMS12G" title="pyQCat.instrument.APMS12G"><code class="xref py py-obj docutils literal notranslate"><span class="pre">APMS12G</span></code></a></p></td>
+<td><p>商用仪器 APMS12G</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.ATS9360.html#module-pyQCat.instrument.ATS9360" title="pyQCat.instrument.ATS9360"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ATS9360</span></code></a></p></td>
+<td><p>商用仪器 ATS9360</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.AWG5208.html#module-pyQCat.instrument.AWG5208" title="pyQCat.instrument.AWG5208"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AWG5208</span></code></a></p></td>
+<td><p>商用仪器 AWG5208</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.AWG33522A.html#module-pyQCat.instrument.AWG33522A" title="pyQCat.instrument.AWG33522A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AWG33522A</span></code></a></p></td>
+<td><p>商用仪器 AWG33522A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.CB2902A.html#module-pyQCat.instrument.CB2902A" title="pyQCat.instrument.CB2902A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CB2902A</span></code></a></p></td>
+<td><p>商用仪器 CB2902A</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.CE8267D.html#module-pyQCat.instrument.CE8267D" title="pyQCat.instrument.CE8267D"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CE8267D</span></code></a></p></td>
+<td><p>商用仪器 CE8267D</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.DG645.html#module-pyQCat.instrument.DG645" title="pyQCat.instrument.DG645"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DG645</span></code></a></p></td>
+<td><p>商用仪器 DG645</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.DSG3000.html#module-pyQCat.instrument.DSG3000" title="pyQCat.instrument.DSG3000"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DSG3000</span></code></a></p></td>
+<td><p>商用仪器 DSG3000</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.E5071C.html#module-pyQCat.instrument.E5071C" title="pyQCat.instrument.E5071C"><code class="xref py py-obj docutils literal notranslate"><span class="pre">E5071C</span></code></a></p></td>
+<td><p>商用仪器 E5071C</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.HP83732A.html#module-pyQCat.instrument.HP83732A" title="pyQCat.instrument.HP83732A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HP83732A</span></code></a></p></td>
+<td><p>商用仪器 HP83732A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.Keithley2400.html#module-pyQCat.instrument.Keithley2400" title="pyQCat.instrument.Keithley2400"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Keithley2400</span></code></a></p></td>
+<td><p>商用仪器 Keithley2400</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.KeithleyB2902A.html#module-pyQCat.instrument.KeithleyB2902A" title="pyQCat.instrument.KeithleyB2902A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KeithleyB2902A</span></code></a></p></td>
+<td><p>商用仪器 KeithleyB2902A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.KeysightMSOX6004A.html#module-pyQCat.instrument.KeysightMSOX6004A" title="pyQCat.instrument.KeysightMSOX6004A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KeysightMSOX6004A</span></code></a></p></td>
+<td><p>商用仪器 KeysightMSOX6004A</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.M8190A.html#module-pyQCat.instrument.M8190A" title="pyQCat.instrument.M8190A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">M8190A</span></code></a></p></td>
+<td><p>商用仪器 M8190A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.MIC12.html#module-pyQCat.instrument.MIC12" title="pyQCat.instrument.MIC12"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MIC12</span></code></a></p></td>
+<td><p>商用仪器 MIC12</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.N5173B.html#module-pyQCat.instrument.N5173B" title="pyQCat.instrument.N5173B"><code class="xref py py-obj docutils literal notranslate"><span class="pre">N5173B</span></code></a></p></td>
+<td><p>商用仪器 N5173B</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.N5232B.html#module-pyQCat.instrument.N5232B" title="pyQCat.instrument.N5232B"><code class="xref py py-obj docutils literal notranslate"><span class="pre">N5232B</span></code></a></p></td>
+<td><p>商用仪器 N5232B</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.N9030B.html#module-pyQCat.instrument.N9030B" title="pyQCat.instrument.N9030B"><code class="xref py py-obj docutils literal notranslate"><span class="pre">N9030B</span></code></a></p></td>
+<td><p>商用仪器 N9030B</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../stubs/pyQCat.instrument.SR830.html#module-pyQCat.instrument.SR830" title="pyQCat.instrument.SR830"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SR830</span></code></a></p></td>
+<td><p>商用仪器 SR830</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.instrument.INSTRUMENT">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.</span></span><span class="sig-name descname"><span class="pre">INSTRUMENT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.INSTRUMENT" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>通过仪器名称获取指定仪器对象的通用接口</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;inst = INSTRUMENT()</span>
+<span class="go">&gt;&gt;&gt;N5173B = inst[&#39;N5173B&#39;]</span>
+<span class="go">&gt;&gt;&gt;N5173B.output_on()  # 打开输出通道</span>
+</pre></div>
+</div>
+<p>Initialize method</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.</span></span><span class="sig-name descname"><span class="pre">Instrument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">support_qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>一体机设备封装类</p>
+<p>实现为一体机各个模块绑定参数的功能</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>support_qubit</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 一体机型号，目前支持8位和30位，默认为8位</p></li>
+<li><p><strong>_kernel</strong> (<a class="reference internal" href="../stubs/pyQCat.database.Kernel.html#pyQCat.database.Kernel" title="pyQCat.database.Kernel"><em>Kernel</em></a>) – 测量参数封装类，设备对象与数据库映射之间的关联类</p></li>
+<li><p><strong>_sweep</strong> (<em>List</em>) – 实验最终施加到设备上的扫描参数</p></li>
+<li><p><strong>instrument_aio</strong> (<em>InstrumentAIODoc</em>) – 设备数据库映射类</p></li>
+<li><p><strong>is_connect</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)"><em>bool</em></a>) – 设备是否连接的标志位</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.open_inst">
+<span class="sig-name descname"><span class="pre">open_inst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.open_inst" title="永久链接至目标">¶</a></dt>
+<dd><p>连接远程一体机设备 <cite>OriginQAIO</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip</strong> – ip地址</p></li>
+<li><p><strong>port</strong> – 端口号</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#IOError" title="(在 Python v3.7)"><strong>IOError</strong></a> – 如果连接一体机失败</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.close_inst">
+<span class="sig-name descname"><span class="pre">close_inst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.close_inst" title="永久链接至目标">¶</a></dt>
+<dd><p>断开与远程一体机设备的连接</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.get_status">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.get_status" title="永久链接至目标">¶</a></dt>
+<dd><p>获取一体机的状态，静态方法，可以直接通过类名调用</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>oid</strong> – 设备数据库映射对象 <cite>InstrumentAIODoc</cite> 的id值</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>当前一体机的状态</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>DatabaseQueryError</strong> – 如果数据库中未找到提供的 <cite>oid</cite> 记录</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.select">
+<span class="sig-name descname"><span class="pre">select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.select" title="永久链接至目标">¶</a></dt>
+<dd><p>选择一体机的指定模块，并打开对应的通道</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_dc_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_dc_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – 字典类型，键为指定模块名，值为通道值
+模块名可以为 <cite>Z_dc_control</cite> 、 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Readout_control</cite></p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">inst</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+    <span class="n">Z_dc_control</span><span class="o">=</span><span class="n">z_dc_channels</span><span class="p">,</span>
+    <span class="n">Z_flux_control</span><span class="o">=</span><span class="n">z_flux_channels</span><span class="p">,</span>
+    <span class="n">XY_control</span><span class="o">=</span><span class="n">xy_channels</span><span class="p">,</span>
+    <span class="n">Readout_control</span><span class="o">=</span><span class="n">readout_channels</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.get" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.load" title="永久链接至目标">¶</a></dt>
+<dd><p>从配置文件中加载 <cite>json</cite> 数据，将配置文件参数转化为 <cite>MongoDB</cite> 数据库中的 <cite>Document</cite> 实例</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>config</strong> – 配置文件的绝对路径</p>
+</dd>
+<dt class="field-even">注意</dt>
+<dd class="field-even"><p>json文件的风格必须要按照 <cite>PyQCat/schema/meas_AIO_schema.json</cite> 中的风格定义</p>
+</dd>
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#ValueError" title="(在 Python v3.7)"><strong>ValueError</strong></a> – 如果没有找到 <cite>json</cite> 风格模板文件</p></li>
+<li><p><strong>ValidateError</strong> – 如果加载的 <cite>json</cite> 文件不满足指定 <cite>json</cite> 风格</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_dc_all">
+<span class="sig-name descname"><span class="pre">set_dc_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dc_seq</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_dc_all" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 <cite>DC</cite> 模块的电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>dc_seq</strong> – 电压列表，通过列表索引确定通道值，列表元素为指定的通道的电压值</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dc_seq</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">set_dc_all</span><span class="p">(</span><span class="n">dc_seq</span><span class="p">)</span>
+<span class="c1"># dc_seq[0] = 1, 其中0为通道值，1位电压值</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_sync_period">
+<span class="sig-name descname"><span class="pre">set_sync_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_sync_period" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机执行周期，在进行重复实验时，每个周期内执行一次施加波形，执行实验的操作，非反馈模式下可以用这个方法
+保证一体机各个模块周期相同</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>value</strong> – <p>一体机施加波形周期</p>
+<ul class="simple">
+<li><p>最小值为10</p></li>
+<li><p>最大值为1000</p></li>
+<li><p>步长为5，设置的周期值必须可能被5整除</p></li>
+<li><p>单位: 微秒(us)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_sync_trig_mode">
+<span class="sig-name descname"><span class="pre">set_sync_trig_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_sync_trig_mode" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机触发模式</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>mode</strong> – 模式编号 ( <code class="docutils literal notranslate"><span class="pre">0/1/2/3</span></code> )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_period">
+<span class="sig-name descname"><span class="pre">set_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_period" title="永久链接至目标">¶</a></dt>
+<dd><p>为一体机的 <cite>AWG/RF/ADDA</cite> 模块设置脉冲周期，仪器模块下，可以用这个方法分别对每个模块设置周期</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>Trig_out_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Read_out_control</cite> 、 <cite>Trig_out_control</cite></p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>value</strong> – 周期值，范围为 <cite>10-1000</cite>，单位：微秒（us）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_trig_mode">
+<span class="sig-name descname"><span class="pre">set_trig_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_trig_mode" title="永久链接至目标">¶</a></dt>
+<dd><p>为一体机 <cite>AWG/RF/ADDA</cite> 模块设置触发模式</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>Trig_out_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Read_out_control</cite> 、 <cite>Trig_out_control</cite></p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>mode</strong> – 触发模式 ( <code class="docutils literal notranslate"><span class="pre">0/1/2/3</span></code> )</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_dc">
+<span class="sig-name descname"><span class="pre">set_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_dc" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>DC</cite> 模块设置电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – DC通道, 范围为 <cite>1~8</cite></p></li>
+<li><p><strong>value</strong> – 电压值, 范围为 <cite>-5~5V</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_power">
+<span class="sig-name descname"><span class="pre">set_power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_power" title="永久链接至目标">¶</a></dt>
+<dd><p>为一体机 <cite>RF/ADDA</cite> 模块设置功率</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – 模块名，可以设置为 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>value</strong> – 功率值，范围为 <cite>-40 ~ -10dBm</cite>, 步长为 <cite>0.1dBm</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_output_freq">
+<span class="sig-name descname"><span class="pre">set_output_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_output_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机 <cite>RF/ADDA</cite> 模块的输出频率</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – 模块名，可以设置为 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>value</strong> – 频率值，范围为 <cite>4000~8000MHz</cite>, 步长为 <cite>0.001MHz</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_intermediate_freq">
+<span class="sig-name descname"><span class="pre">set_intermediate_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_intermediate_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机 <cite>RF/ADDA</cite> 模块中频频率</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – 模块名，可以设置为 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>value</strong> – 频率值，范围为 <cite>500~700MHz</cite>，步长为 <cite>0.001MHz</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_trigger_delay">
+<span class="sig-name descname"><span class="pre">set_trigger_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_trigger_delay" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机 <cite>AWG/RF/ADDA</cite> 模块的触发延时</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>Trig_out_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Read_out_control</cite> 、 <cite>Trig_out_control</cite></p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>values</strong> – 触发延时，范围为 <cite>0 ~ 1000000 ns</cite>, 步长为 <cite>5 ns</cite>, 最大长度为 <cite>5 ns</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.get_trigger_delay">
+<span class="sig-name descname"><span class="pre">get_trigger_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><span class="pre">list</span></a><a class="headerlink" href="#pyQCat.instrument.Instrument.get_trigger_delay" title="永久链接至目标">¶</a></dt>
+<dd><p>获取一体机 <cite>AWG/RF/ADDA</cite> 模块的触发延时</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>Trig_out_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Read_out_control</cite> 、 <cite>Trig_out_control</cite></p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>触发延时</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_trigger_out_delay">
+<span class="sig-name descname"><span class="pre">set_trigger_out_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_trigger_out_delay" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机 <cite>AWG/RF/ADDA</cite> 模块外部触发延时，只支持8比特一体机</p>
+<ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-8</cite></p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite></p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>value</strong> – 触发延时，范围为 <cite>0 ~ 1000000 ns</cite>, 步长为 <cite>5 ns</cite>, 最大长度为 <cite>5 ns</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ModuleChannelError</strong> – 如果通道不满足要求</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_trigout_pulse_width">
+<span class="sig-name descname"><span class="pre">set_trigout_pulse_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chanenl</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_trigout_pulse_width" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机 <cite>TOD</cite> 模块的脉冲宽度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chanenl</strong> – 通道值，范围为 <cite>1-4</cite></p></li>
+<li><p><strong>value</strong> – 脉冲宽度，范围为 <cite>0-500ns</cite>，步长为 <cite>5ns</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_sample_delay">
+<span class="sig-name descname"><span class="pre">set_sample_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_sample_delay" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机 <cite>ADDA</cite> 模块的采样延时</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道值，范围为 <cite>1-4</cite></p></li>
+<li><p><strong>*values</strong> – 采样延时, 范围为 <cite>0-1000000ns</cite> , 步长为 <cite>5ns</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_sample_width">
+<span class="sig-name descname"><span class="pre">set_sample_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_sample_width" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机 <cite>ADDA</cite> 模块的采样宽度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道值，范围为 <cite>1-4</cite></p></li>
+<li><p><strong>value</strong> – 采样宽度，范围为 <cite>0-5000ns</cite>, 步长为 <cite>5ns</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_power_attenuation">
+<span class="sig-name descname"><span class="pre">set_power_attenuation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_power_attenuation" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机 <cite>ADDA</cite> 模块的衰减功率</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道值，范围为 <cite>1-4</cite></p></li>
+<li><p><strong>value</strong> – 功率，范围为 <cite>0-40dB</cite>，步长为 <cite>1dB</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_sine_waveform">
+<span class="sig-name descname"><span class="pre">set_sine_waveform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_sine_waveform" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>AWG/RF</cite> 模块设置正弦波</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><em>str</em></a>) – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道值</p></li>
+<li><p><strong>width</strong> – 波形宽度，范围为 <cite>5-30000ns</cite>，步长为 <cite>5ns</cite></p></li>
+<li><p><strong>amp</strong> – 波形幅值，只有当设置 <cite>AWG</cite> 模块时，该参数才是有效的</p></li>
+<li><p><strong>freq</strong> – 波形频率，当设置 <cite>RF</cite> 模块时，范围为 <cite>500-700MHz</cite>，步长为 <cite>0.001MHz(1KHz)</cite>；
+当设置 <cite>AWG</cite> 模块时，范围为 <cite>0-200MHz</cite>, 步长为 <cite>0.001MHz(1KHz)</cite></p></li>
+<li><p><strong>phase</strong> – 波形相位，范围为 <cite>0-360°</cite>，步长为 <cite>0.5°</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ModuleNameError</strong> – 如果模块名设置错误</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_square_waveform">
+<span class="sig-name descname"><span class="pre">set_square_waveform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_square_waveform" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>AWG</cite> 模块设置方波</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 方波施加的通道, 范围为 <cite>1-8</cite></p></li>
+<li><p><strong>width</strong> – 方波的宽度，范围为 <cite>5~30000ns</cite>，步长为 <cite>5ns</cite></p></li>
+<li><p><strong>amp</strong> – 方波的幅值，范围为 <cite>-1~1V</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_custom_waveform">
+<span class="sig-name descname"><span class="pre">set_custom_waveform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavedata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_custom_waveform" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>AWG/RF/ADDA</cite> 模块设置自定义波形</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><em>str</em></a>) – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道值</p></li>
+<li><p><strong>wavedata</strong> – 二进制波形数据</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>InvalidValueError</strong> – 如果一体机位数既不是8也不是30</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.output_on">
+<span class="sig-name descname"><span class="pre">output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.output_on" title="永久链接至目标">¶</a></dt>
+<dd><p>打开一体机的指定通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道值，当状态设置为1即为开启通道</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>设备映射对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.output_off">
+<span class="sig-name descname"><span class="pre">output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.output_off" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭一体机指定通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道值，当状态设置为4即为关闭通道</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.clear_control_channel">
+<span class="sig-name descname"><span class="pre">clear_control_channel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.clear_control_channel" title="永久链接至目标">¶</a></dt>
+<dd><p>清空一体机所有模块的通道记录</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_output">
+<span class="sig-name descname"><span class="pre">set_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_output" title="永久链接至目标">¶</a></dt>
+<dd><p>设置一体机数据库映射对象 <cite>InstrumentAIODoc</cite> 状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> – 状态值</p></li>
+<li><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道值</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>如果设置成功，会范围数据库存储对象的 <cite>id</cite> 值</p>
+</dd>
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#ConnectionError" title="(在 Python v3.7)"><strong>ConnectionError</strong></a> – 如果连接数据库映射对象 <cite>InstrumentAIODoc</cite> 失败</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_control_channel">
+<span class="sig-name descname"><span class="pre">set_control_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_control_channel" title="永久链接至目标">¶</a></dt>
+<dd><p>为指定模块设置通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.sweep_delay">
+<span class="sig-name descname"><span class="pre">sweep_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.sweep_delay" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>AWG/RF/ADDA</cite> 模块设置扫描延时</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><em>str</em></a>) – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道</p></li>
+<li><p><strong>start</strong> – 触发延时扫描参数的开始时间，范围为 <cite>0-100000ns</cite></p></li>
+<li><p><strong>stop</strong> – 触发延时扫描参数的结束时间，范围为 <cite>0-100000ns</cite></p></li>
+<li><p><strong>step</strong> – 触发延时扫描参数的步长，范围为 <cite>0-100000ns</cite></p></li>
+<li><p><strong>points</strong> – 可迭代的对象，如果没有给出起始、结束、步长三个参数，可以直接传入延时列表交给 <cite>points</cite> 参数</p></li>
+<li><p><strong>repeat</strong> – 重复次数，默认为1000，只有在非反馈模式的时候有效</p></li>
+<li><p><strong>index</strong> – 延时列表的索引</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ArgumentsError</strong> – 如果传入的延时参数有误</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>步长必须为 <cite>5ns</cite> 的整数倍</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.sweep_power">
+<span class="sig-name descname"><span class="pre">sweep_power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.sweep_power" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>RF/ADDA</cite> 模块设置扫描功率</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><em>str</em></a>) – 模块名，可以设置为 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道</p></li>
+<li><p><strong>start</strong> – 功率扫描参数的最小值，范围为 <cite>-40~-10dBm</cite></p></li>
+<li><p><strong>stop</strong> – 功率扫描参数的最大值，范围为 <cite>-40~-10dBm</cite></p></li>
+<li><p><strong>step</strong> – 功率扫描参数的步长，范围为 <cite>-40~-10dBm</cite></p></li>
+<li><p><strong>points</strong> – 可迭代的对象，如果没有给出起始、结束、步长三个参数，可以直接传入功率列表交给 <cite>points</cite> 参数</p></li>
+<li><p><strong>repeat</strong> – 重复次数，默认为1000，只有在非反馈模式的时候有效</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ArgumentsError</strong> – 如果传入的功率参数有误</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>步长必须为 <cite>0.1dBm</cite> 的整数倍</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.sweep_freq">
+<span class="sig-name descname"><span class="pre">sweep_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.sweep_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>RF/ADDA</cite> 模块设置扫描频率</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><em>str</em></a>) – 模块名，可以设置为 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道</p></li>
+<li><p><strong>start</strong> – 频率扫描参数的最小值，范围为 <cite>4000-8000MHz</cite></p></li>
+<li><p><strong>stop</strong> – 频率扫描参数的最大值，范围为 <cite>4000-8000MHz</cite></p></li>
+<li><p><strong>step</strong> – 频率扫描参数的步长，范围为 <cite>4000-8000MHz</cite></p></li>
+<li><p><strong>points</strong> – 可迭代的对象，如果没有给出起始、结束、步长三个参数，可以直接传入频率列表交给 <cite>points</cite> 参数</p></li>
+<li><p><strong>repeat</strong> – 重复次数，默认为1000，只有在非反馈模式的时候有效</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ArgumentsError</strong> – 如果传入的频率参数有误</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>步长必须为 <cite>0.001MHz</cite> 的整数倍</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.sweep_sample_delay">
+<span class="sig-name descname"><span class="pre">sweep_sample_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.sweep_sample_delay" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>ADDA</cite> 模块设置扫描采样延时</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道</p></li>
+<li><p><strong>start</strong> – 扫描采样延时的最小值，范围为 <cite>0-1000000 ns</cite></p></li>
+<li><p><strong>stop</strong> – 扫描采样延时的最大值，范围为 <cite>0-1000000 ns</cite></p></li>
+<li><p><strong>step</strong> – 扫描采样延时的步长，范围为 <cite>0-1000000 ns</cite></p></li>
+<li><p><strong>points</strong> – 可迭代的对象，如果没有给出起始、结束、步长三个参数，可以直接传入扫描列表交给 <cite>points</cite> 参数</p></li>
+<li><p><strong>repeat</strong> – 重复次数，默认为1000，只有在非反馈模式的时候有效</p></li>
+<li><p><strong>index</strong> – 延时参数的索引</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ArgumentsError</strong> – 如果传入的采样延时参数有误</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>步长必须为 <cite>5ns</cite> 的整数倍</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.sweep_voltage">
+<span class="sig-name descname"><span class="pre">sweep_voltage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.sweep_voltage" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>DC</cite> 模块设置扫描电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道，范围为 <cite>1-8</cite></p></li>
+<li><p><strong>start</strong> – 扫描电压参数的最小值, 范围为 <cite>-5-5v</cite></p></li>
+<li><p><strong>stop</strong> – 扫描电压参数的最大值, 范围为 <cite>-5-5v</cite></p></li>
+<li><p><strong>step</strong> – 扫描电压参数的步长, 范围为 <cite>-5-5v</cite></p></li>
+<li><p><strong>points</strong> – 可迭代的对象，如果没有给出起始、结束、步长三个参数，可以直接传入扫描列表交给 <cite>points</cite> 参数</p></li>
+<li><p><strong>repeat</strong> – 重复次数，默认为1000，只有在非反馈模式的时候有效</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ArgumentsError</strong> – 如果传入的采样延时参数有误</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.sweep_wave">
+<span class="sig-name descname"><span class="pre">sweep_wave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavedata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.sweep_wave" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 <cite>AWG/RF/ADDA</cite> 社会中扫描自定义波形</p>
+<p>一体机型号为 <cite>8bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>5-20</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-4</cite></p></li>
+</ul>
+</div></blockquote>
+<p>一体机型号为 <cite>30bit</cite> 时：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>Z_flux_control</cite> 通道范围为 <cite>1-80</cite></p></li>
+<li><p><cite>XY_control</cite> 通道范围为 <cite>9-40</cite></p></li>
+<li><p><cite>Readout_control</cite> 通道范围为 <cite>1-8</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><em>str</em></a>) – 模块名，可以设置为 <cite>Z_flux_control</cite> 、 <cite>XY_control</cite> 、 <cite>Read_out_control</cite></p></li>
+<li><p><strong>channel</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 通道</p></li>
+<li><p><strong>wavedata</strong> – 列表对象，迎来记录波形数据</p></li>
+<li><p><strong>points</strong> – 列表对象，记录扫描波形扫描列表</p></li>
+<li><p><strong>repeat</strong> – 重复次数，默认为1000，只有在非反馈模式的时候有效</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>InvalidValueError</strong> – 一体机位数既不是8比特也不是30比特</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#TypeError" title="(在 Python v3.7)"><strong>TypeError</strong></a> – 传入的 <cite>points</cite> 参数不为列表</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.bind_sweep">
+<span class="sig-name descname"><span class="pre">bind_sweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">nums</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.bind_sweep" title="永久链接至目标">¶</a></dt>
+<dd><p>绑定扫描参数，该方法用来同步扫描参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*nums</strong> – 连续的数组，排序后数据的间隙值必须为1, 列如 <cite>[1,2,3,4]</cite></p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>SweepBindError</strong> – 如果排序后数组间隙值不为1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Instrument.multiple_sweep">
+<span class="sig-name descname"><span class="pre">multiple_sweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.multiple_sweep" title="永久链接至目标">¶</a></dt>
+<dd><p>扫描参数功能，目的让一体机的非反馈模式运行</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>repeat</strong> – 重复次数</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.</span></span><span class="sig-name descname"><span class="pre">Qaio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27017</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.instrument_aio.Instrument"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.instrument_aio.Instrument</span></code></a></p>
+<p>一体机使用封装接口类</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unit_type</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 一体机类型</p></li>
+<li><p><strong>ip</strong> – IP 地址</p></li>
+<li><p><strong>port</strong> – 端口号</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.DC_set">
+<span class="sig-name descname"><span class="pre">DC_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">voltage</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.DC_set" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 DC 模块电压值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – 通道</p></li>
+<li><p><strong>voltage</strong> – 电压值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.DC_output_on">
+<span class="sig-name descname"><span class="pre">DC_output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">channels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.DC_output_on" title="永久链接至目标">¶</a></dt>
+<dd><p>打开 DC 模块指定通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*channels</strong> – 通道</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.DC_output_off">
+<span class="sig-name descname"><span class="pre">DC_output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">channels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.DC_output_off" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭 DC 模块指定通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*channels</strong> – 通道</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.AWG_set">
+<span class="sig-name descname"><span class="pre">AWG_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trig_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Sine" title="pyQCat.instrument.qaio.Sine"><span class="pre">pyQCat.instrument.qaio.Sine</span></a><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Square" title="pyQCat.instrument.qaio.Square"><span class="pre">pyQCat.instrument.qaio.Square</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.AWG_set" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 AWG 模块参数设置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – 通道</p></li>
+<li><p><strong>period</strong> – 周期</p></li>
+<li><p><strong>trig_mode</strong> – 触发模式</p></li>
+<li><p><strong>delay</strong> – 触发延时</p></li>
+<li><p><strong>wave</strong> – 波形</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#TypeError" title="(在 Python v3.7)"><strong>TypeError</strong></a> – wave 只可以为 Sine、 Square、List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.AWG_output_on">
+<span class="sig-name descname"><span class="pre">AWG_output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">channels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.AWG_output_on" title="永久链接至目标">¶</a></dt>
+<dd><p>AWG 输出通道开启</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*channels</strong> – 通道值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.AWG_output_off">
+<span class="sig-name descname"><span class="pre">AWG_output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">channels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.AWG_output_off" title="永久链接至目标">¶</a></dt>
+<dd><p>AWG 输出通道关闭</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*channels</strong> – 通道值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.RF_set">
+<span class="sig-name descname"><span class="pre">RF_set</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.RF_set" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 RF 模块参数设置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>period</strong> – 周期</p></li>
+<li><p><strong>trig_mode</strong> – 触发模式</p></li>
+<li><p><strong>delay</strong> – 触发延时</p></li>
+<li><p><strong>freq</strong> – 频率</p></li>
+<li><p><strong>IF</strong> – 中频</p></li>
+<li><p><strong>power</strong> – 功率</p></li>
+<li><p><strong>wave</strong> – 波形</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#TypeError" title="(在 Python v3.7)"><strong>TypeError</strong></a> – wave 只可以为 Sine、List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.RF_output_on">
+<span class="sig-name descname"><span class="pre">RF_output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">channels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.RF_output_on" title="永久链接至目标">¶</a></dt>
+<dd><p>RF 输出通道开启</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*channels</strong> – 通道值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.RF_output_off">
+<span class="sig-name descname"><span class="pre">RF_output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">channels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.RF_output_off" title="永久链接至目标">¶</a></dt>
+<dd><p>RF 输出通道关闭</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*channels</strong> – 通道值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.TO_set">
+<span class="sig-name descname"><span class="pre">TO_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trig_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.TO_set" title="永久链接至目标">¶</a></dt>
+<dd><p>一体机 TO 模块参数设置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – 通道</p></li>
+<li><p><strong>period</strong> – 周期</p></li>
+<li><p><strong>trig_mode</strong> – 触发模式</p></li>
+<li><p><strong>width</strong> – 宽度</p></li>
+<li><p><strong>delay</strong> – 触发延时</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.TO_output_on">
+<span class="sig-name descname"><span class="pre">TO_output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">channels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.TO_output_on" title="永久链接至目标">¶</a></dt>
+<dd><p>TO 输出通道开启</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*channels</strong> – 通道值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.TO_output_off">
+<span class="sig-name descname"><span class="pre">TO_output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">channels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.TO_output_off" title="永久链接至目标">¶</a></dt>
+<dd><p>TO 输出通道关闭</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>*channels</strong> – 通道值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.instrument_output_on">
+<span class="sig-name descname"><span class="pre">instrument_output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DC</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AWG</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RF</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TO</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.instrument_output_on" title="永久链接至目标">¶</a></dt>
+<dd><p>设备输出通道开启，同时启动多个模块通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DC</strong> – DC 模块指定通道</p></li>
+<li><p><strong>AWG</strong> – AWG 模块指定通道</p></li>
+<li><p><strong>RF</strong> – RF 模块指定通道</p></li>
+<li><p><strong>TO</strong> – TO 模块指定通道</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.instrument_output_off">
+<span class="sig-name descname"><span class="pre">instrument_output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DC</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AWG</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RF</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TO</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.instrument_output_off" title="永久链接至目标">¶</a></dt>
+<dd><p>设备输出通道关闭，同时关闭多个模块通道</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>DC</strong> – DC 模块指定通道</p></li>
+<li><p><strong>AWG</strong> – AWG 模块指定通道</p></li>
+<li><p><strong>RF</strong> – RF 模块指定通道</p></li>
+<li><p><strong>TO</strong> – TO 模块指定通道</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.check_mic_name">
+<span class="sig-name descname"><span class="pre">check_mic_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.check_mic_name" title="永久链接至目标">¶</a></dt>
+<dd><p>检查一体机指定通道对应的模块名</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>channel</strong> – 通道值</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>一体机模块名称，可能为 <cite>Readout_control</cite> 、 <cite>XY_control</cite></p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.ACQ_set">
+<span class="sig-name descname"><span class="pre">ACQ_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_delay</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_att</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.ACQ_set" title="永久链接至目标">¶</a></dt>
+<dd><p>ACQ 模块参数设置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> – 通道值</p></li>
+<li><p><strong>sample_delay</strong> – 采样延时</p></li>
+<li><p><strong>sample_width</strong> – 采样带宽</p></li>
+<li><p><strong>power_att</strong> – 功率参数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.set_multiple_IF">
+<span class="sig-name descname"><span class="pre">set_multiple_IF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">IF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.set_multiple_IF" title="永久链接至目标">¶</a></dt>
+<dd><p>设置扫描中频 IF</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*IF</strong> – 中频</p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.set_multiple_index">
+<span class="sig-name descname"><span class="pre">set_multiple_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><span class="pre">list</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.set_multiple_index" title="永久链接至目标">¶</a></dt>
+<dd><p>设置扫描范围</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – 设置开启和结束索引</p></li>
+<li><p><strong>channel</strong> – 通道值</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Usage::</dt><dd><p>&gt;&gt;&gt;experiment = Qaio()
+&gt;&gt;&gt;experiment.set_multiple_index([0, 1500], [100, 900], channel=1)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.register" title="永久链接至目标">¶</a></dt>
+<dd><p>注册实验，将扫描参数合并，将实验数据封装为 <cite>ExperimentDoc</cite> 保存至数据库中</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>数据库映射类 <cite>ExperimentDoc</cite> 的id值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.Qaio.non_feedback_run">
+<span class="sig-name descname"><span class="pre">non_feedback_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amp_phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I_Q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Qaio.non_feedback_run" title="永久链接至目标">¶</a></dt>
+<dd><p>非反馈模式运行接口</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amp_phase</strong> – 1 表示开启 <code class="docutils literal notranslate"><span class="pre">amp-phase</span></code> 数据类型， 0表示关闭</p></li>
+<li><p><strong>I_Q</strong> – 1 表示开启 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 数据类型， 0表示关闭</p></li>
+<li><p><strong>file_flag</strong> – </p></li>
+<li><p><strong>label</strong> – 实验标签，用于生成结果路径</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.instrument.Sine">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.</span></span><span class="sig-name descname"><span class="pre">Sine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Sine" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Structure" title="pyQCat.instrument.qaio.Structure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.qaio.Structure</span></code></a></p>
+<p>正弦波</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.instrument.Square">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.</span></span><span class="sig-name descname"><span class="pre">Square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Square" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Structure" title="pyQCat.instrument.qaio.Structure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.qaio.Structure</span></code></a></p>
+<p>方波</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.instrument.NonFeedbackAnalysis">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.</span></span><span class="sig-name descname"><span class="pre">NonFeedbackAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.NonFeedbackAnalysis" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>一体机非反馈模式结果分析类</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>experiment_id</strong> – 实验数据库映射类 ExperimentDoc 的 id 值</p></li>
+<li><p><strong>path</strong> – 结果保存路径</p></li>
+<li><p><strong>I</strong> – 实验结果 I 值</p></li>
+<li><p><strong>Q</strong> – 实验结果 Q 值</p></li>
+<li><p><strong>amp</strong> – 实验结果 amp 值</p></li>
+<li><p><strong>phase</strong> – 实验结果 phase 值</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.NonFeedbackAnalysis.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.NonFeedbackAnalysis.run" title="永久链接至目标">¶</a></dt>
+<dd><p>每个实验必须要重写的函数接口,run函数中包含实验中所有的数据处理函数，并且在每个run函数中必须有get_experiment_data函数</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.NonFeedbackAnalysis.data_manage">
+<span class="sig-name descname"><span class="pre">data_manage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.NonFeedbackAnalysis.data_manage" title="永久链接至目标">¶</a></dt>
+<dd><p>实验结束后的数据处理函数，重载之后不需调用</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.NonFeedbackAnalysis.data_manage_single">
+<span class="sig-name descname"><span class="pre">data_manage_single</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.NonFeedbackAnalysis.data_manage_single" title="永久链接至目标">¶</a></dt>
+<dd><p>单次实验的结果处理函数，根据实验选择是否重载，重载之后不需调用</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.NonFeedbackAnalysis.get_experiment_data">
+<span class="sig-name descname"><span class="pre">get_experiment_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.NonFeedbackAnalysis.get_experiment_data" title="永久链接至目标">¶</a></dt>
+<dd><p>从数据库获取实验结果的函数，run函数里面必须调用</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.NonFeedbackAnalysis.get_sweep_points">
+<span class="sig-name descname"><span class="pre">get_sweep_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sweep_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.NonFeedbackAnalysis.get_sweep_points" title="永久链接至目标">¶</a></dt>
+<dd><p>从数据库获取遍历值的函数，根据实验需求选择是否调用</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="stubs/pyQCat.instrument.Instrument.html" class="btn btn-neutral float-right" title="pyQCat.instrument.Instrument" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../flow/stubs/pyQCat.flow.common.html" class="btn btn-neutral float-left" title="pyQCat.flow.common" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

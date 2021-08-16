@@ -1,0 +1,6 @@
+﻿pyQCat.flow.qubit\_freq\_preliminary\_node
+==========================================
+
+.. currentmodule:: pyQCat.flow
+
+.. autofunction:: qubit_freq_preliminary_node

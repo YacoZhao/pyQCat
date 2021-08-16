@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.tool.param_fit &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.tool.parse_yaml" href="pyQCat.tool.parse_yaml.html" />
+    <link rel="prev" title="pyQCat.tool.drift" href="pyQCat.tool.drift.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">pyQCat.detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">pyQCat.experiment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">pyQCat.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">pyQCat.instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">pyQCat.pulse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">pyQCat.qubit</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">pyQCat.tool</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.formula.html">pyQCat.tool.formula</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.drift.html">pyQCat.tool.drift</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pyQCat.tool.param_fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.parse_yaml.html">pyQCat.tool.parse_yaml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.smooth.html">pyQCat.tool.smooth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.iqprobability.html">pyQCat.tool.iqprobability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.NM_bnd.html">pyQCat.tool.NM_bnd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.parsefile.html">pyQCat.tool.parsefile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.plot_data.html">pyQCat.tool.plot_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.resonator_fit_calibration.html">pyQCat.tool.resonator_fit_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.savefile.html">pyQCat.tool.savefile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.set_config.html">pyQCat.tool.set_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.wrappers.html">pyQCat.tool.wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">pyQCat.parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">pyQCat.tool</a> &raquo;</li>
+        
+      <li>pyQCat.tool.param_fit</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/api/tool/stubs/pyQCat.tool.param_fit.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.tool.param_fit">
+<span id="pyqcat-tool-param-fit"></span><h1>pyQCat.tool.param_fit<a class="headerlink" href="#module-pyQCat.tool.param_fit" title="永久链接至标题">¶</a></h1>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.RMSE" title="pyQCat.tool.param_fit.RMSE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RMSE</span></code></a>(x, y1, y2)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.amp2cavity_freq_fit" title="pyQCat.tool.param_fit.amp2cavity_freq_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp2cavity_freq_fit</span></code></a>(x, y, p)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.cosine_fit" title="pyQCat.tool.param_fit.cosine_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cosine_fit</span></code></a>(xdata, ydata[, iter_count, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.curve_fit_step" title="pyQCat.tool.param_fit.curve_fit_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curve_fit_step</span></code></a>(x, y, p0, func, num, bounds)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.freq_flux_fit" title="pyQCat.tool.param_fit.freq_flux_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freq_flux_fit</span></code></a>(x, y)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.least_sq_fit_step" title="pyQCat.tool.param_fit.least_sq_fit_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">least_sq_fit_step</span></code></a>(xdata, ydata, p0, func)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.linear_fit" title="pyQCat.tool.param_fit.linear_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linear_fit</span></code></a>(x, y, k, b)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.natural_exp_fit" title="pyQCat.tool.param_fit.natural_exp_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">natural_exp_fit</span></code></a>(x, y, p0[, iter_count, bounds])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.quadratic_fit" title="pyQCat.tool.param_fit.quadratic_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quadratic_fit</span></code></a>(x, y, a, b, c)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.ramsey_photon_fit" title="pyQCat.tool.param_fit.ramsey_photon_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ramsey_photon_fit</span></code></a>(xdata, ydata, p0)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.residuals" title="pyQCat.tool.param_fit.residuals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">residuals</span></code></a>(p, y, x)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.set_default" title="pyQCat.tool.param_fit.set_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_default</span></code></a>(x, y)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.sine_damping_fit" title="pyQCat.tool.param_fit.sine_damping_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sine_damping_fit</span></code></a>(x, y)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.param_fit.html#pyQCat.tool.param_fit.skewed_lorentzian_fit" title="pyQCat.tool.param_fit.skewed_lorentzian_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skewed_lorentzian_fit</span></code></a>(x, y[, p1, p0])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.natural_exp_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">natural_exp_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">inf,</span> <span class="pre">inf)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.natural_exp_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.freq_flux_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">freq_flux_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.freq_flux_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.sine_damping_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">sine_damping_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.sine_damping_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.set_default">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">set_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.set_default" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.residuals">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">residuals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.residuals" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.RMSE">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">RMSE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.RMSE" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.ramsey_photon_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">ramsey_photon_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.ramsey_photon_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.cosine_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">cosine_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter_count</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guess_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guess_phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guess_amplitude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">guess_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">inf,</span> <span class="pre">inf)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.cosine_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.curve_fit_step">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">curve_fit_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.curve_fit_step" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.skewed_lorentzian_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">skewed_lorentzian_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.skewed_lorentzian_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.amp2cavity_freq_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">amp2cavity_freq_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.amp2cavity_freq_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.least_sq_fit_step">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">least_sq_fit_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xdata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ydata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.least_sq_fit_step" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.quadratic_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">quadratic_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.quadratic_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.linear_fit">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.param_fit.</span></span><span class="sig-name descname"><span class="pre">linear_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.linear_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.tool.parse_yaml.html" class="btn btn-neutral float-right" title="pyQCat.tool.parse_yaml" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.tool.drift.html" class="btn btn-neutral float-left" title="pyQCat.tool.drift" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

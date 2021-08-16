@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>结构及数据流程 &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="API 文档" href="../api/index.html" />
+    <link rel="prev" title="开发指南" href="../community/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">开发指南</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">结构及数据流程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pyqcat">pyQCat组织结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">pyQCat数据传递流程</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>结构及数据流程</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/dataset/index.md.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>结构及数据流程<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="pyqcat">
+<h2>pyQCat组织结构<a class="headerlink" href="#pyqcat" title="永久链接至标题">¶</a></h2>
+<p><strong>pyQCat</strong> 框架</p>
+<p><img alt="image-20210810115026442" src="../_images/image-20210810115026442.png" /></p>
+<p><strong>pyQCat</strong> 主要有实验包<code class="docutils literal notranslate"><span class="pre">experiment</span></code>、数据库映射包<code class="docutils literal notranslate"><span class="pre">database</span></code>、实验流程执行包<code class="docutils literal notranslate"><span class="pre">flow</span></code>、波形包<code class="docutils literal notranslate"><span class="pre">pulse</span></code>、比特包<code class="docutils literal notranslate"><span class="pre">qubit</span></code>、设备包<code class="docutils literal notranslate"><span class="pre">instrument</span></code>以及辅助工具<code class="docutils literal notranslate"><span class="pre">tool</span></code>、<code class="docutils literal notranslate"><span class="pre">gate</span></code>、<code class="docutils literal notranslate"><span class="pre">log</span></code>、<code class="docutils literal notranslate"><span class="pre">errors</span></code>、<code class="docutils literal notranslate"><span class="pre">parameters</span></code>等一些辅助包构成，基本结构如下图所示。</p>
+<p><img alt="image-20210810101822563" src="https://gitee.com/espero/images/raw/master/img/image-20210810101822563.png" /></p>
+<ul class="simple">
+<li><p><strong>experiment：</strong> 此包中封装了各种比特实验的接口</p></li>
+<li><p><strong>database：</strong> 此包中封装了各种实体类的数据库映射，主要有<code class="docutils literal notranslate"><span class="pre">ExperimentDoc</span></code>、<code class="docutils literal notranslate"><span class="pre">QubitStoreDoc</span></code>、<code class="docutils literal notranslate"><span class="pre">MeasureAIODoc</span></code>、<code class="docutils literal notranslate"><span class="pre">MeasureResultDoc</span></code>等</p></li>
+<li><p><strong>qubit：</strong> 此包中定义了比特实体类，包含各种待校准属性参数，如读取频率、读取功率、驱动频率、驱动功率等</p></li>
+<li><p><strong>instrument：</strong> 此包中定义了实验所用仪器远程控制的封装类，使用此包中的接口可以实现远程控制设备施加指定的波形</p></li>
+<li><p><strong>flow：</strong> 此包对单比特表征流程以及多比特实验等流程进行了组合，用户可以根据<code class="docutils literal notranslate"><span class="pre">yaml</span></code>文件灵活选择需要执行的实验接口</p></li>
+<li><p><strong>pulse：</strong> 此包封装了各种实验所需的波形实体类，同时包含波形校准的工具类<code class="docutils literal notranslate"><span class="pre">PulseCorrection</span></code></p></li>
+<li><p><strong>tool：</strong> 此包定义了各种流程执行工具，典型有绘图功能、文件存储功能、集成算法、解析文件功能、定义公式等等</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>pyQCat数据传递流程<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>根据具体实验方法原理，由用户定义实验参数，结合数据库中配置的默认实验信息，将实验参数封装到<code class="docutils literal notranslate"><span class="pre">MeasureAIODoc</span></code>数据库映射类中，然后统一组合成<code class="docutils literal notranslate"><span class="pre">ExperimentDoc</span></code>存储至数据库，最后由上位机获取<code class="docutils literal notranslate"><span class="pre">ExperimentDoc</span></code>执行实验，实验运行结果存放在<code class="docutils literal notranslate"><span class="pre">MeasureResultDoc</span></code>中同样存储至数据库，最终还是由<code class="docutils literal notranslate"><span class="pre">pyQCat</span></code>从数据库中获取实验结果，进行拟合、分析、绘图、保存等一系列操作。</p>
+<p><img alt="image-20210810101933160" src="https://gitee.com/espero/images/raw/master/img/image-20210810101933160.png" /></p>
+<p><strong>下图展示了典型类对应关系，详细内容可见API文档</strong></p>
+<p><img alt="image-20210520103441097" src="../_images/image-20210520103441097.png" /></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../api/index.html" class="btn btn-neutral float-right" title="API 文档" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../community/index.html" class="btn btn-neutral float-left" title="开发指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

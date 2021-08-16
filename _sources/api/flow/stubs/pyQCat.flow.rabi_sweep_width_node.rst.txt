@@ -1,0 +1,6 @@
+﻿pyQCat.flow.rabi\_sweep\_width\_node
+====================================
+
+.. currentmodule:: pyQCat.flow
+
+.. autofunction:: rabi_sweep_width_node

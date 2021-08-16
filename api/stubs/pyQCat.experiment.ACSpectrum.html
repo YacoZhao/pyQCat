@@ -1,0 +1,613 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.experiment.ACSpectrum &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="pyQCat.experiment.DCSpectrum" href="pyQCat.experiment.DCSpectrum.html" />
+    <link rel="prev" title="pyQCat.experiment.T2" href="pyQCat.experiment.T2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../detection/index.html">pyQCat.detection</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../experiment/index.html">pyQCat.experiment</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../experiment/index.html#base-experiment">Base Experiment</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../experiment/index.html#single-qubit-experiments">Single Qubit Experiments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../experiment/index.html#multiple-qubit-experiments">Multiple Qubit experiments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../flow/index.html">pyQCat.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../instrument/index.html">pyQCat.instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pulse/index.html">pyQCat.pulse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qubit/index.html">pyQCat.qubit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tool/index.html">pyQCat.tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../parameters.html">pyQCat.parameters</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../experiment/index.html">pyQCat.experiment</a> &raquo;</li>
+        
+      <li>pyQCat.experiment.ACSpectrum</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/api/stubs/pyQCat.experiment.ACSpectrum.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-experiment-acspectrum">
+<h1>pyQCat.experiment.ACSpectrum<a class="headerlink" href="#pyqcat-experiment-acspectrum" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.experiment.</span></span><span class="sig-name descname"><span class="pre">ACSpectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../instrument/stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.instrument_aio.Instrument"><span class="pre">pyQCat.instrument.instrument_aio.Instrument</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2_bound</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc_freq_limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.base_pulse.PulseCorrection"><span class="pre">pyQCat.pulse.base_pulse.PulseCorrection</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.IQdiscriminator" title="pyQCat.tool.iqprobability.IQdiscriminator"><span class="pre">pyQCat.tool.iqprobability.IQdiscriminator</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p><cite>AC</cite> 谱实验</p>
+<p>AC谱实验用于计算 <cite>flux pulse</cite> 的脉冲幅值对比特频率的调制关系。
+在判断比特是否可调的实验中，我们通过 <cite>DC flux</cite> 可以对读取腔产生调制推断出比特频率可调，
+所以这里通过 <cite>flux pulse</cite> ，研究 <cite>Z</cite> 线上幅值对 <cite>qubit</cite> 频率的调制情况。实验波形和
+<cite>Ramsey</cite> 实验类似，在两个 <cite>π/2pulse</cite> 之间间隔一段时间让其演化，在这里不同的是中间演
+化期间我们在 <cite>Z</cite> 线路上施加了一个方波，扫描不同方波的幅值，我们就可以得到 <cite>flux pulse</cite>
+对比特频率的调节关系。实验执行时，可以 <strong>不断更新所设fringe的频率，保证ramsey
+振荡频率始终处于一小段区间，这样是为了保证振荡频率不会超出采样定理所决定的最高频率</strong> 。
+用公式拟合 <cite>flux pulse</cite> 幅度和比特频率的对应关系，即可获取 <cite>AC</cite> 谱参数。</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.inst">
+<span class="sig-name descname"><span class="pre">inst</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.inst" title="永久链接至目标">¶</a></dt>
+<dd><p>设备对象，封装了实验相关参数的数据库映射对象，集成了各种数据交互操作</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../instrument/stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.Instrument">Instrument</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.qubit">
+<span class="sig-name descname"><span class="pre">qubit</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>量子比特对象，指明当前实验对象</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.Qubit">Qubit</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.init_fringe">
+<span class="sig-name descname"><span class="pre">init_fringe</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.init_fringe" title="永久链接至目标">¶</a></dt>
+<dd><p>初始 <cite>fringe</cite> 频率</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.delay_list">
+<span class="sig-name descname"><span class="pre">delay_list</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.delay_list" title="永久链接至目标">¶</a></dt>
+<dd><p>延时扫描列表</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Union[List, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.z_amp_list">
+<span class="sig-name descname"><span class="pre">z_amp_list</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.z_amp_list" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>flux pulse</cite> 脉冲幅值扫描列表，即 <cite>Z</cite> 线幅值·</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Union[List, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.T2_bound">
+<span class="sig-name descname"><span class="pre">T2_bound</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.T2_bound" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>T2</cite> 时间上限，对 <cite>T2</cite> 时间进行一定的限制</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.freq_bound">
+<span class="sig-name descname"><span class="pre">freq_bound</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.freq_bound" title="永久链接至目标">¶</a></dt>
+<dd><p>当比特比特评率调制范围超出这个值，将会停止实验</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.osc_freq_limit">
+<span class="sig-name descname"><span class="pre">osc_freq_limit</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.osc_freq_limit" title="永久链接至目标">¶</a></dt>
+<dd><p>拟合频率误差限制，对每次Ramsey实验的拟合结果进行评估</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.correct_dc">
+<span class="sig-name descname"><span class="pre">correct_dc</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.correct_dc" title="永久链接至目标">¶</a></dt>
+<dd><p>最终施加到比特上的电压，字典的键表示设备通道，字典的值为施加的电压值</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[Dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.compensate">
+<span class="sig-name descname"><span class="pre">compensate</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.compensate" title="永久链接至目标">¶</a></dt>
+<dd><p>脉冲校准对象，用于加载到比特对象上，默认为空，当设置参数时，它意味着 <cite>Z</cite> 通道打开
+并且进行波形畸变、延时等修正</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.PulseCorrection">PulseCorrection</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.discriminator">
+<span class="sig-name descname"><span class="pre">discriminator</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.discriminator" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>IQ</cite> 分类器，用来将实验测量结果进行分类
+从而以不同状态的概率呈现，如 <cite>P0-P1</cite> 。如果此参数为空，则会用 <cite>amp-phase</cite> 的方式展示实验测试结果</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[<a class="reference internal" href="../tool/index.html#pyQCat.tool.IQdiscriminator" title="pyQCat.tool.IQdiscriminator">IQdiscriminator</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.repeat">
+<span class="sig-name descname"><span class="pre">repeat</span></span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.repeat" title="永久链接至目标">¶</a></dt>
+<dd><p>实验重复次数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../instrument/stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.instrument_aio.Instrument"><span class="pre">pyQCat.instrument.instrument_aio.Instrument</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2_bound</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc_freq_limit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.base_pulse.PulseCorrection"><span class="pre">pyQCat.pulse.base_pulse.PulseCorrection</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.IQdiscriminator" title="pyQCat.tool.iqprobability.IQdiscriminator"><span class="pre">pyQCat.tool.iqprobability.IQdiscriminator</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.7/library/constants.html#None" title="(在 Python v3.7)"><span class="pre">None</span></a><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.__init__" title="永久链接至目标">¶</a></dt>
+<dd><p>Initialize method</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.__init__" title="pyQCat.experiment.ACSpectrum.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(inst, qubit, init_fringe, …[, …])</p></td>
+<td><p>Initialize method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.fit" title="pyQCat.experiment.ACSpectrum.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>()</p></td>
+<td><p>调制谱拟合，获取拟合参数</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.guess_next_freq" title="pyQCat.experiment.ACSpectrum.guess_next_freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">guess_next_freq</span></code></a>(index, z_amp)</p></td>
+<td><p>预测下一次比特频率</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.plot" title="pyQCat.experiment.ACSpectrum.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>()</p></td>
+<td><p>绘制 <cite>amp-f10</cite> 之间的对应关系图</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.run" title="pyQCat.experiment.ACSpectrum.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(*args, **kwargs)</p></td>
+<td><p><cite>AC</cite> 谱实验运行接口</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.run_ramsey" title="pyQCat.experiment.ACSpectrum.run_ramsey"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_ramsey</span></code></a>(ramsey_exp, fringe, IF, fd[, z_amp])</p></td>
+<td><p>执行单次 <cite>Ramsey</cite> 实验</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.solve_equations" title="pyQCat.experiment.ACSpectrum.solve_equations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve_equations</span></code></a>(A, y)</p></td>
+<td><p>求一元二次方程组的系数</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.update_fringe" title="pyQCat.experiment.ACSpectrum.update_fringe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_fringe</span></code></a>(index, IF, fd, z_amp)</p></td>
+<td><p>更新 <cite>fringe</cite> 频率</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.ACSpectrum.validate_result" title="pyQCat.experiment.ACSpectrum.validate_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_result</span></code></a>(fd, f10[, T2])</p></td>
+<td><p><cite>AC/DC</cite> 实验流程的截断条件</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.7/library/constants.html#None" title="(在 Python v3.7)"><span class="pre">None</span></a><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.run" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>AC</cite> 谱实验运行接口</p>
+<p>实验过程中前三个点的 <cite>fringe</cite> 频率保持不变，因为这个时候实验结果太少，不足以了解调制谱信息；
+后面的点根据前三次实验采集的比特频率 <cite>fq</cite> 和幅值 <cite>zamp</cite> 映射数据，用二次函数拟合的方式
+预测在下一次实验时的比特频率。有了预测的比特频率，我们就可以动态的调整 <cite>fringe</cite> 频率，
+尽可能让拟合频率等于我们设置的 <cite>fringe</cite> 频率。</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyQCat.experiment.ac_spectrum</span> <span class="kn">import</span> <span class="n">ACSpectrum</span>
+<span class="kn">from</span> <span class="nn">pyQCat.parameters</span> <span class="kn">import</span> <span class="n">get_parameters</span><span class="p">,</span> <span class="n">corrected_dc</span>
+<span class="kn">from</span> <span class="nn">pyQCat.tool.utlis</span> <span class="kn">import</span> <span class="n">qarange</span><span class="p">,</span> <span class="n">connect_server</span><span class="p">,</span> <span class="n">disconnect_server</span>
+
+
+<span class="k">def</span> <span class="nf">test_ac_spectrum</span><span class="p">(</span><span class="n">bit</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">fringe</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">delay_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">z_amp_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="n">inst</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span>
+    <span class="n">qubit</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;qubit&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">compensate</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;compensate&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">dc</span> <span class="o">=</span> <span class="n">corrected_dc</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">sweet_qubit</span><span class="o">=</span><span class="n">bit</span><span class="p">)</span>
+    <span class="n">dcm</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;dcm&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">ac_exp</span> <span class="o">=</span> <span class="n">ACSpectrum</span><span class="p">(</span><span class="n">inst</span><span class="p">,</span> <span class="n">qubit</span><span class="p">,</span> <span class="n">fringe</span><span class="p">,</span> <span class="n">delay_list</span><span class="p">,</span> <span class="n">z_amp_list</span><span class="p">,</span> <span class="n">correct_dc</span><span class="o">=</span><span class="n">dc</span><span class="p">,</span> <span class="n">compensate</span><span class="o">=</span><span class="n">compensate</span><span class="p">,</span>
+                        <span class="n">discriminator</span><span class="o">=</span><span class="n">dcm</span><span class="p">)</span>
+    <span class="n">ac_exp</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">connect_server</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">)</span>
+    <span class="n">delay</span> <span class="o">=</span> <span class="n">qarange</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">fringe</span> <span class="o">=</span> <span class="o">-</span><span class="mi">30</span>
+    <span class="n">zamp_list</span> <span class="o">=</span> <span class="n">qarange</span><span class="p">(</span><span class="o">-</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">)</span>
+    <span class="n">test_ac_spectrum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">fringe</span><span class="p">,</span> <span class="n">delay</span><span class="p">,</span> <span class="n">zamp_list</span><span class="p">)</span>
+    <span class="n">disconnect_server</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.run_ramsey">
+<span class="sig-name descname"><span class="pre">run_ramsey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">ramsey_exp:</span> <span class="pre">pyQCat.experiment.ramsey.Ramsey</span></em>, <em class="sig-param"><span class="pre">fringe:</span> <span class="pre">float</span></em>, <em class="sig-param"><span class="pre">IF:</span> <span class="pre">float</span></em>, <em class="sig-param"><span class="pre">fd:</span> <span class="pre">float</span></em>, <em class="sig-param"><span class="pre">z_amp:</span> <span class="pre">float</span> <span class="pre">=</span> <span class="pre">0)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'float'&gt;</span></em>, <em class="sig-param"><span class="pre">&lt;class</span> <span class="pre">'float'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.run_ramsey" title="永久链接至目标">¶</a></dt>
+<dd><p>执行单次 <cite>Ramsey</cite> 实验</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ramsey_exp</strong> – <cite>Ramsey</cite> 实验对象</p></li>
+<li><p><strong>fringe</strong> – <cite>Ramsey</cite> 实验的 <cite>fringe</cite> 参数</p></li>
+<li><p><strong>IF</strong> – 中频频率，默认为 <cite>466.667MHz</cite></p></li>
+<li><p><strong>fd</strong> – 比特驱动频率</p></li>
+<li><p><strong>z_amp</strong> – <cite>Z</cite> 线脉冲幅值</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><cite>osc_freq</cite> 拟合频率, <cite>f10</cite> 计算的比特频率</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.validate_result">
+<span class="sig-name descname"><span class="pre">validate_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">fd:</span> <span class="pre">float</span></em>, <em class="sig-param"><span class="pre">f10:</span> <span class="pre">float</span></em>, <em class="sig-param"><span class="pre">T2:</span> <span class="pre">Optional[float]</span> <span class="pre">=</span> <span class="pre">None)</span> <span class="pre">-&gt;</span> <span class="pre">(&lt;class</span> <span class="pre">'bool'&gt;</span></em>, <em class="sig-param"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.validate_result" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>AC/DC</cite> 实验流程的截断条件</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>当 <cite>T2</cite> 超出限制，因为 <cite>T2</cite> 时间拟合不准，此项约束暂时开放</p></li>
+<li><p>当前比特频率与初始比特频率差异超出频率限制，默认为 <cite>800MHz</cite></p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>T2</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – <cite>T2</cite> 时间</p></li>
+<li><p><strong>fd</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 初始比特频率/比特初始驱动频率</p></li>
+<li><p><strong>f10</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 当前比特频率</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><cite>True</cite> 表示校验成功，继续执行下一轮 <cite>Ramsey</cite> 实验， <cite>Flase</cite> 表示校验失败</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.solve_equations">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">solve_equations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.solve_equations" title="永久链接至目标">¶</a></dt>
+<dd><p>求一元二次方程组的系数</p>
+<div class="math notranslate nohighlight">
+\[y = ax^2 + bx + c\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><em>list</em></a>) – 三对坐标的x值</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><em>list</em></a>) – 三对坐标的y值</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>一元二次方程的系数，用于预测下一次 <cite>Ramsey</cite> 实验调制的比特频率</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>a, b, c (Tuple)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.7/library/constants.html#None" title="(在 Python v3.7)"><span class="pre">None</span></a><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.plot" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制 <cite>amp-f10</cite> 之间的对应关系图</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">List</span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.fit" title="永久链接至目标">¶</a></dt>
+<dd><p>调制谱拟合，获取拟合参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>调制谱参数
+- fc: 调制谱参数
+- M: 调制谱参数
+- offset: 调制谱参数
+- d: 调制谱参数</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p>fq_max</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.update_fringe">
+<span class="sig-name descname"><span class="pre">update_fringe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">IF</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fd</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.update_fringe" title="永久链接至目标">¶</a></dt>
+<dd><p>更新 <cite>fringe</cite> 频率</p>
+<div class="math notranslate nohighlight">
+\[fringe = \left(IF - init\_fringe + fd - f\_guess\right)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – 当前 <cite>Ramsey</cite> 实验索引</p></li>
+<li><p><strong>IF</strong> – 中频</p></li>
+<li><p><strong>fd</strong> – 比特频率</p></li>
+<li><p><strong>z_amp</strong> – <cite>Z</cite> 线脉冲幅值</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>更新后的 <cite>fringe</cite> 频率</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ACSpectrum.guess_next_freq">
+<span class="sig-name descname"><span class="pre">guess_next_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><a class="headerlink" href="#pyQCat.experiment.ACSpectrum.guess_next_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>预测下一次比特频率</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – 当前 <cite>Ramsey</cite> 实验索引</p></li>
+<li><p><strong>z_amp</strong> – <cite>Z</cite> 线脉冲幅值</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>预测的比特频率</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.experiment.DCSpectrum.html" class="btn btn-neutral float-right" title="pyQCat.experiment.DCSpectrum" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.experiment.T2.html" class="btn btn-neutral float-left" title="pyQCat.experiment.T2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

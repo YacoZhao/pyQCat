@@ -1,0 +1,46 @@
+﻿pyQCat.pulse.SquareEnvelop
+==========================
+
+.. currentmodule:: pyQCat.pulse
+
+.. autoclass:: SquareEnvelop
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SquareEnvelop.__init__
+      ~SquareEnvelop.correct_ac_crosstalk
+      ~SquareEnvelop.correct_compensate
+      ~SquareEnvelop.correct_delay
+      ~SquareEnvelop.correct_distortion
+      ~SquareEnvelop.correct_pulse
+      ~SquareEnvelop.get_pulse
+      ~SquareEnvelop.get_raw_pulse
+      ~SquareEnvelop.plot
+      ~SquareEnvelop.validate_parameters
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SquareEnvelop.attach
+      ~SquareEnvelop.bit
+      ~SquareEnvelop.delay
+      ~SquareEnvelop.envelop
+      ~SquareEnvelop.id
+      ~SquareEnvelop.parameters
+      ~SquareEnvelop.pulse
+      ~SquareEnvelop.raw_pulse
+      ~SquareEnvelop.sweep
+      ~SquareEnvelop.type
+   
+   

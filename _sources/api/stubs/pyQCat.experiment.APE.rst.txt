@@ -1,0 +1,45 @@
+﻿pyQCat.experiment.APE
+=====================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: APE
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~APE.__init__
+      ~APE.acquire_pulse
+      ~APE.bind_probe_inst
+      ~APE.config_file_sys
+      ~APE.get_coincident_points_path
+      ~APE.init_readout
+      ~APE.play_pulse
+      ~APE.plot_schedule
+      ~APE.register
+      ~APE.run
+      ~APE.save_data
+      ~APE.save_parameters
+      ~APE.set_multiple_IF
+      ~APE.set_multiple_index
+      ~APE.set_readout2q_params
+      ~APE.set_readout_delay
+      ~APE.set_sweep_order
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~APE.multi_sweep
+      ~APE.one_sweep
+   
+   

@@ -1,0 +1,37 @@
+.. title:: pyQCat
+
+pyQCat
+======
+
+|LOGO|
+======
+
+pyQCat是由本源量子开发的基于python的量子比特校准和测试框架，他可以实现量子芯片的表征流程。
+
+目标是一个自动量子位测试和校准的通用框架，因此:
+
+    - 你不需要花很长时间来学习软件实现具体实验的流程；
+    - 你必须为特定的部分编写自己的代码来实现属于自己的实验。
+
+
+为了方便用户使用，pyQCat为用户提供了详细的 `API文档 <api/index.rst>`__ 。
+
+
+
+文档目录
+-------
+
+.. toctree::
+   :maxdepth: 2
+
+   start/index
+   help/help
+   user/index.md
+   community/index
+   dataset/index
+   api/index
+   changes/index
+
+.. |LOGO|  image:: ./logos/pyQCat_logo.png
+   :scale: 100 %
+   :alt: qcodes logo

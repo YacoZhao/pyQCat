@@ -1,0 +1,48 @@
+﻿pyQCat.pulse.AcquireSine
+========================
+
+.. currentmodule:: pyQCat.pulse
+
+.. autoclass:: AcquireSine
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AcquireSine.__init__
+      ~AcquireSine.correct_ac_crosstalk
+      ~AcquireSine.correct_compensate
+      ~AcquireSine.correct_delay
+      ~AcquireSine.correct_distortion
+      ~AcquireSine.correct_pulse
+      ~AcquireSine.envelop2sequence
+      ~AcquireSine.get_pulse
+      ~AcquireSine.get_raw_pulse
+      ~AcquireSine.plot
+      ~AcquireSine.step
+      ~AcquireSine.validate_parameters
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~AcquireSine.attach
+      ~AcquireSine.bit
+      ~AcquireSine.delay
+      ~AcquireSine.envelop
+      ~AcquireSine.id
+      ~AcquireSine.parameters
+      ~AcquireSine.pulse
+      ~AcquireSine.raw_pulse
+      ~AcquireSine.sweep
+      ~AcquireSine.type
+   
+   

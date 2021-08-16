@@ -1,0 +1,44 @@
+﻿pyQCat.experiment.SingleShotAnalysis
+====================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: SingleShotAnalysis
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SingleShotAnalysis.__init__
+      ~SingleShotAnalysis.analyze
+      ~SingleShotAnalysis.excute_loop
+      ~SingleShotAnalysis.get_experiment
+      ~SingleShotAnalysis.loop_control
+      ~SingleShotAnalysis.save_result
+      ~SingleShotAnalysis.single_qubit_usualness
+      ~SingleShotAnalysis.slice_result
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SingleShotAnalysis.F0
+      ~SingleShotAnalysis.F1
+      ~SingleShotAnalysis.I
+      ~SingleShotAnalysis.P0
+      ~SingleShotAnalysis.P1
+      ~SingleShotAnalysis.Q
+      ~SingleShotAnalysis.amp
+      ~SingleShotAnalysis.phase
+      ~SingleShotAnalysis.probability_list
+      ~SingleShotAnalysis.status
+   
+   

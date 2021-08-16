@@ -1,0 +1,37 @@
+﻿pyQCat.experiment.SingleShotCrossTalk
+=====================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: SingleShotCrossTalk
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SingleShotCrossTalk.__init__
+      ~SingleShotCrossTalk.acquire_pulse
+      ~SingleShotCrossTalk.bind_probe_inst
+      ~SingleShotCrossTalk.config_file_sys
+      ~SingleShotCrossTalk.init_readout
+      ~SingleShotCrossTalk.play_pulse
+      ~SingleShotCrossTalk.plot_schedule
+      ~SingleShotCrossTalk.register
+      ~SingleShotCrossTalk.run
+      ~SingleShotCrossTalk.save_data
+      ~SingleShotCrossTalk.save_parameters
+      ~SingleShotCrossTalk.set_multiple_IF
+      ~SingleShotCrossTalk.set_multiple_index
+      ~SingleShotCrossTalk.set_readout2q_params
+      ~SingleShotCrossTalk.set_readout_delay
+      ~SingleShotCrossTalk.set_sweep_order
+   
+   
+
+   
+   
+   

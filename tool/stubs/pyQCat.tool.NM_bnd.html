@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.tool.NM_bnd &mdash; pyQCat 0.0.1 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.tool.NM_bnd</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/tool/stubs/pyQCat.tool.NM_bnd.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.tool.NM_bnd">
+<span id="pyqcat-tool-nm-bnd"></span><h1>pyQCat.tool.NM_bnd<a class="headerlink" href="#module-pyQCat.tool.NM_bnd" title="永久链接至标题">¶</a></h1>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.NM_bnd.MY_OPTIMIZER" title="pyQCat.tool.NM_bnd.MY_OPTIMIZER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MY_OPTIMIZER</span></code></a>(FUN, DIM, x0, ftarget[, args, …])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param FUN</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.NM_bnd.NM_minimize" title="pyQCat.tool.NM_bnd.NM_minimize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NM_minimize</span></code></a>(func, x0[, args, callback, …])</p></td>
+<td><p>Minimization of scalar function of one or more variables using the Nelder-Mead algorithm.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.NM_bnd.NM_minimize_2" title="pyQCat.tool.NM_bnd.NM_minimize_2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NM_minimize_2</span></code></a>(func, x0[, args, ftarget, …])</p></td>
+<td><p>almost the same as NM_minimize, only make nonzdelt as input and add output of sim :param func: :param x0: :param nonzdelt: :param callback: :param maxiter: :param maxfev: :param disp: :param return_all: :param initial_simplex: :param xatol: :param fatol: :param adaptive: :return:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.NM_bnd.NM_minimize_bnd" title="pyQCat.tool.NM_bnd.NM_minimize_bnd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NM_minimize_bnd</span></code></a>(fun, x0[, args, LB, UB, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.NM_bnd.NM_minimize_bnd_2" title="pyQCat.tool.NM_bnd.NM_minimize_bnd_2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NM_minimize_bnd_2</span></code></a>(fun, x0[, args, ftarget, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.NM_bnd.intrafun" title="pyQCat.tool.NM_bnd.intrafun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intrafun</span></code></a>(x, *p)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.NM_bnd.range_2Darray" title="pyQCat.tool.NM_bnd.range_2Darray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">range_2Darray</span></code></a>(x)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.NM_bnd.xtransform" title="pyQCat.tool.NM_bnd.xtransform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xtransform</span></code></a>(x, p)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param x</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.NM_bnd.NM_minimize">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.NM_bnd.</span></span><span class="sig-name descname"><span class="pre">NM_minimize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxfev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_simplex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xatol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fatol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.NM_bnd.NM_minimize" title="永久链接至目标">¶</a></dt>
+<dd><p>Minimization of scalar function of one or more variables using the
+Nelder-Mead algorithm.</p>
+<dl class="simple">
+<dt>disp<span class="classifier">bool</span></dt><dd><p>Set to True to print convergence messages.</p>
+</dd>
+<dt>maxiter, maxfev<span class="classifier">int</span></dt><dd><p>Maximum allowed number of iterations and function evaluations.
+Will default to <code class="docutils literal notranslate"><span class="pre">N*200</span></code>, where <code class="docutils literal notranslate"><span class="pre">N</span></code> is the number of
+variables, if neither <cite>maxiter</cite> or <cite>maxfev</cite> is set. If both
+<cite>maxiter</cite> and <cite>maxfev</cite> are set, minimization will stop at the
+first reached.</p>
+</dd>
+<dt>initial_simplex<span class="classifier">array_like of shape (N + 1, N)</span></dt><dd><p>Initial simplex. If given, overrides <cite>x0</cite>.
+<code class="docutils literal notranslate"><span class="pre">initial_simplex[j,:]</span></code> should contain the coordinates of
+the j-th vertex of the <code class="docutils literal notranslate"><span class="pre">N+1</span></code> vertices in the simplex, where
+<code class="docutils literal notranslate"><span class="pre">N</span></code> is the dimension.</p>
+</dd>
+<dt>xatol<span class="classifier">float, optional</span></dt><dd><p>Absolute error in xopt between iterations that is acceptable for
+convergence.</p>
+</dd>
+<dt>fatol<span class="classifier">number, optional</span></dt><dd><p>Absolute error in func(xopt) between iterations that is acceptable for
+convergence.</p>
+</dd>
+<dt>adaptive<span class="classifier">bool, optional</span></dt><dd><p>Adapt algorithm parameters to dimensionality of problem. Useful for
+high-dimensional minimization <a class="footnote-reference brackets" href="#id2" id="id1">1</a>.</p>
+</dd>
+</dl>
+<p class="rubric">引用</p>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Gao, F. and Han, L.
+Implementing the Nelder-Mead simplex algorithm with adaptive
+parameters. 2012. Computational Optimization and Applications.
+51:1, pp. 259-277</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.NM_bnd.NM_minimize_2">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.NM_bnd.</span></span><span class="sig-name descname"><span class="pre">NM_minimize_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ftarget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonzdelt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxfev</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_simplex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xatol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fatol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adaptive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.NM_bnd.NM_minimize_2" title="永久链接至目标">¶</a></dt>
+<dd><p>almost the same as NM_minimize, only make nonzdelt as input and add output of sim
+:param func:
+:param x0:
+:param nonzdelt:
+:param callback:
+:param maxiter:
+:param maxfev:
+:param disp:
+:param return_all:
+:param initial_simplex:
+:param xatol:
+:param fatol:
+:param adaptive:
+:return:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.NM_bnd.NM_minimize_bnd">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.NM_bnd.</span></span><span class="sig-name descname"><span class="pre">NM_minimize_bnd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.NM_bnd.NM_minimize_bnd" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.NM_bnd.NM_minimize_bnd_2">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.NM_bnd.</span></span><span class="sig-name descname"><span class="pre">NM_minimize_bnd_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ftarget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonzdelt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.NM_bnd.NM_minimize_bnd_2" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.NM_bnd.MY_OPTIMIZER">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.NM_bnd.</span></span><span class="sig-name descname"><span class="pre">MY_OPTIMIZER</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FUN</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DIM</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ftarget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usual_delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxfunevals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">UB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.NM_bnd.MY_OPTIMIZER" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FUN</strong> – </p></li>
+<li><p><strong>DIM</strong> – </p></li>
+<li><p><strong>x0</strong> – </p></li>
+<li><p><strong>ftarget</strong> – </p></li>
+<li><p><strong>maxfunevals</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.NM_bnd.range_2Darray">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.NM_bnd.</span></span><span class="sig-name descname"><span class="pre">range_2Darray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.NM_bnd.range_2Darray" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.NM_bnd.intrafun">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.NM_bnd.</span></span><span class="sig-name descname"><span class="pre">intrafun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.NM_bnd.intrafun" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.NM_bnd.xtransform">
+<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.NM_bnd.</span></span><span class="sig-name descname"><span class="pre">xtransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.NM_bnd.xtransform" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – </p></li>
+<li><p><strong>p</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

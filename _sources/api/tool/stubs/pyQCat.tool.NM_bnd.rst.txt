@@ -1,0 +1,36 @@
+﻿pyQCat.tool.NM\_bnd
+===================
+
+.. automodule:: pyQCat.tool.NM_bnd
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      MY_OPTIMIZER
+      NM_minimize
+      NM_minimize_2
+      NM_minimize_bnd
+      NM_minimize_bnd_2
+      intrafun
+      range_2Darray
+      xtransform
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,6 @@
+﻿pyQCat.flow.distortion\_node
+============================
+
+.. currentmodule:: pyQCat.flow
+
+.. autofunction:: distortion_node

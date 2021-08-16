@@ -1,0 +1,6 @@
+﻿pyQCat.flow.dc\_spectrum\_node
+==============================
+
+.. currentmodule:: pyQCat.flow
+
+.. autofunction:: dc_spectrum_node
