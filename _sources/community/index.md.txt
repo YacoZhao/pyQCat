@@ -193,7 +193,7 @@ def _get_drive_pulse(self, type_: str, sweep_list: List):
 
 构造波形一般你需要提供扫描参数，这些参数与波形生成有关，我们在 [Pulse模块](../api/pulse/index.html) 提供了丰富的波形构造方式，你可以直接进行调用，我们定义了六种常用的波形类：
 
-![image-20210701172735473](file://C:/Users/Origin41515/AppData/Roaming/Typora/typora-user-images/image-20210701172735473.png?lastModify=1628664456)
+![image-20210701172735473](https://gitee.com/espero/images/raw/master/img/image-20210701172735473.png)
 
 图中红色表示施加到Z线上的波形，绿色表示施加到XY线上的波形，黄色为读取线路波形。
 
