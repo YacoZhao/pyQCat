@@ -1,0 +1,432 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.experiment.Swap &mdash; pyQCat 0.0.6 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.experiment.Swap</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-experiment-swap">
+<h1>pyQCat.experiment.Swap<a class="headerlink" href="#pyqcat-experiment-swap" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Swap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">QH</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const_z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parking_qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parking_param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'10'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_high_qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Swap" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Swap实验</p>
+<p>SWAP 实验用于表征两个比特之间的耦合强度，耦合强度的大小直接决定了两比特门的
+快慢，因此 SWAP 实验也是后续一些两比特门相关实验的基础。在现有的固定耦合结构中，
+通过施加 flux pulse 让两个比特达到共振，从振荡频率中我们可以提取耦合强度。</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.QH">
+<span class="sig-name descname"><span class="pre">QH</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.QH" title="永久链接至目标">¶</a></dt>
+<dd><p>高频比特</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit">Qubit</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.QL">
+<span class="sig-name descname"><span class="pre">QL</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.QL" title="永久链接至目标">¶</a></dt>
+<dd><p>低频比特</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit">Qubit</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.inst">
+<span class="sig-name descname"><span class="pre">inst</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.inst" title="永久链接至目标">¶</a></dt>
+<dd><p>设备对象，封装了实验相关参数的数据库映射对象，集成了各种数据交互操作</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument">Instrument</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.z_amp_list">
+<span class="sig-name descname"><span class="pre">z_amp_list</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.z_amp_list" title="永久链接至目标">¶</a></dt>
+<dd><p>扫描幅值列表</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Union[List, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.width_list">
+<span class="sig-name descname"><span class="pre">width_list</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.width_list" title="永久链接至目标">¶</a></dt>
+<dd><p>扫描带宽列表</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Union[List, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.const_z_amp">
+<span class="sig-name descname"><span class="pre">const_z_amp</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.const_z_amp" title="永久链接至目标">¶</a></dt>
+<dd><p>施加到低频比特 Z 线的幅值</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.parking_qubit">
+<span class="sig-name descname"><span class="pre">parking_qubit</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.parking_qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>由于 SWAP 实验中我们总是在高频比特上施加 flux pulse 对比特频率进行调节，
+因此会遇到如下情况，Q1 和 Q3 为低频比特，Q2 为高频比特，这样 Q1Q2 和 Q2Q3 的 SWAP 实验都是通过
+在 Q2 施加 flux pulse 调节 Q2 的比特频率来完成。这样在执行 Q1Q2 的 SWAP 实验时，Q2 上施加的脉
+冲会使得 Q2 经过 Q2Q3 的 SWAP 共振点（如上图所示），引起不想要的相互作用。这里的解决办法是：在做
+Q1Q2 的 SWAP 时，同时给 Q3 加一个等长的 flux pulse 下调 Q3，这里的 Q3 即称为 Parking Qubit，
+Parking Qubit 不是必须的，注意施加 Parking Qubit 的前提条件</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit">Qubit</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.parking_param">
+<span class="sig-name descname"><span class="pre">parking_param</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.parking_param" title="永久链接至目标">¶</a></dt>
+<dd><p>用于构建 Parking Qubit 上的波形</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.state">
+<span class="sig-name descname"><span class="pre">state</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.state" title="永久链接至目标">¶</a></dt>
+<dd><p>可选参数 <code class="docutils literal notranslate"><span class="pre">01</span></code> / <code class="docutils literal notranslate"><span class="pre">10</span></code> / <code class="docutils literal notranslate"><span class="pre">11</span></code> ，它决定施加到比特的上波形</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.sweep_high_qubit">
+<span class="sig-name descname"><span class="pre">sweep_high_qubit</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.sweep_high_qubit" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.tb">
+<span class="sig-name descname"><span class="pre">tb</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.tb" title="永久链接至目标">¶</a></dt>
+<dd><p>是否校准 <a href="#id1"><span class="problematic" id="id2">``</span></a><cite>tb</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.correct_dc">
+<span class="sig-name descname"><span class="pre">correct_dc</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.correct_dc" title="永久链接至目标">¶</a></dt>
+<dd><p>施加到各个比特上的电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.compensate">
+<span class="sig-name descname"><span class="pre">compensate</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.compensate" title="永久链接至目标">¶</a></dt>
+<dd><p>脉冲校准对象，用于加载到比特对象上，默认为空，
+当设置参数时，它意味着 <cite>Z</cite> 通道打开，并且进行波形畸变、延时等修正</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Union[<a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.PulseCorrection" title="pyQCat.PulseCorrection">PulseCorrection</a>, List[<a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.PulseCorrection" title="pyQCat.PulseCorrection">PulseCorrection</a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.repeat">
+<span class="sig-name descname"><span class="pre">repeat</span></span><a class="headerlink" href="#pyQCat.experiment.Swap.repeat" title="永久链接至目标">¶</a></dt>
+<dd><p>实验重复次数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">QH</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">QL</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const_z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parking_qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parking_param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'10'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_high_qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Swap.__init__" title="永久链接至目标">¶</a></dt>
+<dd><p>Initialize method</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.Swap.__init__" title="pyQCat.experiment.Swap.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(QH, QL, inst, z_amp_list, width_list)</p></td>
+<td><p>Initialize method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.Swap.analyze" title="pyQCat.experiment.Swap.analyze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyze</span></code></a>(is_width)</p></td>
+<td><p>Swap实验结果分析方法</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.Swap.run" title="pyQCat.experiment.Swap.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([is_width])</p></td>
+<td><p>运行 Swap 实验</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Swap.run" title="永久链接至目标">¶</a></dt>
+<dd><p>运行 Swap 实验</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>is_width</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 如果为 True 则执行 CZ Swap， 否则执行 Normal Swap</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.Swap.analyze">
+<span class="sig-name descname"><span class="pre">analyze</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Swap.analyze" title="永久链接至目标">¶</a></dt>
+<dd><p>Swap实验结果分析方法</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿pyQCat.rpc.Client
+=================
+
+.. currentmodule:: pyQCat.rpc
+
+.. autoclass:: Client
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Client.__init__
+      ~Client.send_data
+   
+   
+
+   
+   
+   

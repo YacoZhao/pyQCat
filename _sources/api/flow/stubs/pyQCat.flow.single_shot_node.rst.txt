@@ -1,6 +1,0 @@
-﻿pyQCat.flow.single\_shot\_node
-==============================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: single_shot_node

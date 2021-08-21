@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.flow.qubit_optimization &mdash; pyQCat 0.0.6 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.flow.qubit_optimization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.flow.qubit_optimization">
+<span id="pyqcat-flow-qubit-optimization"></span><h1>pyQCat.flow.qubit_optimization<a class="headerlink" href="#module-pyQCat.flow.qubit_optimization" title="永久链接至标题">¶</a></h1>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_optimization.amp_opt_experiment" title="pyQCat.flow.qubit_optimization.amp_opt_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp_opt_experiment</span></code></a>(inst, qubit, dc, …[, …])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param inst</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_optimization.ape_experiment" title="pyQCat.flow.qubit_optimization.ape_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ape_experiment</span></code></a>(inst, qubit, dc, compensate, …)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param inst</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_optimization.ape_run" title="pyQCat.flow.qubit_optimization.ape_run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ape_run</span></code></a>(ape_exp, N_list, detune_list, theta)</p></td>
+<td><p>运行 APE 实验</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_optimization.rb_experiment" title="pyQCat.flow.qubit_optimization.rb_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rb_experiment</span></code></a>(inst, qubit, dc, compensate, …)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param inst</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_optimization.single_qubit_adjust" title="pyQCat.flow.qubit_optimization.single_qubit_adjust"><code class="xref py py-obj docutils literal notranslate"><span class="pre">single_qubit_adjust</span></code></a>(inst, qubit, dc, …)</p></td>
+<td><p>单比特校准流程</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_optimization.t1_experiment" title="pyQCat.flow.qubit_optimization.t1_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t1_experiment</span></code></a>(inst, qubit, dc, compensate, …)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param inst</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_optimization.t2_experiment" title="pyQCat.flow.qubit_optimization.t2_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t2_experiment</span></code></a>(inst, qubit, dc, compensate, …)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param inst</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.ape_run">
+<span class="sig-name descname"><span class="pre">ape_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ape_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fine_adjust</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.ape_run" title="永久链接至目标">¶</a></dt>
+<dd><p>运行 APE 实验</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ape_exp</strong> – </p></li>
+<li><p><strong>N_list</strong> – </p></li>
+<li><p><strong>detune_list</strong> – </p></li>
+<li><p><strong>theta</strong> – </p></li>
+<li><p><strong>fine_adjust</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.ape_experiment">
+<span class="sig-name descname"><span class="pre">ape_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N1_N2_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.ape_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>detune_list</strong> – </p></li>
+<li><p><strong>N1_N2_list</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.amp_opt_experiment">
+<span class="sig-name descname"><span class="pre">amp_opt_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">41</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:/Qubit'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.amp_opt_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>N_dict</strong> – </p></li>
+<li><p><strong>points</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.t1_experiment">
+<span class="sig-name descname"><span class="pre">t1_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.t1_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>t1_delay_list</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.t2_experiment">
+<span class="sig-name descname"><span class="pre">t2_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.t2_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>t2_delay_list</strong> – </p></li>
+<li><p><strong>exp_name</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.rb_experiment">
+<span class="sig-name descname"><span class="pre">rb_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.rb_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>m_list</strong> – </p></li>
+<li><p><strong>k</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.single_qubit_adjust">
+<span class="sig-name descname"><span class="pre">single_qubit_adjust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N1_N2_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.single_qubit_adjust" title="永久链接至目标">¶</a></dt>
+<dd><p>单比特校准流程</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>sample_prefix</strong> – </p></li>
+<li><p><strong>amp_list</strong> – </p></li>
+<li><p><strong>update_step</strong> – </p></li>
+<li><p><strong>detune_list</strong> – </p></li>
+<li><p><strong>N1_N2_list</strong> – </p></li>
+<li><p><strong>points</strong> – </p></li>
+<li><p><strong>N_dict</strong> – </p></li>
+<li><p><strong>t1_delay_list</strong> – </p></li>
+<li><p><strong>t2_delay_list</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

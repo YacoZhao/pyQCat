@@ -1,0 +1,770 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.tool.utlis &mdash; pyQCat 0.0.6 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.tool.wrappers" href="pyQCat.tool.wrappers.html" />
+    <link rel="prev" title="pyQCat.tool.set_config" href="pyQCat.tool.set_config.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.formula.html">pyQCat.tool.formula</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.drift.html">pyQCat.tool.drift</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.param_fit.html">pyQCat.tool.param_fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.parse_yaml.html">pyQCat.tool.parse_yaml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.smooth.html">pyQCat.tool.smooth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.iqprobability.html">pyQCat.tool.iqprobability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.NM_bnd.html">pyQCat.tool.NM_bnd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.parsefile.html">pyQCat.tool.parsefile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.plot_data.html">pyQCat.tool.plot_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.resonator_fit_calibration.html">pyQCat.tool.resonator_fit_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.savefile.html">pyQCat.tool.savefile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.set_config.html">pyQCat.tool.set_config</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pyQCat.tool.utlis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.wrappers.html">pyQCat.tool.wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.tool.utlis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.tool.utlis">
+<span id="pyqcat-tool-utlis"></span><h1>pyQCat.tool.utlis<a class="headerlink" href="#module-pyQCat.tool.utlis" title="永久链接至标题">¶</a></h1>
+<p>这个模块提供了在PyQCat内部使用的实用函数，这些函数在外部使用时也很有用。</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.utlis.args_seq_as_expected" title="pyQCat.tool.utlis.args_seq_as_expected"><code class="xref py py-obj docutils literal notranslate"><span class="pre">args_seq_as_expected</span></code></a>(seq)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.utlis.as_np_array" title="pyQCat.tool.utlis.as_np_array"><code class="xref py py-obj docutils literal notranslate"><span class="pre">as_np_array</span></code></a>(seq)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.connect_server" title="pyQCat.tool.utlis.connect_server"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect_server</span></code></a>([ip, port])</p></td>
+<td><p>连接mongoDB服务器</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.correct_crosstalk" title="pyQCat.tool.utlis.correct_crosstalk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correct_crosstalk</span></code></a>(raw_data, crosstalk)</p></td>
+<td><p>校准串扰(TODO)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.create_file_path" title="pyQCat.tool.utlis.create_file_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_file_path</span></code></a>(exp, fname)</p></td>
+<td><p>为实验补充文件目录</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.disconnect_server" title="pyQCat.tool.utlis.disconnect_server"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disconnect_server</span></code></a>([alias])</p></td>
+<td><p>断开于mongoDB数据库的连接</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.find_coincident_point" title="pyQCat.tool.utlis.find_coincident_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_coincident_point</span></code></a>(points, N)</p></td>
+<td><p>APE 实验中获取重合点</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.find_peak" title="pyQCat.tool.utlis.find_peak"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_peak</span></code></a>(value_list, num_peak, distance)</p></td>
+<td><p>查找一维数组峰值并返回峰值索引</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.fourier_cycle" title="pyQCat.tool.utlis.fourier_cycle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fourier_cycle</span></code></a>(x, y)</p></td>
+<td><p>傅里叶快速变换FFT获取周期</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.get_coincident_point" title="pyQCat.tool.utlis.get_coincident_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_coincident_point</span></code></a>(y_list)</p></td>
+<td><p>获取APE实验的最小重合点索引</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.utlis.get_peak_point" title="pyQCat.tool.utlis.get_peak_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_peak_point</span></code></a>(xdata, ydata, distance, height)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.get_solveCZadibatic2_pulse" title="pyQCat.tool.utlis.get_solveCZadibatic2_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_solveCZadibatic2_pulse</span></code></a>(Tgate, A1, B1, …)</p></td>
+<td><p>acquisition pulse</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.utlis.get_solveCZadibatic3back_pulse" title="pyQCat.tool.utlis.get_solveCZadibatic3back_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_solveCZadibatic3back_pulse</span></code></a>(A1, B1, a1, …)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.list_to_dict" title="pyQCat.tool.utlis.list_to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_to_dict</span></code></a>(node_list)</p></td>
+<td><p>将列表转化为字典</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.look_for_peaks_dips" title="pyQCat.tool.utlis.look_for_peaks_dips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">look_for_peaks_dips</span></code></a>(x, y[, percentile, …])</p></td>
+<td><p>寻峰算法(designed by Serwan)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.parse_readout_data" title="pyQCat.tool.utlis.parse_readout_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_readout_data</span></code></a>(file_name)</p></td>
+<td><p>“解析波形文件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.points_to_time" title="pyQCat.tool.utlis.points_to_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">points_to_time</span></code></a>(points[, sample_rate])</p></td>
+<td><p>根据采样点的序号计算采样点的时刻</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.qarange" title="pyQCat.tool.utlis.qarange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qarange</span></code></a>(start, end, step)</p></td>
+<td><p>将循环测量和控制数据转换为所需的阵列</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.read_file_name" title="pyQCat.tool.utlis.read_file_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_file_name</span></code></a>()</p></td>
+<td><p>弹出窗口从本地选择文件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.set_attr" title="pyQCat.tool.utlis.set_attr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_attr</span></code></a>(obj, attr, other_obj)</p></td>
+<td><p>当两个对象某个属性值不一样的时候，为对象更新属性值</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.smooth" title="pyQCat.tool.utlis.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>(x[, window_len, window])</p></td>
+<td><p>对数据进行平滑处理。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.utlis.sort_z" title="pyQCat.tool.utlis.sort_z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sort_z</span></code></a>(x, y, z, znew[, n])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.spectrum_analysis" title="pyQCat.tool.utlis.spectrum_analysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spectrum_analysis</span></code></a>(data)</p></td>
+<td><p>使用快速傅里叶变换FFT进行频谱分析</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.time_to_points" title="pyQCat.tool.utlis.time_to_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_to_points</span></code></a>(time[, sample_rate])</p></td>
+<td><p>餐具采样时刻计算采样点序号</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.utlis.x_interpolation" title="pyQCat.tool.utlis.x_interpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_interpolation</span></code></a>(x, y, z[, n])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.utlis.y_interpolation" title="pyQCat.tool.utlis.y_interpolation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y_interpolation</span></code></a>(x, y, z[, n])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Exceptions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.utlis.html#pyQCat.tool.utlis.MongoEngineConnectionError" title="pyQCat.tool.utlis.MongoEngineConnectionError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MongoEngineConnectionError</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.MongoEngineConnectionError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MongoEngineConnectionError</span></span><a class="headerlink" href="#pyQCat.tool.utlis.MongoEngineConnectionError" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.qarange">
+<span class="sig-name descname"><span class="pre">qarange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.qarange" title="永久链接至目标">¶</a></dt>
+<dd><p>将循环测量和控制数据转换为所需的阵列</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> – 开始值</p></li>
+<li><p><strong>end</strong> – 结束值</p></li>
+<li><p><strong>step</strong> – 步长</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>转化后的列表</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">amp_list</span> <span class="o">=</span> <span class="n">qarange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="go">[0.0, 0.2, 0.4, 0.6, 0.8, 1.0]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">width_list</span> <span class="o">=</span> <span class="n">qarange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="go">[5, 25, 45, 65, 85, 105, 125, 145, 165, 185]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.fourier_cycle">
+<span class="sig-name descname"><span class="pre">fourier_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.fourier_cycle" title="永久链接至目标">¶</a></dt>
+<dd><p>傅里叶快速变换FFT获取周期</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – 数据集x</p></li>
+<li><p><strong>y</strong> – 数据集y</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>时域周期值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.find_peak">
+<span class="sig-name descname"><span class="pre">find_peak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_peak</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.find_peak" title="永久链接至目标">¶</a></dt>
+<dd><p>查找一维数组峰值并返回峰值索引</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value_list</strong> – 需要找到峰值的数组，ndarray</p></li>
+<li><p><strong>num_peak</strong> – 数据集中的峰/谷的数量。</p></li>
+<li><p><strong>distance</strong> – 相邻峰之间所需的最小水平距离，较小的峰首先被移除，直到所有剩余的峰满足条件</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>元祖类型，第一个值为int类型的峰值索引，第二个值为float类型的峰值</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">title0</span><span class="p">,</span> <span class="n">title1</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">single_qubit_usualness</span><span class="p">()</span>
+<span class="c1"># 假设x表示扫描参数，y0表示amp实验结果，y1表示phase实验结果</span>
+<span class="n">index1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">find_peak</span><span class="p">(</span><span class="n">y0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">index2</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">find_peak</span><span class="p">(</span><span class="n">y1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.look_for_peaks_dips">
+<span class="sig-name descname"><span class="pre">look_for_peaks_dips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percentile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_sigma_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.look_for_peaks_dips" title="永久链接至目标">¶</a></dt>
+<dd><p>寻峰算法(designed by Serwan)</p>
+<ul class="simple">
+<li><p>平滑数据</p></li>
+<li><p>定义噪声阈值</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – x数据</p></li>
+<li><p><strong>y</strong> – y数据</p></li>
+<li><p><strong>percentile</strong> – 噪声阈值</p></li>
+<li><p><strong>window_len</strong> – 平滑函数窗口大小</p></li>
+<li><p><strong>num_sigma_threshold</strong> – 高于标准差的阈值</p></li>
+<li><p><strong>key</strong> – <code class="docutils literal notranslate"><span class="pre">peak</span></code> 或 <code class="docutils literal notranslate"><span class="pre">dip</span></code>，告诉算法找的峰值还是谷值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.smooth">
+<span class="sig-name descname"><span class="pre">smooth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hanning'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.smooth" title="永久链接至目标">¶</a></dt>
+<dd><p>对数据进行平滑处理。</p>
+<p>这种方法是基于一个按比例的窗口进行数据平滑的方法，通过窗口大小来划分数据。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – 输入数据</p></li>
+<li><p><strong>window_len</strong> – 平滑化窗口的大小，保证是一个奇数</p></li>
+<li><p><strong>window</strong> – 窗口的类型，可以选择
+<code class="docutils literal notranslate"><span class="pre">flat</span></code> , <code class="docutils literal notranslate"><span class="pre">hanning</span></code> , <code class="docutils literal notranslate"><span class="pre">hamming</span></code> , <code class="docutils literal notranslate"><span class="pre">bartlett</span></code> , <code class="docutils literal notranslate"><span class="pre">blackman</span></code> , 此处默认为 <code class="docutils literal notranslate"><span class="pre">hanning</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>平滑后的信号</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">*</span> <span class="mf">0.2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">smooth</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;pre smooth&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;after smooth&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.get_solveCZadibatic2_pulse">
+<span class="sig-name descname"><span class="pre">get_solveCZadibatic2_pulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Tgate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Sita1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.35</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.get_solveCZadibatic2_pulse" title="永久链接至目标">¶</a></dt>
+<dd><p>acquisition pulse</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>pulse list, a two-dimensional array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.parse_readout_data">
+<span class="sig-name descname"><span class="pre">parse_readout_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.parse_readout_data" title="永久链接至目标">¶</a></dt>
+<dd><p>“解析波形文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>文件名称</strong> (<em>file_name</em>) – </p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>文件中的数据</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.read_file_name">
+<span class="sig-name descname"><span class="pre">read_file_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.read_file_name" title="永久链接至目标">¶</a></dt>
+<dd><p>弹出窗口从本地选择文件</p>
+<p>只支持 .dat 文件和 .txt 文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>文件全路径名称</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.points_to_time">
+<span class="sig-name descname"><span class="pre">points_to_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.points_to_time" title="永久链接至目标">¶</a></dt>
+<dd><p>根据采样点的序号计算采样点的时刻</p>
+<p>采样定理:</p>
+<div class="math notranslate nohighlight">
+\[r = {\frac{p}{t}}\]</div>
+<p>上式中 <code class="docutils literal notranslate"><span class="pre">r</span></code> 表示采样率，<code class="docutils literal notranslate"><span class="pre">t</span></code> 表示采样时间， <code class="docutils literal notranslate"><span class="pre">p</span></code> 表示在 <code class="docutils literal notranslate"><span class="pre">t</span></code> 时间内的采样点数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 采样点的序号</p></li>
+<li><p><strong>sample_rate</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 采样率，默认为1.6</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>当前采样点的时间</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.time_to_points">
+<span class="sig-name descname"><span class="pre">time_to_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.time_to_points" title="永久链接至目标">¶</a></dt>
+<dd><p>餐具采样时刻计算采样点序号</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 采样时刻</p></li>
+<li><p><strong>sample_rate</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 采样率，默认为1.6</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>采样点的序号</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.correct_crosstalk">
+<span class="sig-name descname"><span class="pre">correct_crosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">crosstalk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.correct_crosstalk" title="永久链接至目标">¶</a></dt>
+<dd><p>校准串扰(TODO)</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – </p></li>
+<li><p><strong>crosstalk</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>校准后的数据</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.connect_server">
+<span class="sig-name descname"><span class="pre">connect_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27017</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.connect_server" title="永久链接至目标">¶</a></dt>
+<dd><p>连接mongoDB服务器</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip</strong> – IP地址</p></li>
+<li><p><strong>port</strong> – 端口号，默认为27017</p></li>
+</ul>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">connect_server</span><span class="p">(</span><span class="n">ip</span><span class="o">=</span><span class="s2">&quot;192.168.1.103&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.disconnect_server">
+<span class="sig-name descname"><span class="pre">disconnect_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'some_alias'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.disconnect_server" title="永久链接至目标">¶</a></dt>
+<dd><p>断开于mongoDB数据库的连接</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>alias</strong> – 默认为 some_alias</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">disconnect_server</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.find_coincident_point">
+<span class="sig-name descname"><span class="pre">find_coincident_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.find_coincident_point" title="永久链接至目标">¶</a></dt>
+<dd><p>APE 实验中获取重合点</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code>]) – 由 <cite>pyQCat.Point</cite> 对象组成的列表</p></li>
+<li><p><strong>N</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 重合点数量</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code>]</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>重合点列表</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.create_file_path">
+<span class="sig-name descname"><span class="pre">create_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.create_file_path" title="永久链接至目标">¶</a></dt>
+<dd><p>为实验补充文件目录</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exp</strong> – 实验对象</p></li>
+<li><p><strong>fname</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 文件名</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>生成文件目录的路径</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.set_attr">
+<span class="sig-name descname"><span class="pre">set_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.set_attr" title="永久链接至目标">¶</a></dt>
+<dd><p>当两个对象某个属性值不一样的时候，为对象更新属性值</p>
+<p>两个对象必须都有这个属性，且属性值不相等</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – 待修改的对象</p></li>
+<li><p><strong>attr</strong> – 属性</p></li>
+<li><p><strong>other_obj</strong> – 对比的对象</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>如果修改了属性值则返回True，否则返回None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.get_coincident_point">
+<span class="sig-name descname"><span class="pre">get_coincident_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.get_coincident_point" title="永久链接至目标">¶</a></dt>
+<dd><p>获取APE实验的最小重合点索引</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>y_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – APE实验的Y坐标值</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>重合点索引</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.list_to_dict">
+<span class="sig-name descname"><span class="pre">list_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.list_to_dict" title="永久链接至目标">¶</a></dt>
+<dd><p>将列表转化为字典</p>
+<p>创建一个字典，key是列表中的一个元素，value是一个与key相邻的元素，如果不存在，value就是None。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>node_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – 列表元素</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>转化后的字典</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">arrs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dicts</span> <span class="o">=</span> <span class="n">list_to_dict</span><span class="p">(</span><span class="n">arrs</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">dicts</span><span class="p">)</span>
+<span class="go">{1: 2, 2: 3, 3: 4, 4: 5, 5: None}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.utlis.spectrum_analysis">
+<span class="sig-name descname"><span class="pre">spectrum_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.utlis.spectrum_analysis" title="永久链接至目标">¶</a></dt>
+<dd><p>使用快速傅里叶变换FFT进行频谱分析</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – 输出数据，数组或者列表</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>元祖类型，第一个值为data数据长度的一半, 第二个值为傅里叶变化后拟合数据的一半</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">spectrum_analysis</span><span class="p">(</span><span class="n">amp_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.tool.wrappers.html" class="btn btn-neutral float-right" title="pyQCat.tool.wrappers" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.tool.set_config.html" class="btn btn-neutral float-left" title="pyQCat.tool.set_config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+pyQCat.database package
+=======================
+
+Submodules
+----------
+
+pyQCat.database.ODM module
+--------------------------
+
+.. automodule:: pyQCat.database.ODM
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.database.kernel module
+-----------------------------
+
+.. automodule:: pyQCat.database.kernel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: pyQCat.database
+   :members:
+   :undoc-members:
+   :show-inheritance:

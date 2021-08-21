@@ -1,0 +1,30 @@
+﻿pyQCat.flow.qubit\_correction
+=============================
+
+.. automodule:: pyQCat.flow.qubit_correction
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      ac_crosstalk_experiment
+      dc_crosstalk_experiment
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,46 @@
+﻿pyQCat.pulse.GaussianSquare
+===========================
+
+.. currentmodule:: pyQCat.pulse
+
+.. autoclass:: GaussianSquare
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~GaussianSquare.__init__
+      ~GaussianSquare.correct_ac_crosstalk
+      ~GaussianSquare.correct_compensate
+      ~GaussianSquare.correct_delay
+      ~GaussianSquare.correct_distortion
+      ~GaussianSquare.correct_pulse
+      ~GaussianSquare.get_pulse
+      ~GaussianSquare.get_raw_pulse
+      ~GaussianSquare.plot
+      ~GaussianSquare.validate_parameters
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~GaussianSquare.attach
+      ~GaussianSquare.bit
+      ~GaussianSquare.delay
+      ~GaussianSquare.envelop
+      ~GaussianSquare.id
+      ~GaussianSquare.parameters
+      ~GaussianSquare.pulse
+      ~GaussianSquare.raw_pulse
+      ~GaussianSquare.sweep
+      ~GaussianSquare.type
+   
+   

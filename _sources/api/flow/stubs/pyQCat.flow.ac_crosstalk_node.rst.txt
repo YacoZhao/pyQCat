@@ -1,6 +1,0 @@
-﻿pyQCat.flow.ac\_crosstalk\_node
-===============================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: ac_crosstalk_node

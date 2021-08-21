@@ -1,6 +1,0 @@
-﻿pyQCat.flow.update\_goodness\_node
-==================================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: update_goodness_node

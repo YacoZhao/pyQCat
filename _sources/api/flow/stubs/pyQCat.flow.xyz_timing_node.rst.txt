@@ -1,6 +1,0 @@
-﻿pyQCat.flow.xyz\_timing\_node
-=============================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: xyz_timing_node

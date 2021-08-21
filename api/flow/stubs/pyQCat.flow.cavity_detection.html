@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.flow.cavity_detection &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.flow.cavity_detection &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
   
 
   
@@ -67,7 +72,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -93,23 +98,23 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">pyQCat.detection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">pyQCat.experiment</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">pyQCat.flow</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="../index.html#dag-node">Dag Node</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">pyQCat.instrument</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">pyQCat.pulse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">pyQCat.qubit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">pyQCat.tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">pyQCat.parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -137,7 +142,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -165,15 +170,13 @@
         
           <li><a href="../../index.html">API 文档</a> &raquo;</li>
         
-          <li><a href="../index.html">pyQCat.flow</a> &raquo;</li>
+          <li><a href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a> &raquo;</li>
         
       <li>pyQCat.flow.cavity_detection</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../../_sources/api/flow/stubs/pyQCat.flow.cavity_detection.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -195,25 +198,25 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.cavity_detection.find_cavity_freq" title="pyQCat.flow.cavity_detection.find_cavity_freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_cavity_freq</span></code></a>(qubits[, fc_start, fc_end, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.cavity_detection.html#pyQCat.flow.cavity_detection.find_cavity_freq" title="pyQCat.flow.cavity_detection.find_cavity_freq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_cavity_freq</span></code></a>(qubits[, fc_start, fc_end, …])</p></td>
 <td><p>Get cavity freq</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.cavity_detection.is_goodness" title="pyQCat.flow.cavity_detection.is_goodness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_goodness</span></code></a>(qubit[, dc_correct, high_power, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.cavity_detection.html#pyQCat.flow.cavity_detection.is_goodness" title="pyQCat.flow.cavity_detection.is_goodness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_goodness</span></code></a>(qubit[, dc_correct, high_power, …])</p></td>
 <td><p>Whether the bit can be goodness</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.cavity_detection.is_tunable" title="pyQCat.flow.cavity_detection.is_tunable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_tunable</span></code></a>(qubits[, test_bit, scan_f, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.cavity_detection.html#pyQCat.flow.cavity_detection.is_tunable" title="pyQCat.flow.cavity_detection.is_tunable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_tunable</span></code></a>(qubits[, test_bit, scan_f, …])</p></td>
 <td><p>Whether the bit can be tunable</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.cavity_detection.find_cavity_freq">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.cavity_detection.</span></span><span class="sig-name descname"><span class="pre">find_cavity_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6300000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6600000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cavity_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.find_cavity_freq" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">find_cavity_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6300000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6600000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cavity_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.find_cavity_freq" title="永久链接至目标">¶</a></dt>
 <dd><p>Get cavity freq</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>qubits</strong> – Qubit list</p></li>
+<li><p><strong>qubits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="../../../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]) – Qubit list</p></li>
 <li><p><strong>fc_start</strong> – scan freq start</p></li>
 <li><p><strong>fc_end</strong> – scan freq end</p></li>
 <li><p><strong>N</strong> – scan points</p></li>
@@ -228,20 +231,20 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.cavity_detection.is_tunable">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.cavity_detection.</span></span><span class="sig-name descname"><span class="pre">is_tunable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_f</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IFBW</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">-</span> <span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">(-</span> <span class="pre">1.2,</span> <span class="pre">1.2,</span> <span class="pre">0.04)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.is_tunable" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_tunable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_bit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_flux</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">1.2,</span> <span class="pre">1.2,</span> <span class="pre">0.04)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.is_tunable" title="永久链接至目标">¶</a></dt>
 <dd><p>Whether the bit can be tunable</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>qubits</strong> – Qubit list</p></li>
-<li><p><strong>scan_f</strong> – freq scan range</p></li>
-<li><p><strong>points</strong> – scan points</p></li>
-<li><p><strong>IFBW</strong> – The IF bandwidth of the network analyzer</p></li>
-<li><p><strong>probe_power</strong> – The power of network analyzer</p></li>
-<li><p><strong>scan_flux</strong> – scan dc list, (start, end, step)</p></li>
+<li><p><strong>qubits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="../../../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]) – Qubit list</p></li>
+<li><p><strong>scan_f</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – freq scan range</p></li>
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – scan points</p></li>
+<li><p><strong>IFBW</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – The IF bandwidth of the network analyzer</p></li>
+<li><p><strong>probe_power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The power of network analyzer</p></li>
+<li><p><strong>scan_flux</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – scan dc list, (start, end, step)</p></li>
 <li><p><strong>network_analyzer</strong> – Network analyzer model. default ‘E5071C’</p></li>
-<li><p><strong>qaio_ip</strong> – Qaio IP</p></li>
-<li><p><strong>qaio_type</strong> – Qaio type, {8, 30}, optional.</p></li>
+<li><p><strong>qaio_ip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Qaio IP</p></li>
+<li><p><strong>qaio_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Qaio type, {8, 30}, optional.</p></li>
 </ul>
 </dd>
 </dl>
@@ -250,20 +253,20 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.cavity_detection.is_goodness">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.cavity_detection.</span></span><span class="sig-name descname"><span class="pre">is_goodness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="../../qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(在 Python v3.7)"><span class="pre">dict</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">35</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hight_IFBW</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_IFBW</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.is_goodness" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">is_goodness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">35</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hight_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.is_goodness" title="永久链接至目标">¶</a></dt>
 <dd><p>Whether the bit can be goodness</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>qubit</strong> – Qubit</p></li>
-<li><p><strong>dc_correct</strong> – Dc correct</p></li>
+<li><p><strong>qubit</strong> (<a class="reference internal" href="../../../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>) – Qubit</p></li>
+<li><p><strong>dc_correct</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Dc correct</p></li>
 <li><p><strong>high_power</strong> – Bit’s network analyzer scans high power values</p></li>
 <li><p><strong>low_power</strong> – Bit’s network analyzer scans low power values</p></li>
-<li><p><strong>points</strong> – Scanning points.</p></li>
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Scanning points.</p></li>
 <li><p><strong>IFBW</strong> – The IF bandwidth of the network analyzer</p></li>
 <li><p><strong>network_analyzer</strong> – Network analyzer model. default ‘E5071C’</p></li>
-<li><p><strong>qaio_ip</strong> – Qaio IP</p></li>
-<li><p><strong>qaio_type</strong> – Qaio type, {8, 30}, optional.</p></li>
+<li><p><strong>qaio_ip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Qaio IP</p></li>
+<li><p><strong>qaio_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Qaio type, {8, 30}, optional.</p></li>
 <li><p><strong>root</strong> – sample prefix</p></li>
 <li><p><strong>log_path</strong> – save qubit info path</p></li>
 </ul>
@@ -288,6 +291,10 @@
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

@@ -1,10 +1,9 @@
-.. title:: pyQCat
+.. figure:: logos/pyQCat_logo.png
+   :align: center
+   :width: 7in
 
-pyQCat
-======
-
-|LOGO|
-======
+pyQCat: Quantum Calibration and Testing in Python
+=================================================
 
 pyQCat是由本源量子开发的基于python的量子比特校准和测试框架，他可以实现量子芯片的表征流程。
 
@@ -19,19 +18,22 @@ pyQCat是由本源量子开发的基于python的量子比特校准和测试框�
 
 
 文档目录
--------
+------
 
 .. toctree::
    :maxdepth: 2
 
    start/index
-   help/help
+   help
    user/index.md
    community/index
    dataset/index
    api/index
    changes/index
 
-.. |LOGO|  image:: ./logos/pyQCat_logo.png
-   :scale: 100 %
-   :alt: qcodes logo
+
+索引及搜索
+--------
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

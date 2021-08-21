@@ -1,6 +1,0 @@
-﻿pyQCat.flow.t2\_spectrum\_node
-==============================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: t2_spectrum_node

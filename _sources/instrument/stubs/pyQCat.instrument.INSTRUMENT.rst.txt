@@ -1,0 +1,60 @@
+﻿pyQCat.instrument.Instrument
+============================
+
+.. currentmodule:: pyQCat.instrument
+
+.. autoclass:: Instrument
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Instrument.__init__
+      ~Instrument.bind_sweep
+      ~Instrument.clear_control_channel
+      ~Instrument.close_inst
+      ~Instrument.get
+      ~Instrument.get_status
+      ~Instrument.get_trigger_delay
+      ~Instrument.load
+      ~Instrument.multiple_sweep
+      ~Instrument.open_inst
+      ~Instrument.output_off
+      ~Instrument.output_on
+      ~Instrument.select
+      ~Instrument.set_control_channel
+      ~Instrument.set_custom_waveform
+      ~Instrument.set_dc
+      ~Instrument.set_dc_all
+      ~Instrument.set_intermediate_freq
+      ~Instrument.set_output
+      ~Instrument.set_output_freq
+      ~Instrument.set_period
+      ~Instrument.set_power
+      ~Instrument.set_power_attenuation
+      ~Instrument.set_sample_delay
+      ~Instrument.set_sample_width
+      ~Instrument.set_sine_waveform
+      ~Instrument.set_square_waveform
+      ~Instrument.set_sync_period
+      ~Instrument.set_sync_trig_mode
+      ~Instrument.set_trig_mode
+      ~Instrument.set_trigger_delay
+      ~Instrument.set_trigger_out_delay
+      ~Instrument.set_trigout_pulse_width
+      ~Instrument.sweep_delay
+      ~Instrument.sweep_freq
+      ~Instrument.sweep_power
+      ~Instrument.sweep_sample_delay
+      ~Instrument.sweep_voltage
+      ~Instrument.sweep_wave
+   
+   
+
+   
+   
+   

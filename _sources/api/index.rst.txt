@@ -3,18 +3,26 @@
 API 文档
 ========
 
-此页面记录了 pyQCat API 文档说明，这个页面包含所有面向用户的模块的文档，
-大致将每个pyQCat子模块构成单独的一页，为了更加清晰的展示，对一些子模块进行了拆分。
+说明
+----
+**pyQCat** 由多个部分构成，他们分别为：
 
+- **Quantum Experiment:** 负责量子比特实验，实现量子比特的测量及参数校准。
+- **Automated Testing Flow:** 负责量子比特自动化测试及校准流程。
+- **Measurement Instrument:** 负责量子比特实验参数下传及数据接受。
+- **Quantum Circuits:** 负责构造量子比特实验所需要的脉冲波形。
+- **Quantum Bits:** 定义量子比特实体类。
+- **Auxiliary Tools:** 辅助工具包，负责数据处理、绘制结果、参数拟合、用户界面等功能。
+- **Experiment Parameters:** 负责加载量子比特实验所需要的一系列参数。
 
-pyQCat API目录
--------------
+下面是 **pyQCat** 所涉及的主要功能模块，你可以选择你感兴趣的模块进行浏览。
 
+目录
+----
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
    :includehidden:
 
-   detection/index
    experiment/index
    flow/index
    instrument/index

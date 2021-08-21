@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.flow.common &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.flow.common &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
   
 
   
@@ -42,7 +47,7 @@
     
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="pyQCat.instrument" href="../../instrument/index.html" />
+    <link rel="next" title="Measurement Instrument (pyQCat.instrument)" href="../../instrument/index.html" />
     <link rel="prev" title="pyQCat.flow.readout_calibration" href="pyQCat.flow.readout_calibration.html" /> 
 </head>
 
@@ -67,7 +72,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -93,23 +98,23 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">pyQCat.detection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">pyQCat.experiment</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">pyQCat.flow</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="../index.html#dag-node">Dag Node</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">pyQCat.instrument</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">pyQCat.pulse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">pyQCat.qubit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">pyQCat.tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">pyQCat.parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -137,7 +142,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -165,15 +170,13 @@
         
           <li><a href="../../index.html">API 文档</a> &raquo;</li>
         
-          <li><a href="../index.html">pyQCat.flow</a> &raquo;</li>
+          <li><a href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a> &raquo;</li>
         
       <li>pyQCat.flow.common</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../../_sources/api/flow/stubs/pyQCat.flow.common.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -195,23 +198,23 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.common.execute_node" title="pyQCat.flow.common.execute_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execute_node</span></code></a>(flows, run_node_list, data)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.common.html#pyQCat.flow.common.execute_node" title="pyQCat.flow.common.execute_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execute_node</span></code></a>(flows, run_node_list, data)</p></td>
 <td><p>Execute node which in flow,</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.common.make_graph" title="pyQCat.flow.common.make_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_graph</span></code></a>(schema)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.common.html#pyQCat.flow.common.make_graph" title="pyQCat.flow.common.make_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_graph</span></code></a>(schema)</p></td>
 <td><p>Construct the task graph (dag) from a given schema.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.common.plot_dag" title="pyQCat.flow.common.plot_dag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_dag</span></code></a>(dag, png_name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.common.html#pyQCat.flow.common.plot_dag" title="pyQCat.flow.common.plot_dag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_dag</span></code></a>(dag, png_name)</p></td>
 <td><p>Plot dag node png.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.common.run_single_qubit" title="pyQCat.flow.common.run_single_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_single_qubit</span></code></a>(bit, flows, inst, exp_args, …)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.common.html#pyQCat.flow.common.run_single_qubit" title="pyQCat.flow.common.run_single_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_single_qubit</span></code></a>(bit, flows, inst, exp_args, …)</p></td>
 <td><p>single qubit run calibrate flow,</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.common.make_graph">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.common.</span></span><span class="sig-name descname"><span class="pre">make_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.make_graph" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">make_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.make_graph" title="永久链接至目标">¶</a></dt>
 <dd><p>Construct the task graph (dag) from a given schema.</p>
 <p>Parses the graph schema definition and creates the task graph. Tasks are the
 vertices of the graph and the connections defined in the schema become the edges.</p>
@@ -233,7 +236,7 @@ tasks using a dictionary instead of a list for the children:</p>
 non-existing nodes is created.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>schema</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(在 Python v3.7)"><em>dict</em></a>) – A dictionary with the schema definition.</p>
+<dd class="field-odd"><p><strong>schema</strong> (<em>dict</em>) – A dictionary with the schema definition.</p>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>A reference to the fully constructed graph object.</p>
@@ -249,13 +252,13 @@ non-existing nodes is created.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.common.plot_dag">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.common.</span></span><span class="sig-name descname"><span class="pre">plot_dag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">png_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.plot_dag" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">plot_dag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">png_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.plot_dag" title="永久链接至目标">¶</a></dt>
 <dd><p>Plot dag node png.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dag</strong> (<em>nx.DiGraph</em>) – nx.DiGraph object</p></li>
-<li><p><strong>png_name</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><em>str</em></a>) – save png name</p></li>
+<li><p><strong>png_name</strong> (<em>str</em>) – save png name</p></li>
 </ul>
 </dd>
 </dl>
@@ -263,38 +266,38 @@ non-existing nodes is created.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.common.execute_node">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.common.</span></span><span class="sig-name descname"><span class="pre">execute_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_node_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.execute_node" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">execute_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_node_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.execute_node" title="永久链接至目标">¶</a></dt>
 <dd><p>Execute node which in flow,</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>flows</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><em>list</em></a>) – list of dict,</p></li>
-<li><p><strong>run_node_list</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><em>list</em></a>) – list of node</p></li>
-<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(在 Python v3.7)"><em>dict</em></a>) – execute node experiment args</p></li>
+<li><p><strong>flows</strong> (<em>list</em>) – list of dict,</p></li>
+<li><p><strong>run_node_list</strong> (<em>list</em>) – list of node</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – execute node experiment args</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>result,</p>
 </dd>
 <dt class="field-odd">返回类型</dt>
-<dd class="field-odd"><p>ret (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(在 Python v3.7)">dict</a>)</p>
+<dd class="field-odd"><p>ret (dict)</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.common.run_single_qubit">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.common.</span></span><span class="sig-name descname"><span class="pre">run_single_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_node_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.run_single_qubit" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run_single_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_node_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.run_single_qubit" title="永久链接至目标">¶</a></dt>
 <dd><p>single qubit run calibrate flow,</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>bit</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – qubit.bit</p></li>
-<li><p><strong>flows</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><em>list</em></a>) – list of dict,</p></li>
-<li><p><strong>inst</strong> (<a class="reference internal" href="../../instrument/stubs/pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.Instrument"><em>Instrument</em></a>) – Instrument object</p></li>
+<li><p><strong>bit</strong> (<em>int</em>) – qubit.bit</p></li>
+<li><p><strong>flows</strong> (<em>list</em>) – list of dict,</p></li>
+<li><p><strong>inst</strong> (<a class="reference internal" href="../../../_auto/pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument"><em>Instrument</em></a>) – Instrument object</p></li>
 <li><p><strong>exp_args</strong> (<a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parse_yaml.html#pyQCat.tool.parse_yaml.ExpArgs" title="pyQCat.tool.parse_yaml.ExpArgs"><em>ExpArgs</em></a>) – ExpArgs object</p></li>
-<li><p><strong>bit_list</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><em>list</em></a>) – list of bit</p></li>
-<li><p><strong>run_node_list</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><em>list</em></a>) – list of node</p></li>
+<li><p><strong>bit_list</strong> (<em>list</em>) – list of bit</p></li>
+<li><p><strong>run_node_list</strong> (<em>list</em>) – list of node</p></li>
 </ul>
 </dd>
 </dl>
@@ -308,7 +311,7 @@ non-existing nodes is created.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../../instrument/index.html" class="btn btn-neutral float-right" title="pyQCat.instrument" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../instrument/index.html" class="btn btn-neutral float-right" title="Measurement Instrument (pyQCat.instrument)" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="pyQCat.flow.readout_calibration.html" class="btn btn-neutral float-left" title="pyQCat.flow.readout_calibration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
     </div>
 
@@ -316,6 +319,10 @@ non-existing nodes is created.</p>
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

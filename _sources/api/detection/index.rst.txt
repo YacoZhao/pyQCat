@@ -1,6 +1,6 @@
 .. _detection_api :
 
-pyQCat.detection
-================
-
 .. automodule:: pyQCat.detection
+   :no-members:
+   :no-inherited-members:
+   :no-special-members:

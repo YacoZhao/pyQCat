@@ -1,0 +1,7 @@
+pyQCat
+======
+
+.. toctree::
+   :maxdepth: 10
+
+   pyQCat

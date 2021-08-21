@@ -1,6 +1,0 @@
-﻿pyQCat.flow.set\_qubit\_Vwork\_node
-===================================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: set_qubit_Vwork_node

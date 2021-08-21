@@ -1,6 +1,0 @@
-﻿pyQCat.flow.amp\_opt\_node
-==========================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: amp_opt_node

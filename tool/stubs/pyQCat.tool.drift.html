@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.tool.drift &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.tool.drift &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
   
 
   
@@ -65,7 +70,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -91,7 +96,7 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
@@ -119,7 +124,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -151,8 +156,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/tool/stubs/pyQCat.tool.drift.rst.txt" rel="nofollow"> 查看页面源码</a>
-          
         
       </li>
     
@@ -166,7 +169,7 @@
             
   <div class="section" id="module-pyQCat.tool.drift">
 <span id="pyqcat-tool-drift"></span><h1>pyQCat.tool.drift<a class="headerlink" href="#module-pyQCat.tool.drift" title="永久链接至标题">¶</a></h1>
-<p>drift 模块定义</p>
+<p>TODO</p>
 <p class="rubric">Functions</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -178,7 +181,7 @@
 <td><p>寻找最佳工作点</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.drift.fit_spectrum" title="pyQCat.tool.drift.fit_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_spectrum</span></code></a>(z_amp_list, freq_list[, detune, d])</p></td>
-<td><p>拟合比特能谱参数</p></td>
+<td><p>拟合比特能谱实验数据</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.drift.get_amp_offset" title="pyQCat.tool.drift.get_amp_offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_amp_offset</span></code></a>(work_point, fq_max, fc, M, …)</p></td>
 <td><p>获取调制谱漂移值</p></td>
@@ -187,64 +190,63 @@
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.drift.fit_spectrum">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.drift.</span></span><span class="sig-name descname"><span class="pre">fit_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_amp_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">-</span> <span class="pre">240</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.drift.fit_spectrum" title="永久链接至目标">¶</a></dt>
-<dd><p>拟合比特能谱参数</p>
-<p>Fit the parameters of Qubit Spectrum/ RamseySpectrum.</p>
+<span class="sig-name descname"><span class="pre">fit_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">240</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.drift.fit_spectrum" title="永久链接至目标">¶</a></dt>
+<dd><p>拟合比特能谱实验数据</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>z_amp_list</strong> (<em>iterable</em>) – z flux line amplitude value</p></li>
-<li><p><strong>freq_list</strong> (<em>iterable</em>) – qubit frequency matching the z amp list.</p></li>
-<li><p><strong>fc</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – <p>…</p>
+<li><p><strong>z_amp_list</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – z flux line amplitude value</p></li>
+<li><p><strong>freq_list</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – qubit frequency matching the z amp list.</p></li>
+<li><p><strong>fc</strong> – <p>…</p>
 </p></li>
-<li><p><strong>M</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – <p>…</p>
+<li><p><strong>M</strong> – <p>…</p>
 </p></li>
-<li><p><strong>d</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – <p>…</p>
+<li><p><strong>d</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – <p>…</p>
 </p></li>
 </ul>
 </dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>the parameters of amp2freq_formula.</p>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>(typing.List, typing.List)</p>
 </dd>
-<dt class="field-odd">返回类型</dt>
-<dd class="field-odd"><p>param (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)">list</a>, <a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)">list</a>)</p>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>the parameters of amp2freq_formula.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.drift.get_amp_offset">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.drift.</span></span><span class="sig-name descname"><span class="pre">get_amp_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_point</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.drift.get_amp_offset" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_amp_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.drift.get_amp_offset" title="永久链接至目标">¶</a></dt>
 <dd><p>获取调制谱漂移值</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>work_point</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#tuple" title="(在 Python v3.7)"><em>tuple</em></a>) – current DC working point or AC flux and measured frequency correspond to DC.</p></li>
-<li><p><strong>fq_max</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 调制谱参数</p></li>
-<li><p><strong>fc</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><em>float</em></a>) – 调制谱参数</p></li>
-<li><p><strong>M</strong> – 调制谱参数</p></li>
-<li><p><strong>offset</strong> – 调制谱参数</p></li>
-<li><p><strong>d</strong> – 调制谱参数</p></li>
+<li><p><strong>work_point</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>) – current DC working point or AC flux and measured frequency correspond to DC.</p></li>
+<li><p><strong>fq_max</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 调制谱参数</p></li>
+<li><p><strong>fc</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 调制谱参数</p></li>
+<li><p><strong>M</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 调制谱参数</p></li>
+<li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 调制谱参数</p></li>
+<li><p><strong>d</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 调制谱参数</p></li>
 </ul>
 </dd>
-<dt class="field-even">返回</dt>
-<dd class="field-even"><p>幅值/dc 漂移值</p>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
 </dd>
-<dt class="field-odd">返回类型</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)">float</a></p>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>幅值/dc 漂移值</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.drift.find_working_point">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.drift.</span></span><span class="sig-name descname"><span class="pre">find_working_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_point</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_exp</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Tuple</span><a class="headerlink" href="#pyQCat.tool.drift.find_working_point" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">find_working_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.drift.find_working_point" title="永久链接至目标">¶</a></dt>
 <dd><p>寻找最佳工作点</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>work_point</strong> – </p></li>
-<li><p><strong>fq_exp</strong> – </p></li>
+<li><p><strong>work_point</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>) – </p></li>
+<li><p><strong>fq_exp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
 <li><p><strong>fq_max</strong> – </p></li>
 <li><p><strong>fc</strong> – </p></li>
 <li><p><strong>M</strong> – </p></li>
@@ -254,6 +256,11 @@
 </dd>
 </dl>
 <p>Returns:</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -268,6 +275,10 @@
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

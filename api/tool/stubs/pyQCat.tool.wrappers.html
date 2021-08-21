@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.tool.wrappers &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.tool.wrappers &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
   
 
   
@@ -42,8 +47,8 @@
     
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="pyQCat.parameters" href="../../parameters.html" />
-    <link rel="prev" title="pyQCat.tool.set_config" href="pyQCat.tool.set_config.html" /> 
+    <link rel="next" title="Experiment Parameters (pyQCat.parameters)" href="../../parameters.html" />
+    <link rel="prev" title="pyQCat.tool.utlis" href="pyQCat.tool.utlis.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -67,7 +72,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -93,19 +98,19 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">pyQCat.detection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">pyQCat.experiment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">pyQCat.flow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">pyQCat.instrument</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">pyQCat.pulse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">pyQCat.qubit</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">pyQCat.tool</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.formula.html">pyQCat.tool.formula</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.drift.html">pyQCat.tool.drift</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.param_fit.html">pyQCat.tool.param_fit</a></li>
@@ -118,10 +123,11 @@
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.resonator_fit_calibration.html">pyQCat.tool.resonator_fit_calibration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.savefile.html">pyQCat.tool.savefile</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.set_config.html">pyQCat.tool.set_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.utlis.html">pyQCat.tool.utlis</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">pyQCat.tool.wrappers</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">pyQCat.parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -149,7 +155,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -177,15 +183,13 @@
         
           <li><a href="../../index.html">API 文档</a> &raquo;</li>
         
-          <li><a href="../index.html">pyQCat.tool</a> &raquo;</li>
+          <li><a href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a> &raquo;</li>
         
       <li>pyQCat.tool.wrappers</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../../_sources/api/tool/stubs/pyQCat.tool.wrappers.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -200,6 +204,7 @@
             
   <div class="section" id="module-pyQCat.tool.wrappers">
 <span id="pyqcat-tool-wrappers"></span><h1>pyQCat.tool.wrappers<a class="headerlink" href="#module-pyQCat.tool.wrappers" title="永久链接至标题">¶</a></h1>
+<p>该模块定义了 <code class="docutils literal notranslate"><span class="pre">pyQCat</span></code> 中所用到的注解方法</p>
 <p class="rubric">Functions</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -207,56 +212,26 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.wrappers.html#pyQCat.tool.wrappers.remote_connection" title="pyQCat.tool.wrappers.remote_connection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remote_connection</span></code></a>(ip[, port])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.wrappers.remote_connection" title="pyQCat.tool.wrappers.remote_connection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remote_connection</span></code></a>(ip[, port])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.wrappers.html#pyQCat.tool.wrappers.set_file" title="pyQCat.tool.wrappers.set_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_file</span></code></a>(func)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.wrappers.set_file" title="pyQCat.tool.wrappers.set_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_file</span></code></a>(func)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.wrappers.html#pyQCat.tool.wrappers.statistics_time" title="pyQCat.tool.wrappers.statistics_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">statistics_time</span></code></a>(func)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.wrappers.statistics_time" title="pyQCat.tool.wrappers.statistics_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">statistics_time</span></code></a>(func)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.wrappers.html#pyQCat.tool.wrappers.time_block" title="pyQCat.tool.wrappers.time_block"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_block</span></code></a>(label)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.wrappers.time_block" title="pyQCat.tool.wrappers.time_block"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_block</span></code></a>(label)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.wrappers.html#pyQCat.tool.wrappers.time_cal" title="pyQCat.tool.wrappers.time_cal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_cal</span></code></a>(func)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.wrappers.time_cal" title="pyQCat.tool.wrappers.time_cal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_cal</span></code></a>(func)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.wrappers.html#pyQCat.tool.wrappers.whether_import_save" title="pyQCat.tool.wrappers.whether_import_save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">whether_import_save</span></code></a>(func)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.wrappers.whether_import_save" title="pyQCat.tool.wrappers.whether_import_save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">whether_import_save</span></code></a>(func)</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-<dl class="py function">
-<dt class="sig sig-object py" id="pyQCat.tool.wrappers.set_file">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.wrappers.</span></span><span class="sig-name descname"><span class="pre">set_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.wrappers.set_file" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyQCat.tool.wrappers.time_cal">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.wrappers.</span></span><span class="sig-name descname"><span class="pre">time_cal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.wrappers.time_cal" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyQCat.tool.wrappers.time_block">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.wrappers.</span></span><span class="sig-name descname"><span class="pre">time_block</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.wrappers.time_block" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyQCat.tool.wrappers.remote_connection">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.wrappers.</span></span><span class="sig-name descname"><span class="pre">remote_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27017</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.wrappers.remote_connection" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyQCat.tool.wrappers.statistics_time">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.wrappers.</span></span><span class="sig-name descname"><span class="pre">statistics_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.wrappers.statistics_time" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyQCat.tool.wrappers.whether_import_save">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.wrappers.</span></span><span class="sig-name descname"><span class="pre">whether_import_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.wrappers.whether_import_save" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
 </div>
 
 
@@ -265,14 +240,18 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../../parameters.html" class="btn btn-neutral float-right" title="pyQCat.parameters" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="pyQCat.tool.set_config.html" class="btn btn-neutral float-left" title="pyQCat.tool.set_config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../../parameters.html" class="btn btn-neutral float-right" title="Experiment Parameters (pyQCat.parameters)" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.tool.utlis.html" class="btn btn-neutral float-left" title="pyQCat.tool.utlis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

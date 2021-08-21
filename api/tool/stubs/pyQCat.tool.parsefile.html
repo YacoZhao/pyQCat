@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.tool.parsefile &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.tool.parsefile &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
   
 
   
@@ -67,7 +72,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -93,19 +98,19 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">pyQCat.detection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">pyQCat.experiment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">pyQCat.flow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">pyQCat.instrument</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">pyQCat.pulse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">pyQCat.qubit</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">pyQCat.tool</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.formula.html">pyQCat.tool.formula</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.drift.html">pyQCat.tool.drift</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.param_fit.html">pyQCat.tool.param_fit</a></li>
@@ -118,10 +123,11 @@
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.resonator_fit_calibration.html">pyQCat.tool.resonator_fit_calibration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.savefile.html">pyQCat.tool.savefile</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.set_config.html">pyQCat.tool.set_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.utlis.html">pyQCat.tool.utlis</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.wrappers.html">pyQCat.tool.wrappers</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">pyQCat.parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -149,7 +155,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -177,15 +183,13 @@
         
           <li><a href="../../index.html">API 文档</a> &raquo;</li>
         
-          <li><a href="../index.html">pyQCat.tool</a> &raquo;</li>
+          <li><a href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a> &raquo;</li>
         
       <li>pyQCat.tool.parsefile</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../../_sources/api/tool/stubs/pyQCat.tool.parsefile.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -200,9 +204,7 @@
             
   <div class="section" id="module-pyQCat.tool.parsefile">
 <span id="pyqcat-tool-parsefile"></span><h1>pyQCat.tool.parsefile<a class="headerlink" href="#module-pyQCat.tool.parsefile" title="永久链接至标题">¶</a></h1>
-<p>__date:         2020/11/5
-__author:       Miracle Shih
-__corporation:  OriginQuantum</p>
+<p>该模块定义了一系列用于获取实验参数的具体方法</p>
 <p class="rubric">Functions</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -211,40 +213,40 @@ __corporation:  OriginQuantum</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_ac_crosstalk" title="pyQCat.tool.parsefile.get_ac_crosstalk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_ac_crosstalk</span></code></a>(file)</p></td>
-<td><p></p></td>
+<td><p>获取AC串扰系数</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_correction" title="pyQCat.tool.parsefile.get_correction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_correction</span></code></a>(file, bit)</p></td>
-<td><p></p></td>
+<td><p>获取比特脉冲校准对象</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_cz_pulse_param" title="pyQCat.tool.parsefile.get_cz_pulse_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_cz_pulse_param</span></code></a>(file)</p></td>
-<td><p></p></td>
+<td><p>获取CZ门脉冲参数</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_dc_crosstalk" title="pyQCat.tool.parsefile.get_dc_crosstalk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dc_crosstalk</span></code></a>(file)</p></td>
-<td><p></p></td>
+<td><p>获取DC串扰系数</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_fidelity_matrix" title="pyQCat.tool.parsefile.get_fidelity_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fidelity_matrix</span></code></a>(file[, qubits])</p></td>
-<td><p></p></td>
+<td><p>获取保真度矩阵</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_freq_zamp" title="pyQCat.tool.parsefile.get_freq_zamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_freq_zamp</span></code></a>(file, bit)</p></td>
-<td><p></p></td>
+<td><p>获取AC调制谱参数</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_freq_zamp_dc" title="pyQCat.tool.parsefile.get_freq_zamp_dc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_freq_zamp_dc</span></code></a>(file, bit)</p></td>
-<td><p></p></td>
+<td><p>获取DC调制谱</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_inst" title="pyQCat.tool.parsefile.get_inst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_inst</span></code></a>(file[, bit])</p></td>
-<td><p></p></td>
+<td><p>获取初始设备对象</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_iq_discriminator" title="pyQCat.tool.parsefile.get_iq_discriminator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_iq_discriminator</span></code></a>(file, qubit[, union])</p></td>
-<td><p></p></td>
+<td><p>获取IQ分类器</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_qubit" title="pyQCat.tool.parsefile.get_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_qubit</span></code></a>(file, bit)</p></td>
-<td><p></p></td>
+<td><p>获取比特</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_two_qubit_readout_params" title="pyQCat.tool.parsefile.get_two_qubit_readout_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_two_qubit_readout_params</span></code></a>(file, bit)</p></td>
-<td><p></p></td>
+<td><p>获取两比特联合读取参数</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.get_union_readout_args" title="pyQCat.tool.parsefile.get_union_readout_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_union_readout_args</span></code></a>(file)</p></td>
-<td><p></p></td>
+<td><p>获取联合读取参数</p></td>
 </tr>
 </tbody>
 </table>
@@ -256,75 +258,263 @@ __corporation:  OriginQuantum</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.TwoQubitReadout" title="pyQCat.tool.parsefile.TwoQubitReadout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TwoQubitReadout</span></code></a>(**entries)</p></td>
-<td><p></p></td>
+<td><p>封装两比特联合读取参数</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_iq_discriminator">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_iq_discriminator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">union</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.IQdiscriminator" title="pyQCat.tool.iqprobability.IQdiscriminator"><span class="pre">pyQCat.tool.iqprobability.IQdiscriminator</span></a><a class="headerlink" href="#pyQCat.tool.parsefile.get_iq_discriminator" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_iq_discriminator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">union</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_iq_discriminator" title="永久链接至目标">¶</a></dt>
+<dd><p>获取IQ分类器</p>
+<p>首先会从数据库中读取，如果没有读到，则从指定的配置文件中加载</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p></li>
+<li><p><strong>qubit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 比特编号</p></li>
+<li><p><strong>union</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – 获取联合读取判据时，必须传入 union 参数</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.IQdiscriminator" title="pyQCat.tool.iqprobability.IQdiscriminator"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQdiscriminator</span></code></a></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>IQ分类器</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_ac_crosstalk">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_ac_crosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><a class="headerlink" href="#pyQCat.tool.parsefile.get_ac_crosstalk" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_ac_crosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_ac_crosstalk" title="永久链接至目标">¶</a></dt>
+<dd><p>获取AC串扰系数</p>
+<p>只支持从数据库中查询</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>AC串扰系数</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_dc_crosstalk">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_dc_crosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><a class="headerlink" href="#pyQCat.tool.parsefile.get_dc_crosstalk" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_dc_crosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_dc_crosstalk" title="永久链接至目标">¶</a></dt>
+<dd><p>获取DC串扰系数</p>
+<p>只支持从数据库中查询</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>DC串扰系数</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_union_readout_args">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_union_readout_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(在 NumPy v1.21)"><span class="pre">numpy.ndarray</span></a><a class="headerlink" href="#pyQCat.tool.parsefile.get_union_readout_args" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_union_readout_args</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_union_readout_args" title="永久链接至目标">¶</a></dt>
+<dd><p>获取联合读取参数</p>
+<p>只支持从数据库中查询</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>联合读取参数</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_fidelity_matrix">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_fidelity_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_fidelity_matrix" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_fidelity_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_fidelity_matrix" title="永久链接至目标">¶</a></dt>
+<dd><p>获取保真度矩阵</p>
+<p>只支持从数据库中查询</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p></li>
+<li><p><strong>qubits</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – 期望获取保真度矩阵对应的比特对象</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – 查询失败</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>保真度矩阵</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_inst">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_inst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_inst" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_inst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_inst" title="永久链接至目标">¶</a></dt>
+<dd><p>获取初始设备对象</p>
+<p>默认从本地配置文件中加载</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p></li>
+<li><p><strong>bit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 设备位数，支持8位和30位</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – bit 属性既不是 8 也不是 30</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../../_auto/pyQCat.instrument.html#pyQCat.instrument.instrument_aio.Instrument" title="pyQCat.instrument.instrument_aio.Instrument"><code class="xref py py-class docutils literal notranslate"><span class="pre">Instrument</span></code></a></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>设备对象</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_correction">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="../../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.base_pulse.PulseCorrection"><span class="pre">pyQCat.pulse.base_pulse.PulseCorrection</span></a><a class="headerlink" href="#pyQCat.tool.parsefile.get_correction" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_correction" title="永久链接至目标">¶</a></dt>
+<dd><p>获取比特脉冲校准对象</p>
+<p>默认先从数据库中加载，如果加载不到，再从本地存储路径中加载</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p></li>
+<li><p><strong>bit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 比特编号</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../../_auto/pyQCat.pulse.html#pyQCat.pulse.base_pulse.PulseCorrection" title="pyQCat.pulse.base_pulse.PulseCorrection"><code class="xref py py-class docutils literal notranslate"><span class="pre">PulseCorrection</span></code></a></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>脉冲校准对象</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_qubit">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_qubit" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>获取比特</p>
+<p>只支持从数据库中读取</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p></li>
+<li><p><strong>bit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 比特编号</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>比特对象</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_freq_zamp">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_freq_zamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_freq_zamp" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_freq_zamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_freq_zamp" title="永久链接至目标">¶</a></dt>
+<dd><p>获取AC调制谱参数</p>
+<p>只支持从数据库中读取</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p></li>
+<li><p><strong>bit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 比特编号</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>AC调制谱参数</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_freq_zamp_dc">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_freq_zamp_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_freq_zamp_dc" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_freq_zamp_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_freq_zamp_dc" title="永久链接至目标">¶</a></dt>
+<dd><p>获取DC调制谱</p>
+<p>只支持从数据库中读取</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p></li>
+<li><p><strong>bit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 比特编号</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>DC调制谱参数</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.TwoQubitReadout">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">TwoQubitReadout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">entries</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.TwoQubitReadout" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">TwoQubitReadout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">entries</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.TwoQubitReadout" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>封装两比特联合读取参数</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_two_qubit_readout_params">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_two_qubit_readout_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_two_qubit_readout_params" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_two_qubit_readout_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_two_qubit_readout_params" title="永久链接至目标">¶</a></dt>
+<dd><p>获取两比特联合读取参数</p>
+<p>只支持从数据库中读取</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p></li>
+<li><p><strong>bit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 比特编号列表</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.parsefile.html#pyQCat.tool.parsefile.TwoQubitReadout" title="pyQCat.tool.parsefile.TwoQubitReadout"><code class="xref py py-class docutils literal notranslate"><span class="pre">TwoQubitReadout</span></code></a></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>连比特联合读取参数</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.parsefile.get_cz_pulse_param">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.parsefile.</span></span><span class="sig-name descname"><span class="pre">get_cz_pulse_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_cz_pulse_param" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_cz_pulse_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.parsefile.get_cz_pulse_param" title="永久链接至目标">¶</a></dt>
+<dd><p>获取CZ门脉冲参数</p>
+<p>只支持从数据库中读取</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>file</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件路径</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>CZ门脉冲参数</p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 
@@ -342,6 +532,10 @@ __corporation:  OriginQuantum</p>
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

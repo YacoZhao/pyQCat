@@ -1,6 +1,6 @@
 .. _tool_api :
 
-pyQCat.tool
-===========
-
 .. automodule:: pyQCat.tool
+   :no-members:
+   :no-inherited-members:
+   :no-special-members:

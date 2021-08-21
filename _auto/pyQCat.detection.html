@@ -1,0 +1,1011 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.detection package &mdash; pyQCat 0.0.6 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.detection package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-detection-package">
+<h1>pyQCat.detection package<a class="headerlink" href="#pyqcat-detection-package" title="永久链接至标题">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html">pyQCat.detection.qubit_preliminary package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.cavity_flux_scan">pyQCat.detection.qubit_preliminary.cavity_flux_scan module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.find_cavity_freq">pyQCat.detection.qubit_preliminary.find_cavity_freq module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.find_qubit_freq">pyQCat.detection.qubit_preliminary.find_qubit_freq module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.fixed_flux">pyQCat.detection.qubit_preliminary.fixed_flux module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.fixed_fq">pyQCat.detection.qubit_preliminary.fixed_fq module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.preliminary_inst">pyQCat.detection.qubit_preliminary.preliminary_inst module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.preliminary_utility">pyQCat.detection.qubit_preliminary.preliminary_utility module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.s21_circle_fit_triton">pyQCat.detection.qubit_preliminary.s21_circle_fit_triton module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary.zero_detuning">pyQCat.detection.qubit_preliminary.zero_detuning module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#module-pyQCat.detection.qubit_preliminary">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="module-pyQCat.detection.cavity_detection">
+<span id="pyqcat-detection-cavity-detection-module"></span><h2>pyQCat.detection.cavity_detection module<a class="headerlink" href="#module-pyQCat.detection.cavity_detection" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.cavity_detection.CavityDetection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">CavityDetection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VNA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.cavity_detection.CavityDetection" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.detection.detection_interface.DetectionBase" title="pyQCat.detection.detection_interface.DetectionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.detection_interface.DetectionBase</span></code></a></p>
+<p>腔频检查</p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.cavity_detection.CavityDetection.stock_config">
+<span class="sig-name descname"><span class="pre">stock_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.cavity_detection.CavityDetection.stock_config" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>root</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.cavity_detection.CavityDetection.sweep_S21">
+<span class="sig-name descname"><span class="pre">sweep_S21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.cavity_detection.CavityDetection.sweep_S21" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>span</strong> – </p></li>
+<li><p><strong>start</strong> – </p></li>
+<li><p><strong>stop</strong> – </p></li>
+<li><p><strong>power</strong> – </p></li>
+<li><p><strong>ifwb</strong> – </p></li>
+<li><p><strong>points</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.cavity_detection.CavityDetection.get_resonance_signal">
+<span class="sig-name descname"><span class="pre">get_resonance_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.cavity_detection.CavityDetection.get_resonance_signal" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num</strong> – </p></li>
+<li><p><strong>dis</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.cavity_detection.CavityDetection.cavity_fitting_Q">
+<span class="sig-name descname"><span class="pre">cavity_fitting_Q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real_freq_lst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.cavity_detection.CavityDetection.cavity_fitting_Q" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>real_freq_lst</strong> – </p></li>
+<li><p><strong>power</strong> – </p></li>
+<li><p><strong>stock</strong> – </p></li>
+<li><p><strong>small_freq</strong> – </p></li>
+<li><p><strong>small_ifwb</strong> – </p></li>
+<li><p><strong>small_points</strong> – </p></li>
+<li><p><strong>medium_freq</strong> – </p></li>
+<li><p><strong>medium_ifwb</strong> – </p></li>
+<li><p><strong>medium_points</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.detection.detection_interface">
+<span id="pyqcat-detection-detection-interface-module"></span><h2>pyQCat.detection.detection_interface module<a class="headerlink" href="#module-pyQCat.detection.detection_interface" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DetectionBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VNA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>检测基类</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument"><em>Instrument</em></a>) – 一体机设备</p></li>
+<li><p><strong>VNA</strong> – 商用仪器</p></li>
+<li><p><strong>ip</strong> – 一体机 IP 地址</p></li>
+<li><p><strong>port</strong> – 端口号</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.open" title="永久链接至目标">¶</a></dt>
+<dd><p>与测量设备建立连接</p>
+<dl class="field-list simple">
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><strong>IOError</strong> – 无法连接远程设备</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.close" title="永久链接至目标">¶</a></dt>
+<dd><p>与测量设备断开连接</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.status">
+<span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.status" title="永久链接至目标">¶</a></dt>
+<dd><p>根据设备数据库映射类的id值查询一体机状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>oid</strong> – 设备数据库映射类的 id 编号</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.DatabaseQueryError" title="pyQCat.errors.DatabaseQueryError"><strong>DatabaseQueryError</strong></a> – 数据库查询异常，可能是数据库不存在此 id 值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.set_sweep_param">
+<span class="sig-name descname"><span class="pre">set_sweep_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.set_sweep_param" title="永久链接至目标">¶</a></dt>
+<dd><p>设置扫描参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>span</strong> – 扫描参数的步长</p></li>
+<li><p><strong>start</strong> – 扫描参数的起始值</p></li>
+<li><p><strong>stop</strong> – 扫描参数的结束值</p></li>
+<li><p><strong>power</strong> – 功率</p></li>
+<li><p><strong>ifwb</strong> – 中频带宽</p></li>
+<li><p><strong>points</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.sweep">
+<span class="sig-name descname"><span class="pre">sweep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.sweep" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.save_file">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">save_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_file</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ex_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.save_file" title="永久链接至目标">¶</a></dt>
+<dd><p>将数据保存至文件中</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c_file</strong> – the class : <cite>CFile</cite></p></li>
+<li><p><strong>args</strong> – <p>可迭代的对象，每一个元素必须为 ndarray 类型，例如：</p>
+<p>array([1, 2, 3, 4])
+[array([1, 2, 3, 4]), array([5, 6, 7, 8])]</p>
+</p></li>
+<li><p><strong>ex_dir</strong> – 添加额外的路径，扩展存储路径名</p></li>
+<li><p><strong>name</strong> – 文件名，默认为空，当为空时，保存的文件名将以 <code class="docutils literal notranslate"><span class="pre">0.dat/1.dat/2.dat...</span></code> 的形式命名</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.set_file_config">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">set_file_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">subdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">svmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.set_file_config" title="永久链接至目标">¶</a></dt>
+<dd><p>by setting paramets to get class : <cite>QFile</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> – root dictionary</p></li>
+<li><p><strong>subdir</strong> – sub dictionary</p></li>
+<li><p><strong>svmode</strong> – data saving format, such as ‘.dat’/’.txt’/’.ini’</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>QFile object</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qf</span> <span class="o">=</span> <span class="n">DetectionBase</span><span class="o">.</span><span class="n">set_file_config</span><span class="p">(</span><span class="s1">&#39;D:/cavity/&#39;</span><span class="p">,</span> <span class="s1">&#39;low power&#39;</span><span class="p">,</span><span class="s1">&#39;1 f=6379250000&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.save_param">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">save_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ex_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.save_param" title="永久链接至目标">¶</a></dt>
+<dd><p>save some paramters to file</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_file</strong> – the class : <cite>QFile</cite></p></li>
+<li><p><strong>ex_dir</strong> – aditinal dictionary</p></li>
+<li><p><strong>kwargs</strong> – paramters you want to save</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.fit_Q">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">fit_Q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tup_cali</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mag_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.fit_Q" title="永久链接至目标">¶</a></dt>
+<dd><p>fitting power and Q value</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tup</strong> – </p></li>
+<li><p><strong>tup_cali</strong> – </p></li>
+<li><p><strong>mag_order</strong> – </p></li>
+<li><p><strong>phase_order</strong> – </p></li>
+<li><p><strong>savefig</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>‘f0 = 6379250892.32 +/- 976.30
+Qi = 3.402e+04 +/- 3.755e+02
+Qc = 4.269e+03 +/- 3.311e+01
+phi = -0.4512 +/- 0.0075’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.stock_config">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">stock_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.stock_config" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.detection_interface.DetectionBase.sweep_S21">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">sweep_S21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.detection_interface.DetectionBase.sweep_S21" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.detection.z_line_detection">
+<span id="pyqcat-detection-z-line-detection-module"></span><h2>pyQCat.detection.z_line_detection module<a class="headerlink" href="#module-pyQCat.detection.z_line_detection" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.z_line_detection.ZlineDetection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ZlineDetection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VNA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.z_line_detection.ZlineDetection" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.detection.detection_interface.DetectionBase" title="pyQCat.detection.detection_interface.DetectionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.detection_interface.DetectionBase</span></code></a></p>
+<p><cite>Z</cite> 线检测</p>
+<p>TODO 文档</p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.z_line_detection.ZlineDetection.stock_config">
+<span class="sig-name descname"><span class="pre">stock_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.z_line_detection.ZlineDetection.stock_config" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>path</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.z_line_detection.ZlineDetection.sweep_S21">
+<span class="sig-name descname"><span class="pre">sweep_S21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol_seq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.z_line_detection.ZlineDetection.sweep_S21" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>center_freq</strong> – </p></li>
+<li><p><strong>span</strong> – </p></li>
+<li><p><strong>power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>ifwb</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>vol_channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>vol_seq</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.detection">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyQCat.detection" title="永久链接至标题">¶</a></h2>
+<div class="section" id="quantum-detection-pyqcat-detection">
+<h3>Quantum Detection (<a class="reference internal" href="../api/detection/index.html#module-pyQCat.detection" title="pyQCat.detection"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code></a>)<a class="headerlink" href="#quantum-detection-pyqcat-detection" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pyQCat.detection</span></code> 模块封装了量子比特芯片初步探测（包括扫腔频、扫比特能谱等等），用户可以直接进行调用</p>
+<div class="section" id="cavity-detection">
+<h4>Cavity Detection<a class="headerlink" href="#cavity-detection" title="永久链接至标题">¶</a></h4>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../detection/stubs/pyQCat.detection.CavityDetection.html#pyQCat.detection.CavityDetection" title="pyQCat.detection.CavityDetection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CavityDetection</span></code></a></p></td>
+<td><p>腔频检查</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="detection-interface">
+<h4>Detection Interface<a class="headerlink" href="#detection-interface" title="永久链接至标题">¶</a></h4>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../detection/stubs/pyQCat.detection.DetectionBase.html#pyQCat.detection.DetectionBase" title="pyQCat.detection.DetectionBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DetectionBase</span></code></a></p></td>
+<td><p>检测基类</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="z-line-detection">
+<h4>Z Line Detection<a class="headerlink" href="#z-line-detection" title="永久链接至标题">¶</a></h4>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../detection/stubs/pyQCat.detection.ZlineDetection.html#pyQCat.detection.ZlineDetection" title="pyQCat.detection.ZlineDetection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZlineDetection</span></code></a></p></td>
+<td><p><cite>Z</cite> 线检测</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DetectionBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VNA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>检测基类</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument"><em>Instrument</em></a>) – 一体机设备</p></li>
+<li><p><strong>VNA</strong> – 商用仪器</p></li>
+<li><p><strong>ip</strong> – 一体机 IP 地址</p></li>
+<li><p><strong>port</strong> – 端口号</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.open" title="永久链接至目标">¶</a></dt>
+<dd><p>与测量设备建立连接</p>
+<dl class="field-list simple">
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><strong>IOError</strong> – 无法连接远程设备</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.close" title="永久链接至目标">¶</a></dt>
+<dd><p>与测量设备断开连接</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.status">
+<span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.status" title="永久链接至目标">¶</a></dt>
+<dd><p>根据设备数据库映射类的id值查询一体机状态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>oid</strong> – 设备数据库映射类的 id 编号</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.DatabaseQueryError" title="pyQCat.errors.DatabaseQueryError"><strong>DatabaseQueryError</strong></a> – 数据库查询异常，可能是数据库不存在此 id 值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.set_sweep_param">
+<span class="sig-name descname"><span class="pre">set_sweep_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.set_sweep_param" title="永久链接至目标">¶</a></dt>
+<dd><p>设置扫描参数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>span</strong> – 扫描参数的步长</p></li>
+<li><p><strong>start</strong> – 扫描参数的起始值</p></li>
+<li><p><strong>stop</strong> – 扫描参数的结束值</p></li>
+<li><p><strong>power</strong> – 功率</p></li>
+<li><p><strong>ifwb</strong> – 中频带宽</p></li>
+<li><p><strong>points</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.sweep">
+<span class="sig-name descname"><span class="pre">sweep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.sweep" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.save_file">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">save_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_file</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ex_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.save_file" title="永久链接至目标">¶</a></dt>
+<dd><p>将数据保存至文件中</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c_file</strong> – the class : <cite>CFile</cite></p></li>
+<li><p><strong>args</strong> – <p>可迭代的对象，每一个元素必须为 ndarray 类型，例如：</p>
+<p>array([1, 2, 3, 4])
+[array([1, 2, 3, 4]), array([5, 6, 7, 8])]</p>
+</p></li>
+<li><p><strong>ex_dir</strong> – 添加额外的路径，扩展存储路径名</p></li>
+<li><p><strong>name</strong> – 文件名，默认为空，当为空时，保存的文件名将以 <code class="docutils literal notranslate"><span class="pre">0.dat/1.dat/2.dat...</span></code> 的形式命名</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.set_file_config">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">set_file_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">subdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">svmode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.set_file_config" title="永久链接至目标">¶</a></dt>
+<dd><p>by setting paramets to get class : <cite>QFile</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> – root dictionary</p></li>
+<li><p><strong>subdir</strong> – sub dictionary</p></li>
+<li><p><strong>svmode</strong> – data saving format, such as ‘.dat’/’.txt’/’.ini’</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>QFile object</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qf</span> <span class="o">=</span> <span class="n">DetectionBase</span><span class="o">.</span><span class="n">set_file_config</span><span class="p">(</span><span class="s1">&#39;D:/cavity/&#39;</span><span class="p">,</span> <span class="s1">&#39;low power&#39;</span><span class="p">,</span><span class="s1">&#39;1 f=6379250000&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.save_param">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">save_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ex_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.save_param" title="永久链接至目标">¶</a></dt>
+<dd><p>save some paramters to file</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_file</strong> – the class : <cite>QFile</cite></p></li>
+<li><p><strong>ex_dir</strong> – aditinal dictionary</p></li>
+<li><p><strong>kwargs</strong> – paramters you want to save</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.fit_Q">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">fit_Q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tup_cali</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mag_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.fit_Q" title="永久链接至目标">¶</a></dt>
+<dd><p>fitting power and Q value</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tup</strong> – </p></li>
+<li><p><strong>tup_cali</strong> – </p></li>
+<li><p><strong>mag_order</strong> – </p></li>
+<li><p><strong>phase_order</strong> – </p></li>
+<li><p><strong>savefig</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>‘f0 = 6379250892.32 +/- 976.30
+Qi = 3.402e+04 +/- 3.755e+02
+Qc = 4.269e+03 +/- 3.311e+01
+phi = -0.4512 +/- 0.0075’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.stock_config">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">stock_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.stock_config" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.DetectionBase.sweep_S21">
+<em class="property"><span class="pre">abstract</span> </em><span class="sig-name descname"><span class="pre">sweep_S21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.DetectionBase.sweep_S21" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityDetection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">CavityDetection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VNA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityDetection" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.detection.detection_interface.DetectionBase" title="pyQCat.detection.detection_interface.DetectionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.detection_interface.DetectionBase</span></code></a></p>
+<p>腔频检查</p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityDetection.stock_config">
+<span class="sig-name descname"><span class="pre">stock_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityDetection.stock_config" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>root</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityDetection.sweep_S21">
+<span class="sig-name descname"><span class="pre">sweep_S21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityDetection.sweep_S21" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>span</strong> – </p></li>
+<li><p><strong>start</strong> – </p></li>
+<li><p><strong>stop</strong> – </p></li>
+<li><p><strong>power</strong> – </p></li>
+<li><p><strong>ifwb</strong> – </p></li>
+<li><p><strong>points</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityDetection.get_resonance_signal">
+<span class="sig-name descname"><span class="pre">get_resonance_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityDetection.get_resonance_signal" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num</strong> – </p></li>
+<li><p><strong>dis</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityDetection.cavity_fitting_Q">
+<span class="sig-name descname"><span class="pre">cavity_fitting_Q</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real_freq_lst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stock</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">medium_points</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityDetection.cavity_fitting_Q" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>real_freq_lst</strong> – </p></li>
+<li><p><strong>power</strong> – </p></li>
+<li><p><strong>stock</strong> – </p></li>
+<li><p><strong>small_freq</strong> – </p></li>
+<li><p><strong>small_ifwb</strong> – </p></li>
+<li><p><strong>small_points</strong> – </p></li>
+<li><p><strong>medium_freq</strong> – </p></li>
+<li><p><strong>medium_ifwb</strong> – </p></li>
+<li><p><strong>medium_points</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.ZlineDetection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ZlineDetection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VNA</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.ZlineDetection" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.detection.detection_interface.DetectionBase" title="pyQCat.detection.detection_interface.DetectionBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.detection_interface.DetectionBase</span></code></a></p>
+<p><cite>Z</cite> 线检测</p>
+<p>TODO 文档</p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.ZlineDetection.stock_config">
+<span class="sig-name descname"><span class="pre">stock_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.ZlineDetection.stock_config" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>path</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.ZlineDetection.sweep_S21">
+<span class="sig-name descname"><span class="pre">sweep_S21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ifwb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol_seq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.ZlineDetection.sweep_S21" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>center_freq</strong> – </p></li>
+<li><p><strong>span</strong> – </p></li>
+<li><p><strong>power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>ifwb</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>vol_channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>vol_seq</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityFluxScan">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">CavityFluxScan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'qaio'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityFluxScan" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary" title="pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityFluxScan.qaio">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">qaio</span></span><a class="headerlink" href="#pyQCat.detection.CavityFluxScan.qaio" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityFluxScan.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dc_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-</span> <span class="pre">1.0,</span> <span class="pre">-</span> <span class="pre">0.98,</span> <span class="pre">-</span> <span class="pre">0.96,</span> <span class="pre">-</span> <span class="pre">0.94,</span> <span class="pre">-</span> <span class="pre">0.92,</span> <span class="pre">-</span> <span class="pre">0.9,</span> <span class="pre">-</span> <span class="pre">0.88,</span> <span class="pre">-</span> <span class="pre">0.86,</span> <span class="pre">-</span> <span class="pre">0.84,</span> <span class="pre">-</span> <span class="pre">0.82,</span> <span class="pre">-</span> <span class="pre">0.8,</span> <span class="pre">-</span> <span class="pre">0.78,</span> <span class="pre">-</span> <span class="pre">0.76,</span> <span class="pre">-</span> <span class="pre">0.74,</span> <span class="pre">-</span> <span class="pre">0.72,</span> <span class="pre">-</span> <span class="pre">0.7,</span> <span class="pre">-</span> <span class="pre">0.68,</span> <span class="pre">-</span> <span class="pre">0.66,</span> <span class="pre">-</span> <span class="pre">0.64,</span> <span class="pre">-</span> <span class="pre">0.62,</span> <span class="pre">-</span> <span class="pre">0.6,</span> <span class="pre">-</span> <span class="pre">0.58,</span> <span class="pre">-</span> <span class="pre">0.56,</span> <span class="pre">-</span> <span class="pre">0.54,</span> <span class="pre">-</span> <span class="pre">0.52,</span> <span class="pre">-</span> <span class="pre">0.5,</span> <span class="pre">-</span> <span class="pre">0.48,</span> <span class="pre">-</span> <span class="pre">0.46,</span> <span class="pre">-</span> <span class="pre">0.44,</span> <span class="pre">-</span> <span class="pre">0.42,</span> <span class="pre">-</span> <span class="pre">0.4,</span> <span class="pre">-</span> <span class="pre">0.38,</span> <span class="pre">-</span> <span class="pre">0.36,</span> <span class="pre">-</span> <span class="pre">0.34,</span> <span class="pre">-</span> <span class="pre">0.32,</span> <span class="pre">-</span> <span class="pre">0.3,</span> <span class="pre">-</span> <span class="pre">0.28,</span> <span class="pre">-</span> <span class="pre">0.26,</span> <span class="pre">-</span> <span class="pre">0.24,</span> <span class="pre">-</span> <span class="pre">0.22,</span> <span class="pre">-</span> <span class="pre">0.2,</span> <span class="pre">-</span> <span class="pre">0.18,</span> <span class="pre">-</span> <span class="pre">0.16,</span> <span class="pre">-</span> <span class="pre">0.14,</span> <span class="pre">-</span> <span class="pre">0.12,</span> <span class="pre">-</span> <span class="pre">0.1,</span> <span class="pre">-</span> <span class="pre">0.08,</span> <span class="pre">-</span> <span class="pre">0.06,</span> <span class="pre">-</span> <span class="pre">0.04,</span> <span class="pre">-</span> <span class="pre">0.02,</span> <span class="pre">0.0,</span> <span class="pre">0.02,</span> <span class="pre">0.04,</span> <span class="pre">0.06,</span> <span class="pre">0.08,</span> <span class="pre">0.1,</span> <span class="pre">0.12,</span> <span class="pre">0.14,</span> <span class="pre">0.16,</span> <span class="pre">0.18,</span> <span class="pre">0.2,</span> <span class="pre">0.22,</span> <span class="pre">0.24,</span> <span class="pre">0.26,</span> <span class="pre">0.28,</span> <span class="pre">0.3,</span> <span class="pre">0.32,</span> <span class="pre">0.34,</span> <span class="pre">0.36,</span> <span class="pre">0.38,</span> <span class="pre">0.4,</span> <span class="pre">0.42,</span> <span class="pre">0.44,</span> <span class="pre">0.46,</span> <span class="pre">0.48,</span> <span class="pre">0.5,</span> <span class="pre">0.52,</span> <span class="pre">0.54,</span> <span class="pre">0.56,</span> <span class="pre">0.58,</span> <span class="pre">0.6,</span> <span class="pre">0.62,</span> <span class="pre">0.64,</span> <span class="pre">0.66,</span> <span class="pre">0.68,</span> <span class="pre">0.7,</span> <span class="pre">0.72,</span> <span class="pre">0.74,</span> <span class="pre">0.76,</span> <span class="pre">0.78,</span> <span class="pre">0.8,</span> <span class="pre">0.82,</span> <span class="pre">0.84,</span> <span class="pre">0.86,</span> <span class="pre">0.88,</span> <span class="pre">0.9,</span> <span class="pre">0.92,</span> <span class="pre">0.94,</span> <span class="pre">0.96,</span> <span class="pre">0.98,</span> <span class="pre">1.0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[6400,</span> <span class="pre">6410,</span> <span class="pre">6420,</span> <span class="pre">6430,</span> <span class="pre">6440,</span> <span class="pre">6450,</span> <span class="pre">6460,</span> <span class="pre">6470,</span> <span class="pre">6480,</span> <span class="pre">6490,</span> <span class="pre">6500]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ATT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">typing.Union[str,</span> <span class="pre">pyQCat.qubit.qubit.Qubit]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityFluxScan.run" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dc_list</strong> – Flux scan list</p></li>
+<li><p><strong>freq_list</strong> – Freq scan list</p></li>
+<li><p><strong>dc_channel</strong> – FLux channel</p></li>
+<li><p><strong>net_IFBW</strong> – The IF bandwidth of network analyzer</p></li>
+<li><p><strong>net_power</strong> – The power of network analyzer</p></li>
+<li><p><strong>dynamic_plot</strong> – Bool. If True stands for animated drawing</p></li>
+<li><p><strong>fit_q</strong> – Bool. If Ture stands Q fitting</p></li>
+<li><p><strong>root</strong> – str or Qubit object</p></li>
+<li><p><strong>name</strong> – Optional. Experiment name</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.FindCavityFreq">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FindCavityFreq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.FindCavityFreq" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary" title="pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary</span></code></a></p>
+<p>Use to find the bit cavity frequency
+:param network_analyzer: Network analyzer model</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.FindCavityFreq.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">fc_start=6300</span></em>, <em class="sig-param"><span class="pre">fc_end=6600</span></em>, <em class="sig-param"><span class="pre">cavity_count=6</span></em>, <em class="sig-param"><span class="pre">points=1001</span></em>, <em class="sig-param"><span class="pre">net_IFBW=500</span></em>, <em class="sig-param"><span class="pre">net_power=-15</span></em>, <em class="sig-param"><span class="pre">ATT=0</span></em>, <em class="sig-param"><span class="pre">root=&lt;class</span> <span class="pre">'str'&gt;</span></em>, <em class="sig-param"><span class="pre">name=None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.FindCavityFreq.run" title="永久链接至目标">¶</a></dt>
+<dd><p>Sweep cavity freq
+:param fc_start: Start freq
+:param fc_end: End freq
+:param cavity_count: Cavity freq number
+:param points: Sweep points
+:param net_IFBW: The IF bandwidth of network analyzer
+:param net_power: The power of network analyzer
+:param root: File save path</p>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.FindQubitFreq">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FindQubitFreq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dc_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mic_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_analyzer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.FindQubitFreq" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary" title="pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.FindQubitFreq.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cavity_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mic_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">typing.Union[str,</span> <span class="pre">pyQCat.qubit.qubit.Qubit]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.FindQubitFreq.run" title="永久链接至目标">¶</a></dt>
+<dd><p>Qubit freq scan
+:type cavity_list: <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>
+:param cavity_list: The cavity frequency selected in the ‘cavity flux scan’ results
+:type dc_list: <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>
+:param dc_list: The dc selected in the ‘cavity flux scan’ results
+:param dc_channel: Dc channel
+:type fq_list: <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>
+:param fq_list: Qubit start freq
+:param net_IFBW: The IF bandwidth of network analyzer
+:param net_power: The power of network analyzer
+:param mic_power: The power of Mic source
+:param root: File save path</p>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.FixedFlux">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FixedFlux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dc_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mic_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_analyzer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.FixedFlux" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary" title="pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.FixedFlux.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_IFBW</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mic_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mic_span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.FixedFlux.run" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>freq</strong> – Center freq</p></li>
+<li><p><strong>dc</strong> – flux</p></li>
+<li><p><strong>power_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – Power scan list</p></li>
+<li><p><strong>dc_channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Flux scan list</p></li>
+<li><p><strong>net_power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The power of network analyzer</p></li>
+<li><p><strong>net_points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The points of network analyzer</p></li>
+<li><p><strong>net_IFBW</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The IF bandwidth of network analyzer</p></li>
+<li><p><strong>net_span</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The span of network analyzer</p></li>
+<li><p><strong>mic_points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The points of Mic source</p></li>
+<li><p><strong>mic_span</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The span of Mic source</p></li>
+<li><p><strong>root</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – str. File save path</p></li>
+<li><p><strong>name</strong> – Optional. Experiment name</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.FixedFq">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FixedFq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dc_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mic_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_analyzer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.FixedFq" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary" title="pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.FixedFq.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_IFBW</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.FixedFq.run" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>freq</strong> – Center freq</p></li>
+<li><p><strong>dc_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – DC scan list</p></li>
+<li><p><strong>power_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – Power scan list</p></li>
+<li><p><strong>dc_channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Dc channel</p></li>
+<li><p><strong>net_power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The power of network analyzer</p></li>
+<li><p><strong>net_points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The points of network analyzer</p></li>
+<li><p><strong>net_IFBW</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The IF bandwidth of network analyzer</p></li>
+<li><p><strong>net_span</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The span of network analyzer</p></li>
+<li><p><strong>root</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – str. File save path</p></li>
+<li><p><strong>name</strong> – Optional. Experiment name</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.ZeroDetuning">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ZeroDetuning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dc_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mic_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_analyzer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.ZeroDetuning" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="pyQCat.detection.qubit_preliminary.html#pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary" title="pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.ZeroDetuning.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_span</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detuning</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ATT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.ZeroDetuning.run" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>freq_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – Freq scan list, unit(Mhz)</p></li>
+<li><p><strong>dc_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – Flux scan list</p></li>
+<li><p><strong>power_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – Power scan list</p></li>
+<li><p><strong>dc_channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Flux channel</p></li>
+<li><p><strong>net_power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The power of network analyzer</p></li>
+<li><p><strong>net_points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The points of network analyzer</p></li>
+<li><p><strong>net_IFBW</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The IF bandwidth of network analyzer</p></li>
+<li><p><strong>net_span</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The span of network analyzer, unit(hz)</p></li>
+<li><p><strong>detuning</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – unit(Mhz)</p></li>
+<li><p><strong>root</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – File save path</p></li>
+<li><p><strong>name</strong> – <p>Optional. Experiment name</p>
+<p>Returns:</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

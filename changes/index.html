@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>版本记录 &mdash; pyQCat 0.0.1 文档</title>
+  <title>版本记录 &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../_static/pyQCat.ico"/>
   
 
   
@@ -42,7 +47,7 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="prev" title="pyQCat.parameters" href="../api/parameters.html" /> 
+    <link rel="prev" title="Experiment Parameters (pyQCat.parameters)" href="../api/parameters.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +71,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -92,7 +97,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataset/index.html">结构及数据流程</a></li>
@@ -103,6 +108,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#version-0-0-4">version 0.0.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-0-0-5">version 0.0.5</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#version-0-0-6">version 0.0.6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-0-7">version 0.0.7</a></li>
 </ul>
 </li>
 </ul>
@@ -127,7 +133,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -158,8 +164,6 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/changes/index.md.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -247,6 +251,32 @@
 <li><p>修改BUG：flow GUI执行界面 dcm_flag 属性不支持 False 输入 （已解决）</p></li>
 </ol>
 </div>
+<div class="section" id="version-0-0-7">
+<h2>version 0.0.7<a class="headerlink" href="#version-0-0-7" title="永久链接至标题">¶</a></h2>
+<p><strong>日期：2021年8月20日</strong></p>
+<p><strong>实验结果解析展示</strong></p>
+<ol class="simple">
+<li><p>解决了显示数据的小数位数以及数据变化标注不准确的问题。优化了数据与实验图片的对应逻辑。</p></li>
+<li><p>优化各flow图片收集类的结构，对重复部分进一步抽取，各目录对应关系通过类名区分作为单独参数统一独立出来。</p></li>
+<li><p>各实验数据收集装饰器入口优化，减少冗余代码。</p></li>
+<li><p>qubit_data输出路径优化，按照bit分类</p></li>
+</ol>
+<p><strong>数据处理方案优化</strong></p>
+<ol class="simple">
+<li><p>chirp变频范围由 [IF， IF+bandwidth] 调整为 [IF-bandwidth/2， IF+bandwidth/2]，拟合结果不需要做bandwidth/2的修正。</p></li>
+<li><p>Rabi振荡检测中的MAD范围扩大因子b由1.482调整为2.5。</p></li>
+</ol>
+<p><strong>实验逻辑优化</strong></p>
+<ol class="simple">
+<li><p>调整寻找比特频率的逻辑，结合chrip方案、寻峰算法及raibScanWidth，大幅度提升比特频率的查找准确率</p></li>
+<li><p>yaml文件增加sweet point选项供用户选择，自由选择DC串扰校准的制备点</p></li>
+<li><p>goodness节点加入拟合Q值功能</p></li>
+</ol>
+<p><strong>自动化测试GUI界面更新</strong></p>
+<ol class="simple">
+<li><p>flow GUI界面添加sweet point参数选项</p></li>
+</ol>
+</div>
 </div>
 
 
@@ -255,13 +285,17 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../api/parameters.html" class="btn btn-neutral float-left" title="pyQCat.parameters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../api/parameters.html" class="btn btn-neutral float-left" title="Experiment Parameters (pyQCat.parameters)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

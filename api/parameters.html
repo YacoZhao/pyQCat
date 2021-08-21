@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.parameters &mdash; pyQCat 0.0.1 文档</title>
+  <title>Experiment Parameters (pyQCat.parameters) &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../_static/pyQCat.ico"/>
   
 
   
@@ -67,7 +72,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -93,20 +98,20 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataset/index.html">结构及数据流程</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API 文档</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="detection/index.html">pyQCat.detection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="experiment/index.html">pyQCat.experiment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="flow/index.html">pyQCat.flow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="instrument/index.html">pyQCat.instrument</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pulse/index.html">pyQCat.pulse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qubit/index.html">pyQCat.qubit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tool/index.html">pyQCat.tool</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">pyQCat.parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +139,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -162,13 +167,11 @@
         
           <li><a href="index.html">API 文档</a> &raquo;</li>
         
-      <li>pyQCat.parameters</li>
+      <li>Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/api/parameters.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -182,16 +185,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="module-pyQCat.parameters">
-<span id="pyqcat-parameters"></span><h1>pyQCat.parameters<a class="headerlink" href="#module-pyQCat.parameters" title="永久链接至标题">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code> 模块用于获取实验参数</p>
+<span id="experiment-parameters-pyqcat-parameters"></span><h1>Experiment Parameters (<a class="reference internal" href="#module-pyQCat.parameters" title="pyQCat.parameters"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code></a>)<a class="headerlink" href="#module-pyQCat.parameters" title="永久链接至标题">¶</a></h1>
+<p>该模块包装了用于获取实验参数的通用方法</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.parameters.get_parameters">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.parameters.</span></span><span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'D:\\work_loc\\pyqcat\\pyqcat_doc_ch/config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">union</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.get_parameters" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_docs/config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">union</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.get_parameters" title="永久链接至目标">¶</a></dt>
 <dd><p>获取实验所需参数</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – <p>对象名称</p>
+<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – <p>对象名称，你可以选择：</p>
 <ul>
 <li><p>ac_crosstalk: 获取AC串扰系数</p></li>
 <li><p>dc_crosstalk: 获取DC串扰系数</p></li>
@@ -207,25 +210,29 @@
 <li><p>cz_dict: 获取CZ门</p></li>
 </ul>
 </p></li>
-<li><p><strong>bit</strong> – 比特编号</p></li>
-<li><p><strong>root</strong> – 获取参数的路径，默认为空，从数据库中加载，否则从你提供的配置文件路劲中获取</p></li>
-<li><p><strong>union</strong> – </p></li>
+<li><p><strong>bit</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – 比特编号</p></li>
+<li><p><strong>root</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 获取参数的路径，默认为空，从数据库中加载，否则从你提供的配置文件路劲中获取</p></li>
+<li><p><strong>union</strong> – 获取联合IQ分类器的时候使用，默认为空</p></li>
 </ul>
 </dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
-<p>Examples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inst</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">inst</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span>
 <span class="n">qubit</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;qubit&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
 <span class="n">compensate</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;compensate&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
 <span class="n">dc</span> <span class="o">=</span> <span class="n">corrected_dc</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 <span class="n">dcm</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;dcm&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+
+<span class="c1"># 获取联合读取分类器</span>
+<span class="n">dcm_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;dcm&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">union</span><span class="o">=</span><span class="n">union_bit_list</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">union_bit_list</span><span class="p">]</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.parameters.corrected_dc">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.parameters.</span></span><span class="sig-name descname"><span class="pre">corrected_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'D:\\work_loc\\pyqcat\\pyqcat_doc_ch/config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_qubit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_qubits</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><a class="headerlink" href="#pyQCat.parameters.corrected_dc" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">corrected_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_docs/config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.corrected_dc" title="永久链接至目标">¶</a></dt>
 <dd><p>获取实验中施加到各个比特上的DC电压值</p>
 <p>如果传入 <code class="docutils literal notranslate"><span class="pre">sweet_point</span></code> 参数，则 <code class="docutils literal notranslate"><span class="pre">sweet_point</span></code> 对应的比特取 <code class="docutils literal notranslate"><span class="pre">dc_max</span></code> 属性，
 其他比特取 <code class="docutils literal notranslate"><span class="pre">dc_min</span></code> 属性，且不需要进行畸变修正；</p>
@@ -235,33 +242,61 @@
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>dimension</strong> – 比特个数，默认为6比特</p></li>
-<li><p><strong>root</strong> – 根目录，用于从json中获取数据</p></li>
-<li><p><strong>sweet_qubit</strong> – 工作比特</p></li>
-<li><p><strong>static_qubits</strong> – 传参输入自选的比特</p></li>
+<li><p><strong>dimension</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – 比特个数，默认为6比特</p></li>
+<li><p><strong>root</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 根目录，用于从json中获取数据</p></li>
+<li><p><strong>sweet_qubit</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – 工作比特</p></li>
+<li><p><strong>static_qubits</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]]) – 传参输入自选的比特</p></li>
 </ul>
 </dd>
 <dt class="field-even">引发</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#TypeError" title="(在 Python v3.7)"><strong>TypeError</strong></a> – <code class="docutils literal notranslate"><span class="pre">dimension</span></code> 属性既不是 <code class="docutils literal notranslate"><span class="pre">int</span></code> 类型，也不是 <code class="docutils literal notranslate"><span class="pre">List</span></code> 类型</p>
+<dd class="field-even"><p><strong>TypeError</strong> – <code class="docutils literal notranslate"><span class="pre">dimension</span></code> 属性既不是 <code class="docutils literal notranslate"><span class="pre">int</span></code> 类型，也不是 <code class="docutils literal notranslate"><span class="pre">List</span></code> 类型</p>
 </dd>
-<dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>每个通道对应的电压值，最终施加到比特上的电压</p>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
 </dd>
-<dt class="field-even">返回类型</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#dict" title="(在 Python v3.7)">dict</a></p>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>每个通道对应的电压值，最终施加到比特上的电压</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.parameters.update_qubit_dc">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.parameters.</span></span><span class="sig-name descname"><span class="pre">update_qubit_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'D:\\work_loc\\pyqcat\\pyqcat_doc_ch/config'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.update_qubit_dc" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">update_qubit_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_docs/config'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.update_qubit_dc" title="永久链接至目标">¶</a></dt>
+<dd><p>更新配置文件中 <code class="docutils literal notranslate"><span class="pre">qubit.json</span></code> 中的比特电压值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 比特编号</p></li>
+<li><p><strong>vol</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 电压值</p></li>
+<li><p><strong>root</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 配置文件 <code class="docutils literal notranslate"><span class="pre">qubit.json</span></code> 所在位置的绝对路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.parameters.decorate_dc">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.parameters.</span></span><span class="sig-name descname"><span class="pre">decorate_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="qubit/stubs/pyQCat.qubit.Qubit.html#pyQCat.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><span class="pre">pyQCat.qubit.qubit.Qubit</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">5)</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">Dict</span><a class="headerlink" href="#pyQCat.parameters.decorate_dc" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">decorate_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">5)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.decorate_dc" title="永久链接至目标">¶</a></dt>
+<dd><p>利用DC串扰系数修正电压</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]) – 比特列表</p></li>
+<li><p><strong>shape</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>) – 比特规模</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>经过串扰修正后施加到各个比特上的电压</p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 
@@ -279,6 +314,10 @@
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

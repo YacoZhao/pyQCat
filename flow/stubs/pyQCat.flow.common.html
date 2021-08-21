@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.flow.common &mdash; pyQCat 0.0.6 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.flow.common</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.flow.common">
+<span id="pyqcat-flow-common"></span><h1>pyQCat.flow.common<a class="headerlink" href="#module-pyQCat.flow.common" title="永久链接至标题">¶</a></h1>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.common.execute_node" title="pyQCat.flow.common.execute_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execute_node</span></code></a>(flows, run_node_list, data)</p></td>
+<td><p>Execute node which in flow,</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.common.make_graph" title="pyQCat.flow.common.make_graph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_graph</span></code></a>(schema)</p></td>
+<td><p>Construct the task graph (dag) from a given schema.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.common.plot_dag" title="pyQCat.flow.common.plot_dag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_dag</span></code></a>(dag, png_name)</p></td>
+<td><p>Plot dag node png.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.common.run_single_qubit" title="pyQCat.flow.common.run_single_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_single_qubit</span></code></a>(bit, flows, inst, exp_args, …)</p></td>
+<td><p>single qubit run calibrate flow,</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.make_graph">
+<span class="sig-name descname"><span class="pre">make_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.make_graph" title="永久链接至目标">¶</a></dt>
+<dd><p>Construct the task graph (dag) from a given schema.</p>
+<p>Parses the graph schema definition and creates the task graph. Tasks are the
+vertices of the graph and the connections defined in the schema become the edges.</p>
+<p>A key in the schema dict represents a parent task and the value one or more
+children:</p>
+<blockquote>
+<div><p>{parent: [child]} or {parent: [child1, child2]}</p>
+</div></blockquote>
+<p>The data output of one task can be routed to a labelled input slot of successor
+tasks using a dictionary instead of a list for the children:</p>
+<blockquote>
+<div><p>{parent: {child1: ‘positive’, child2: ‘negative’}}</p>
+</div></blockquote>
+<dl class="simple">
+<dt>An empty slot name or None skips the creation of a labelled slot:</dt><dd><p>{parent: {child1: ‘’, child2: None}}</p>
+</dd>
+</dl>
+<p>The underlying graph library creates nodes automatically, when an edge between
+non-existing nodes is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>schema</strong> (<em>dict</em>) – A dictionary with the schema definition.</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>A reference to the fully constructed graph object.</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>DiGraph</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>DirectedAcyclicGraphUndefined</strong> – If the schema is not defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.plot_dag">
+<span class="sig-name descname"><span class="pre">plot_dag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">png_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.plot_dag" title="永久链接至目标">¶</a></dt>
+<dd><p>Plot dag node png.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dag</strong> (<em>nx.DiGraph</em>) – nx.DiGraph object</p></li>
+<li><p><strong>png_name</strong> (<em>str</em>) – save png name</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.execute_node">
+<span class="sig-name descname"><span class="pre">execute_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_node_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.execute_node" title="永久链接至目标">¶</a></dt>
+<dd><p>Execute node which in flow,</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flows</strong> (<em>list</em>) – list of dict,</p></li>
+<li><p><strong>run_node_list</strong> (<em>list</em>) – list of node</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – execute node experiment args</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>result,</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>ret (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.run_single_qubit">
+<span class="sig-name descname"><span class="pre">run_single_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_node_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.run_single_qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>single qubit run calibrate flow,</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bit</strong> (<em>int</em>) – qubit.bit</p></li>
+<li><p><strong>flows</strong> (<em>list</em>) – list of dict,</p></li>
+<li><p><strong>inst</strong> (<a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument"><em>Instrument</em></a>) – Instrument object</p></li>
+<li><p><strong>exp_args</strong> (<a class="reference internal" href="../../tool/stubs/pyQCat.tool.parse_yaml.html#pyQCat.tool.parse_yaml.ExpArgs" title="pyQCat.tool.parse_yaml.ExpArgs"><em>ExpArgs</em></a>) – ExpArgs object</p></li>
+<li><p><strong>bit_list</strong> (<em>list</em>) – list of bit</p></li>
+<li><p><strong>run_node_list</strong> (<em>list</em>) – list of node</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

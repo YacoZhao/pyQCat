@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.instrument.KeysightMSOX6004A &mdash; pyQCat 0.0.6 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.6
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.instrument.KeysightMSOX6004A</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.instrument.KeysightMSOX6004A">
+<span id="pyqcat-instrument-keysightmsox6004a"></span><h1>pyQCat.instrument.KeysightMSOX6004A<a class="headerlink" href="#module-pyQCat.instrument.KeysightMSOX6004A" title="永久链接至标题">¶</a></h1>
+<p>商用仪器 KeysightMSOX6004A</p>
+<p class="rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A" title="pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KeysightMSOX6004A</span></code></a>(visa_address)</p></td>
+<td><p>示波器 B2902A</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">KeysightMSOX6004A</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visa_address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../_auto/pyQCat.instrument.html#pyQCat.instrument.visa_inst.VisaInst" title="pyQCat.instrument.visa_inst.VisaInst"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.visa_inst.VisaInst</span></code></a></p>
+<p>示波器 B2902A</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>visa_address</strong> – visa地址，如 <code class="docutils literal notranslate"><span class="pre">TCPIP0::192.168.110.241::inst0::INSTR</span></code></p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A.initializing_oscilloscope">
+<span class="sig-name descname"><span class="pre">initializing_oscilloscope</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A.initializing_oscilloscope" title="永久链接至目标">¶</a></dt>
+<dd><p>Initializing the Interface and the Oscilloscope</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A.auto_scale">
+<span class="sig-name descname"><span class="pre">auto_scale</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A.auto_scale" title="永久链接至目标">¶</a></dt>
+<dd><p>The :AUToscale command performs a very useful function for unknown waveforms by setting up the
+vertical channel, time base, and trigger level of the instrument.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A.set_acq">
+<span class="sig-name descname"><span class="pre">set_acq</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A.set_acq" title="永久链接至目标">¶</a></dt>
+<dd><p>Configure the instrument for normal acquisition.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A.get_image_data">
+<span class="sig-name descname"><span class="pre">get_image_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.KeysightMSOX6004A.KeysightMSOX6004A.get_image_data" title="永久链接至目标">¶</a></dt>
+<dd><p>query reads and returns screen image data</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

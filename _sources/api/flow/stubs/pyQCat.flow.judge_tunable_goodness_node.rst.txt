@@ -1,6 +1,0 @@
-﻿pyQCat.flow.judge\_tunable\_goodness\_node
-==========================================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: judge_tunable_goodness_node

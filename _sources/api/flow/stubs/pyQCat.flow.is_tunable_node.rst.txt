@@ -1,6 +1,0 @@
-﻿pyQCat.flow.is\_tunable\_node
-=============================
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: is_tunable_node

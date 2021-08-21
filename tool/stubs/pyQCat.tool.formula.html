@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.tool.formula &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.tool.formula &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
   
 
   
@@ -66,7 +71,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -92,7 +97,7 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
@@ -120,7 +125,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -151,8 +156,6 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/tool/stubs/pyQCat.tool.formula.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -242,7 +245,7 @@
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.natural_exp">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">natural_exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.natural_exp" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">natural_exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.natural_exp" title="永久链接至目标">¶</a></dt>
 <dd><p>natural exp formula</p>
 <div class="math notranslate nohighlight">
 \[y = A + B * e^{\frac{-x}{T_1}}\]</div>
@@ -250,7 +253,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.sine_damping">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">sine_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.sine_damping" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">sine_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.sine_damping" title="永久链接至目标">¶</a></dt>
 <dd><p>sine damping formula</p>
 <div class="math notranslate nohighlight">
 \[y = a + b * e^{\frac{-x}{t_2}} * \cos(2 * \pi * f * x)\]</div>
@@ -258,7 +261,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.sine_damping_accessory">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">sine_damping_accessory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.sine_damping_accessory" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">sine_damping_accessory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.sine_damping_accessory" title="永久链接至目标">¶</a></dt>
 <dd><p>sine damping formula</p>
 <div class="math notranslate nohighlight">
 \[y = a + b * e^{\frac{-x}{t_2}} * \cos(2 * \pi * f * x)\]</div>
@@ -274,7 +277,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.freq_flux">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">freq_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.freq_flux" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">freq_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.freq_flux" title="永久链接至目标">¶</a></dt>
 <dd><p>freq flux formula</p>
 <div class="math notranslate nohighlight">
 \[y = A * \sqrt{\sqrt{1+d^2*(\tan(\pi * (\frac{x}{a} + b))^2)} *         \vert \cos(\pi * (\frac{x}{a} + b))\vert} + B\]</div>
@@ -282,13 +285,13 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.fourier_cycle">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">fourier_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.fourier_cycle" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">fourier_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.fourier_cycle" title="永久链接至目标">¶</a></dt>
 <dd><p>FFT change to get function cycle t</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.ramsey_photon">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">ramsey_photon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.ramsey_photon" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ramsey_photon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.ramsey_photon" title="永久链接至目标">¶</a></dt>
 <dd><p>ramsey photon formula</p>
 <div class="math notranslate nohighlight">
 \[y = amp * e^{\frac{-x}{T_2}} * \cos(2\pi x * freq + phase) + e\]</div>
@@ -296,7 +299,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.cosine_damping">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">cosine_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.cosine_damping" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">cosine_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.cosine_damping" title="永久链接至目标">¶</a></dt>
 <dd><p>cosine damping formula</p>
 <div class="math notranslate nohighlight">
 \[y = amp * e^{\frac{-x}{T_2}} * \cos(2\pi x * freq + phase) + e\]</div>
@@ -304,7 +307,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.cosine">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">cosine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.cosine" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">cosine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.cosine" title="永久链接至目标">¶</a></dt>
 <dd><p>cosine formula</p>
 <div class="math notranslate nohighlight">
 \[y=amp * \cos(2\pi * freq * (x - phi)) + offset\]</div>
@@ -312,7 +315,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.pseudo_voige">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">pseudo_voige</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.pseudo_voige" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">pseudo_voige</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.pseudo_voige" title="永久链接至目标">¶</a></dt>
 <dd><p>pseudo voige formula</p>
 <div class="math notranslate nohighlight">
 \[y = a * [(1-e)*e^{\frac{-(x-v)^2}{c^2}} + \frac{e}{1 + \frac{(x-b)^2}{c^2}}] + d + f * x\]</div>
@@ -320,7 +323,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.skewed_lorentzian">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">skewed_lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ql</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.skewed_lorentzian" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">skewed_lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ql</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.skewed_lorentzian" title="永久链接至目标">¶</a></dt>
 <dd><p>skewed lorentzian formula</p>
 <div class="math notranslate nohighlight">
 \[y = \frac{A1+A3+(A2+A4) * (x-fr)}{1+4Ql^2 * (\frac{x-fr}{fr})^2}\]</div>
@@ -328,7 +331,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.skewed_lorentzian_auxiliary">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">skewed_lorentzian_auxiliary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.skewed_lorentzian_auxiliary" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">skewed_lorentzian_auxiliary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.skewed_lorentzian_auxiliary" title="永久链接至目标">¶</a></dt>
 <dd><p>skewed lorentzian auxiliary formula</p>
 <div class="math notranslate nohighlight">
 \[y = A1 + A2 * (x - fr) + \frac{A3+A4*(x-fr)}{1+4Ql^2 * (\frac{x-fr}{fr})^2}\]</div>
@@ -336,7 +339,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.amp2freq_formula">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">amp2freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2freq_formula" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">amp2freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2freq_formula" title="永久链接至目标">¶</a></dt>
 <dd><p>amp2freq formula</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{equation*}
@@ -349,7 +352,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.amp2cavity_freq_formula">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">amp2cavity_freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f10max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2cavity_freq_formula" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">amp2cavity_freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f10max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2cavity_freq_formula" title="永久链接至目标">¶</a></dt>
 <dd><p>amp2cavity freq formula</p>
 <div class="math notranslate nohighlight">
 \[kai = \frac{g^2}{delta * (\frac{1-delta}{fc})}\]</div>
@@ -357,7 +360,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.gauss">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">gauss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.gauss" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">gauss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.gauss" title="永久链接至目标">¶</a></dt>
 <dd><p>gauss formula</p>
 <div class="math notranslate nohighlight">
 \[y = a * e^{\frac{(x-b)^2}{c^2}} + d\]</div>
@@ -365,7 +368,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.freq2amp_formula">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">freq2amp_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.freq2amp_formula" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">freq2amp_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.freq2amp_formula" title="永久链接至目标">¶</a></dt>
 <dd><p>freq2amp formula</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{equation*}
@@ -379,7 +382,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.swap_formula">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">swap_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.swap_formula" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">swap_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.swap_formula" title="永久链接至目标">¶</a></dt>
 <dd><p>swap formula</p>
 <div class="math notranslate nohighlight">
 \[y = \sqrt{4 * g^2 + A^2 * (z - z0)^2}\]</div>
@@ -387,7 +390,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.amp2delta_freq_formula">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">amp2delta_freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2delta_freq_formula" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">amp2delta_freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2delta_freq_formula" title="永久链接至目标">¶</a></dt>
 <dd><p>amp2delta freq formula</p>
 <div class="math notranslate nohighlight">
 \[y = a * x^2 + b * x + c\]</div>
@@ -395,7 +398,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.delta_freq2amp_formula">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">delta_freq2amp_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.delta_freq2amp_formula" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">delta_freq2amp_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.delta_freq2amp_formula" title="永久链接至目标">¶</a></dt>
 <dd><p>delta freq2amp formula</p>
 <div class="math notranslate nohighlight">
 \[amp = \frac{-b + \sqrt{b^2 - 4 * a * (c - freq)}}{2a}\]</div>
@@ -403,7 +406,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.lorentzian">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.lorentzian" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.lorentzian" title="永久链接至目标">¶</a></dt>
 <dd><p>lorentzian formula</p>
 <div class="math notranslate nohighlight">
 \[val = offset + \frac{A}{\pi} * \frac{kappa}{(f - f0)^2 + kappa^2}\]</div>
@@ -411,7 +414,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.twin_lorentzian">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">twin_lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.twin_lorentzian" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">twin_lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.twin_lorentzian" title="永久链接至目标">¶</a></dt>
 <dd><p>Twin lorentz with background.</p>
 <p>Args:
 f (float):          frequency sweep points in Hz
@@ -452,7 +455,7 @@ val = &amp;\frac{A\_gf\_over\_2}{\pi} * \frac{kappa\_gf\_over\_2}{(f - f0\_gf\_o
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.formula.linear_formula">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.formula.</span></span><span class="sig-name descname"><span class="pre">linear_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.linear_formula" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">linear_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.linear_formula" title="永久链接至目标">¶</a></dt>
 <dd><p>linear formula</p>
 <div class="math notranslate nohighlight">
 \[y = k * x + b\]</div>
@@ -470,6 +473,10 @@ val = &amp;\frac{A\_gf\_over\_2}{\pi} * \frac{kappa\_gf\_over\_2}{(f - f0\_gf\_o
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

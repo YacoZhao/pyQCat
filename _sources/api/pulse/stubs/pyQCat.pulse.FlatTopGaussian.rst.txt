@@ -1,0 +1,47 @@
+﻿pyQCat.pulse.FlatTopGaussian
+============================
+
+.. currentmodule:: pyQCat.pulse
+
+.. autoclass:: FlatTopGaussian
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FlatTopGaussian.__init__
+      ~FlatTopGaussian.correct_ac_crosstalk
+      ~FlatTopGaussian.correct_compensate
+      ~FlatTopGaussian.correct_delay
+      ~FlatTopGaussian.correct_distortion
+      ~FlatTopGaussian.correct_pulse
+      ~FlatTopGaussian.formula
+      ~FlatTopGaussian.get_pulse
+      ~FlatTopGaussian.get_raw_pulse
+      ~FlatTopGaussian.plot
+      ~FlatTopGaussian.validate_parameters
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FlatTopGaussian.attach
+      ~FlatTopGaussian.bit
+      ~FlatTopGaussian.delay
+      ~FlatTopGaussian.envelop
+      ~FlatTopGaussian.id
+      ~FlatTopGaussian.parameters
+      ~FlatTopGaussian.pulse
+      ~FlatTopGaussian.raw_pulse
+      ~FlatTopGaussian.sweep
+      ~FlatTopGaussian.type
+   
+   

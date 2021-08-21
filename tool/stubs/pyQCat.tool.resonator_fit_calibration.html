@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.tool.resonator_fit_calibration &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.tool.resonator_fit_calibration &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
   
 
   
@@ -65,7 +70,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -91,7 +96,7 @@
             
             
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
@@ -119,7 +124,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -151,8 +156,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/tool/stubs/pyQCat.tool.resonator_fit_calibration.rst.txt" rel="nofollow"> 查看页面源码</a>
-          
         
       </li>
     
@@ -166,6 +169,7 @@
             
   <div class="section" id="module-pyQCat.tool.resonator_fit_calibration">
 <span id="pyqcat-tool-resonator-fit-calibration"></span><h1>pyQCat.tool.resonator_fit_calibration<a class="headerlink" href="#module-pyQCat.tool.resonator_fit_calibration" title="永久链接至标题">¶</a></h1>
+<p>TODO</p>
 <p class="rubric">Functions</p>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -185,7 +189,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.resonator_fit_calibration.S21Curve" title="pyQCat.tool.resonator_fit_calibration.S21Curve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">S21Curve</span></code></a>(freq, mag, phase[, dB])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_auto/pyQCat.tool.html#pyQCat.tool.resonator_fit_calibration.S21Curve" title="pyQCat.tool.resonator_fit_calibration.S21Curve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">S21Curve</span></code></a>(freq, mag, phase[, dB])</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.resonator_fit_calibration.S21Func" title="pyQCat.tool.resonator_fit_calibration.S21Func"><code class="xref py py-obj docutils literal notranslate"><span class="pre">S21Func</span></code></a>([target])</p></td>
@@ -195,8 +199,8 @@
 </table>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Func">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.tool.resonator_fit_calibration.</span></span><span class="sig-name descname"><span class="pre">S21Func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'invS21'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Func" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">S21Func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'invS21'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Func" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="simple">
 <dt>S21 trace has the form of:</dt><dd><p>1 - Q/Qc*exp(i*phi0)* 1/(1 + 2j*Q*(f-f0)/f0)</p>
 </dd>
@@ -204,80 +208,11 @@
 </dd>
 </dl>
 <p>From XiangLiang</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Func.get_func">
-<span class="sig-name descname"><span class="pre">get_func</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Func.get_func" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Func.invS21Func">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">invS21Func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Qi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Qc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Func.invS21Func" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Func.s21Func">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">s21Func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Qc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Func.s21Func" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.tool.resonator_fit_calibration.</span></span><span class="sig-name descname"><span class="pre">S21Curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve.plotS21mag">
-<span class="sig-name descname"><span class="pre">plotS21mag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve.plotS21mag" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve.plotS21phase">
-<span class="sig-name descname"><span class="pre">plotS21phase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve.plotS21phase" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve.plotinvS21">
-<span class="sig-name descname"><span class="pre">plotinvS21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycle</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">arg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve.plotinvS21" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve.fittinginvS21">
-<span class="sig-name descname"><span class="pre">fittinginvS21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve.fittinginvS21" title="永久链接至目标">¶</a></dt>
-<dd><p>p0 = (Qi, Qc, phi)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve.fittingS21">
-<span class="sig-name descname"><span class="pre">fittingS21</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve.fittingS21" title="永久链接至目标">¶</a></dt>
-<dd><p>p0 = (Q, Qc, phi)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve.fitting">
-<span class="sig-name descname"><span class="pre">fitting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invFit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve.fitting" title="永久链接至目标">¶</a></dt>
-<dd><p>fitting the parameter of S21 curve
-When invFit is True, we fit the data S21^(-1), else we fit the data S21.
-It is recommended to fit S21^(-1)
-&#64;param invFit: default is True
-&#64;return: the fitting parameter (f0, Qi, Qc, phi) and the covariance matrix</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve.plotFittingResult">
-<span class="sig-name descname"><span class="pre">plotFittingResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve.plotFittingResult" title="永久链接至目标">¶</a></dt>
-<dd><p>plot invS21 and the fitting result</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.S21Curve.formatFittingResult">
-<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">formatFittingResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cov</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.S21Curve.formatFittingResult" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.tool.resonator_fit_calibration.calibrate">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.tool.resonator_fit_calibration.</span></span><span class="sig-name descname"><span class="pre">calibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataS21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caliS21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phaseOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.calibrate" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">calibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataS21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caliS21</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phaseOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.resonator_fit_calibration.calibrate" title="永久链接至目标">¶</a></dt>
 <dd><p>calibrate S21 curve
 &#64;param dataS21: the S21Curve that needs be calibrated
 &#64;param caliS21: the calibration S21Curve
@@ -298,6 +233,10 @@ It is recommended to fit S21^(-1)
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

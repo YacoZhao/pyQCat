@@ -1,0 +1,53 @@
+pyQCat.wave package
+===================
+
+Submodules
+----------
+
+pyQCat.wave.common\_wave module
+-------------------------------
+
+.. automodule:: pyQCat.wave.common_wave
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.wave.envelop module
+--------------------------
+
+.. automodule:: pyQCat.wave.envelop
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.wave.generator module
+----------------------------
+
+.. automodule:: pyQCat.wave.generator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.wave.pulse module
+------------------------
+
+.. automodule:: pyQCat.wave.pulse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.wave.schedule module
+---------------------------
+
+.. automodule:: pyQCat.wave.schedule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: pyQCat.wave
+   :members:
+   :undoc-members:
+   :show-inheritance:

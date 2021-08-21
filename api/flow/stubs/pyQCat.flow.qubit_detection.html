@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.flow.qubit_detection &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.flow.qubit_detection &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
   
 
   
@@ -67,7 +72,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -93,23 +98,23 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">pyQCat.detection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">pyQCat.experiment</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">pyQCat.flow</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="../index.html#dag-node">Dag Node</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">pyQCat.instrument</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">pyQCat.pulse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">pyQCat.qubit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">pyQCat.tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">pyQCat.parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -137,7 +142,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -165,15 +170,13 @@
         
           <li><a href="../../index.html">API 文档</a> &raquo;</li>
         
-          <li><a href="../index.html">pyQCat.flow</a> &raquo;</li>
+          <li><a href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a> &raquo;</li>
         
       <li>pyQCat.flow.qubit_detection</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../../_sources/api/flow/stubs/pyQCat.flow.qubit_detection.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -195,17 +198,17 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_detection.cavity_freq_update" title="pyQCat.flow.qubit_detection.cavity_freq_update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cavity_freq_update</span></code></a>(inst, qubit, compensate, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.cavity_freq_update" title="pyQCat.flow.qubit_detection.cavity_freq_update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cavity_freq_update</span></code></a>(inst, qubit, compensate, …)</p></td>
 <td><p>Update cavity freq</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_detection.find_peaks_dips" title="pyQCat.flow.qubit_detection.find_peaks_dips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_peaks_dips</span></code></a>(x, y[, interpolation_num, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.find_peaks_dips" title="pyQCat.flow.qubit_detection.find_peaks_dips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_peaks_dips</span></code></a>(x, y[, interpolation_num, …])</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">param x</dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
 </p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_detection.freq_preliminary" title="pyQCat.flow.qubit_detection.freq_preliminary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freq_preliminary</span></code></a>(inst, qubit, compensate, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.freq_preliminary" title="pyQCat.flow.qubit_detection.freq_preliminary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freq_preliminary</span></code></a>(inst, qubit, compensate, …)</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">param inst</dt>
 <dd class="field-odd"><p>Insrument object</p>
@@ -213,17 +216,17 @@
 </dl>
 </p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_detection.judge_peak_dip" title="pyQCat.flow.qubit_detection.judge_peak_dip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">judge_peak_dip</span></code></a>(data)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.judge_peak_dip" title="pyQCat.flow.qubit_detection.judge_peak_dip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">judge_peak_dip</span></code></a>(data)</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">param data</dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
 </p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_detection.lorentz_fit" title="pyQCat.flow.qubit_detection.lorentz_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lorentz_fit</span></code></a>(x, y, *peaks[, twin])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.lorentz_fit" title="pyQCat.flow.qubit_detection.lorentz_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lorentz_fit</span></code></a>(x, y, *peaks[, twin])</p></td>
 <td><p>lorentz fit, Used for ‘twin_lorentz’ and ‘lorentz’</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.qubit_detection.plot_peaks" title="pyQCat.flow.qubit_detection.plot_peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_peaks</span></code></a>(data, peak_index, properties[, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.plot_peaks" title="pyQCat.flow.qubit_detection.plot_peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_peaks</span></code></a>(data, peak_index, properties[, …])</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">param data</dt>
 <dd class="field-odd"><p></p></dd>
@@ -234,7 +237,7 @@
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.freq_preliminary">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.qubit_detection.</span></span><span class="sig-name descname"><span class="pre">freq_preliminary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f02_measure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.freq_preliminary" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">freq_preliminary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f02_measure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.freq_preliminary" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
@@ -257,7 +260,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.lorentz_fit">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.qubit_detection.</span></span><span class="sig-name descname"><span class="pre">lorentz_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.lorentz_fit" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">lorentz_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.lorentz_fit" title="永久链接至目标">¶</a></dt>
 <dd><p>lorentz fit, Used for ‘twin_lorentz’ and ‘lorentz’</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
@@ -278,7 +281,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.cavity_freq_update">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.qubit_detection.</span></span><span class="sig-name descname"><span class="pre">cavity_freq_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_freq_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.cavity_freq_update" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">cavity_freq_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_freq_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.cavity_freq_update" title="永久链接至目标">¶</a></dt>
 <dd><p>Update cavity freq</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
@@ -299,17 +302,17 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.find_peaks_dips">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.qubit_detection.</span></span><span class="sig-name descname"><span class="pre">find_peaks_dips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_num</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_len</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peaks_num</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prominences</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#bool" title="(在 Python v3.7)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.find_peaks_dips" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">find_peaks_dips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peaks_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prominences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.find_peaks_dips" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>x</strong> – </p></li>
 <li><p><strong>y</strong> – </p></li>
-<li><p><strong>interpolation_num</strong> – </p></li>
-<li><p><strong>window_len</strong> – </p></li>
-<li><p><strong>distance</strong> – </p></li>
-<li><p><strong>peaks_num</strong> – </p></li>
-<li><p><strong>prominences</strong> – </p></li>
+<li><p><strong>interpolation_num</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>window_len</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>distance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>peaks_num</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – </p></li>
+<li><p><strong>prominences</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – </p></li>
 <li><p><strong>file_path</strong> – </p></li>
 </ul>
 </dd>
@@ -319,7 +322,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.plot_peaks">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.qubit_detection.</span></span><span class="sig-name descname"><span class="pre">plot_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.plot_peaks" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">plot_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.plot_peaks" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
@@ -335,7 +338,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.judge_peak_dip">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.flow.qubit_detection.</span></span><span class="sig-name descname"><span class="pre">judge_peak_dip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.judge_peak_dip" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">judge_peak_dip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.judge_peak_dip" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>data</strong> – </p>
@@ -360,6 +363,10 @@
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.instrument.qaio &mdash; pyQCat 0.0.1 文档</title>
+  <title>pyQCat.instrument.qaio &mdash; pyQCat 0.0.6 文档</title>
   
 
   
@@ -15,8 +15,13 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
 
   
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
   
 
   
@@ -42,8 +47,8 @@
     
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="pyQCat.instrument.INSTRUMENT" href="../../stubs/pyQCat.instrument.INSTRUMENT.html" />
-    <link rel="prev" title="pyQCat.instrument.Instrument" href="pyQCat.instrument.Instrument.html" /> 
+    <link rel="next" title="pyQCat.instrument.INSTRUMENT" href="pyQCat.instrument.INSTRUMENT.html" />
+    <link rel="prev" title="Measurement Instrument (pyQCat.instrument)" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -67,7 +72,7 @@
             
             
               <div class="version">
-                0.0.1
+                0.0.6
               </div>
             
           
@@ -93,24 +98,24 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../help/help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#pyqcat-api">pyQCat API目录</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">pyQCat.detection</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">pyQCat.experiment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">pyQCat.flow</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../index.html">pyQCat.instrument</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="../index.html#measureaio-instruments">MeasureAIO Instruments</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#commercial-instruments">Commercial Instruments</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">pyQCat.pulse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">pyQCat.qubit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">pyQCat.tool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">pyQCat.parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -138,7 +143,7 @@
 
       <div class="wy-nav-content">
         
-        <div class="rst-content">
+        <div class="rst-content style-external-links">
         
           
 
@@ -166,15 +171,13 @@
         
           <li><a href="../../index.html">API 文档</a> &raquo;</li>
         
-          <li><a href="../index.html">pyQCat.instrument</a> &raquo;</li>
+          <li><a href="../index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a> &raquo;</li>
         
       <li>pyQCat.instrument.qaio</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../../_sources/api/instrument/stubs/pyQCat.instrument.qaio.rst.txt" rel="nofollow"> 查看页面源码</a>
           
         
       </li>
@@ -197,7 +200,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.instrument.qaio.make_sig" title="pyQCat.instrument.qaio.make_sig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_sig</span></code></a>(*names)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.make_sig" title="pyQCat.instrument.qaio.make_sig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_sig</span></code></a>(*names)</p></td>
 <td><p>签名检查</p></td>
 </tr>
 </tbody>
@@ -209,71 +212,71 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.instrument.qaio.NonFeedbackAnalysis" title="pyQCat.instrument.qaio.NonFeedbackAnalysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonFeedbackAnalysis</span></code></a>(experiment_id[, path])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.NonFeedbackAnalysis" title="pyQCat.instrument.qaio.NonFeedbackAnalysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NonFeedbackAnalysis</span></code></a>(experiment_id[, path])</p></td>
 <td><p>一体机非反馈模式结果分析类</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.instrument.qaio.Qaio" title="pyQCat.instrument.qaio.Qaio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Qaio</span></code></a>(unit_type[, ip, port])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Qaio" title="pyQCat.instrument.qaio.Qaio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Qaio</span></code></a>([unit_type, ip, port])</p></td>
 <td><p>一体机使用封装接口类</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.instrument.qaio.Sine" title="pyQCat.instrument.qaio.Sine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sine</span></code></a>(width, amp, freq, phase)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Sine" title="pyQCat.instrument.qaio.Sine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Sine</span></code></a>(*args, **kwargs)</p></td>
 <td><p>正弦波</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.instrument.qaio.Square" title="pyQCat.instrument.qaio.Square"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Square</span></code></a>(width, amp)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Square" title="pyQCat.instrument.qaio.Square"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Square</span></code></a>(*args, **kwargs)</p></td>
 <td><p>方波</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.instrument.qaio.Structure" title="pyQCat.instrument.qaio.Structure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Structure</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Structure" title="pyQCat.instrument.qaio.Structure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Structure</span></code></a>(*args, **kwargs)</p></td>
 <td><p>波形父类</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.instrument.qaio.StructureMeta" title="pyQCat.instrument.qaio.StructureMeta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StructureMeta</span></code></a>(clsname, bases, clsdict)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.StructureMeta" title="pyQCat.instrument.qaio.StructureMeta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StructureMeta</span></code></a>(clsname, bases, clsdict)</p></td>
 <td><p>元类</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.make_sig">
-<span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.qaio.</span></span><span class="sig-name descname"><span class="pre">make_sig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.make_sig" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">make_sig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.make_sig" title="永久链接至目标">¶</a></dt>
 <dd><p>签名检查</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.StructureMeta">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.qaio.</span></span><span class="sig-name descname"><span class="pre">StructureMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clsname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clsdict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.StructureMeta" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#type" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">StructureMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clsname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bases</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clsdict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.StructureMeta" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></p>
 <p>元类</p>
 <p>用来进行参数校验，验证指定波形生成时，传入的属性值是否正确</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Structure">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.qaio.</span></span><span class="sig-name descname"><span class="pre">Structure</span></span><a class="headerlink" href="#pyQCat.instrument.qaio.Structure" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Structure" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>波形父类</p>
 <p>元类为 StructureMeta，用来实现进行参数校验</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Sine">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.qaio.</span></span><span class="sig-name descname"><span class="pre">Sine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Sine" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference internal" href="#pyQCat.instrument.qaio.Structure" title="pyQCat.instrument.qaio.Structure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.qaio.Structure</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Sine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Sine" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Structure" title="pyQCat.instrument.qaio.Structure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.qaio.Structure</span></code></a></p>
 <p>正弦波</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Square">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.qaio.</span></span><span class="sig-name descname"><span class="pre">Square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Square" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference internal" href="#pyQCat.instrument.qaio.Structure" title="pyQCat.instrument.qaio.Structure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.qaio.Structure</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Square" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Structure" title="pyQCat.instrument.qaio.Structure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.qaio.Structure</span></code></a></p>
 <p>方波</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.qaio.</span></span><span class="sig-name descname"><span class="pre">Qaio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27017</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference internal" href="pyQCat.instrument.Instrument.html#pyQCat.instrument.Instrument" title="pyQCat.instrument.instrument_aio.Instrument"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.instrument_aio.Instrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Qaio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">27017</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../../_auto/pyQCat.instrument.html#pyQCat.instrument.instrument_aio.Instrument" title="pyQCat.instrument.instrument_aio.Instrument"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.instrument_aio.Instrument</span></code></a></p>
 <p>一体机使用封装接口类</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>unit_type</strong> (<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><em>int</em></a>) – 一体机类型</p></li>
+<li><p><strong>unit_type</strong> (<em>int</em>) – 一体机类型</p></li>
 <li><p><strong>ip</strong> – IP 地址</p></li>
 <li><p><strong>port</strong> – 端口号</p></li>
 </ul>
@@ -282,13 +285,13 @@
 <p>Initialize method</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.DC_set">
-<span class="sig-name descname"><span class="pre">DC_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">voltage</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#float" title="(在 Python v3.7)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.DC_set" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">DC_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voltage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.DC_set" title="永久链接至目标">¶</a></dt>
 <dd><p>设置 DC 模块电压值</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>channel</strong> – 通道</p></li>
-<li><p><strong>voltage</strong> – 电压值</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 通道</p></li>
+<li><p><strong>voltage</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – 电压值</p></li>
 </ul>
 </dd>
 </dl>
@@ -318,20 +321,20 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.AWG_set">
-<span class="sig-name descname"><span class="pre">AWG_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trig_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pyQCat.instrument.qaio.Sine" title="pyQCat.instrument.qaio.Sine"><span class="pre">pyQCat.instrument.qaio.Sine</span></a><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#pyQCat.instrument.qaio.Square" title="pyQCat.instrument.qaio.Square"><span class="pre">pyQCat.instrument.qaio.Square</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.AWG_set" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">AWG_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trig_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.AWG_set" title="永久链接至目标">¶</a></dt>
 <dd><p>一体机 AWG 模块参数设置</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>channel</strong> – 通道</p></li>
-<li><p><strong>period</strong> – 周期</p></li>
-<li><p><strong>trig_mode</strong> – 触发模式</p></li>
-<li><p><strong>delay</strong> – 触发延时</p></li>
-<li><p><strong>wave</strong> – 波形</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 通道</p></li>
+<li><p><strong>period</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 周期</p></li>
+<li><p><strong>trig_mode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 触发模式</p></li>
+<li><p><strong>delay</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – 触发延时</p></li>
+<li><p><strong>wave</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Sine" title="pyQCat.instrument.qaio.Sine"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sine</span></code></a>, <a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Square" title="pyQCat.instrument.qaio.Square"><code class="xref py py-class docutils literal notranslate"><span class="pre">Square</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – 波形</p></li>
 </ul>
 </dd>
 <dt class="field-even">引发</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#TypeError" title="(在 Python v3.7)"><strong>TypeError</strong></a> – wave 只可以为 Sine、 Square、List</p>
+<dd class="field-even"><p><strong>TypeError</strong> – wave 只可以为 Sine、 Square、List</p>
 </dd>
 </dl>
 </dd></dl>
@@ -360,23 +363,23 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.RF_set">
-<span class="sig-name descname"><span class="pre">RF_set</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.RF_set" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">RF_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trig_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.RF_set" title="永久链接至目标">¶</a></dt>
 <dd><p>一体机 RF 模块参数设置</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>channel</strong> – 通道值</p></li>
-<li><p><strong>period</strong> – 周期</p></li>
-<li><p><strong>trig_mode</strong> – 触发模式</p></li>
-<li><p><strong>delay</strong> – 触发延时</p></li>
-<li><p><strong>freq</strong> – 频率</p></li>
-<li><p><strong>IF</strong> – 中频</p></li>
-<li><p><strong>power</strong> – 功率</p></li>
-<li><p><strong>wave</strong> – 波形</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 通道值</p></li>
+<li><p><strong>period</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 周期</p></li>
+<li><p><strong>trig_mode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 触发模式</p></li>
+<li><p><strong>delay</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – 触发延时</p></li>
+<li><p><strong>freq</strong> (<em>[</em><em>&lt;class 'int'&gt;</em><em>, </em><em>&lt;class 'float'&gt;</em><em>]</em>) – 频率</p></li>
+<li><p><strong>IF</strong> (<em>[</em><em>&lt;class 'int'&gt;</em><em>, </em><em>&lt;class 'float'&gt;</em><em>]</em>) – 中频</p></li>
+<li><p><strong>power</strong> (<em>[</em><em>&lt;class 'int'&gt;</em><em>, </em><em>&lt;class 'float'&gt;</em><em>]</em>) – 功率</p></li>
+<li><p><strong>wave</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Sine" title="pyQCat.instrument.qaio.Sine"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sine</span></code></a>, <a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.qaio.html#pyQCat.instrument.qaio.Square" title="pyQCat.instrument.qaio.Square"><code class="xref py py-class docutils literal notranslate"><span class="pre">Square</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – 波形</p></li>
 </ul>
 </dd>
 <dt class="field-even">引发</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.7/library/exceptions.html#TypeError" title="(在 Python v3.7)"><strong>TypeError</strong></a> – wave 只可以为 Sine、List</p>
+<dd class="field-even"><p><strong>TypeError</strong> – wave 只可以为 Sine、List</p>
 </dd>
 </dl>
 </dd></dl>
@@ -405,16 +408,16 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.TO_set">
-<span class="sig-name descname"><span class="pre">TO_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trig_mode</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.TO_set" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">TO_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trig_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.TO_set" title="永久链接至目标">¶</a></dt>
 <dd><p>一体机 TO 模块参数设置</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>channel</strong> – 通道</p></li>
-<li><p><strong>period</strong> – 周期</p></li>
-<li><p><strong>trig_mode</strong> – 触发模式</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 通道</p></li>
+<li><p><strong>period</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 周期</p></li>
+<li><p><strong>trig_mode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 触发模式</p></li>
 <li><p><strong>width</strong> – 宽度</p></li>
-<li><p><strong>delay</strong> – 触发延时</p></li>
+<li><p><strong>delay</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – 触发延时</p></li>
 </ul>
 </dd>
 </dl>
@@ -444,15 +447,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.instrument_output_on">
-<span class="sig-name descname"><span class="pre">instrument_output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DC</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AWG</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RF</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TO</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.instrument_output_on" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">instrument_output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DC</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AWG</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TO</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.instrument_output_on" title="永久链接至目标">¶</a></dt>
 <dd><p>设备输出通道开启，同时启动多个模块通道</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>DC</strong> – DC 模块指定通道</p></li>
-<li><p><strong>AWG</strong> – AWG 模块指定通道</p></li>
-<li><p><strong>RF</strong> – RF 模块指定通道</p></li>
-<li><p><strong>TO</strong> – TO 模块指定通道</p></li>
+<li><p><strong>DC</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – DC 模块指定通道</p></li>
+<li><p><strong>AWG</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – AWG 模块指定通道</p></li>
+<li><p><strong>RF</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – RF 模块指定通道</p></li>
+<li><p><strong>TO</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – TO 模块指定通道</p></li>
 </ul>
 </dd>
 </dl>
@@ -460,15 +463,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.instrument_output_off">
-<span class="sig-name descname"><span class="pre">instrument_output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DC</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AWG</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RF</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TO</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.instrument_output_off" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">instrument_output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">DC</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AWG</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TO</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.instrument_output_off" title="永久链接至目标">¶</a></dt>
 <dd><p>设备输出通道关闭，同时关闭多个模块通道</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>DC</strong> – DC 模块指定通道</p></li>
-<li><p><strong>AWG</strong> – AWG 模块指定通道</p></li>
-<li><p><strong>RF</strong> – RF 模块指定通道</p></li>
-<li><p><strong>TO</strong> – TO 模块指定通道</p></li>
+<li><p><strong>DC</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – DC 模块指定通道</p></li>
+<li><p><strong>AWG</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – AWG 模块指定通道</p></li>
+<li><p><strong>RF</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – RF 模块指定通道</p></li>
+<li><p><strong>TO</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – TO 模块指定通道</p></li>
 </ul>
 </dd>
 </dl>
@@ -476,32 +479,32 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.check_mic_name">
-<span class="sig-name descname"><span class="pre">check_mic_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.check_mic_name" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">check_mic_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.check_mic_name" title="永久链接至目标">¶</a></dt>
 <dd><p>检查一体机指定通道对应的模块名</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>channel</strong> – 通道值</p>
+<dd class="field-odd"><p><strong>channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 通道值</p>
 </dd>
 <dt class="field-even">返回</dt>
 <dd class="field-even"><p>一体机模块名称，可能为 <cite>Readout_control</cite> 、 <cite>XY_control</cite></p>
 </dd>
 <dt class="field-odd">返回类型</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#str" title="(在 Python v3.7)">str</a></p>
+<dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.ACQ_set">
-<span class="sig-name descname"><span class="pre">ACQ_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_delay</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_att</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.7/library/functions.html#int" title="(在 Python v3.7)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.ACQ_set" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ACQ_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_att</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.ACQ_set" title="永久链接至目标">¶</a></dt>
 <dd><p>ACQ 模块参数设置</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>channel</strong> – 通道值</p></li>
-<li><p><strong>sample_delay</strong> – 采样延时</p></li>
-<li><p><strong>sample_width</strong> – 采样带宽</p></li>
-<li><p><strong>power_att</strong> – 功率参数</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 通道值</p></li>
+<li><p><strong>sample_delay</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – 采样延时</p></li>
+<li><p><strong>sample_width</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – 采样带宽</p></li>
+<li><p><strong>power_att</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – 功率参数</p></li>
 </ul>
 </dd>
 </dl>
@@ -523,7 +526,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.Qaio.set_multiple_index">
-<span class="sig-name descname"><span class="pre">set_multiple_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.7/library/stdtypes.html#list" title="(在 Python v3.7)"><span class="pre">list</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.set_multiple_index" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">set_multiple_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.Qaio.set_multiple_index" title="永久链接至目标">¶</a></dt>
 <dd><p>设置扫描范围</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
@@ -571,8 +574,8 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.instrument.qaio.NonFeedbackAnalysis">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pyQCat.instrument.qaio.</span></span><span class="sig-name descname"><span class="pre">NonFeedbackAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.NonFeedbackAnalysis" title="永久链接至目标">¶</a></dt>
-<dd><p>基类：<a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">NonFeedbackAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.qaio.NonFeedbackAnalysis" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>一体机非反馈模式结果分析类</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
@@ -627,14 +630,18 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../../stubs/pyQCat.instrument.INSTRUMENT.html" class="btn btn-neutral float-right" title="pyQCat.instrument.INSTRUMENT" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="pyQCat.instrument.Instrument.html" class="btn btn-neutral float-left" title="pyQCat.instrument.Instrument" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="pyQCat.instrument.INSTRUMENT.html" class="btn btn-neutral float-right" title="pyQCat.instrument.INSTRUMENT" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Measurement Instrument (pyQCat.instrument)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/21.
+      </span>
 
     </p>
   </div>
