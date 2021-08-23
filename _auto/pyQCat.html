@@ -810,7 +810,7 @@
 <p>该模块包装了用于获取实验参数的通用方法</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.parameters.get_parameters">
-<span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_docs/config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">union</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.get_parameters" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_documents/config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">union</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.get_parameters" title="永久链接至目标">¶</a></dt>
 <dd><p>获取实验所需参数</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
@@ -853,7 +853,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.parameters.corrected_dc">
-<span class="sig-name descname"><span class="pre">corrected_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_docs/config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.corrected_dc" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">corrected_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dimension</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_documents/config'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">static_qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.corrected_dc" title="永久链接至目标">¶</a></dt>
 <dd><p>获取实验中施加到各个比特上的DC电压值</p>
 <p>如果传入 <code class="docutils literal notranslate"><span class="pre">sweet_point</span></code> 参数，则 <code class="docutils literal notranslate"><span class="pre">sweet_point</span></code> 对应的比特取 <code class="docutils literal notranslate"><span class="pre">dc_max</span></code> 属性，
 其他比特取 <code class="docutils literal notranslate"><span class="pre">dc_min</span></code> 属性，且不需要进行畸变修正；</p>
@@ -883,7 +883,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.parameters.update_qubit_dc">
-<span class="sig-name descname"><span class="pre">update_qubit_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_docs/config'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.update_qubit_dc" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_qubit_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_documents/config'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.parameters.update_qubit_dc" title="永久链接至目标">¶</a></dt>
 <dd><p>更新配置文件中 <code class="docutils literal notranslate"><span class="pre">qubit.json</span></code> 中的比特电压值</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
@@ -9016,7 +9016,12 @@ phi = -0.4512 +/- 0.0075’</p>
 <dt class="sig sig-object py" id="pyQCat.PulseComponent.type">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyQCat.PulseComponent.type" title="永久链接至目标">¶</a></dt>
 <dd><p>获取波形类型</p>
-<p>定义了三种类型的波形，分别为 <cite>XY</cite> <cite>Z</cite> <cite>M</cite>, 它表示当前脉冲施加的对象，如 <cite>M</cite> 波形是施加到读取通道的</p>
+<p>定义了三种类型的波形，分别为 <cite>XY</cite> <cite>Z</cite> <cite>M</cite>, 它表示当前脉冲施加的对象。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">XY</span></code> 波形是施加到XY线上的</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Z</span></code> 波形是施加到Z线上的</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M</span></code> 波形是施加到读取通道的</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -9027,10 +9032,14 @@ phi = -0.4512 +/- 0.0075’</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.PulseComponent.delay">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">delay</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyQCat.PulseComponent.delay" title="永久链接至目标">¶</a></dt>
-<dd><p>获取波形延时时间</p>
+<dd><p>获取波形触发延时时间</p>
+<p>在实验中，为了保证波形相互作用的顺序关系，我们给波形添加了 <code class="docutils literal notranslate"><span class="pre">delay</span></code> 属性，它表示脉冲触发延时。</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>触发延时</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9044,16 +9053,23 @@ phi = -0.4512 +/- 0.0075’</p>
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
 </dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>比特编号</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.PulseComponent.sweep">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sweep</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyQCat.PulseComponent.sweep" title="永久链接至目标">¶</a></dt>
-<dd><p>TODO</p>
+<dd><p>获取扫描参数说明</p>
+<p>在量子比特实验中，往往需要对某个波形参数进行扫描，我们可以在 <code class="docutils literal notranslate"><span class="pre">sweep</span></code> 属性中设置对扫描参数的说明</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>扫描参数功能说明</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9061,11 +9077,13 @@ phi = -0.4512 +/- 0.0075’</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.PulseComponent.id">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyQCat.PulseComponent.id" title="永久链接至目标">¶</a></dt>
-<dd><p>获取波形编号</p>
-<p>波形的唯一识别符</p>
+<dd><p>获取波形对象的唯一标识符</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>波形对象的唯一标识符</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9125,6 +9143,9 @@ phi = -0.4512 +/- 0.0075’</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>字典类型，键名表示脉冲对象的属性名，对应的键值表示脉冲对象的属性值</p>
 </dd>
 </dl>
 </dd></dl>
@@ -9579,7 +9600,7 @@ f\left(x\right)      ,  elsewhere\]</div>
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/21.
+        最后更新于 2021/08/23.
       </span>
 
     </p>

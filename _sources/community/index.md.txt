@@ -193,7 +193,7 @@ def _get_drive_pulse(self, type_: str, sweep_list: List):
 
 构造波形一般你需要提供扫描参数，这些参数与波形生成有关，我们在 [Pulse模块](../api/pulse/index.html) 提供了丰富的波形构造方式，你可以直接进行调用，我们定义了六种常用的波形类：
 
-![image-20210701172735473](file://C:/Users/Origin41515/AppData/Roaming/Typora/typora-user-images/image-20210701172735473.png?lastModify=1628664456)
+![image-20210701172735473](file://C:/Users/Origin41515/AppData/Roaming/Typora/typora-user-images/image-20210701172735473.png)
 
 图中红色表示施加到Z线上的波形，绿色表示施加到XY线上的波形，黄色为读取线路波形。
 
@@ -427,7 +427,7 @@ class NewExperiment(TopExperiment):
 
 #### 获取并分析数据
 
-当你绑定了实验结果分析类之后，你就可以使用 ``TopAnalysis`` 中的方法了，我们给数据接受和分析过程进行了封装，你只需要调用 ``TopAnalysis`` 中的 ``excute_loop()`` 方法即调用数据接受和处理的逻辑。当然，它可以正常执行的前提是，你需要在你的 ``NewExperimentAnalysis`` 中定义 ``analysis()`` 方法，因为我们 ``excute_loop()`` 的实现逻辑中调用了 ``analysis()`` 方法
+当你绑定了实验结果分析类之后，你就可以使用 ``TopAnalysis`` 中的方法了，我们给数据接受和分析过程进行了封装，你只需要调用 ``TopAnalysis`` 中的 ``excute_loop()`` 方法即调用数据接受和处理的逻辑。当然，它可以正常执行的前提是，你需要在你的 ``NewExperimentAnalysis`` 中定义 ``analyze()`` 方法，因为我们 ``excute_loop()`` 的实现逻辑中调用了 ``analyze()`` 方法
 
 ```python
 def excute_loop(self, func=None, args=None, *, analyze_one=None):
@@ -435,7 +435,7 @@ def excute_loop(self, func=None, args=None, *, analyze_one=None):
     
     ...
     
-    # 用户自定义的 analysis() 方法
+    # 用户自定义的 analyze() 方法
     self.analyze()
 ```
 
@@ -457,9 +457,9 @@ class NewExperiment(TopExperiment):
         self.analysis.excute_loop()
 ```
 
-#### analysis方法
+#### analyze方法
 
-analysis方法中，我们以单比特实验为例，你需要实验的逻辑有下面几点：
+analyze方法中，我们以单比特实验为例，你需要实验的逻辑有下面几点：
 
 ① 获取实验数据，我们提供了 ``single_qubit_usualness()`` 方法让你直接获取数据，避免繁琐的数据转化工作;
 
@@ -467,7 +467,7 @@ analysis方法中，我们以单比特实验为例，你需要实验的逻辑有
 
 ③ 绘制实验结果图需要根据不同的实验结果自定义，我们在 [plot_data](../api/tool/stubs/pyQCat.tool.plot_data.html) 模板中定义了常用的图像绘制工具供你调用。
 
-我们以幅值优化实验``AmpOptimize``的analysis为例：
+我们以幅值优化实验``AmpOptimize``的``analyze()``方法为例：
 
 ```python
 def analyze(self):

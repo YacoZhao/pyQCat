@@ -204,7 +204,12 @@
 <dt class="sig sig-object py" id="pyQCat.pulse.base_pulse.PulseComponent.type">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyQCat.pulse.base_pulse.PulseComponent.type" title="永久链接至目标">¶</a></dt>
 <dd><p>获取波形类型</p>
-<p>定义了三种类型的波形，分别为 <cite>XY</cite> <cite>Z</cite> <cite>M</cite>, 它表示当前脉冲施加的对象，如 <cite>M</cite> 波形是施加到读取通道的</p>
+<p>定义了三种类型的波形，分别为 <cite>XY</cite> <cite>Z</cite> <cite>M</cite>, 它表示当前脉冲施加的对象。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">XY</span></code> 波形是施加到XY线上的</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Z</span></code> 波形是施加到Z线上的</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M</span></code> 波形是施加到读取通道的</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -215,10 +220,14 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.pulse.base_pulse.PulseComponent.delay">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">delay</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyQCat.pulse.base_pulse.PulseComponent.delay" title="永久链接至目标">¶</a></dt>
-<dd><p>获取波形延时时间</p>
+<dd><p>获取波形触发延时时间</p>
+<p>在实验中，为了保证波形相互作用的顺序关系，我们给波形添加了 <code class="docutils literal notranslate"><span class="pre">delay</span></code> 属性，它表示脉冲触发延时。</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>触发延时</p>
 </dd>
 </dl>
 </dd></dl>
@@ -232,16 +241,23 @@
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
 </dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>比特编号</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.pulse.base_pulse.PulseComponent.sweep">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sweep</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyQCat.pulse.base_pulse.PulseComponent.sweep" title="永久链接至目标">¶</a></dt>
-<dd><p>TODO</p>
+<dd><p>获取扫描参数说明</p>
+<p>在量子比特实验中，往往需要对某个波形参数进行扫描，我们可以在 <code class="docutils literal notranslate"><span class="pre">sweep</span></code> 属性中设置对扫描参数的说明</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>扫描参数功能说明</p>
 </dd>
 </dl>
 </dd></dl>
@@ -249,11 +265,13 @@
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.pulse.base_pulse.PulseComponent.id">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyQCat.pulse.base_pulse.PulseComponent.id" title="永久链接至目标">¶</a></dt>
-<dd><p>获取波形编号</p>
-<p>波形的唯一识别符</p>
+<dd><p>获取波形对象的唯一标识符</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>波形对象的唯一标识符</p>
 </dd>
 </dl>
 </dd></dl>
@@ -313,6 +331,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>字典类型，键名表示脉冲对象的属性名，对应的键值表示脉冲对象的属性值</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1271,7 +1292,12 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.type">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyQCat.pulse.PulseComponent.type" title="永久链接至目标">¶</a></dt>
 <dd><p>获取波形类型</p>
-<p>定义了三种类型的波形，分别为 <cite>XY</cite> <cite>Z</cite> <cite>M</cite>, 它表示当前脉冲施加的对象，如 <cite>M</cite> 波形是施加到读取通道的</p>
+<p>定义了三种类型的波形，分别为 <cite>XY</cite> <cite>Z</cite> <cite>M</cite>, 它表示当前脉冲施加的对象。</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">XY</span></code> 波形是施加到XY线上的</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Z</span></code> 波形是施加到Z线上的</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M</span></code> 波形是施加到读取通道的</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -1282,10 +1308,14 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.delay">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">delay</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyQCat.pulse.PulseComponent.delay" title="永久链接至目标">¶</a></dt>
-<dd><p>获取波形延时时间</p>
+<dd><p>获取波形触发延时时间</p>
+<p>在实验中，为了保证波形相互作用的顺序关系，我们给波形添加了 <code class="docutils literal notranslate"><span class="pre">delay</span></code> 属性，它表示脉冲触发延时。</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>触发延时</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1299,16 +1329,23 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
 </dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>比特编号</p>
+</dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.sweep">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">sweep</span></span><em class="property"><span class="pre">:</span> <span class="pre">str</span></em><a class="headerlink" href="#pyQCat.pulse.PulseComponent.sweep" title="永久链接至目标">¶</a></dt>
-<dd><p>TODO</p>
+<dd><p>获取扫描参数说明</p>
+<p>在量子比特实验中，往往需要对某个波形参数进行扫描，我们可以在 <code class="docutils literal notranslate"><span class="pre">sweep</span></code> 属性中设置对扫描参数的说明</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>扫描参数功能说明</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1316,11 +1353,13 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.id">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="pre">:</span> <span class="pre">int</span></em><a class="headerlink" href="#pyQCat.pulse.PulseComponent.id" title="永久链接至目标">¶</a></dt>
-<dd><p>获取波形编号</p>
-<p>波形的唯一识别符</p>
+<dd><p>获取波形对象的唯一标识符</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>波形对象的唯一标识符</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1380,6 +1419,9 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>字典类型，键名表示脉冲对象的属性名，对应的键值表示脉冲对象的属性值</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1751,7 +1793,7 @@ f\left(x\right)      ,  elsewhere\]</div>
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/21.
+        最后更新于 2021/08/23.
       </span>
 
     </p>

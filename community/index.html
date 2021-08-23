@@ -116,12 +116,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#analysis">绑定Analysis接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id9">绘制脉冲时序图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id10">获取并分析数据</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id11">analysis方法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">获取实验结果</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">拟合实验数据</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">绘制实验结果图</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">完整的实验模板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">实验调用执行方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analyze">analyze方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">获取实验结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">拟合实验数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">绘制实验结果图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">完整的实验模板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">实验调用执行方法</a></li>
 </ul>
 </li>
 </ul>
@@ -366,7 +366,7 @@
 </div>
 <p><strong>波形调用：</strong></p>
 <p>构造波形一般你需要提供扫描参数，这些参数与波形生成有关，我们在 <a class="reference external" href="../api/pulse/index.html">Pulse模块</a> 提供了丰富的波形构造方式，你可以直接进行调用，我们定义了六种常用的波形类：</p>
-<p><img alt="image-20210701172735473" src="file://C:/Users/Origin41515/AppData/Roaming/Typora/typora-user-images/image-20210701172735473.png?lastModify=1628664456" /></p>
+<p><img alt="image-20210701172735473" src="file://C:/Users/Origin41515/AppData/Roaming/Typora/typora-user-images/image-20210701172735473.png" /></p>
 <p>图中红色表示施加到Z线上的波形，绿色表示施加到XY线上的波形，黄色为读取线路波形。</p>
 <p>此外，我们还对经常使用的波形进行了封装，他们波形可以从图中看出。</p>
 <ul class="simple">
@@ -571,13 +571,13 @@
 </div>
 <div class="section" id="id10">
 <h3>获取并分析数据<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
-<p>当你绑定了实验结果分析类之后，你就可以使用 <code class="docutils literal notranslate"><span class="pre">TopAnalysis</span></code> 中的方法了，我们给数据接受和分析过程进行了封装，你只需要调用 <code class="docutils literal notranslate"><span class="pre">TopAnalysis</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">excute_loop()</span></code> 方法即调用数据接受和处理的逻辑。当然，它可以正常执行的前提是，你需要在你的 <code class="docutils literal notranslate"><span class="pre">NewExperimentAnalysis</span></code> 中定义 <code class="docutils literal notranslate"><span class="pre">analysis()</span></code> 方法，因为我们 <code class="docutils literal notranslate"><span class="pre">excute_loop()</span></code> 的实现逻辑中调用了 <code class="docutils literal notranslate"><span class="pre">analysis()</span></code> 方法</p>
+<p>当你绑定了实验结果分析类之后，你就可以使用 <code class="docutils literal notranslate"><span class="pre">TopAnalysis</span></code> 中的方法了，我们给数据接受和分析过程进行了封装，你只需要调用 <code class="docutils literal notranslate"><span class="pre">TopAnalysis</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">excute_loop()</span></code> 方法即调用数据接受和处理的逻辑。当然，它可以正常执行的前提是，你需要在你的 <code class="docutils literal notranslate"><span class="pre">NewExperimentAnalysis</span></code> 中定义 <code class="docutils literal notranslate"><span class="pre">analyze()</span></code> 方法，因为我们 <code class="docutils literal notranslate"><span class="pre">excute_loop()</span></code> 的实现逻辑中调用了 <code class="docutils literal notranslate"><span class="pre">analyze()</span></code> 方法</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">excute_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">analyze_one</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;循环获取实验测量结果&quot;&quot;&quot;</span>
     
     <span class="o">...</span>
     
-    <span class="c1"># 用户自定义的 analysis() 方法</span>
+    <span class="c1"># 用户自定义的 analyze() 方法</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">analyze</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -598,13 +598,13 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id11">
-<h3>analysis方法<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
-<p>analysis方法中，我们以单比特实验为例，你需要实验的逻辑有下面几点：</p>
+<div class="section" id="analyze">
+<h3>analyze方法<a class="headerlink" href="#analyze" title="永久链接至标题">¶</a></h3>
+<p>analyze方法中，我们以单比特实验为例，你需要实验的逻辑有下面几点：</p>
 <p>① 获取实验数据，我们提供了 <code class="docutils literal notranslate"><span class="pre">single_qubit_usualness()</span></code> 方法让你直接获取数据，避免繁琐的数据转化工作;</p>
 <p>② 拟合实验数据，数据拟合方法<strong>需要自己去实现</strong>，我们在 <a class="reference external" href="../api/tool/stubs/pyQCat.tool.formula.html">formula</a> 模块中定义了常用的拟合公式;</p>
 <p>③ 绘制实验结果图需要根据不同的实验结果自定义，我们在 <a class="reference external" href="../api/tool/stubs/pyQCat.tool.plot_data.html">plot_data</a> 模板中定义了常用的图像绘制工具供你调用。</p>
-<p>我们以幅值优化实验<code class="docutils literal notranslate"><span class="pre">AmpOptimize</span></code>的analysis为例：</p>
+<p>我们以幅值优化实验<code class="docutils literal notranslate"><span class="pre">AmpOptimize</span></code>的<code class="docutils literal notranslate"><span class="pre">analyze()</span></code>方法为例：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">analyze</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; `AmpOptimize` 实验结果分析方法&quot;&quot;&quot;</span>
     
@@ -633,8 +633,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id12">
-<h3>获取实验结果<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id11">
+<h3>获取实验结果<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <p>我们在 <code class="docutils literal notranslate"><span class="pre">TopAnalysis</span></code> 中提供了单比特实验通用的数据接受函数 <code class="docutils literal notranslate"><span class="pre">single_qubit_usualness()</span></code>， 它会自动对实验数据进行解析，如果你的 <code class="docutils literal notranslate"><span class="pre">discriminator</span></code> 属性为空，它会给你返回 <code class="docutils literal notranslate"><span class="pre">amp-phase</span></code> 数据，如果不为空，它会给你返回 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 数据，同时它会给你自动生成标题 <code class="docutils literal notranslate"><span class="pre">title</span></code> 信息。如果你按照这种方式，在分析类定义的时候，你必须提前绑定扫描参数 <code class="docutils literal notranslate"><span class="pre">x_list</span></code> ，而你只需要这样编写代码：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NewExperimentAnalysis</span><span class="p">(</span><span class="n">TopAnalysis</span><span class="p">):</span>
 
@@ -670,8 +670,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id13">
-<h3>拟合实验数据<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id12">
+<h3>拟合实验数据<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p>如果你的数据需要进行拟合，则需要你自己去实验拟合逻辑了，当然我们也提供的一些模板供你参考：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="../api/tool/stubs/pyQCat.tool.formula.html">formula</a> 模块中定义了常用的拟合公式;</p></li>
@@ -706,8 +706,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id14">
-<h3>绘制实验结果图<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id13">
+<h3>绘制实验结果图<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
 <p>如果你需要绘制实验结果图，你可自行实现绘制图片的逻辑，当然我们也提供了一些绘图模板方法供你参考，你可以在<a class="reference external" href="../api/tool/stubs/pyQCat.tool.plot_data.html">plot_data</a>模块中寻找。</p>
 <p>你可按照下面的模板来编写绘制实验结果的逻辑：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NewExperimentAnalysis</span><span class="p">(</span><span class="n">TopAnalysis</span><span class="p">):</span>
@@ -742,8 +742,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id15">
-<h3>完整的实验模板<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id14">
+<h3>完整的实验模板<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <p>我们在上面完整的介绍了单比特实验实现的完整逻辑，模板总结如下：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyQCat.experiment</span> <span class="kn">import</span> <span class="n">TopExperiment</span><span class="p">,</span> <span class="n">TopAnalysis</span>
 <span class="kn">from</span> <span class="nn">pyQCat.tool.iqprobability</span> <span class="kn">import</span> <span class="n">IQdiscriminator</span>
@@ -809,8 +809,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id16">
-<h3>实验调用执行方法<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id15">
+<h3>实验调用执行方法<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <p>当你实现完整的实验之后，你只需要按照 <code class="docutils literal notranslate"><span class="pre">TopExperiment</span></code> 的构造方法，传入实验所需要的参数，如(inst、qubits、compensate、discriminator、correct_dc等)，创建实验对象，然后调用实验的<code class="docutils literal notranslate"><span class="pre">run()</span></code>方法即可启动实验，详细的实验调用及执行得到流程可以参考<a class="reference external" href="../user/index.html">用户指南</a>。</p>
 </div>
 </div>
@@ -832,7 +832,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/21.
+        最后更新于 2021/08/23.
       </span>
 
     </p>
