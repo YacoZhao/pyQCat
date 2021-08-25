@@ -205,7 +205,7 @@
 <p>pyQCat中所有的实验都可以继承<code class="docutils literal notranslate"><span class="pre">TopExperiment</span></code>类实现通用的功能，它包括绑定设备初始参数、参数校验、施加波形、绘制波形等功能，详细内容可以参考<a class="reference external" href="../api/experiment/stubs/pyQCat.experiment.TopExperiment.html">API文档</a>。</p>
 <p>如果你想要自定义一个完整的实验，你必须提前实例化下面一些对象：</p>
 <ul class="simple">
-<li><p><strong>inst：</strong> 设备对象<a class="reference external" href="../api/instrument/stubs/pyQCat.instrument.Instrument.html">Instrument</a>，封装了实验参数的设置方法，集成了各种数据交互操作。它帮助你完成脉冲信号的施加并接受量子比特返回的数据。</p></li>
+<li><p><strong>inst：</strong> 设备对象<a class="reference external" href="../instrument/stubs/pyQCat.instrument.Instrument.html">Instrument</a>，封装了实验参数的设置方法，集成了各种数据交互操作。它帮助你完成脉冲信号的施加并接受量子比特返回的数据。</p></li>
 <li><p><strong>qubits：</strong> 量子比特对象<a class="reference external" href="../api/qubit/stubs/pyQCat.qubit.Qubit.html">Qubit</a>，定义了量子比特的常见参数，自动化校准流程的核心对象。它支持多比特实验，只需要你以元组的形式传入比特对象即可。</p></li>
 </ul>
 <p>当然，通常比特测试实验需要更丰富的功能，我们为你提供了丰富的参数选项：</p>
