@@ -1,0 +1,6 @@
+﻿pyQCat.pulse.pi\_pulse
+======================
+
+.. currentmodule:: pyQCat.pulse
+
+.. autofunction:: pi_pulse

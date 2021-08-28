@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.experiment.RandomizedBenchmarking &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.experiment.RandomizedBenchmarking</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-experiment-randomizedbenchmarking">
+<h1>pyQCat.experiment.RandomizedBenchmarking<a class="headerlink" href="#pyqcat-experiment-randomizedbenchmarking" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.RandomizedBenchmarking">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">RandomizedBenchmarking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_drive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_readout_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sequence'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.RandomizedBenchmarking" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../_auto/pyQCat.experiment.html#pyQCat.experiment.top_experiment.TopExperiment" title="pyQCat.experiment.top_experiment.TopExperiment"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_experiment.TopExperiment</span></code></a></p>
+<p><cite>RB</cite> 实验</p>
+<p><cite>RB</cite> 实验用来获取单门操作的平均保真度</p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.RandomizedBenchmarking.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_drive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_readout_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sequence'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.RandomizedBenchmarking.__init__" title="永久链接至目标">¶</a></dt>
+<dd><p>Initialize method</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.RandomizedBenchmarking.__init__" title="pyQCat.experiment.RandomizedBenchmarking.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(inst, *qubits[, correct_dc, …])</p></td>
+<td><p>Initialize method</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">acquire_pulse</span></code>(acq_pulse[, qubit])</p></td>
+<td><p>设置读取波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bind_probe_inst</span></code>(qubit)</p></td>
+<td><p>为一体机读取模块绑定初始化参数。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_file_sys</span></code>([name, display])</p></td>
+<td><p>设置实验分析结果文件的保存路径</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.RandomizedBenchmarking.get_ancilla_gate" title="pyQCat.experiment.RandomizedBenchmarking.get_ancilla_gate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_ancilla_gate</span></code></a>(clifford_matrix_set, …)</p></td>
+<td><p>寻找逆元操作</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.RandomizedBenchmarking.get_clifford_matrix_set" title="pyQCat.experiment.RandomizedBenchmarking.get_clifford_matrix_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_clifford_matrix_set</span></code></a>()</p></td>
+<td><p>获取 clifford 集群中每个个体对应的矩阵 matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.RandomizedBenchmarking.get_quantum_circuits" title="pyQCat.experiment.RandomizedBenchmarking.get_quantum_circuits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_quantum_circuits</span></code></a>(circuit_depth_list, …)</p></td>
+<td><p>获取量子线路</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.RandomizedBenchmarking.get_quantum_pulses" title="pyQCat.experiment.RandomizedBenchmarking.get_quantum_pulses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_quantum_pulses</span></code></a>(quantum_circuits)</p></td>
+<td><p>获取每个量子逻辑门的波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_readout</span></code>([time, amp, IF, channel])</p></td>
+<td><p>初始化读取模块，为读取线添加波形</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">play_pulse</span></code>(name, qubit, pulse)</p></td>
+<td><p>给 XY 或 Z 线绑定波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_schedule</span></code>([xy_index, is_save])</p></td>
+<td><p>绘制波形时序图</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>([data_type, enable_one_sweep])</p></td>
+<td><p>注册实验</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.RandomizedBenchmarking.run" title="pyQCat.experiment.RandomizedBenchmarking.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(circuit_depth_list, random_times[, …])</p></td>
+<td><p>RB 实验运行接口</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_data</span></code>(*args[, file_name])</p></td>
+<td><p>保存自定义的数据到当前实验预先生成的结果路径下</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_parameters</span></code>(**kwargs)</p></td>
+<td><p>保存实验参数到本地目录</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_multiple_IF</span></code>(*IF[, channel])</p></td>
+<td><p>联合读取实验中用来设置多个中频</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_multiple_index</span></code>(*args[, channel])</p></td>
+<td><p>联合读取实验中用来设置各个比特波形的选择范围</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_readout2q_params</span></code>([IF, channel])</p></td>
+<td><p>设置两比特联合读取波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_readout_delay</span></code>(*delay[, channel])</p></td>
+<td><p>设置读取通道波形的脉冲触发延时</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_sweep_order</span></code>(order_list)</p></td>
+<td><p>调整扫描参数的施加顺序</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.RandomizedBenchmarking.split_gate" title="pyQCat.experiment.RandomizedBenchmarking.split_gate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">split_gate</span></code></a>()</p></td>
+<td><p>划分门扫做</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_auto/pyQCat.experiment.html#pyQCat.experiment.RandomizedBenchmarking.gate_map" title="pyQCat.experiment.RandomizedBenchmarking.gate_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gate_map</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../_auto/pyQCat.experiment.html#pyQCat.experiment.RandomizedBenchmarking.standard_clifford_set" title="pyQCat.experiment.RandomizedBenchmarking.standard_clifford_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">standard_clifford_set</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.RandomizedBenchmarking.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit_depth_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_times</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interleaved_gate_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_gate_split</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.RandomizedBenchmarking.run" title="永久链接至目标">¶</a></dt>
+<dd><p>RB 实验运行接口</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit_depth_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 从 clifford 集群中随机选取门操作的个数</p></li>
+<li><p><strong>random_times</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 随机次数</p></li>
+<li><p><strong>interleaved_gate_list</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – </p></li>
+<li><p><strong>is_gate_split</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 门是否需要划分</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.RandomizedBenchmarking.get_quantum_circuits">
+<span class="sig-name descname"><span class="pre">get_quantum_circuits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit_depth_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_times</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clifford_matrix_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interleaved_gate_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_gate_split</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.RandomizedBenchmarking.get_quantum_circuits" title="永久链接至目标">¶</a></dt>
+<dd><p>获取量子线路</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit_depth_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 从 clifford 集群中随机选取门操作的个数</p></li>
+<li><p><strong>random_times</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 随机实验次数</p></li>
+<li><p><strong>clifford_matrix_set</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – clifford 集群的矩阵形式</p></li>
+<li><p><strong>interleaved_gate_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p></li>
+<li><p><strong>is_gate_split</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否进行门划分 [X, Y] -&gt; [X/2, Y/2]</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>门操作连接而成的量子逻辑门列表</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.RandomizedBenchmarking.get_quantum_pulses">
+<span class="sig-name descname"><span class="pre">get_quantum_pulses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantum_circuits</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.RandomizedBenchmarking.get_quantum_pulses" title="永久链接至目标">¶</a></dt>
+<dd><p>获取每个量子逻辑门的波形</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>quantum_circuits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 量子逻辑门连接的列表</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>脉冲列表</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.PulseComponent" title="pyQCat.PulseComponent">PulseComponent</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.RandomizedBenchmarking.get_clifford_matrix_set">
+<span class="sig-name descname"><span class="pre">get_clifford_matrix_set</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.RandomizedBenchmarking.get_clifford_matrix_set" title="永久链接至目标">¶</a></dt>
+<dd><p>获取 clifford 集群中每个个体对应的矩阵 matrix</p>
+<p>线将 clifford 列表进行反转，然后进行矩阵相乘</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>clifford 集群个体对应的矩阵形式</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.RandomizedBenchmarking.get_ancilla_gate">
+<span class="sig-name descname"><span class="pre">get_ancilla_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clifford_matrix_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gate_matrix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.RandomizedBenchmarking.get_ancilla_gate" title="永久链接至目标">¶</a></dt>
+<dd><p>寻找逆元操作</p>
+<p>根据群的定义，在 clifford 群中一定存在一个逆元使得这一系列操作等效为一个单位门，再把它施加到比特上。如果操作
+都是完美的，比特此时应该仍然处于 0 态</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>clifford_matrix_set</strong> – clifford 集群的矩阵形式</p></li>
+<li><p><strong>gate_matrix</strong> – 当前的连接门序列</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>当亲矩阵逆元的字符串形式</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.RandomizedBenchmarking.split_gate">
+<span class="sig-name descname"><span class="pre">split_gate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.RandomizedBenchmarking.split_gate" title="永久链接至目标">¶</a></dt>
+<dd><p>划分门扫做</p>
+<p>如果 RB 实验传入的参数 <code class="docutils literal notranslate"><span class="pre">is_gate_split</span></code> 为 True 时，则将 X 拆分成 (X/2, X/2),
+将 Y 拆分成 (Y/2, Y/2), 将 -X 拆分成 (-X/2, -X/2), 将 -Y 拆分成 (-Y/2, -Y/2),
+以这种逻辑更新 <code class="docutils literal notranslate"><span class="pre">gate_set</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

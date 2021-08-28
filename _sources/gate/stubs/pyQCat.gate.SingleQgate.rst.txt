@@ -1,0 +1,30 @@
+﻿pyQCat.gate.SingleQgate
+=======================
+
+.. currentmodule:: pyQCat.gate
+
+.. autoclass:: SingleQgate
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SingleQgate.__init__
+      ~SingleQgate.to_pulse
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~SingleQgate.matrix
+      ~SingleQgate.name
+   
+   

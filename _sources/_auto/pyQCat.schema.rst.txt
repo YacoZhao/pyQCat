@@ -1,0 +1,21 @@
+pyQCat.schema package
+=====================
+
+Submodules
+----------
+
+pyQCat.schema.qschema module
+----------------------------
+
+.. automodule:: pyQCat.schema.qschema
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: pyQCat.schema
+   :members:
+   :undoc-members:
+   :show-inheritance:

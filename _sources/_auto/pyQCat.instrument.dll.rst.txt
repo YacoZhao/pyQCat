@@ -1,0 +1,10 @@
+pyQCat.instrument.dll package
+=============================
+
+Module contents
+---------------
+
+.. automodule:: pyQCat.instrument.dll
+   :members:
+   :undoc-members:
+   :show-inheritance:

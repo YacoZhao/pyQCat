@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.tool.formula &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.tool.drift" href="pyQCat.tool.drift.html" />
+    <link rel="prev" title="Auxiliary Tools (pyQCat.tool)" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pyQCat.tool.formula</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.drift.html">pyQCat.tool.drift</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.param_fit.html">pyQCat.tool.param_fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.parse_yaml.html">pyQCat.tool.parse_yaml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.smooth.html">pyQCat.tool.smooth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.iqprobability.html">pyQCat.tool.iqprobability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.NM_bnd.html">pyQCat.tool.NM_bnd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.parsefile.html">pyQCat.tool.parsefile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.plot_data.html">pyQCat.tool.plot_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.resonator_fit_calibration.html">pyQCat.tool.resonator_fit_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.SaveFile.html">pyQCat.tool.SaveFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.set_config.html">pyQCat.tool.set_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.utlis.html">pyQCat.tool.utlis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.wrappers.html">pyQCat.tool.wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.tool.formula</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.tool.formula">
+<span id="pyqcat-tool-formula"></span><h1>pyQCat.tool.formula<a class="headerlink" href="#module-pyQCat.tool.formula" title="永久链接至标题">¶</a></h1>
+<p>定义了 pyQCat 中所用到的公式</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.amp2cavity_freq_formula" title="pyQCat.tool.formula.amp2cavity_freq_formula"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp2cavity_freq_formula</span></code></a>(x, f10max, fc, M, …)</p></td>
+<td><p>amp2cavity freq formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.amp2delta_freq_formula" title="pyQCat.tool.formula.amp2delta_freq_formula"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp2delta_freq_formula</span></code></a>(x, a, b, c)</p></td>
+<td><p>amp2delta freq formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.amp2freq_formula" title="pyQCat.tool.formula.amp2freq_formula"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp2freq_formula</span></code></a>(amp, fq_max, detune, M, …)</p></td>
+<td><p>amp2freq formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.cosine" title="pyQCat.tool.formula.cosine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cosine</span></code></a>(x, freq, phi, amp, offset)</p></td>
+<td><p>cosine formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.cosine_damping" title="pyQCat.tool.formula.cosine_damping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cosine_damping</span></code></a>(x, T2, freq, phase, amp, e)</p></td>
+<td><p>cosine damping formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.cross_entropy" title="pyQCat.tool.formula.cross_entropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cross_entropy</span></code></a>(p_list, q_list)</p></td>
+<td><p>Calculate cross entropy</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.delta_freq2amp_formula" title="pyQCat.tool.formula.delta_freq2amp_formula"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delta_freq2amp_formula</span></code></a>(freq, a, b, c)</p></td>
+<td><p>delta freq2amp formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.exp_decay_formula" title="pyQCat.tool.formula.exp_decay_formula"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp_decay_formula</span></code></a>(x, A, B, p)</p></td>
+<td><p>Exponential decay fit formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.fourier_cycle" title="pyQCat.tool.formula.fourier_cycle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fourier_cycle</span></code></a>(x, y)</p></td>
+<td><p>FFT change to get function cycle t</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.freq2amp_formula" title="pyQCat.tool.formula.freq2amp_formula"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freq2amp_formula</span></code></a>(freq, fmax, detune, M, …)</p></td>
+<td><p>freq2amp formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.freq_flux" title="pyQCat.tool.formula.freq_flux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freq_flux</span></code></a>(x, A, d, a, b, B)</p></td>
+<td><p>freq flux formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.gauss" title="pyQCat.tool.formula.gauss"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gauss</span></code></a>(x, a, b, c, d)</p></td>
+<td><p>gauss formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.linear_formula" title="pyQCat.tool.formula.linear_formula"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linear_formula</span></code></a>(x, k, b)</p></td>
+<td><p>linear formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.lorentzian" title="pyQCat.tool.formula.lorentzian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lorentzian</span></code></a>(f, A, offset, f0, kappa)</p></td>
+<td><p>lorentzian formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.natural_exp" title="pyQCat.tool.formula.natural_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">natural_exp</span></code></a>(x, A, B, T1)</p></td>
+<td><p>natural exp formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.pseudo_voige" title="pyQCat.tool.formula.pseudo_voige"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pseudo_voige</span></code></a>(x, a, b, c, d, e, f)</p></td>
+<td><p>pseudo voige formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.ramsey_photon" title="pyQCat.tool.formula.ramsey_photon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ramsey_photon</span></code></a>(x, *p)</p></td>
+<td><p>ramsey photon formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.sine_damping" title="pyQCat.tool.formula.sine_damping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sine_damping</span></code></a>(x, a, b, t2, f)</p></td>
+<td><p>sine damping formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.sine_damping_accessory" title="pyQCat.tool.formula.sine_damping_accessory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sine_damping_accessory</span></code></a>(a, f)</p></td>
+<td><p>sine damping formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.skewed_lorentzian" title="pyQCat.tool.formula.skewed_lorentzian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skewed_lorentzian</span></code></a>(x, A1, A2, A3, A4, fr, Ql)</p></td>
+<td><p>skewed lorentzian formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.skewed_lorentzian_auxiliary" title="pyQCat.tool.formula.skewed_lorentzian_auxiliary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">skewed_lorentzian_auxiliary</span></code></a>(A1, A3, fr)</p></td>
+<td><p>skewed lorentzian auxiliary formula</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.swap_formula" title="pyQCat.tool.formula.swap_formula"><code class="xref py py-obj docutils literal notranslate"><span class="pre">swap_formula</span></code></a>(z, g, A, z0)</p></td>
+<td><p>swap formula</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.formula.html#pyQCat.tool.formula.twin_lorentzian" title="pyQCat.tool.formula.twin_lorentzian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">twin_lorentzian</span></code></a>(f, A_gf_over_2, A, …[, …])</p></td>
+<td><p>Twin lorentz with background.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.natural_exp">
+<span class="sig-name descname"><span class="pre">natural_exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.natural_exp" title="永久链接至目标">¶</a></dt>
+<dd><p>natural exp formula</p>
+<div class="math notranslate nohighlight">
+\[y = A + B * e^{\frac{-x}{T_1}}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.sine_damping">
+<span class="sig-name descname"><span class="pre">sine_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.sine_damping" title="永久链接至目标">¶</a></dt>
+<dd><p>sine damping formula</p>
+<div class="math notranslate nohighlight">
+\[y = a + b * e^{\frac{-x}{t_2}} * \cos(2 * \pi * f * x)\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.sine_damping_accessory">
+<span class="sig-name descname"><span class="pre">sine_damping_accessory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.sine_damping_accessory" title="永久链接至目标">¶</a></dt>
+<dd><p>sine damping formula</p>
+<div class="math notranslate nohighlight">
+\[y = a + b * e^{\frac{-x}{t_2}} * \cos(2 * \pi * f * x)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">func(x,</span> <span class="pre">b,</span> <span class="pre">t2)</span></code></p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>func</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.freq_flux">
+<span class="sig-name descname"><span class="pre">freq_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.freq_flux" title="永久链接至目标">¶</a></dt>
+<dd><p>freq flux formula</p>
+<div class="math notranslate nohighlight">
+\[y = A * \sqrt{\sqrt{1+d^2*(\tan(\pi * (\frac{x}{a} + b))^2)} *         \vert \cos(\pi * (\frac{x}{a} + b))\vert} + B\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.fourier_cycle">
+<span class="sig-name descname"><span class="pre">fourier_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.fourier_cycle" title="永久链接至目标">¶</a></dt>
+<dd><p>FFT change to get function cycle t</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.ramsey_photon">
+<span class="sig-name descname"><span class="pre">ramsey_photon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.ramsey_photon" title="永久链接至目标">¶</a></dt>
+<dd><p>ramsey photon formula</p>
+<div class="math notranslate nohighlight">
+\[y = amp * e^{\frac{-x}{T_2}} * \cos(2\pi x * freq + phase) + e\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.cosine_damping">
+<span class="sig-name descname"><span class="pre">cosine_damping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.cosine_damping" title="永久链接至目标">¶</a></dt>
+<dd><p>cosine damping formula</p>
+<div class="math notranslate nohighlight">
+\[y = amp * e^{\frac{-x}{T_2}} * \cos(2\pi x * freq + phase) + e\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.cosine">
+<span class="sig-name descname"><span class="pre">cosine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.cosine" title="永久链接至目标">¶</a></dt>
+<dd><p>cosine formula</p>
+<div class="math notranslate nohighlight">
+\[y=amp * \cos(2\pi * freq * (x - phi)) + offset\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.pseudo_voige">
+<span class="sig-name descname"><span class="pre">pseudo_voige</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.pseudo_voige" title="永久链接至目标">¶</a></dt>
+<dd><p>pseudo voige formula</p>
+<div class="math notranslate nohighlight">
+\[y = a * [(1-e)*e^{\frac{-(x-v)^2}{c^2}} + \frac{e}{1 + \frac{(x-b)^2}{c^2}}] + d + f * x\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.skewed_lorentzian">
+<span class="sig-name descname"><span class="pre">skewed_lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ql</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.skewed_lorentzian" title="永久链接至目标">¶</a></dt>
+<dd><p>skewed lorentzian formula</p>
+<div class="math notranslate nohighlight">
+\[y = \frac{A1+A3+(A2+A4) * (x-fr)}{1+4Ql^2 * (\frac{x-fr}{fr})^2}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.skewed_lorentzian_auxiliary">
+<span class="sig-name descname"><span class="pre">skewed_lorentzian_auxiliary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">A1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.skewed_lorentzian_auxiliary" title="永久链接至目标">¶</a></dt>
+<dd><p>skewed lorentzian auxiliary formula</p>
+<div class="math notranslate nohighlight">
+\[y = A1 + A2 * (x - fr) + \frac{A3+A4*(x-fr)}{1+4Ql^2 * (\frac{x-fr}{fr})^2}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.amp2freq_formula">
+<span class="sig-name descname"><span class="pre">amp2freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2freq_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>amp2freq formula</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{equation*}
+\begin{split}
+&amp;phi = \pi * M * (amp-offset)\\
+&amp;fq = (fq\_max + detune) * \sqrt{\sqrt{1+d^2+\tan(phi)^2} * \vert\cos(phi)\vert} - detune
+\end{split}
+\end{equation*}\end{split}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.amp2cavity_freq_formula">
+<span class="sig-name descname"><span class="pre">amp2cavity_freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f10max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2cavity_freq_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>amp2cavity freq formula</p>
+<div class="math notranslate nohighlight">
+\[kai = \frac{g^2}{delta * (\frac{1-delta}{fc})}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.gauss">
+<span class="sig-name descname"><span class="pre">gauss</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.gauss" title="永久链接至目标">¶</a></dt>
+<dd><p>gauss formula</p>
+<div class="math notranslate nohighlight">
+\[y = a * e^{\frac{(x-b)^2}{c^2}} + d\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.freq2amp_formula">
+<span class="sig-name descname"><span class="pre">freq2amp_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.freq2amp_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>freq2amp formula</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{equation*}
+\begin{split}
+&amp;alpha = \frac{freq + detune}{detune + fmax}\\
+&amp;belta = \frac{alpha^4 - d^2}{1 - d^2}\\
+&amp;amp = \frac{\vert \arccos{\sqrt{belta}}}{M * \pi} + offset
+\end{split}
+\end{equation*}\end{split}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.swap_formula">
+<span class="sig-name descname"><span class="pre">swap_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.swap_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>swap formula</p>
+<div class="math notranslate nohighlight">
+\[y = \sqrt{4 * g^2 + A^2 * (z - z0)^2}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.amp2delta_freq_formula">
+<span class="sig-name descname"><span class="pre">amp2delta_freq_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.amp2delta_freq_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>amp2delta freq formula</p>
+<div class="math notranslate nohighlight">
+\[y = a * x^2 + b * x + c\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.delta_freq2amp_formula">
+<span class="sig-name descname"><span class="pre">delta_freq2amp_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.delta_freq2amp_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>delta freq2amp formula</p>
+<div class="math notranslate nohighlight">
+\[amp = \frac{-b + \sqrt{b^2 - 4 * a * (c - freq)}}{2a}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.lorentzian">
+<span class="sig-name descname"><span class="pre">lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.lorentzian" title="永久链接至目标">¶</a></dt>
+<dd><p>lorentzian formula</p>
+<div class="math notranslate nohighlight">
+\[val = offset + \frac{A}{\pi} * \frac{kappa}{(f - f0)^2 + kappa^2}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.twin_lorentzian">
+<span class="sig-name descname"><span class="pre">twin_lorentzian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa_gf_over_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.twin_lorentzian" title="永久链接至目标">¶</a></dt>
+<dd><p>Twin lorentz with background.</p>
+<p>Args:
+f (float):          frequency sweep points in Hz
+A (float):          amplitude of the tallest/deepest Lorentzian structure</p>
+<blockquote>
+<div><p>in the data</p>
+</div></blockquote>
+<dl class="simple">
+<dt>A_gf_over_2 (float):    amplitude of the other Lorentzian structure in the</dt><dd><p>data; since this function is used for high power
+qubit spectroscopy, this parameter refers to the
+Lorentzian structure corresponding to the gf/2
+transition</p>
+</dd>
+<dt>f0 (float):         frequency of the tallest/deepest Lorentzian structure</dt><dd><p>in the data</p>
+</dd>
+<dt>f0_gf_over_2 (float):   frequency of the other Lorentzian structure in the</dt><dd><p>data; since this function is used for high power
+qubit spectroscopy, this parameter refers to the
+Lorentzian structure corresponding to the gf/2
+transition</p>
+</dd>
+<dt>kappa (float):      kappa (FWHM) of the tallest/deepest Lorentzian structure</dt><dd><p>in the data</p>
+</dd>
+<dt>kappa_gf_over_2 (float): kappa (FWHM) of the other Lorentzian structure in</dt><dd><p>the data; since this function is used for high
+power qubit spectroscopy, this parameter refers to
+the Lorentzian structure corresponding to the gf/2
+transition</p>
+</dd>
+</dl>
+<p>background (float):     background offset</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{equation*}
+\begin{split}
+val = &amp;\frac{A\_gf\_over\_2}{\pi} * \frac{kappa\_gf\_over\_2}{(f - f0\_gf\_over\_2)^2 + (kappa\_gf\_over\_2)^2} + \\
+&amp;\frac{A}{\pi} * \frac{kappa}{(f-f0)^2 + kappa^2} + background
+\end{split}
+\end{equation*}\end{split}\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.linear_formula">
+<span class="sig-name descname"><span class="pre">linear_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.linear_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>linear formula</p>
+<div class="math notranslate nohighlight">
+\[y = k * x + b\]</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.exp_decay_formula">
+<span class="sig-name descname"><span class="pre">exp_decay_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.exp_decay_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>Exponential decay fit formula</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.cross_entropy">
+<span class="sig-name descname"><span class="pre">cross_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.cross_entropy" title="永久链接至目标">¶</a></dt>
+<dd><p>Calculate cross entropy</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.tool.drift.html" class="btn btn-neutral float-right" title="pyQCat.tool.drift" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Auxiliary Tools (pyQCat.tool)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

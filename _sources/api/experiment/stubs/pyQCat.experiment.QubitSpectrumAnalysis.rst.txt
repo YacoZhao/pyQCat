@@ -1,0 +1,41 @@
+﻿pyQCat.experiment.QubitSpectrumAnalysis
+=======================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: QubitSpectrumAnalysis
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~QubitSpectrumAnalysis.__init__
+      ~QubitSpectrumAnalysis.analyze
+      ~QubitSpectrumAnalysis.excute_loop
+      ~QubitSpectrumAnalysis.get_experiment
+      ~QubitSpectrumAnalysis.loop_control
+      ~QubitSpectrumAnalysis.single_qubit_usualness
+      ~QubitSpectrumAnalysis.slice_result
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~QubitSpectrumAnalysis.I
+      ~QubitSpectrumAnalysis.P0
+      ~QubitSpectrumAnalysis.P1
+      ~QubitSpectrumAnalysis.Q
+      ~QubitSpectrumAnalysis.amp
+      ~QubitSpectrumAnalysis.phase
+      ~QubitSpectrumAnalysis.probability_list
+      ~QubitSpectrumAnalysis.status
+   
+   

@@ -1,0 +1,534 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.tool.plot_data &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.tool.plot_data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.tool.plot_data">
+<span id="pyqcat-tool-plot-data"></span><h1>pyQCat.tool.plot_data<a class="headerlink" href="#module-pyQCat.tool.plot_data" title="永久链接至标题">¶</a></h1>
+<p>该模块定义了一些常用的绘图方法</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_2D_depth_pic" title="pyQCat.tool.plot_data.plot_2D_depth_pic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_2D_depth_pic</span></code></a>(x_label, x_list, y_label, …)</p></td>
+<td><p>plot 2 dimension depth picture</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_bar3d" title="pyQCat.tool.plot_data.plot_bar3d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_bar3d</span></code></a>(rho[, width, depth, ticks_label, …])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param rho</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_coincident_point" title="pyQCat.tool.plot_data.plot_coincident_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_coincident_point</span></code></a>(x, *y, index[, path])</p></td>
+<td><p>绘制冲突点</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_depth_dynamic" title="pyQCat.tool.plot_data.plot_depth_dynamic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_depth_dynamic</span></code></a>(x_label, x_list, y_label, …)</p></td>
+<td><p>绘制三维动图</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_double_dynamic" title="pyQCat.tool.plot_data.plot_double_dynamic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_double_dynamic</span></code></a>(x1_list, y1_list, …[, …])</p></td>
+<td><p>绘制两个子图的动图</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_dynamic" title="pyQCat.tool.plot_data.plot_dynamic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_dynamic</span></code></a>(x_list, y_list[, figure, …])</p></td>
+<td><p>绘制动图</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_errorbar" title="pyQCat.tool.plot_data.plot_errorbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_errorbar</span></code></a>(x_axis, y_axis, standard[, …])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param x_axis</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_iq" title="pyQCat.tool.plot_data.plot_iq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_iq</span></code></a>(*args[, prob0, prob1, c, name, dir])</p></td>
+<td><p>绘制IQ数据</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_multiple" title="pyQCat.tool.plot_data.plot_multiple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_multiple</span></code></a>(x_axis, *args[, xlabel, …])</p></td>
+<td><p>多图绘制</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_signals" title="pyQCat.tool.plot_data.plot_signals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_signals</span></code></a>(x, signals[, x_label, y_label, …])</p></td>
+<td><p>绘制信号点</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.plot_spectrum" title="pyQCat.tool.plot_data.plot_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_spectrum</span></code></a>(x, y, z, x_label, y_label, title)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">type x</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.tool.plot_data.subplot_signals" title="pyQCat.tool.plot_data.subplot_signals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subplot_signals</span></code></a>(x, signals[, fit_signals, …])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">type x</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_iq">
+<span class="sig-name descname"><span class="pre">plot_iq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_iq" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制IQ数据</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – </p></li>
+<li><p><strong>prob0</strong> – </p></li>
+<li><p><strong>prob1</strong> – </p></li>
+<li><p><strong>c</strong> – </p></li>
+<li><p><strong>name</strong> – </p></li>
+<li><p><strong>dir</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_bar3d">
+<span class="sig-name descname"><span class="pre">plot_bar3d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticks_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(16,</span> <span class="pre">9)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_bar3d" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rho</strong> – </p></li>
+<li><p><strong>width</strong> – </p></li>
+<li><p><strong>depth</strong> – </p></li>
+<li><p><strong>ticks_label</strong> – </p></li>
+<li><p><strong>title</strong> – </p></li>
+<li><p><strong>dir</strong> – </p></li>
+<li><p><strong>is_show</strong> – </p></li>
+<li><p><strong>figsize</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_errorbar">
+<span class="sig-name descname"><span class="pre">plot_errorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standard</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_errorbar" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_axis</strong> – </p></li>
+<li><p><strong>y_axis</strong> – </p></li>
+<li><p><strong>standard</strong> – </p></li>
+<li><p><strong>xlabel</strong> – </p></li>
+<li><p><strong>ylabel</strong> – </p></li>
+<li><p><strong>title</strong> – </p></li>
+<li><p><strong>dir</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_multiple">
+<span class="sig-name descname"><span class="pre">plot_multiple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_axis</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xlabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_labes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pcolor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">site</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_multiple" title="永久链接至目标">¶</a></dt>
+<dd><p>多图绘制</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_axis</strong> – </p></li>
+<li><p><strong>*args</strong> – </p></li>
+<li><p><strong>xlabel</strong> – </p></li>
+<li><p><strong>ylabel</strong> – </p></li>
+<li><p><strong>line_labes</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>]) – </p></li>
+<li><p><strong>title</strong> – </p></li>
+<li><p><strong>index</strong> – </p></li>
+<li><p><strong>dir</strong> – </p></li>
+<li><p><strong>pcolor</strong> – </p></li>
+<li><p><strong>is_show</strong> – </p></li>
+<li><p><strong>site</strong> – </p></li>
+<li><p><strong>text</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – </p></li>
+<li><p><strong>text_pos</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_dynamic">
+<span class="sig-name descname"><span class="pre">plot_dynamic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_dynamic" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制动图</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_list</strong> – </p></li>
+<li><p><strong>y_list</strong> – </p></li>
+<li><p><strong>figure</strong> – </p></li>
+<li><p><strong>x_label</strong> – </p></li>
+<li><p><strong>y_label</strong> – </p></li>
+<li><p><strong>title</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_double_dynamic">
+<span class="sig-name descname"><span class="pre">plot_double_dynamic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figures</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x1_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_double_dynamic" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制两个子图的动图</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x1_list</strong> – </p></li>
+<li><p><strong>y1_list</strong> – </p></li>
+<li><p><strong>x2_list</strong> – </p></li>
+<li><p><strong>y2_list</strong> – </p></li>
+<li><p><strong>figures</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>]) – </p></li>
+<li><p><strong>x1_label</strong> – </p></li>
+<li><p><strong>y1_label</strong> – </p></li>
+<li><p><strong>x2_label</strong> – </p></li>
+<li><p><strong>y2_label</strong> – </p></li>
+<li><p><strong>title1</strong> – </p></li>
+<li><p><strong>title2</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_depth_dynamic">
+<span class="sig-name descname"><span class="pre">plot_depth_dynamic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_depth_dynamic" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制三维动图</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_label</strong> – </p></li>
+<li><p><strong>x_list</strong> – </p></li>
+<li><p><strong>y_label</strong> – </p></li>
+<li><p><strong>y_list</strong> – </p></li>
+<li><p><strong>z_list</strong> – </p></li>
+<li><p><strong>title</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_2D_depth_pic">
+<span class="sig-name descname"><span class="pre">plot_2D_depth_pic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_2D_depth_pic" title="永久链接至目标">¶</a></dt>
+<dd><p>plot 2 dimension depth picture</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_label</strong> – x axis data name</p></li>
+<li><p><strong>x_list</strong> – x axis data name</p></li>
+<li><p><strong>y_label</strong> – y axis data name</p></li>
+<li><p><strong>y_list</strong> – y axis data, the same length as x_list</p></li>
+<li><p><strong>z_list</strong> – dependent variable data</p></li>
+<li><p><strong>title</strong> – plot title</p></li>
+<li><p><strong>root_dir</strong> – save plot file path</p></li>
+<li><p><strong>file_name</strong> – save pic name</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_coincident_point">
+<span class="sig-name descname"><span class="pre">plot_coincident_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_coincident_point" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制冲突点</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – </p></li>
+<li><p><strong>*y</strong> – </p></li>
+<li><p><strong>index</strong> – </p></li>
+<li><p><strong>path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_signals">
+<span class="sig-name descname"><span class="pre">plot_signals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">12)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_signals" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制信号点</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – </p></li>
+<li><p><strong>signals</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]]) – </p></li>
+<li><p><strong>x_label</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p></li>
+<li><p><strong>y_label</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p></li>
+<li><p><strong>title</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p></li>
+<li><p><strong>line_label</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – </p></li>
+<li><p><strong>savefig</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p></li>
+<li><p><strong>annotations</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>]]) – </p></li>
+<li><p><strong>figsize</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>) – </p></li>
+<li><p><strong>is_show</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.subplot_signals">
+<span class="sig-name descname"><span class="pre">subplot_signals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_signals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_labels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">12)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.subplot_signals" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – </p></li>
+<li><p><strong>signals</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]]) – </p></li>
+<li><p><strong>fit_signals</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]]]) – </p></li>
+<li><p><strong>x_label</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p></li>
+<li><p><strong>y_labels</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – </p></li>
+<li><p><strong>titles</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]]) – </p></li>
+<li><p><strong>savefig</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p></li>
+<li><p><strong>annotations</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>]]) – </p></li>
+<li><p><strong>figsize</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>) – </p></li>
+<li><p><strong>is_show</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.plot_data.plot_spectrum">
+<span class="sig-name descname"><span class="pre">plot_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(20,</span> <span class="pre">12)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.plot_data.plot_spectrum" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – </p></li>
+<li><p><strong>y</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – </p></li>
+<li><p><strong>z</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – </p></li>
+<li><p><strong>x_label</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – </p></li>
+<li><p><strong>y_label</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – </p></li>
+<li><p><strong>title</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – </p></li>
+<li><p><strong>savefig</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p></li>
+<li><p><strong>figsize</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>) – </p></li>
+<li><p><strong>is_show</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

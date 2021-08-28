@@ -1,0 +1,35 @@
+﻿pyQCat.tool.wrappers
+====================
+
+.. automodule:: pyQCat.tool.wrappers
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      collect_qubit_data
+      remote_connection
+      set_file
+      statistics_time
+      time_block
+      time_cal
+      whether_import_save
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

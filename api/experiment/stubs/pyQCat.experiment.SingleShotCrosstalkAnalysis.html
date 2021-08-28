@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.experiment.SingleShotCrosstalkAnalysis &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.experiment.Swap" href="pyQCat.experiment.Swap.html" />
+    <link rel="prev" title="pyQCat.experiment.SingleShotCrossTalk" href="pyQCat.experiment.SingleShotCrossTalk.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#base-experiment-template">Base Experiment Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cavityfreqspectrum">CavityFreqSpectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cavitypoweroptimize">CavityPowerOptimize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#qubitspectrum">QubitSpectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#rabi">Rabi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#ampoptimize">AmpOptimize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#ape">APE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#singleshot">SingleShot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#ramsey">Ramsey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#spinecho">SpinEcho</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#t1">T1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#t2">T2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#randomizedbenchmarking">RandomizedBenchmarking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#xeb">XEB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#modulation-spectrum">Modulation Spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#circuit-compensation">Circuit Compensation</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#crosstalk">Crosstalk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#swap">Swap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#unionsingleshot">UnionSingleShot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.experiment.SingleShotCrosstalkAnalysis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-experiment-singleshotcrosstalkanalysis">
+<h1>pyQCat.experiment.SingleShotCrosstalkAnalysis<a class="headerlink" href="#pyqcat-experiment-singleshotcrosstalkanalysis" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.SingleShotCrosstalkAnalysis">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SingleShotCrosstalkAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'I_Q'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.SingleShotCrosstalkAnalysis" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../../_auto/pyQCat.experiment.html#pyQCat.experiment.single_shot.SingleShotAnalysis" title="pyQCat.experiment.single_shot.SingleShotAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.single_shot.SingleShotAnalysis</span></code></a></p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.SingleShotCrosstalkAnalysis.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'I_Q'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.SingleShotCrosstalkAnalysis.__init__" title="永久链接至目标">¶</a></dt>
+<dd><p>Initialize method</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../experiment/stubs/pyQCat.experiment.SingleShotCrosstalkAnalysis.html#pyQCat.experiment.SingleShotCrosstalkAnalysis.__init__" title="pyQCat.experiment.SingleShotCrosstalkAnalysis.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(experiment_id[, qubit, repeat, …])</p></td>
+<td><p>Initialize method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../experiment/stubs/pyQCat.experiment.SingleShotCrosstalkAnalysis.html#pyQCat.experiment.SingleShotCrosstalkAnalysis.analyze" title="pyQCat.experiment.SingleShotCrosstalkAnalysis.analyze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyze</span></code></a>()</p></td>
+<td><p>SingleShot实验结果分析方法</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">excute_loop</span></code>([func, args, analyze_one])</p></td>
+<td><p>循环获取实验测量结果</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_experiment</span></code>([field])</p></td>
+<td><p>从数据库中查询最近保存的 <code class="docutils literal notranslate"><span class="pre">ExperimentDoc</span></code> 对象</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">loop_control</span></code>(sample_channels, loop)</p></td>
+<td><p>每次循环获取实验数据的默认方法</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_result</span></code>(I0, Q0, I1, Q1, bit, discriminator)</p></td>
+<td><p>保存分类结果</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">single_qubit_usualness</span></code>()</p></td>
+<td><p>单比特实验测量结果分析方法，如果 <cite>IQ分类器</cite> 为空，则返回振幅和相位测量参数。 否则，使用 <cite>IQ分类器</cite> 对采集的实验数据进行分类，返回状态0和状态1的概率。最终 将实验结果转化为 <code class="docutils literal notranslate"><span class="pre">y0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">y1</span></code> 的形式</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_result</span></code>(measure_result)</p></td>
+<td><p>划分实验结果</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">F0</span></code></p></td>
+<td><p>比特0态被正确分类的概率</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">F1</span></code></p></td>
+<td><p>比特1态被正确分类的概率</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">I</span></code></p></td>
+<td><p>获取实验结果解调后的 <code class="docutils literal notranslate"><span class="pre">I</span></code> 参数，仅当数据类型为 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 时有效</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">P0</span></code></p></td>
+<td><p>获取实验结果处于0态的概率，仅当数据类型为 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 时有效</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">P1</span></code></p></td>
+<td><p>获取实验结果处于1态的概率，仅当数据类型为 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 时有效</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Q</span></code></p></td>
+<td><p>获取实验结果解调后的 <code class="docutils literal notranslate"><span class="pre">Q</span></code> 参数，仅当数据类型为 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 时有效</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp</span></code></p></td>
+<td><p>获取实验结果的幅值参数，仅当数据类型为 <code class="docutils literal notranslate"><span class="pre">amp-phase</span></code> 时有效</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">phase</span></code></p></td>
+<td><p>获取实验结果的相位参数，仅当数据类型为 <code class="docutils literal notranslate"><span class="pre">amp-phase</span></code> 时有效</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">probability_list</span></code></p></td>
+<td><p>根据 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 值获取实验结果处于 <code class="docutils literal notranslate"><span class="pre">0态</span></code> 和 <code class="docutils literal notranslate"><span class="pre">1态</span></code> 的概率列表</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">status</span></code></p></td>
+<td><p>获取实验状态，从数据库的 <code class="docutils literal notranslate"><span class="pre">ExperimentDoc</span></code> 中获取实验状态</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.SingleShotCrosstalkAnalysis.analyze">
+<span class="sig-name descname"><span class="pre">analyze</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.SingleShotCrosstalkAnalysis.analyze" title="永久链接至目标">¶</a></dt>
+<dd><p>SingleShot实验结果分析方法</p>
+<ul class="simple">
+<li><p>首先分别获取比特处于0态和1态下的 <code class="docutils literal notranslate"><span class="pre">IQ</span></code> 数据</p></li>
+<li><p>交给聚类算法进行聚类</p></li>
+<li><p>保存聚类结果，生成分类器</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.experiment.Swap.html" class="btn btn-neutral float-right" title="pyQCat.experiment.Swap" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.experiment.SingleShotCrossTalk.html" class="btn btn-neutral float-left" title="pyQCat.experiment.SingleShotCrossTalk" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

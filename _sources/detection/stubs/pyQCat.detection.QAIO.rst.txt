@@ -1,0 +1,26 @@
+﻿pyQCat.detection.QAIO
+=====================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: QAIO
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~QAIO.__init__
+      ~QAIO.close
+      ~QAIO.output_off
+      ~QAIO.output_on
+      ~QAIO.set_dc
+   
+   
+
+   
+   
+   

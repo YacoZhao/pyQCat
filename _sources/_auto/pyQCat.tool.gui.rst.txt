@@ -1,0 +1,37 @@
+pyQCat.tool.gui package
+=======================
+
+Submodules
+----------
+
+pyQCat.tool.gui.gui module
+--------------------------
+
+.. automodule:: pyQCat.tool.gui.gui
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.tool.gui.mainGui module
+------------------------------
+
+.. automodule:: pyQCat.tool.gui.mainGui
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.tool.gui.style module
+----------------------------
+
+.. automodule:: pyQCat.tool.gui.style
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: pyQCat.tool.gui
+   :members:
+   :undoc-members:
+   :show-inheritance:

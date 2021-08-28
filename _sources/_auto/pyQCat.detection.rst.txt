@@ -1,0 +1,45 @@
+pyQCat.detection package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 10
+
+   pyQCat.detection.qubit_preliminary
+
+Submodules
+----------
+
+pyQCat.detection.cavity\_detection module
+-----------------------------------------
+
+.. automodule:: pyQCat.detection.cavity_detection
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.detection\_interface module
+--------------------------------------------
+
+.. automodule:: pyQCat.detection.detection_interface
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.z\_line\_detection module
+------------------------------------------
+
+.. automodule:: pyQCat.detection.z_line_detection
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: pyQCat.detection
+   :members:
+   :undoc-members:
+   :show-inheritance:

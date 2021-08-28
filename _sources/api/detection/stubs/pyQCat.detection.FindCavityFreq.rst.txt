@@ -1,0 +1,35 @@
+﻿pyQCat.detection.FindCavityFreq
+===============================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: FindCavityFreq
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FindCavityFreq.__init__
+      ~FindCavityFreq.run
+      ~FindCavityFreq.select_dc_source
+      ~FindCavityFreq.select_mic_source
+      ~FindCavityFreq.select_net_analyzer
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FindCavityFreq.config_path
+      ~FindCavityFreq.dc_source
+      ~FindCavityFreq.mic_source
+      ~FindCavityFreq.net_analyzer
+   
+   

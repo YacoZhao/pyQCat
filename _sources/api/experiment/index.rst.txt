@@ -1,0 +1,6 @@
+.. _experiment_api :
+
+.. automodule:: pyQCat.experiment
+   :no-members:
+   :no-inherited-members:
+   :no-special-members:

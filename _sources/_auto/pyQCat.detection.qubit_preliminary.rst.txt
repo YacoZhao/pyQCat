@@ -1,0 +1,85 @@
+pyQCat.detection.qubit\_preliminary package
+===========================================
+
+Submodules
+----------
+
+pyQCat.detection.qubit\_preliminary.cavity\_flux\_scan module
+-------------------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.cavity_flux_scan
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.qubit\_preliminary.find\_cavity\_freq module
+-------------------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.find_cavity_freq
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.qubit\_preliminary.find\_qubit\_freq module
+------------------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.find_qubit_freq
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.qubit\_preliminary.fixed\_flux module
+------------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.fixed_flux
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.qubit\_preliminary.fixed\_fq module
+----------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.fixed_fq
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.qubit\_preliminary.preliminary\_inst module
+------------------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.preliminary_inst
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.qubit\_preliminary.preliminary\_utility module
+---------------------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.preliminary_utility
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.qubit\_preliminary.s21\_circle\_fit\_triton module
+-------------------------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.s21_circle_fit_triton
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.detection.qubit\_preliminary.zero\_detuning module
+---------------------------------------------------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary.zero_detuning
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: pyQCat.detection.qubit_preliminary
+   :members:
+   :undoc-members:
+   :show-inheritance:

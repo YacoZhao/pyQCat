@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.instrument.DSG3000 &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.instrument.E5071C" href="pyQCat.instrument.E5071C.html" />
+    <link rel="prev" title="pyQCat.instrument.DG645" href="pyQCat.instrument.DG645.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#measureaio-instruments">MeasureAIO Instruments</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#commercial-instruments">Commercial Instruments</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.instrument.DSG3000</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.instrument.DSG3000">
+<span id="pyqcat-instrument-dsg3000"></span><h1>pyQCat.instrument.DSG3000<a class="headerlink" href="#module-pyQCat.instrument.DSG3000" title="永久链接至标题">¶</a></h1>
+<p>商用仪器 DSG3000</p>
+<p class="rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../instrument/stubs/pyQCat.instrument.DSG3000.html#pyQCat.instrument.DSG3000.DSG3000" title="pyQCat.instrument.DSG3000.DSG3000"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DSG3000</span></code></a>(visa_address)</p></td>
+<td><p>射频信号源 DSG3000</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.instrument.DSG3000.DSG3000">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DSG3000</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visa_address</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.DSG3000.DSG3000" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../../_auto/pyQCat.instrument.html#pyQCat.instrument.visa_inst.VisaInst" title="pyQCat.instrument.visa_inst.VisaInst"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.instrument.visa_inst.VisaInst</span></code></a></p>
+<p>射频信号源 DSG3000</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>visa_address</strong> – visa地址，如 <code class="docutils literal notranslate"><span class="pre">TCPIP0::192.168.110.241::inst0::INSTR</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.instrument.E5071C.html" class="btn btn-neutral float-right" title="pyQCat.instrument.E5071C" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.instrument.DG645.html" class="btn btn-neutral float-left" title="pyQCat.instrument.DG645" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

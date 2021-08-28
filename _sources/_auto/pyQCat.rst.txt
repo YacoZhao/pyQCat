@@ -1,0 +1,64 @@
+pyQCat package
+==============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 10
+
+   pyQCat.database
+   pyQCat.detection
+   pyQCat.experiment
+   pyQCat.flow
+   pyQCat.gate
+   pyQCat.instrument
+   pyQCat.pulse
+   pyQCat.qubit
+   pyQCat.rpc
+   pyQCat.schema
+   pyQCat.tool
+   pyQCat.wave
+
+Submodules
+----------
+
+pyQCat.errors module
+--------------------
+
+.. automodule:: pyQCat.errors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.log module
+-----------------
+
+.. automodule:: pyQCat.log
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.parameters module
+------------------------
+
+.. automodule:: pyQCat.parameters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+pyQCat.structures module
+------------------------
+
+.. automodule:: pyQCat.structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: pyQCat
+   :members:
+   :undoc-members:
+   :show-inheritance:

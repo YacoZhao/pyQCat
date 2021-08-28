@@ -1,0 +1,22 @@
+﻿pyQCat.pulse.PulseCorrection
+============================
+
+.. currentmodule:: pyQCat.pulse
+
+.. autoclass:: PulseCorrection
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PulseCorrection.__init__
+   
+   
+
+   
+   
+   

@@ -1,0 +1,22 @@
+﻿pyQCat.qubit.union\_readout
+===========================
+
+.. currentmodule:: pyQCat.qubit
+
+.. autoclass:: union_readout
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~union_readout.__init__
+   
+   
+
+   
+   
+   

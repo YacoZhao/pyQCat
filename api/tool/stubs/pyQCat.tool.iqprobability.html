@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.tool.iqprobability &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.tool.NM_bnd" href="pyQCat.tool.NM_bnd.html" />
+    <link rel="prev" title="pyQCat.tool.smooth" href="pyQCat.tool.smooth.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.formula.html">pyQCat.tool.formula</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.drift.html">pyQCat.tool.drift</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.param_fit.html">pyQCat.tool.param_fit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.parse_yaml.html">pyQCat.tool.parse_yaml</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.smooth.html">pyQCat.tool.smooth</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">pyQCat.tool.iqprobability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.NM_bnd.html">pyQCat.tool.NM_bnd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.parsefile.html">pyQCat.tool.parsefile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.plot_data.html">pyQCat.tool.plot_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.resonator_fit_calibration.html">pyQCat.tool.resonator_fit_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.SaveFile.html">pyQCat.tool.SaveFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.set_config.html">pyQCat.tool.set_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.utlis.html">pyQCat.tool.utlis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.wrappers.html">pyQCat.tool.wrappers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.tool.iqprobability</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.tool.iqprobability">
+<span id="pyqcat-tool-iqprobability"></span><h1>pyQCat.tool.iqprobability<a class="headerlink" href="#module-pyQCat.tool.iqprobability" title="永久链接至标题">¶</a></h1>
+<p>该模块实现了使用 <code class="docutils literal notranslate"><span class="pre">k-means</span></code> 算法，根据 <code class="docutils literal notranslate"><span class="pre">IQ</span></code> 数据获取分类器</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.correct_fidelity" title="pyQCat.tool.iqprobability.correct_fidelity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">correct_fidelity</span></code></a>(qubits, measure_qubits, …)</p></td>
+<td><p>保真度矩阵校准函数</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.get_iq_threshold" title="pyQCat.tool.iqprobability.get_iq_threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_iq_threshold</span></code></a>(i, q)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.get_iq_threshold_probability" title="pyQCat.tool.iqprobability.get_iq_threshold_probability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_iq_threshold_probability</span></code></a>(k, b, i, q)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.get_iqprob" title="pyQCat.tool.iqprobability.get_iqprob"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_iqprob</span></code></a>(i, q[, state, wave_type])</p></td>
+<td><p>get the probability of 0 and 1 by i/q couple.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.get_multi_iq_threshold" title="pyQCat.tool.iqprobability.get_multi_iq_threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_iq_threshold</span></code></a>(i, q)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.get_multi_iq_threshold_probability" title="pyQCat.tool.iqprobability.get_multi_iq_threshold_probability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_multi_iq_threshold_probability</span></code></a>(k01, b01, …)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.get_qubits_probability" title="pyQCat.tool.iqprobability.get_qubits_probability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_qubits_probability</span></code></a>(discriminator_list, …)</p></td>
+<td><p>联合读取获取各个状态下的概率</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../tool/stubs/pyQCat.tool.iqprobability.html#pyQCat.tool.iqprobability.probability_multiple" title="pyQCat.tool.iqprobability.probability_multiple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probability_multiple</span></code></a>(i, q)</p></td>
+<td><p>get the probability of 0 and 1 by i/q couple.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.probability_single" title="pyQCat.tool.iqprobability.probability_single"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probability_single</span></code></a>(i, q)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.simulate_qgate" title="pyQCat.tool.iqprobability.simulate_qgate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simulate_qgate</span></code></a>(qubit_num)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">rtype</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.IQdiscriminator" title="pyQCat.tool.iqprobability.IQdiscriminator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IQdiscriminator</span></code></a>(I_list, Q_list[, …])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.iqprobability.get_iqprob">
+<span class="sig-name descname"><span class="pre">get_iqprob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wave_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.iqprobability.get_iqprob" title="永久链接至目标">¶</a></dt>
+<dd><p>get the probability of 0 and 1 by i/q couple.
+:param i: ndarray type data sequence.
+:param q: ndarray type data sequence.
+:param state: only can be set to 0 or 1.
+:param wave_type: only can be set to 0 or 1.
+:return: 0 and 1 probability. such as 0.45, 0.55.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.iqprobability.probability_multiple">
+<span class="sig-name descname"><span class="pre">probability_multiple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.iqprobability.probability_multiple" title="永久链接至目标">¶</a></dt>
+<dd><p>get the probability of 0 and 1 by i/q couple.
+Please put “0”state first
+:param i: ndarray type data sequence.
+:param q: ndarray type data sequence.
+:return: 0 and 1 probability. such as 0.45, 0.55.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.iqprobability.get_qubits_probability">
+<span class="sig-name descname"><span class="pre">get_qubits_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">discriminator_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.iqprobability.get_qubits_probability" title="永久链接至目标">¶</a></dt>
+<dd><p>联合读取获取各个状态下的概率</p>
+<p>如果执行三比特联合读取，假设有 [q0、q1、q2]，则三种比特一共可能出现8种情况，分为为
+<code class="docutils literal notranslate"><span class="pre">[000,</span> <span class="pre">001,</span> <span class="pre">010,</span> <span class="pre">011,</span> <span class="pre">100,</span> <span class="pre">101,</span> <span class="pre">110,</span> <span class="pre">111]</span></code> , 获取联合读取实验结果后，用每个比特
+的 IQ 分类器预测每个比特所处的状态 <code class="docutils literal notranslate"><span class="pre">0</span></code> 或 <code class="docutils literal notranslate"><span class="pre">1</span></code>, 然后统计读取结果在8种可能情况下的个数，
+除以实验重复次数即的各个比特每个情况下的出现概率</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>discriminator_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="../../../_auto/pyQCat.tool.html#pyQCat.tool.iqprobability.IQdiscriminator" title="pyQCat.tool.iqprobability.IQdiscriminator"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQdiscriminator</span></code></a>]) – 联合读取时，每个比特对应的 IQ 分类器列表</p></li>
+<li><p><strong>i_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 联合读取 I 数据</p></li>
+<li><p><strong>q_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 联合读取 Q 数据</p></li>
+<li><p><strong>repeat</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 实验重复次数</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>联合读取在每种状态下的概率</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.iqprobability.correct_fidelity">
+<span class="sig-name descname"><span class="pre">correct_fidelity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measure_qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f_matrix</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.iqprobability.correct_fidelity" title="永久链接至目标">¶</a></dt>
+<dd><p>保真度矩阵校准函数</p>
+<p>返回的概率列表在经过 f_matrix 修正后，效果更好</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 对应的比特数目</p></li>
+<li><p><strong>measure_qubits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – </p></li>
+<li><p><strong>std_p</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 修真之前的概率列表</p></li>
+<li><p><strong>f_matrix</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – 保真度矩阵</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>当前系统在每种状态的概率</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.tool.NM_bnd.html" class="btn btn-neutral float-right" title="pyQCat.tool.NM_bnd" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.tool.smooth.html" class="btn btn-neutral float-left" title="pyQCat.tool.smooth" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

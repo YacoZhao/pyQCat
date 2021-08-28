@@ -1,0 +1,41 @@
+﻿pyQCat.experiment.ZZTimingAnalysis
+==================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: ZZTimingAnalysis
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ZZTimingAnalysis.__init__
+      ~ZZTimingAnalysis.analyze
+      ~ZZTimingAnalysis.excute_loop
+      ~ZZTimingAnalysis.get_experiment
+      ~ZZTimingAnalysis.loop_control
+      ~ZZTimingAnalysis.single_qubit_usualness
+      ~ZZTimingAnalysis.slice_result
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ZZTimingAnalysis.I
+      ~ZZTimingAnalysis.P0
+      ~ZZTimingAnalysis.P1
+      ~ZZTimingAnalysis.Q
+      ~ZZTimingAnalysis.amp
+      ~ZZTimingAnalysis.phase
+      ~ZZTimingAnalysis.probability_list
+      ~ZZTimingAnalysis.status
+   
+   

@@ -1,0 +1,6 @@
+.. _flow_api :
+
+.. automodule:: pyQCat.flow
+   :no-members:
+   :no-inherited-members:
+   :no-special-members:

@@ -1,0 +1,41 @@
+﻿pyQCat.instrument.MIC12
+=======================
+
+.. automodule:: pyQCat.instrument.MIC12
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      verify
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ChannelSelect
+      FreqPower
+      Head
+      MIC12
+      Phase
+      Switch
+      TcpRecv
+   
+   
+
+   
+   
+   
+
+
+

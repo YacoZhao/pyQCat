@@ -1,0 +1,39 @@
+﻿pyQCat.experiment.UnionSingleShot
+=================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: UnionSingleShot
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~UnionSingleShot.__init__
+      ~UnionSingleShot.acquire_pulse
+      ~UnionSingleShot.bind_probe_inst
+      ~UnionSingleShot.config_file_sys
+      ~UnionSingleShot.get_qubit_str
+      ~UnionSingleShot.init_readout
+      ~UnionSingleShot.play_pulse
+      ~UnionSingleShot.plot_schedule
+      ~UnionSingleShot.register
+      ~UnionSingleShot.run
+      ~UnionSingleShot.save_data
+      ~UnionSingleShot.save_parameters
+      ~UnionSingleShot.set_multiple_IF
+      ~UnionSingleShot.set_multiple_index
+      ~UnionSingleShot.set_readout2q_params
+      ~UnionSingleShot.set_readout_delay
+      ~UnionSingleShot.set_sweep_order
+      ~UnionSingleShot.set_union_readout_params
+   
+   
+
+   
+   
+   

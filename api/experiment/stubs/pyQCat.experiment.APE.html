@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.experiment.APE &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.experiment.APEAnalysis" href="pyQCat.experiment.APEAnalysis.html" />
+    <link rel="prev" title="pyQCat.experiment.AmpOptimizeAnalysis" href="pyQCat.experiment.AmpOptimizeAnalysis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#base-experiment-template">Base Experiment Template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cavityfreqspectrum">CavityFreqSpectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cavitypoweroptimize">CavityPowerOptimize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#qubitspectrum">QubitSpectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#rabi">Rabi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#ampoptimize">AmpOptimize</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#ape">APE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#singleshot">SingleShot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#ramsey">Ramsey</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#spinecho">SpinEcho</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#t1">T1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#t2">T2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#randomizedbenchmarking">RandomizedBenchmarking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#xeb">XEB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#modulation-spectrum">Modulation Spectrum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#circuit-compensation">Circuit Compensation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#crosstalk">Crosstalk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#swap">Swap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#unionsingleshot">UnionSingleShot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.experiment.APE</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-experiment-ape">
+<h1>pyQCat.experiment.APE<a class="headerlink" href="#pyqcat-experiment-ape" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.APE">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">APE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_drive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_readout_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sequence'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.APE" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../../_auto/pyQCat.experiment.html#pyQCat.experiment.top_experiment.TopExperiment" title="pyQCat.experiment.top_experiment.TopExperiment"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_experiment.TopExperiment</span></code></a></p>
+<p><cite>APE</cite> 实验</p>
+<p>利用 <cite>APE</cite> 实验可以对 <cite>XYWave</cite> 的 <code class="docutils literal notranslate"><span class="pre">detune_pi</span></code> 和 <code class="docutils literal notranslate"><span class="pre">detune_pi2</span></code> 参数进行标定。
+DRAG波形在驱动频率上会引入一个失谐量 <code class="docutils literal notranslate"><span class="pre">detune</span></code> 来校准相位错误，提高门操作的保真度。
+而APE实验正是用来校准所需施加的失谐量大小。APE实验通过增加插入的 <code class="docutils literal notranslate"><span class="pre">X±π</span></code> 对的数目，
+可以提高实验结果对 <code class="docutils literal notranslate"><span class="pre">detune</span></code> 的敏感度。</p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.APE.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_drive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_readout_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sequence'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.APE.__init__" title="永久链接至目标">¶</a></dt>
+<dd><p>Initialize method</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../experiment/stubs/pyQCat.experiment.APE.html#pyQCat.experiment.APE.__init__" title="pyQCat.experiment.APE.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(inst, *qubits[, correct_dc, …])</p></td>
+<td><p>Initialize method</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">acquire_pulse</span></code>(acq_pulse[, qubit])</p></td>
+<td><p>设置读取波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bind_probe_inst</span></code>(qubit)</p></td>
+<td><p>为一体机读取模块绑定初始化参数。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_file_sys</span></code>([name, display])</p></td>
+<td><p>设置实验分析结果文件的保存路径</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../experiment/stubs/pyQCat.experiment.APE.html#pyQCat.experiment.APE.get_coincident_points_path" title="pyQCat.experiment.APE.get_coincident_points_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_coincident_points_path</span></code></a>()</p></td>
+<td><p>获取保存冲突点保存路径</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_qubit_str</span></code>()</p></td>
+<td><p>Get qubit str, an args qubit for SaveFile class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_readout</span></code>([time, amp, IF, channel])</p></td>
+<td><p>初始化读取模块，为读取线添加波形</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">play_pulse</span></code>(name, qubit, pulse)</p></td>
+<td><p>给 XY 或 Z 线绑定波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_schedule</span></code>([xy_index, is_save])</p></td>
+<td><p>绘制波形时序图</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>([data_type, enable_one_sweep])</p></td>
+<td><p>注册实验</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../experiment/stubs/pyQCat.experiment.APE.html#pyQCat.experiment.APE.run" title="pyQCat.experiment.APE.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(name, sweep_list[, N, theta_type, …])</p></td>
+<td><p><cite>APE</cite> 实验启动函数</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_data</span></code>(*args[, file_name])</p></td>
+<td><p>保存自定义的数据到当前实验预先生成的结果路径下</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_parameters</span></code>(**kwargs)</p></td>
+<td><p>保存实验参数到本地目录</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_multiple_IF</span></code>(*IF[, channel])</p></td>
+<td><p>联合读取实验中用来设置多个中频</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_multiple_index</span></code>(*args[, channel])</p></td>
+<td><p>联合读取实验中用来设置各个比特波形的选择范围</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_readout2q_params</span></code>([IF, channel])</p></td>
+<td><p>设置两比特联合读取波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_readout_delay</span></code>(*delay[, channel])</p></td>
+<td><p>设置读取通道波形的脉冲触发延时</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_sweep_order</span></code>(order_list)</p></td>
+<td><p>调整扫描参数的施加顺序</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.experiment.html#pyQCat.experiment.APE.multi_sweep" title="pyQCat.experiment.APE.multi_sweep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multi_sweep</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_auto/pyQCat.experiment.html#pyQCat.experiment.APE.one_sweep" title="pyQCat.experiment.APE.one_sweep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">one_sweep</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.APE.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Xpi'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.APE.run" title="永久链接至目标">¶</a></dt>
+<dd><p><cite>APE</cite> 实验启动函数</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 实验目的，可选detune和phase，其他选项则会报错</p></li>
+<li><p><strong>sweep_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 实验扫描参数，可以的detune值扫描列表，也可以是phase值扫描列表</p></li>
+<li><p><strong>N</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 波形重复次数</p></li>
+<li><p><strong>theta_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 优化选项，可以为Xpi，也可以为XPi/2，其他选项将会报错</p></li>
+<li><p><strong>phi_num</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – todo</p></li>
+<li><p><strong>schedule_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 绘制波形时序图的波形序号</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NameError</strong> – 如果name属性既不是detune也不是phase</p></li>
+<li><p><strong>ValueError</strong> – 如果theta_type属性既不是Xpi也不是XPi/2</p></li>
+</ul>
+</dd>
+</dl>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyQCat.experiment.ape</span> <span class="kn">import</span> <span class="n">APE</span>
+<span class="kn">from</span> <span class="nn">pyQCat.parameters</span> <span class="kn">import</span> <span class="n">get_parameters</span><span class="p">,</span> <span class="n">corrected_dc</span>
+<span class="kn">from</span> <span class="nn">pyQCat.tool</span> <span class="kn">import</span> <span class="n">qarange</span><span class="p">,</span> <span class="n">remote_connection</span>
+
+
+<span class="nd">@remote_connection</span><span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">ape_run</span><span class="p">(</span><span class="n">bit</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">detune_list</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+    <span class="n">inst</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;instrument&quot;</span><span class="p">)</span>
+    <span class="n">qubit</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;qubit&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">compensate</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;compensate&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+    <span class="n">dc</span> <span class="o">=</span> <span class="n">corrected_dc</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">dcm</span> <span class="o">=</span> <span class="n">get_parameters</span><span class="p">(</span><span class="s2">&quot;dcm&quot;</span><span class="p">,</span> <span class="n">bit</span><span class="p">)</span>
+
+    <span class="n">ape_exp</span> <span class="o">=</span> <span class="n">APE</span><span class="p">(</span><span class="n">inst</span><span class="p">,</span> <span class="n">qubit</span><span class="p">,</span> <span class="n">correct_dc</span><span class="o">=</span><span class="n">dc</span><span class="p">,</span> <span class="n">compensate</span><span class="o">=</span><span class="n">compensate</span><span class="p">,</span> <span class="n">discriminator</span><span class="o">=</span><span class="n">dcm</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">ape_exp</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;detune&quot;</span><span class="p">,</span> <span class="n">detune_list</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ape_exp</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">ape_run</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">qarange</span><span class="p">(</span><span class="o">-</span><span class="mf">10e-3</span><span class="p">,</span> <span class="o">-</span><span class="mf">3e-3</span><span class="p">,</span> <span class="mf">0.1e-3</span><span class="p">),</span> <span class="s2">&quot;Xpi/2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.APE.get_coincident_points_path">
+<span class="sig-name descname"><span class="pre">get_coincident_points_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.APE.get_coincident_points_path" title="永久链接至目标">¶</a></dt>
+<dd><p>获取保存冲突点保存路径</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.experiment.APEAnalysis.html" class="btn btn-neutral float-right" title="pyQCat.experiment.APEAnalysis" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.experiment.AmpOptimizeAnalysis.html" class="btn btn-neutral float-left" title="pyQCat.experiment.AmpOptimizeAnalysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

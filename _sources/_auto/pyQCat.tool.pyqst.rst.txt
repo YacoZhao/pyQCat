@@ -1,0 +1,10 @@
+pyQCat.tool.pyqst package
+=========================
+
+Module contents
+---------------
+
+.. automodule:: pyQCat.tool.pyqst
+   :members:
+   :undoc-members:
+   :show-inheritance:

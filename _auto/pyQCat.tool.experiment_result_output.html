@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.tool.experiment_result_output package &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.tool.experiment_result_output package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-tool-experiment-result-output-package">
+<h1>pyQCat.tool.experiment_result_output package<a class="headerlink" href="#pyqcat-tool-experiment-result-output-package" title="永久链接至标题">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="module-pyQCat.tool.experiment_result_output.exception">
+<span id="pyqcat-tool-experiment-result-output-exception-module"></span><h2>pyQCat.tool.experiment_result_output.exception module<a class="headerlink" href="#module-pyQCat.tool.experiment_result_output.exception" title="永久链接至标题">¶</a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.exception.StatusError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">StatusError</span></span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.exception.StatusError" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.exception.ParameterError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">ParameterError</span></span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.exception.ParameterError" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.tool.experiment_result_output.experiment_result_output">
+<span id="pyqcat-tool-experiment-result-output-experiment-result-output-module"></span><h2>pyQCat.tool.experiment_result_output.experiment_result_output module<a class="headerlink" href="#module-pyQCat.tool.experiment_result_output.experiment_result_output" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ExperimentResultOutput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_flows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.get_exp_flow_dir_path">
+<span class="sig-name descname"><span class="pre">get_exp_flow_dir_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.get_exp_flow_dir_path" title="永久链接至目标">¶</a></dt>
+<dd><p>Traverse the path to get all flow folders.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.read_picture_path_json">
+<span class="sig-name descname"><span class="pre">read_picture_path_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.read_picture_path_json" title="永久链接至目标">¶</a></dt>
+<dd><p>Read the JSON file of the stored experimental result picture path from
+each flow folder.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.format_exp_output">
+<span class="sig-name descname"><span class="pre">format_exp_output</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.format_exp_output" title="永久链接至目标">¶</a></dt>
+<dd><p>Format the experimental picture and qubit variable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.change_img_path_qubit_data_to_markdown">
+<span class="sig-name descname"><span class="pre">change_img_path_qubit_data_to_markdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.change_img_path_qubit_data_to_markdown" title="永久链接至目标">¶</a></dt>
+<dd><p>Convert the picture path and qubit data to markdown format.</p>
+<p>flow -&gt; h1; q_bit -&gt; h2; exp_name -&gt; h3; qubit_para -&gt; code_block;
+path -&gt; img_block</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.extract_exp_data_and_result_picture">
+<span class="sig-name descname"><span class="pre">extract_exp_data_and_result_picture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flow_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit_result_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.extract_exp_data_and_result_picture" title="永久链接至目标">¶</a></dt>
+<dd><p>Extract all relevant data and result pictures of the experiment.
+:param nodes: Node under the current flow.
+:type nodes: list
+:param flow_name: current flow name
+:type flow_name: str
+:param qubit_result_path: The path of the result picture</p>
+<blockquote>
+<div><p>corresponding to the experiment executed by qubit under the
+current flow. {q_bit: {exp: ‘xxx.png’}}</p>
+</div></blockquote>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.format_exp_qubit_data_and_exp_result">
+<span class="sig-name descname"><span class="pre">format_exp_qubit_data_and_exp_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_bit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.format_exp_qubit_data_and_exp_result" title="永久链接至目标">¶</a></dt>
+<dd><p>Splicing experimental data and experimental results.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.transform_change_data">
+<span class="sig-name descname"><span class="pre">transform_change_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.transform_change_data" title="永久链接至目标">¶</a></dt>
+<dd><p>Extract qubit data and split the data before and after the experiment.
+:param func_name (): Method to grab qubit data.
+:param q_bit (): qubit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.change_qubit_data_by_form_structure">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">change_qubit_data_by_form_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">para_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.change_qubit_data_by_form_structure" title="永久链接至目标">¶</a></dt>
+<dd><p>Convert the qubit string according to the table format you want to
+output.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.splicing_qubit_data_change_str">
+<span class="sig-name descname"><span class="pre">splicing_qubit_data_change_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.splicing_qubit_data_change_str" title="永久链接至目标">¶</a></dt>
+<dd><p>Convert the qubit data into a string, and mark the changes before and
+after the experiment.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.splicing_change_data">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">splicing_change_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.splicing_change_data" title="永久链接至目标">¶</a></dt>
+<dd><p>Judge the data has changed to splice the data.
+:param k: data key
+:type k: str
+:param start_v: data value before experiment
+:type start_v: str
+:param end_v: data value after experiment
+:type end_v: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>yyy    –&gt;     &lt;font color=red&gt;zzz&lt;/font&gt;&lt;br/&gt;
+or    aaa: bbb</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>xxx</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.splicing_wave_data_str">
+<span class="sig-name descname"><span class="pre">splicing_wave_data_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wave</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.splicing_wave_data_str" title="永久链接至目标">¶</a></dt>
+<dd><p>Splice the wave data before and after the experiment.
+:param wave: wave name. ‘XYwave’, ‘Zwave’, ‘Mwave’
+:type wave: str
+:param start_v: wave data before exp.
+:type start_v: dict
+:param end_v: wave data after exp.
+:type end_v: dict</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>String concatenated from all key value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.keep_decimal_places">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">keep_decimal_places</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">digit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e_enable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.keep_decimal_places" title="永久链接至目标">¶</a></dt>
+<dd><p>Keep the number of decimal places of floating-point numbers.
+:type num: <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>
+:param num: Floating point numbers that need to retain decimal</p>
+<blockquote>
+<div><p>places.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>digit</strong> (<em>int</em>) – Reserved digits.</p></li>
+<li><p><strong>e_enable</strong> (<em>bool</em>) – Whether scientific notation is adopted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.save_markdown_file">
+<span class="sig-name descname"><span class="pre">save_markdown_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.save_markdown_file" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.markdown_to_html_save">
+<span class="sig-name descname"><span class="pre">markdown_to_html_save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.markdown_to_html_save" title="永久链接至目标">¶</a></dt>
+<dd><p>Convert the markdown string to HTML.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.main">
+<span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experiment_result_output.ExperimentResultOutput.main" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.tool.experiment_result_output.experimental_picture_arrangement">
+<span id="pyqcat-tool-experiment-result-output-experimental-picture-arrangement-module"></span><h2>pyQCat.tool.experiment_result_output.experimental_picture_arrangement module<a class="headerlink" href="#module-pyQCat.tool.experiment_result_output.experimental_picture_arrangement" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ExperimentPicturePath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Organize the picture path of the experimental results
+:param experiment_file_path: The root directory of the experimental</p>
+<blockquote>
+<div><p>results file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>bit</strong> (<em>int</em>) – It’s required to output the bit of the result file
+path.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.get_file_extension">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">get_file_extension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.get_file_extension" title="永久链接至目标">¶</a></dt>
+<dd><p>Extract the extension from the file name.
+:type f_name: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>
+:param f_name: The name of the file whose extension needs to be</p>
+<blockquote>
+<div><p>extracted.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>The file extension returned.</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>f_extension (str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.traverse_all_paths">
+<span class="sig-name descname"><span class="pre">traverse_all_paths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.traverse_all_paths" title="永久链接至目标">¶</a></dt>
+<dd><p>Traverse all directory files under the experimental data path, and
+classify the paths of different types of data files to be processed
+into the corresponding dictionary according to the extension.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.module_filter">
+<span class="sig-name descname"><span class="pre">module_filter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.module_filter" title="永久链接至目标">¶</a></dt>
+<dd><p>Filter paths by module.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.module_result_filter">
+<span class="sig-name descname"><span class="pre">module_result_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">picture_field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.module_result_filter" title="永久链接至目标">¶</a></dt>
+<dd><p>According to the timestamp information under the module path, take the
+latest experimental result picture and output it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.path_filter">
+<span class="sig-name descname"><span class="pre">path_filter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.path_filter" title="永久链接至目标">¶</a></dt>
+<dd><p>Filter by module name in path.
+:returns: The set of picture paths that each module needs to output under</p>
+<blockquote>
+<div><p>flow.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.main">
+<span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.main" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.save_picture_path">
+<span class="sig-name descname"><span class="pre">save_picture_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath.save_picture_path" title="永久链接至目标">¶</a></dt>
+<dd><p>Save the path of the experimental result picture to the file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.CavityDetectionPath">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">CavityDetectionPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.CavityDetectionPath" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath" title="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath</span></code></a></p>
+<p>Organize the picture path of the experimental results
+:param experiment_file_path: The root directory of the experimental</p>
+<blockquote>
+<div><p>results file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>bit</strong> (<em>int</em>) – It’s required to output the bit of the result file
+path.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.CavityDetectionPath.path_filter">
+<span class="sig-name descname"><span class="pre">path_filter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.CavityDetectionPath.path_filter" title="永久链接至目标">¶</a></dt>
+<dd><p>Filter by module name in path.
+:returns: The set of picture paths that each module needs to output under</p>
+<blockquote>
+<div><p>flow.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.FluxRegulationPath">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FluxRegulationPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.FluxRegulationPath" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath" title="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath</span></code></a></p>
+<p>Organize the picture path of the experimental results
+:param experiment_file_path: The root directory of the experimental</p>
+<blockquote>
+<div><p>results file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>bit</strong> (<em>int</em>) – It’s required to output the bit of the result file
+path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.PiPulseDetectionPath">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">PiPulseDetectionPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.PiPulseDetectionPath" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath" title="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath</span></code></a></p>
+<p>Organize the picture path of the experimental results
+:param experiment_file_path: The root directory of the experimental</p>
+<blockquote>
+<div><p>results file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>bit</strong> (<em>int</em>) – It’s required to output the bit of the result file
+path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.QubitDetectionPath">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">QubitDetectionPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.QubitDetectionPath" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath" title="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath</span></code></a></p>
+<p>Organize the picture path of the experimental results
+:param experiment_file_path: The root directory of the experimental</p>
+<blockquote>
+<div><p>results file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>bit</strong> (<em>int</em>) – It’s required to output the bit of the result file
+path.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.QubitDetectionPath.path_filter">
+<span class="sig-name descname"><span class="pre">path_filter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.QubitDetectionPath.path_filter" title="永久链接至目标">¶</a></dt>
+<dd><p>Filter by module name in path.
+:returns: The set of picture paths that each module needs to output under</p>
+<blockquote>
+<div><p>flow.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.QubitFreqCalibrationPath">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">QubitFreqCalibrationPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.QubitFreqCalibrationPath" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath" title="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath</span></code></a></p>
+<p>Organize the picture path of the experimental results
+:param experiment_file_path: The root directory of the experimental</p>
+<blockquote>
+<div><p>results file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>bit</strong> (<em>int</em>) – It’s required to output the bit of the result file
+path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.QubitOptimizationPath">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">QubitOptimizationPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.QubitOptimizationPath" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath" title="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath</span></code></a></p>
+<p>Organize the picture path of the experimental results
+:param experiment_file_path: The root directory of the experimental</p>
+<blockquote>
+<div><p>results file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>bit</strong> (<em>int</em>) – It’s required to output the bit of the result file
+path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ReadoutCalibrationPath">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">ReadoutCalibrationPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ReadoutCalibrationPath" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath" title="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.tool.experiment_result_output.experimental_picture_arrangement.ExperimentPicturePath</span></code></a></p>
+<p>Organize the picture path of the experimental results
+:param experiment_file_path: The root directory of the experimental</p>
+<blockquote>
+<div><p>results file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>bit</strong> (<em>int</em>) – It’s required to output the bit of the result file
+path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.OutputResultPicture">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">OutputResultPicture</span></span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.OutputResultPicture" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The corresponding experimental results and image path collection class
+of each flow and module.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.experimental_picture_arrangement.OutputResultPicture.output_result_picture">
+<span class="sig-name descname"><span class="pre">output_result_picture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.experimental_picture_arrangement.OutputResultPicture.output_result_picture" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.tool.experiment_result_output.qubit_para_collection">
+<span id="pyqcat-tool-experiment-result-output-qubit-para-collection-module"></span><h2>pyQCat.tool.experiment_result_output.qubit_para_collection module<a class="headerlink" href="#module-pyQCat.tool.experiment_result_output.qubit_para_collection" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">QubitParaCollection</span></span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection.get_exp_para">
+<span class="sig-name descname"><span class="pre">get_exp_para</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection.get_exp_para" title="永久链接至目标">¶</a></dt>
+<dd><p>Receive the qubit parameters before and after the experiment.
+:type qubit_property: <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>
+:param qubit_property: The properties of qubit and their</p>
+<blockquote>
+<div><p>corresponding values.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>exp_status</strong> (<em>str</em>) – Indicates at what stage the node is currently
+executing to obtain parameters. Only start and end are
+supported.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection.save_notic_para_change">
+<span class="sig-name descname"><span class="pre">save_notic_para_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection.save_notic_para_change" title="永久链接至目标">¶</a></dt>
+<dd><p>Save qubit data according to flow and bit.
+:param func_name: Change the method name of qubit data.
+:type func_name: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection.record_qubit_data">
+<span class="sig-name descname"><span class="pre">record_qubit_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection.record_qubit_data" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection.main">
+<span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_import</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.qubit_para_collection.QubitParaCollection.main" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.tool.experiment_result_output.run_output_result">
+<span id="pyqcat-tool-experiment-result-output-run-output-result-module"></span><h2>pyQCat.tool.experiment_result_output.run_output_result module<a class="headerlink" href="#module-pyQCat.tool.experiment_result_output.run_output_result" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.run_output_result.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.experiment_result_output.run_output_result.run" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.tool.experiment_result_output.setting">
+<span id="pyqcat-tool-experiment-result-output-setting-module"></span><h2>pyQCat.tool.experiment_result_output.setting module<a class="headerlink" href="#module-pyQCat.tool.experiment_result_output.setting" title="永久链接至标题">¶</a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="pyQCat.tool.experiment_result_output.setting.separator">
+<span class="sig-name descname"><span class="pre">separator</span></span><em class="property"> <span class="pre">=</span> <span class="pre">'/'</span></em><a class="headerlink" href="#pyQCat.tool.experiment_result_output.setting.separator" title="永久链接至目标">¶</a></dt>
+<dd><p>Classify the data of qubit according to the header field of the result output
+page table.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.tool.experiment_result_output">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyQCat.tool.experiment_result_output" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

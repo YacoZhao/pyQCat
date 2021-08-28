@@ -1,0 +1,29 @@
+﻿pyQCat.instrument.DG645
+=======================
+
+.. automodule:: pyQCat.instrument.DG645
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      DG645
+   
+   
+
+   
+   
+   
+
+
+

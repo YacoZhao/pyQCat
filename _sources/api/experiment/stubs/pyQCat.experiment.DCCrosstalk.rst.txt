@@ -1,0 +1,25 @@
+﻿pyQCat.experiment.DCCrosstalk
+=============================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: DCCrosstalk
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DCCrosstalk.__init__
+      ~DCCrosstalk.plot
+      ~DCCrosstalk.run
+      ~DCCrosstalk.run_ramsey
+   
+   
+
+   
+   
+   

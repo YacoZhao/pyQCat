@@ -1,0 +1,5 @@
+================================================
+Experiment Parameters (:mod:`pyQCat.parameters`)
+================================================
+
+.. automodule:: pyQCat.parameters

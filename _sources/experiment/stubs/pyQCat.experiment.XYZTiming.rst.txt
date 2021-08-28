@@ -1,0 +1,37 @@
+﻿pyQCat.experiment.XYZTiming
+===========================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: XYZTiming
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~XYZTiming.__init__
+      ~XYZTiming.acquire_pulse
+      ~XYZTiming.bind_probe_inst
+      ~XYZTiming.config_file_sys
+      ~XYZTiming.init_readout
+      ~XYZTiming.play_pulse
+      ~XYZTiming.plot_schedule
+      ~XYZTiming.register
+      ~XYZTiming.run
+      ~XYZTiming.save_data
+      ~XYZTiming.save_parameters
+      ~XYZTiming.set_multiple_IF
+      ~XYZTiming.set_multiple_index
+      ~XYZTiming.set_readout2q_params
+      ~XYZTiming.set_readout_delay
+      ~XYZTiming.set_sweep_order
+   
+   
+
+   
+   
+   

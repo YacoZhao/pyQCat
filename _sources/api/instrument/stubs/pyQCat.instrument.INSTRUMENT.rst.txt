@@ -1,0 +1,22 @@
+﻿pyQCat.instrument.INSTRUMENT
+============================
+
+.. currentmodule:: pyQCat.instrument
+
+.. autoclass:: INSTRUMENT
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~INSTRUMENT.__init__
+   
+   
+
+   
+   
+   

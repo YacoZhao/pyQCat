@@ -1,0 +1,755 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.flow.dag_node &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.flow.dag_node</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.flow.dag_node">
+<span id="pyqcat-flow-dag-node"></span><h1>pyQCat.flow.dag_node<a class="headerlink" href="#module-pyQCat.flow.dag_node" title="永久链接至标题">¶</a></h1>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.ac_crosstalk_node" title="pyQCat.flow.dag_node.ac_crosstalk_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ac_crosstalk_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.ac_spectrum_node" title="pyQCat.flow.dag_node.ac_spectrum_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ac_spectrum_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.amp_opt_node" title="pyQCat.flow.dag_node.amp_opt_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp_opt_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.ape_experiment_node" title="pyQCat.flow.dag_node.ape_experiment_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ape_experiment_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.cavity_freq_update_node" title="pyQCat.flow.dag_node.cavity_freq_update_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cavity_freq_update_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.dc_crosstalk_node" title="pyQCat.flow.dag_node.dc_crosstalk_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dc_crosstalk_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.dc_spectrum_node" title="pyQCat.flow.dag_node.dc_spectrum_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dc_spectrum_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.distortion_node" title="pyQCat.flow.dag_node.distortion_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">distortion_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.execute_rb_node" title="pyQCat.flow.dag_node.execute_rb_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execute_rb_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.initial_qubit_node" title="pyQCat.flow.dag_node.initial_qubit_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initial_qubit_node</span></code></a>(data)</p></td>
+<td><p>Initial qubit info, and save to MongoDB.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.initial_store_node" title="pyQCat.flow.dag_node.initial_store_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initial_store_node</span></code></a>(data)</p></td>
+<td><p>Initial some config data, and save to MongoDB ConfigStore.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.is_tunable_node" title="pyQCat.flow.dag_node.is_tunable_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_tunable_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../_auto/pyQCat.flow.html#pyQCat.flow.dag_node.judge_tunable_goodness_node" title="pyQCat.flow.dag_node.judge_tunable_goodness_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">judge_tunable_goodness_node</span></code></a>(data)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.probe_freq_cali_node" title="pyQCat.flow.dag_node.probe_freq_cali_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probe_freq_cali_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.probe_power_bus_cali_node" title="pyQCat.flow.dag_node.probe_power_bus_cali_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probe_power_bus_cali_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.probe_power_cali_node" title="pyQCat.flow.dag_node.probe_power_cali_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probe_power_cali_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.qubit_freq_calibrate_node" title="pyQCat.flow.dag_node.qubit_freq_calibrate_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qubit_freq_calibrate_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.qubit_freq_preliminary_node" title="pyQCat.flow.dag_node.qubit_freq_preliminary_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qubit_freq_preliminary_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.rabi_scan_amp_node" title="pyQCat.flow.dag_node.rabi_scan_amp_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rabi_scan_amp_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.rabi_sweep_width_node" title="pyQCat.flow.dag_node.rabi_sweep_width_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rabi_sweep_width_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.rabi_update_xpi_node" title="pyQCat.flow.dag_node.rabi_update_xpi_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rabi_update_xpi_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.set_not_save_qubit_node" title="pyQCat.flow.dag_node.set_not_save_qubit_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_not_save_qubit_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.set_qubit_Vwork_node" title="pyQCat.flow.dag_node.set_qubit_Vwork_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_qubit_Vwork_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.set_save_qubit_node" title="pyQCat.flow.dag_node.set_save_qubit_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_save_qubit_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.single_shot_node" title="pyQCat.flow.dag_node.single_shot_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">single_shot_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.t1_experiment_node" title="pyQCat.flow.dag_node.t1_experiment_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t1_experiment_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.t1_spectrum_node" title="pyQCat.flow.dag_node.t1_spectrum_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t1_spectrum_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.t2_experiment_node" title="pyQCat.flow.dag_node.t2_experiment_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t2_experiment_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.t2_spectrum_node" title="pyQCat.flow.dag_node.t2_spectrum_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t2_spectrum_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.update_goodness_node" title="pyQCat.flow.dag_node.update_goodness_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_goodness_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.dag_node.xyz_timing_node" title="pyQCat.flow.dag_node.xyz_timing_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyz_timing_node</span></code></a>(data)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param data</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.initial_store_node">
+<span class="sig-name descname"><span class="pre">initial_store_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.initial_store_node" title="永久链接至目标">¶</a></dt>
+<dd><p>Initial some config data, and save to MongoDB ConfigStore.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.initial_qubit_node">
+<span class="sig-name descname"><span class="pre">initial_qubit_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.initial_qubit_node" title="永久链接至目标">¶</a></dt>
+<dd><p>Initial qubit info, and save to MongoDB.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.is_tunable_node">
+<span class="sig-name descname"><span class="pre">is_tunable_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.is_tunable_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.update_goodness_node">
+<span class="sig-name descname"><span class="pre">update_goodness_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.update_goodness_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.cavity_freq_update_node">
+<span class="sig-name descname"><span class="pre">cavity_freq_update_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.cavity_freq_update_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.qubit_freq_preliminary_node">
+<span class="sig-name descname"><span class="pre">qubit_freq_preliminary_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.qubit_freq_preliminary_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.rabi_sweep_width_node">
+<span class="sig-name descname"><span class="pre">rabi_sweep_width_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.rabi_sweep_width_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.rabi_scan_amp_node">
+<span class="sig-name descname"><span class="pre">rabi_scan_amp_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.rabi_scan_amp_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.probe_freq_cali_node">
+<span class="sig-name descname"><span class="pre">probe_freq_cali_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.probe_freq_cali_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.probe_power_cali_node">
+<span class="sig-name descname"><span class="pre">probe_power_cali_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.probe_power_cali_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.probe_power_bus_cali_node">
+<span class="sig-name descname"><span class="pre">probe_power_bus_cali_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.probe_power_bus_cali_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.single_shot_node">
+<span class="sig-name descname"><span class="pre">single_shot_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.single_shot_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.qubit_freq_calibrate_node">
+<span class="sig-name descname"><span class="pre">qubit_freq_calibrate_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.qubit_freq_calibrate_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.rabi_update_xpi_node">
+<span class="sig-name descname"><span class="pre">rabi_update_xpi_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.rabi_update_xpi_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.ape_experiment_node">
+<span class="sig-name descname"><span class="pre">ape_experiment_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.ape_experiment_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.amp_opt_node">
+<span class="sig-name descname"><span class="pre">amp_opt_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.amp_opt_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.t1_experiment_node">
+<span class="sig-name descname"><span class="pre">t1_experiment_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.t1_experiment_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.t2_experiment_node">
+<span class="sig-name descname"><span class="pre">t2_experiment_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.t2_experiment_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.ac_spectrum_node">
+<span class="sig-name descname"><span class="pre">ac_spectrum_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.ac_spectrum_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.t2_spectrum_node">
+<span class="sig-name descname"><span class="pre">t2_spectrum_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.t2_spectrum_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.execute_rb_node">
+<span class="sig-name descname"><span class="pre">execute_rb_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.execute_rb_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.xyz_timing_node">
+<span class="sig-name descname"><span class="pre">xyz_timing_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.xyz_timing_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.distortion_node">
+<span class="sig-name descname"><span class="pre">distortion_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.distortion_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.ac_crosstalk_node">
+<span class="sig-name descname"><span class="pre">ac_crosstalk_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.ac_crosstalk_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.dc_spectrum_node">
+<span class="sig-name descname"><span class="pre">dc_spectrum_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.dc_spectrum_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.set_not_save_qubit_node">
+<span class="sig-name descname"><span class="pre">set_not_save_qubit_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.set_not_save_qubit_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.set_save_qubit_node">
+<span class="sig-name descname"><span class="pre">set_save_qubit_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.set_save_qubit_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.set_qubit_Vwork_node">
+<span class="sig-name descname"><span class="pre">set_qubit_Vwork_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.set_qubit_Vwork_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.dc_crosstalk_node">
+<span class="sig-name descname"><span class="pre">dc_crosstalk_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.dc_crosstalk_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.t1_spectrum_node">
+<span class="sig-name descname"><span class="pre">t1_spectrum_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.t1_spectrum_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

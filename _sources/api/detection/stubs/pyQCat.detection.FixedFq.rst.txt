@@ -1,0 +1,35 @@
+﻿pyQCat.detection.FixedFq
+========================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: FixedFq
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FixedFq.__init__
+      ~FixedFq.run
+      ~FixedFq.select_dc_source
+      ~FixedFq.select_mic_source
+      ~FixedFq.select_net_analyzer
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FixedFq.config_path
+      ~FixedFq.dc_source
+      ~FixedFq.mic_source
+      ~FixedFq.net_analyzer
+   
+   

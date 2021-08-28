@@ -1,0 +1,41 @@
+﻿pyQCat.experiment.XEBAnalysis
+=============================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: XEBAnalysis
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~XEBAnalysis.__init__
+      ~XEBAnalysis.analyze
+      ~XEBAnalysis.excute_loop
+      ~XEBAnalysis.get_experiment
+      ~XEBAnalysis.loop_control
+      ~XEBAnalysis.single_qubit_usualness
+      ~XEBAnalysis.slice_result
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~XEBAnalysis.I
+      ~XEBAnalysis.P0
+      ~XEBAnalysis.P1
+      ~XEBAnalysis.Q
+      ~XEBAnalysis.amp
+      ~XEBAnalysis.phase
+      ~XEBAnalysis.probability_list
+      ~XEBAnalysis.status
+   
+   

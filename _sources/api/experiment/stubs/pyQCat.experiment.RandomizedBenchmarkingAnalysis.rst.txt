@@ -1,0 +1,41 @@
+﻿pyQCat.experiment.RandomizedBenchmarkingAnalysis
+================================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: RandomizedBenchmarkingAnalysis
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RandomizedBenchmarkingAnalysis.__init__
+      ~RandomizedBenchmarkingAnalysis.analyze
+      ~RandomizedBenchmarkingAnalysis.excute_loop
+      ~RandomizedBenchmarkingAnalysis.get_experiment
+      ~RandomizedBenchmarkingAnalysis.loop_control
+      ~RandomizedBenchmarkingAnalysis.single_qubit_usualness
+      ~RandomizedBenchmarkingAnalysis.slice_result
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RandomizedBenchmarkingAnalysis.I
+      ~RandomizedBenchmarkingAnalysis.P0
+      ~RandomizedBenchmarkingAnalysis.P1
+      ~RandomizedBenchmarkingAnalysis.Q
+      ~RandomizedBenchmarkingAnalysis.amp
+      ~RandomizedBenchmarkingAnalysis.phase
+      ~RandomizedBenchmarkingAnalysis.probability_list
+      ~RandomizedBenchmarkingAnalysis.status
+   
+   

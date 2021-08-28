@@ -1,0 +1,22 @@
+﻿pyQCat.qubit.Mwave
+==================
+
+.. currentmodule:: pyQCat.qubit
+
+.. autoclass:: Mwave
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Mwave.__init__
+   
+   
+
+   
+   
+   

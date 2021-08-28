@@ -1,0 +1,1768 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.flow package &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.flow package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-flow-package">
+<h1>pyQCat.flow package<a class="headerlink" href="#pyqcat-flow-package" title="永久链接至标题">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="module-pyQCat.flow.cavity_detection">
+<span id="pyqcat-flow-cavity-detection-module"></span><h2>pyQCat.flow.cavity_detection module<a class="headerlink" href="#module-pyQCat.flow.cavity_detection" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.cavity_detection.find_cavity_freq">
+<span class="sig-name descname"><span class="pre">find_cavity_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6300000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6600000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cavity_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.find_cavity_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>Get cavity freq</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]) – Qubit list</p></li>
+<li><p><strong>fc_start</strong> – scan freq start</p></li>
+<li><p><strong>fc_end</strong> – scan freq end</p></li>
+<li><p><strong>N</strong> – scan points</p></li>
+<li><p><strong>IFBW</strong> – The IF bandwidth of the network analyzer</p></li>
+<li><p><strong>probe_power</strong> – The power of network analyzer</p></li>
+<li><p><strong>network_analyzer</strong> – Network analyzer model. default ‘E5071C’</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.cavity_detection.is_tunable">
+<span class="sig-name descname"><span class="pre">is_tunable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_bit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_flux</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">1.2,</span> <span class="pre">1.2,</span> <span class="pre">0.04)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.is_tunable" title="永久链接至目标">¶</a></dt>
+<dd><p>Whether the bit can be tunable</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]) – Qubit list</p></li>
+<li><p><strong>scan_f</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – freq scan range</p></li>
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – scan points</p></li>
+<li><p><strong>IFBW</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – The IF bandwidth of the network analyzer</p></li>
+<li><p><strong>probe_power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The power of network analyzer</p></li>
+<li><p><strong>scan_flux</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – scan dc list, (start, end, step)</p></li>
+<li><p><strong>network_analyzer</strong> – Network analyzer model. default ‘E5071C’</p></li>
+<li><p><strong>qaio_ip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Qaio IP</p></li>
+<li><p><strong>qaio_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Qaio type, {8, 30}, optional.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.cavity_detection.is_goodness">
+<span class="sig-name descname"><span class="pre">is_goodness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">35</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-</span> <span class="pre">6,</span> <span class="pre">4]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hight_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_detection.is_goodness" title="永久链接至目标">¶</a></dt>
+<dd><p>Whether the bit can be goodness</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit</strong> (<a class="reference internal" href="pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>) – Qubit</p></li>
+<li><p><strong>dc_correct</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Dc correct</p></li>
+<li><p><strong>high_power</strong> – Bit’s network analyzer scans high power values</p></li>
+<li><p><strong>low_power</strong> – Bit’s network analyzer scans low power values</p></li>
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Scanning points.</p></li>
+<li><p><strong>scan_range</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – probe freq scan range, format:[scan_left, scan_right]</p></li>
+<li><p><strong>IFBW</strong> – The IF bandwidth of the network analyzer</p></li>
+<li><p><strong>network_analyzer</strong> – Network analyzer model. default ‘E5071C’</p></li>
+<li><p><strong>qaio_ip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Qaio IP</p></li>
+<li><p><strong>qaio_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Qaio type, {8, 30}, optional.</p></li>
+<li><p><strong>root</strong> – sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.common">
+<span id="pyqcat-flow-common-module"></span><h2>pyQCat.flow.common module<a class="headerlink" href="#module-pyQCat.flow.common" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.make_graph">
+<span class="sig-name descname"><span class="pre">make_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.make_graph" title="永久链接至目标">¶</a></dt>
+<dd><p>Construct the task graph (dag) from a given schema.</p>
+<p>Parses the graph schema definition and creates the task graph. Tasks are the
+vertices of the graph and the connections defined in the schema become the edges.</p>
+<p>A key in the schema dict represents a parent task and the value one or more
+children:</p>
+<blockquote>
+<div><p>{parent: [child]} or {parent: [child1, child2]}</p>
+</div></blockquote>
+<p>The data output of one task can be routed to a labelled input slot of successor
+tasks using a dictionary instead of a list for the children:</p>
+<blockquote>
+<div><p>{parent: {child1: ‘positive’, child2: ‘negative’}}</p>
+</div></blockquote>
+<dl class="simple">
+<dt>An empty slot name or None skips the creation of a labelled slot:</dt><dd><p>{parent: {child1: ‘’, child2: None}}</p>
+</dd>
+</dl>
+<p>The underlying graph library creates nodes automatically, when an edge between
+non-existing nodes is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>schema</strong> (<em>dict</em>) – A dictionary with the schema definition.</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>A reference to the fully constructed graph object.</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>DiGraph</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>DirectedAcyclicGraphUndefined</strong> – If the schema is not defined.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.plot_dag">
+<span class="sig-name descname"><span class="pre">plot_dag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">png_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.plot_dag" title="永久链接至目标">¶</a></dt>
+<dd><p>Plot dag node png.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dag</strong> (<em>nx.DiGraph</em>) – nx.DiGraph object</p></li>
+<li><p><strong>png_name</strong> (<em>str</em>) – save png name</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.execute_node">
+<span class="sig-name descname"><span class="pre">execute_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_node_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.execute_node" title="永久链接至目标">¶</a></dt>
+<dd><p>Execute node which in flow,</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>flows</strong> (<em>list</em>) – list of dict,</p></li>
+<li><p><strong>run_node_list</strong> (<em>list</em>) – list of node</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – execute node experiment args</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>result,</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>ret (dict)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.run_single_qubit">
+<span class="sig-name descname"><span class="pre">run_single_qubit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_node_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.run_single_qubit" title="永久链接至目标">¶</a></dt>
+<dd><p>single qubit run calibrate flow,</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bit</strong> (<em>int</em>) – qubit.bit</p></li>
+<li><p><strong>flows</strong> (<em>list</em>) – list of dict,</p></li>
+<li><p><strong>inst</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument"><em>Instrument</em></a>) – Instrument object</p></li>
+<li><p><strong>exp_args</strong> (<a class="reference internal" href="../tool/stubs/pyQCat.tool.parse_yaml.html#pyQCat.tool.parse_yaml.ExpArgs" title="pyQCat.tool.parse_yaml.ExpArgs"><em>ExpArgs</em></a>) – ExpArgs object</p></li>
+<li><p><strong>bit_list</strong> (<em>list</em>) – list of bit</p></li>
+<li><p><strong>run_node_list</strong> (<em>list</em>) – list of node</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.validate_value">
+<span class="sig-name descname"><span class="pre">validate_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiple_of</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.validate_value" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.bind_xy_IF">
+<span class="sig-name descname"><span class="pre">bind_xy_IF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_IF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.bind_xy_IF" title="永久链接至目标">¶</a></dt>
+<dd><p>Bind instrument XY control intermediate freq and qubit XYwave drive IF.
+:param inst: Instrument object
+:type inst: Instrument
+:param bit_list: list of bit
+:type bit_list: list
+:param drive_IF: drive_IF value from exp.yaml system.drive_IF
+:type drive_IF: float</p>
+<dl class="simple">
+<dt>Returns</dt><dd><p>new_inst (Instrument): Instrument object</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.InvalidValueError" title="pyQCat.errors.InvalidValueError"><strong>InvalidValueError</strong></a> – if drive_IF value not conform to (400, 700, 0.001)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.dag_node">
+<span id="pyqcat-flow-dag-node-module"></span><h2>pyQCat.flow.dag_node module<a class="headerlink" href="#module-pyQCat.flow.dag_node" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.initial_store_node">
+<span class="sig-name descname"><span class="pre">initial_store_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.initial_store_node" title="永久链接至目标">¶</a></dt>
+<dd><p>Initial some config data, and save to MongoDB ConfigStore.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.initial_qubit_node">
+<span class="sig-name descname"><span class="pre">initial_qubit_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.initial_qubit_node" title="永久链接至目标">¶</a></dt>
+<dd><p>Initial qubit info, and save to MongoDB.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.is_tunable_node">
+<span class="sig-name descname"><span class="pre">is_tunable_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.is_tunable_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.update_goodness_node">
+<span class="sig-name descname"><span class="pre">update_goodness_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.update_goodness_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.cavity_freq_update_node">
+<span class="sig-name descname"><span class="pre">cavity_freq_update_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.cavity_freq_update_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.judge_tunable_goodness_node">
+<span class="sig-name descname"><span class="pre">judge_tunable_goodness_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.judge_tunable_goodness_node" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.qubit_freq_preliminary_node">
+<span class="sig-name descname"><span class="pre">qubit_freq_preliminary_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.qubit_freq_preliminary_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.anharmonicity_measure_node">
+<span class="sig-name descname"><span class="pre">anharmonicity_measure_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.anharmonicity_measure_node" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.rabi_sweep_width_node">
+<span class="sig-name descname"><span class="pre">rabi_sweep_width_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.rabi_sweep_width_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.rabi_scan_amp_node">
+<span class="sig-name descname"><span class="pre">rabi_scan_amp_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.rabi_scan_amp_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.probe_freq_cali_node">
+<span class="sig-name descname"><span class="pre">probe_freq_cali_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.probe_freq_cali_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.probe_power_cali_node">
+<span class="sig-name descname"><span class="pre">probe_power_cali_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.probe_power_cali_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.probe_power_bus_cali_node">
+<span class="sig-name descname"><span class="pre">probe_power_bus_cali_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.probe_power_bus_cali_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.single_shot_node">
+<span class="sig-name descname"><span class="pre">single_shot_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.single_shot_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.qubit_freq_calibrate_node">
+<span class="sig-name descname"><span class="pre">qubit_freq_calibrate_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.qubit_freq_calibrate_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.rabi_update_xpi_node">
+<span class="sig-name descname"><span class="pre">rabi_update_xpi_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.rabi_update_xpi_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.ape_experiment_node">
+<span class="sig-name descname"><span class="pre">ape_experiment_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.ape_experiment_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.amp_opt_node">
+<span class="sig-name descname"><span class="pre">amp_opt_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.amp_opt_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.t1_experiment_node">
+<span class="sig-name descname"><span class="pre">t1_experiment_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.t1_experiment_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.t2_experiment_node">
+<span class="sig-name descname"><span class="pre">t2_experiment_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.t2_experiment_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.ac_spectrum_node">
+<span class="sig-name descname"><span class="pre">ac_spectrum_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.ac_spectrum_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.t2_spectrum_node">
+<span class="sig-name descname"><span class="pre">t2_spectrum_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.t2_spectrum_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.execute_rb_node">
+<span class="sig-name descname"><span class="pre">execute_rb_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.execute_rb_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.execute_xeb_node">
+<span class="sig-name descname"><span class="pre">execute_xeb_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.execute_xeb_node" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.xyz_timing_node">
+<span class="sig-name descname"><span class="pre">xyz_timing_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.xyz_timing_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.distortion_node">
+<span class="sig-name descname"><span class="pre">distortion_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.distortion_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.ac_crosstalk_node">
+<span class="sig-name descname"><span class="pre">ac_crosstalk_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.ac_crosstalk_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.dc_spectrum_node">
+<span class="sig-name descname"><span class="pre">dc_spectrum_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.dc_spectrum_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.set_not_save_qubit_node">
+<span class="sig-name descname"><span class="pre">set_not_save_qubit_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.set_not_save_qubit_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.set_save_qubit_node">
+<span class="sig-name descname"><span class="pre">set_save_qubit_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.set_save_qubit_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.set_qubit_Vwork_node">
+<span class="sig-name descname"><span class="pre">set_qubit_Vwork_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.set_qubit_Vwork_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.dc_crosstalk_node">
+<span class="sig-name descname"><span class="pre">dc_crosstalk_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.dc_crosstalk_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.dag_node.t1_spectrum_node">
+<span class="sig-name descname"><span class="pre">t1_spectrum_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.dag_node.t1_spectrum_node" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.flux_regulation">
+<span id="pyqcat-flow-flux-regulation-module"></span><h2>pyQCat.flow.flux_regulation module<a class="headerlink" href="#module-pyQCat.flow.flux_regulation" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.flux_regulation.ac_spectrum_experiment">
+<span class="sig-name descname"><span class="pre">ac_spectrum_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc_freq_limit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.flux_regulation.ac_spectrum_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>fringe</strong> – </p></li>
+<li><p><strong>delay_list</strong> – </p></li>
+<li><p><strong>z_amp_list</strong> – </p></li>
+<li><p><strong>osc_freq_limit</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.flux_regulation.t2_spectrum_experiment">
+<span class="sig-name descname"><span class="pre">t2_spectrum_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reduce</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.flux_regulation.t2_spectrum_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>fringe</strong> – </p></li>
+<li><p><strong>delay_list</strong> – </p></li>
+<li><p><strong>reduce</strong> – </p></li>
+<li><p><strong>step</strong> – </p></li>
+<li><p><strong>exp_name</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.flux_regulation.dc_spectrum_experiment">
+<span class="sig-name descname"><span class="pre">dc_spectrum_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.flux_regulation.dc_spectrum_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>fringe</strong> – </p></li>
+<li><p><strong>delay_list</strong> – </p></li>
+<li><p><strong>z_amp_interval</strong> – </p></li>
+<li><p><strong>freq_bound</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+<li><p><strong>calibration_node_params</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – </p></li>
+<li><p><strong>sweet_point</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.flux_regulation.t1_spectrum_experiment">
+<span class="sig-name descname"><span class="pre">t1_spectrum_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.flux_regulation.t1_spectrum_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>z_amp_list</strong> – </p></li>
+<li><p><strong>delay_list</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.init_instrument_json">
+<span id="pyqcat-flow-init-instrument-json-module"></span><h2>pyQCat.flow.init_instrument_json module<a class="headerlink" href="#module-pyQCat.flow.init_instrument_json" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.init_instrument_json.init_instrument">
+<span class="sig-name descname"><span class="pre">init_instrument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.init_instrument_json.init_instrument" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.line_calibration">
+<span id="pyqcat-flow-line-calibration-module"></span><h2>pyQCat.flow.line_calibration module<a class="headerlink" href="#module-pyQCat.flow.line_calibration" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.line_calibration.xyz_timing_experiment">
+<span class="sig-name descname"><span class="pre">xyz_timing_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const_delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.line_calibration.xyz_timing_experiment" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.line_calibration.distortion_experiment">
+<span class="sig-name descname"><span class="pre">distortion_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat_times</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat_loops</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_stop_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.line_calibration.distortion_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>t2_delay_list</strong> – </p></li>
+<li><p><strong>repeat_times</strong> – </p></li>
+<li><p><strong>repeat_loops</strong> – </p></li>
+<li><p><strong>data_stop_index</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.pi_pulse_detection">
+<span id="pyqcat-flow-pi-pulse-detection-module"></span><h2>pyQCat.flow.pi_pulse_detection module<a class="headerlink" href="#module-pyQCat.flow.pi_pulse_detection" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.rabi_experiment">
+<span class="sig-name descname"><span class="pre">rabi_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Xpi'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.rabi_experiment" title="永久链接至目标">¶</a></dt>
+<dd><p>Execute Rabi experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>sweep_list</strong> – list, scan amp list, or width list</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>name</strong> – run Rabi select Xpi， Xpi/2 or width</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>list, value is rabi_exp.analysis.amp
+rabi_Xpi: rabi_exp.analysis.Xpi</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>rabi_amp_list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.judge_background_noise">
+<span class="sig-name descname"><span class="pre">judge_background_noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">judge_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.judge_background_noise" title="永久链接至目标">¶</a></dt>
+<dd><p>Judge local noise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>amp_list</strong> – list of amp, scan amp value</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>sample</strong> – qubit.sample prefix</p></li>
+<li><p><strong>judge_step</strong> – change drive power step</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>True or False, judge local noise, True means existence local noise.</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>background_noise_flag</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.rabi_update_xpi">
+<span class="sig-name descname"><span class="pre">rabi_update_xpi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expect_Xpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.rabi_update_xpi" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.XYwave.Xpi, qubit.XYwave.Xpi2, qubit.drive_drive_power.
+Judge Ax1 value range [0.7, 0.9], SinDamp fit.
+Directly, use Rabi experiment’s result of consine fit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>amp_list</strong> – list of amp, scan amp value</p></li>
+<li><p><strong>sample</strong> – qubit.sample prefix</p></li>
+<li><p><strong>expect_Xpi</strong> – expectation value of Xpi</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>True or False, True means update successfully.</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>xpi_flag</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.rabi_scan_amp">
+<span class="sig-name descname"><span class="pre">rabi_scan_amp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">judge_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expect_Xpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:/Qubit'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">qubit_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.rabi_scan_amp" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.XYwave.Xpi, qubit.XYwave.Xpi2, qubit.drive_drive_power.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>amp_list</strong> – list of amp value   (0, 1, 0.02V)</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>judge_step</strong> – judge background noise change drive power step</p></li>
+<li><p><strong>expect_Xpi</strong> – expectation value of Xpi</p></li>
+<li><p><strong>sample_prefix</strong> – qubit.sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+<li><p><strong>qubit_state</strong> – (dict) qubit import from store or not</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.InvalidValueError" title="pyQCat.errors.InvalidValueError"><strong>InvalidValueError</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.rabi_sweep_width">
+<span class="sig-name descname"><span class="pre">rabi_sweep_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.rabi_sweep_width" title="永久链接至目标">¶</a></dt>
+<dd><p>Run Rabi with scan width, judge oscillation or not .</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>width_list</strong> – list, scan width list</p></li>
+<li><p><strong>sample</strong> – qubit.sample prefix</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>beta</strong> – enlargement factor of spectrum analysis</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>True or False, True means oscillation successfully.</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>osci_flag</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.qtp">
+<span id="pyqcat-flow-qtp-module"></span><h2>pyQCat.flow.qtp module<a class="headerlink" href="#module-pyQCat.flow.qtp" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qtp.qtp">
+<span class="sig-name descname"><span class="pre">qtp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaml_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qtp.qtp" title="永久链接至目标">¶</a></dt>
+<dd><p>自动化校准流程启动接口</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>yaml_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.qubit_correction">
+<span id="pyqcat-flow-qubit-correction-module"></span><h2>pyQCat.flow.qubit_correction module<a class="headerlink" href="#module-pyQCat.flow.qubit_correction" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_correction.ac_crosstalk_experiment">
+<span class="sig-name descname"><span class="pre">ac_crosstalk_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias_bound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_correction.ac_crosstalk_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>bit_list</strong> – </p></li>
+<li><p><strong>v_bias</strong> – </p></li>
+<li><p><strong>init_fringe</strong> – </p></li>
+<li><p><strong>freq_offset</strong> – </p></li>
+<li><p><strong>v_bias_bound</strong> – </p></li>
+<li><p><strong>freq_threshold</strong> – </p></li>
+<li><p><strong>delay_list</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_correction.dc_crosstalk_experiment">
+<span class="sig-name descname"><span class="pre">dc_crosstalk_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias_bound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_spectrum_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_point</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_correction.dc_crosstalk_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>v_bias</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>bit_list</strong> – </p></li>
+<li><p><strong>init_fringe</strong> – </p></li>
+<li><p><strong>freq_offset</strong> – </p></li>
+<li><p><strong>v_bias_bound</strong> – </p></li>
+<li><p><strong>freq_threshold</strong> – </p></li>
+<li><p><strong>delay_list</strong> – </p></li>
+<li><p><strong>dc_spectrum_params</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.qubit_detection">
+<span id="pyqcat-flow-qubit-detection-module"></span><h2>pyQCat.flow.qubit_detection module<a class="headerlink" href="#module-pyQCat.flow.qubit_detection" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.freq_preliminary">
+<span class="sig-name descname"><span class="pre">freq_preliminary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[4000,</span> <span class="pre">4005,</span> <span class="pre">4010,</span> <span class="pre">4015,</span> <span class="pre">4020,</span> <span class="pre">4025,</span> <span class="pre">4030,</span> <span class="pre">4035,</span> <span class="pre">4040,</span> <span class="pre">4045,</span> <span class="pre">4050,</span> <span class="pre">4055,</span> <span class="pre">4060,</span> <span class="pre">4065,</span> <span class="pre">4070,</span> <span class="pre">4075,</span> <span class="pre">4080,</span> <span class="pre">4085,</span> <span class="pre">4090,</span> <span class="pre">4095,</span> <span class="pre">4100,</span> <span class="pre">4105,</span> <span class="pre">4110,</span> <span class="pre">4115,</span> <span class="pre">4120,</span> <span class="pre">4125,</span> <span class="pre">4130,</span> <span class="pre">4135,</span> <span class="pre">4140,</span> <span class="pre">4145,</span> <span class="pre">4150,</span> <span class="pre">4155,</span> <span class="pre">4160,</span> <span class="pre">4165,</span> <span class="pre">4170,</span> <span class="pre">4175,</span> <span class="pre">4180,</span> <span class="pre">4185,</span> <span class="pre">4190,</span> <span class="pre">4195,</span> <span class="pre">4200,</span> <span class="pre">4205,</span> <span class="pre">4210,</span> <span class="pre">4215,</span> <span class="pre">4220,</span> <span class="pre">4225,</span> <span class="pre">4230,</span> <span class="pre">4235,</span> <span class="pre">4240,</span> <span class="pre">4245,</span> <span class="pre">4250,</span> <span class="pre">4255,</span> <span class="pre">4260,</span> <span class="pre">4265,</span> <span class="pre">4270,</span> <span class="pre">4275,</span> <span class="pre">4280,</span> <span class="pre">4285,</span> <span class="pre">4290,</span> <span class="pre">4295,</span> <span class="pre">4300,</span> <span class="pre">4305,</span> <span class="pre">4310,</span> <span class="pre">4315,</span> <span class="pre">4320,</span> <span class="pre">4325,</span> <span class="pre">4330,</span> <span class="pre">4335,</span> <span class="pre">4340,</span> <span class="pre">4345,</span> <span class="pre">4350,</span> <span class="pre">4355,</span> <span class="pre">4360,</span> <span class="pre">4365,</span> <span class="pre">4370,</span> <span class="pre">4375,</span> <span class="pre">4380,</span> <span class="pre">4385,</span> <span class="pre">4390,</span> <span class="pre">4395,</span> <span class="pre">4400,</span> <span class="pre">4405,</span> <span class="pre">4410,</span> <span class="pre">4415,</span> <span class="pre">4420,</span> <span class="pre">4425,</span> <span class="pre">4430,</span> <span class="pre">4435,</span> <span class="pre">4440,</span> <span class="pre">4445,</span> <span class="pre">4450,</span> <span class="pre">4455,</span> <span class="pre">4460,</span> <span class="pre">4465,</span> <span class="pre">4470,</span> <span class="pre">4475,</span> <span class="pre">4480,</span> <span class="pre">4485,</span> <span class="pre">4490,</span> <span class="pre">4495,</span> <span class="pre">4500,</span> <span class="pre">4505,</span> <span class="pre">4510,</span> <span class="pre">4515,</span> <span class="pre">4520,</span> <span class="pre">4525,</span> <span class="pre">4530,</span> <span class="pre">4535,</span> <span class="pre">4540,</span> <span class="pre">4545,</span> <span class="pre">4550,</span> <span class="pre">4555,</span> <span class="pre">4560,</span> <span class="pre">4565,</span> <span class="pre">4570,</span> <span class="pre">4575,</span> <span class="pre">4580,</span> <span class="pre">4585,</span> <span class="pre">4590,</span> <span class="pre">4595,</span> <span class="pre">4600,</span> <span class="pre">4605,</span> <span class="pre">4610,</span> <span class="pre">4615,</span> <span class="pre">4620,</span> <span class="pre">4625,</span> <span class="pre">4630,</span> <span class="pre">4635,</span> <span class="pre">4640,</span> <span class="pre">4645,</span> <span class="pre">4650,</span> <span class="pre">4655,</span> <span class="pre">4660,</span> <span class="pre">4665,</span> <span class="pre">4670,</span> <span class="pre">4675,</span> <span class="pre">4680,</span> <span class="pre">4685,</span> <span class="pre">4690,</span> <span class="pre">4695,</span> <span class="pre">4700,</span> <span class="pre">4705,</span> <span class="pre">4710,</span> <span class="pre">4715,</span> <span class="pre">4720,</span> <span class="pre">4725,</span> <span class="pre">4730,</span> <span class="pre">4735,</span> <span class="pre">4740,</span> <span class="pre">4745,</span> <span class="pre">4750,</span> <span class="pre">4755,</span> <span class="pre">4760,</span> <span class="pre">4765,</span> <span class="pre">4770,</span> <span class="pre">4775,</span> <span class="pre">4780,</span> <span class="pre">4785,</span> <span class="pre">4790,</span> <span class="pre">4795,</span> <span class="pre">4800,</span> <span class="pre">4805,</span> <span class="pre">4810,</span> <span class="pre">4815,</span> <span class="pre">4820,</span> <span class="pre">4825,</span> <span class="pre">4830,</span> <span class="pre">4835,</span> <span class="pre">4840,</span> <span class="pre">4845,</span> <span class="pre">4850,</span> <span class="pre">4855,</span> <span class="pre">4860,</span> <span class="pre">4865,</span> <span class="pre">4870,</span> <span class="pre">4875,</span> <span class="pre">4880,</span> <span class="pre">4885,</span> <span class="pre">4890,</span> <span class="pre">4895,</span> <span class="pre">4900,</span> <span class="pre">4905,</span> <span class="pre">4910,</span> <span class="pre">4915,</span> <span class="pre">4920,</span> <span class="pre">4925,</span> <span class="pre">4930,</span> <span class="pre">4935,</span> <span class="pre">4940,</span> <span class="pre">4945,</span> <span class="pre">4950,</span> <span class="pre">4955,</span> <span class="pre">4960,</span> <span class="pre">4965,</span> <span class="pre">4970,</span> <span class="pre">4975,</span> <span class="pre">4980,</span> <span class="pre">4985,</span> <span class="pre">4990,</span> <span class="pre">4995,</span> <span class="pre">5000,</span> <span class="pre">5005,</span> <span class="pre">5010,</span> <span class="pre">5015,</span> <span class="pre">5020,</span> <span class="pre">5025,</span> <span class="pre">5030,</span> <span class="pre">5035,</span> <span class="pre">5040,</span> <span class="pre">5045,</span> <span class="pre">5050,</span> <span class="pre">5055,</span> <span class="pre">5060,</span> <span class="pre">5065,</span> <span class="pre">5070,</span> <span class="pre">5075,</span> <span class="pre">5080,</span> <span class="pre">5085,</span> <span class="pre">5090,</span> <span class="pre">5095,</span> <span class="pre">5100,</span> <span class="pre">5105,</span> <span class="pre">5110,</span> <span class="pre">5115,</span> <span class="pre">5120,</span> <span class="pre">5125,</span> <span class="pre">5130,</span> <span class="pre">5135,</span> <span class="pre">5140,</span> <span class="pre">5145,</span> <span class="pre">5150,</span> <span class="pre">5155,</span> <span class="pre">5160,</span> <span class="pre">5165,</span> <span class="pre">5170,</span> <span class="pre">5175,</span> <span class="pre">5180,</span> <span class="pre">5185,</span> <span class="pre">5190,</span> <span class="pre">5195,</span> <span class="pre">5200,</span> <span class="pre">5205,</span> <span class="pre">5210,</span> <span class="pre">5215,</span> <span class="pre">5220,</span> <span class="pre">5225,</span> <span class="pre">5230,</span> <span class="pre">5235,</span> <span class="pre">5240,</span> <span class="pre">5245,</span> <span class="pre">5250,</span> <span class="pre">5255,</span> <span class="pre">5260,</span> <span class="pre">5265,</span> <span class="pre">5270,</span> <span class="pre">5275,</span> <span class="pre">5280,</span> <span class="pre">5285,</span> <span class="pre">5290,</span> <span class="pre">5295,</span> <span class="pre">5300,</span> <span class="pre">5305,</span> <span class="pre">5310,</span> <span class="pre">5315,</span> <span class="pre">5320,</span> <span class="pre">5325,</span> <span class="pre">5330,</span> <span class="pre">5335,</span> <span class="pre">5340,</span> <span class="pre">5345,</span> <span class="pre">5350,</span> <span class="pre">5355,</span> <span class="pre">5360,</span> <span class="pre">5365,</span> <span class="pre">5370,</span> <span class="pre">5375,</span> <span class="pre">5380,</span> <span class="pre">5385,</span> <span class="pre">5390,</span> <span class="pre">5395,</span> <span class="pre">5400,</span> <span class="pre">5405,</span> <span class="pre">5410,</span> <span class="pre">5415,</span> <span class="pre">5420,</span> <span class="pre">5425,</span> <span class="pre">5430,</span> <span class="pre">5435,</span> <span class="pre">5440,</span> <span class="pre">5445,</span> <span class="pre">5450,</span> <span class="pre">5455,</span> <span class="pre">5460,</span> <span class="pre">5465,</span> <span class="pre">5470,</span> <span class="pre">5475,</span> <span class="pre">5480,</span> <span class="pre">5485,</span> <span class="pre">5490,</span> <span class="pre">5495,</span> <span class="pre">5500,</span> <span class="pre">5505,</span> <span class="pre">5510,</span> <span class="pre">5515,</span> <span class="pre">5520,</span> <span class="pre">5525,</span> <span class="pre">5530,</span> <span class="pre">5535,</span> <span class="pre">5540,</span> <span class="pre">5545,</span> <span class="pre">5550,</span> <span class="pre">5555,</span> <span class="pre">5560,</span> <span class="pre">5565,</span> <span class="pre">5570,</span> <span class="pre">5575,</span> <span class="pre">5580,</span> <span class="pre">5585,</span> <span class="pre">5590,</span> <span class="pre">5595,</span> <span class="pre">5600,</span> <span class="pre">5605,</span> <span class="pre">5610,</span> <span class="pre">5615,</span> <span class="pre">5620,</span> <span class="pre">5625,</span> <span class="pre">5630,</span> <span class="pre">5635,</span> <span class="pre">5640,</span> <span class="pre">5645,</span> <span class="pre">5650,</span> <span class="pre">5655,</span> <span class="pre">5660,</span> <span class="pre">5665,</span> <span class="pre">5670,</span> <span class="pre">5675,</span> <span class="pre">5680,</span> <span class="pre">5685,</span> <span class="pre">5690,</span> <span class="pre">5695,</span> <span class="pre">5700,</span> <span class="pre">5705,</span> <span class="pre">5710,</span> <span class="pre">5715,</span> <span class="pre">5720,</span> <span class="pre">5725,</span> <span class="pre">5730,</span> <span class="pre">5735,</span> <span class="pre">5740,</span> <span class="pre">5745,</span> <span class="pre">5750,</span> <span class="pre">5755,</span> <span class="pre">5760,</span> <span class="pre">5765,</span> <span class="pre">5770,</span> <span class="pre">5775,</span> <span class="pre">5780,</span> <span class="pre">5785,</span> <span class="pre">5790,</span> <span class="pre">5795,</span> <span class="pre">5800,</span> <span class="pre">5805,</span> <span class="pre">5810,</span> <span class="pre">5815,</span> <span class="pre">5820,</span> <span class="pre">5825,</span> <span class="pre">5830,</span> <span class="pre">5835,</span> <span class="pre">5840,</span> <span class="pre">5845,</span> <span class="pre">5850,</span> <span class="pre">5855,</span> <span class="pre">5860,</span> <span class="pre">5865,</span> <span class="pre">5870,</span> <span class="pre">5875,</span> <span class="pre">5880,</span> <span class="pre">5885,</span> <span class="pre">5890,</span> <span class="pre">5895,</span> <span class="pre">5900,</span> <span class="pre">5905,</span> <span class="pre">5910,</span> <span class="pre">5915,</span> <span class="pre">5920,</span> <span class="pre">5925,</span> <span class="pre">5930,</span> <span class="pre">5935,</span> <span class="pre">5940,</span> <span class="pre">5945,</span> <span class="pre">5950,</span> <span class="pre">5955,</span> <span class="pre">5960,</span> <span class="pre">5965,</span> <span class="pre">5970,</span> <span class="pre">5975,</span> <span class="pre">5980,</span> <span class="pre">5985,</span> <span class="pre">5990,</span> <span class="pre">5995,</span> <span class="pre">6000]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[5,</span> <span class="pre">10,</span> <span class="pre">15,</span> <span class="pre">20,</span> <span class="pre">25,</span> <span class="pre">30,</span> <span class="pre">35,</span> <span class="pre">40,</span> <span class="pre">45,</span> <span class="pre">50,</span> <span class="pre">55,</span> <span class="pre">60,</span> <span class="pre">65,</span> <span class="pre">70,</span> <span class="pre">75,</span> <span class="pre">80,</span> <span class="pre">85,</span> <span class="pre">90,</span> <span class="pre">95,</span> <span class="pre">100,</span> <span class="pre">105,</span> <span class="pre">110,</span> <span class="pre">115,</span> <span class="pre">120,</span> <span class="pre">125,</span> <span class="pre">130,</span> <span class="pre">135,</span> <span class="pre">140,</span> <span class="pre">145,</span> <span class="pre">150,</span> <span class="pre">155,</span> <span class="pre">160,</span> <span class="pre">165,</span> <span class="pre">170,</span> <span class="pre">175,</span> <span class="pre">180,</span> <span class="pre">185,</span> <span class="pre">190,</span> <span class="pre">195,</span> <span class="pre">200]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rabi_beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.freq_preliminary" title="永久链接至目标">¶</a></dt>
+<dd><p>测量比特频率</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Insrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – chanel compensate</p></li>
+<li><p><strong>dc_correct</strong> – dc correct dict</p></li>
+<li><p><strong>fq_list</strong> – scan freq list</p></li>
+<li><p><strong>width_list</strong> – the scan width list of rabi</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>amp_coefficient</strong> – Amplitude coefficient, ranging from 0 to 1</p></li>
+<li><p><strong>power_step</strong> – Step size of qubit measurement</p></li>
+<li><p><strong>noise_percentage</strong> – Percentage of noise measurement</p></li>
+<li><p><strong>rabi_beta</strong> – enlargement factor of spectrum analysis</p></li>
+<li><p><strong>root</strong> – expand save file</p></li>
+<li><p><strong>log_path</strong> – qubit log path</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.anharmonicity_measure">
+<span class="sig-name descname"><span class="pre">anharmonicity_measure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f02_freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(150,</span> <span class="pre">80)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.anharmonicity_measure" title="永久链接至目标">¶</a></dt>
+<dd><p>Measure qubit freq f21</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Insrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – chanel compensate</p></li>
+<li><p><strong>dc_correct</strong> – dc correct dict</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>amp_coefficient</strong> – Amplitude coefficient</p></li>
+<li><p><strong>power_step</strong> – Step size of qubit measurement</p></li>
+<li><p><strong>root</strong> – expand save file</p></li>
+<li><p><strong>log_path</strong> – qubit log path</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.lorentz_fit">
+<span class="sig-name descname"><span class="pre">lorentz_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">peaks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">twin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.lorentz_fit" title="永久链接至目标">¶</a></dt>
+<dd><p>lorentz fit, Used for ‘twin_lorentz’ and ‘lorentz’</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The abscissa of the fit</p></li>
+<li><p><strong>y</strong> – The ordinate of the fit</p></li>
+<li><p><strong>twin</strong> – Bool, False or True, Is “false” to fit “lorentz”, otherwise to
+fit ‘twin_lorent’</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>Fit result</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>f0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.cavity_freq_update">
+<span class="sig-name descname"><span class="pre">cavity_freq_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_freq_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.cavity_freq_update" title="永久链接至目标">¶</a></dt>
+<dd><p>Update cavity freq</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dc_correct</strong> – </p></li>
+<li><p><strong>scan_freq</strong> – scan freq range</p></li>
+<li><p><strong>scan_freq_step</strong> – scan freq step</p></li>
+<li><p><strong>root</strong> – sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.find_peaks_dips">
+<span class="sig-name descname"><span class="pre">find_peaks_dips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpolation_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peaks_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prominences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.find_peaks_dips" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – </p></li>
+<li><p><strong>y</strong> – </p></li>
+<li><p><strong>interpolation_num</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>window_len</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>distance</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – </p></li>
+<li><p><strong>peaks_num</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – </p></li>
+<li><p><strong>prominences</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – </p></li>
+<li><p><strong>file_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.plot_peaks">
+<span class="sig-name descname"><span class="pre">plot_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.plot_peaks" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.judge_peak_dip">
+<span class="sig-name descname"><span class="pre">judge_peak_dip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.judge_peak_dip" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>data</strong> – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.qubit_freq_calibration">
+<span id="pyqcat-flow-qubit-freq-calibration-module"></span><h2>pyQCat.flow.qubit_freq_calibration module<a class="headerlink" href="#module-pyQCat.flow.qubit_freq_calibration" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_freq_calibration.ramsey_experiment">
+<span class="sig-name descname"><span class="pre">ramsey_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_freq_calibration.ramsey_experiment" title="永久链接至目标">¶</a></dt>
+<dd><p>执行Ramsey实验</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>delay_list</strong> – </p></li>
+<li><p><strong>fringe</strong> – </p></li>
+<li><p><strong>z_amp</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_freq_calibration.ramsey_cali_freq">
+<span class="sig-name descname"><span class="pre">ramsey_cali_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">466.667</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:/Qubit'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_freq_calibration.ramsey_cali_freq" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>delay_list</strong> – list of delay, likes qarange(100, 800, 10)</p></li>
+<li><p><strong>delta_list</strong> – normal 10</p></li>
+<li><p><strong>z_amp</strong> – amp of Z_flux, default is None</p></li>
+<li><p><strong>IF</strong> – IF value, normal 466.667</p></li>
+<li><p><strong>sample_prefix</strong> – qubit.sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.qubit_optimization">
+<span id="pyqcat-flow-qubit-optimization-module"></span><h2>pyQCat.flow.qubit_optimization module<a class="headerlink" href="#module-pyQCat.flow.qubit_optimization" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.ape_run">
+<span class="sig-name descname"><span class="pre">ape_run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ape_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fine_adjust</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.ape_run" title="永久链接至目标">¶</a></dt>
+<dd><p>运行 APE 实验</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ape_exp</strong> – </p></li>
+<li><p><strong>N_list</strong> – </p></li>
+<li><p><strong>detune_list</strong> – </p></li>
+<li><p><strong>theta</strong> – </p></li>
+<li><p><strong>fine_adjust</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.ape_experiment">
+<span class="sig-name descname"><span class="pre">ape_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N1_N2_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.ape_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>detune_list</strong> – </p></li>
+<li><p><strong>N1_N2_list</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.amp_opt_experiment">
+<span class="sig-name descname"><span class="pre">amp_opt_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">41</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:/Qubit'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.amp_opt_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>N_dict</strong> – </p></li>
+<li><p><strong>points</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.t1_experiment">
+<span class="sig-name descname"><span class="pre">t1_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.t1_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>t1_delay_list</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.t2_experiment">
+<span class="sig-name descname"><span class="pre">t2_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.t2_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>t2_delay_list</strong> – </p></li>
+<li><p><strong>exp_name</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.rb_experiment">
+<span class="sig-name descname"><span class="pre">rb_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.rb_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>m_list</strong> – </p></li>
+<li><p><strong>k</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.xeb_experiment">
+<span class="sig-name descname"><span class="pre">xeb_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.xeb_experiment" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_optimization.single_qubit_adjust">
+<span class="sig-name descname"><span class="pre">single_qubit_adjust</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_step</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N1_N2_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2_delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_optimization.single_qubit_adjust" title="永久链接至目标">¶</a></dt>
+<dd><p>单比特校准流程</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dcm</strong> – </p></li>
+<li><p><strong>sample_prefix</strong> – </p></li>
+<li><p><strong>amp_list</strong> – </p></li>
+<li><p><strong>update_step</strong> – </p></li>
+<li><p><strong>detune_list</strong> – </p></li>
+<li><p><strong>N1_N2_list</strong> – </p></li>
+<li><p><strong>points</strong> – </p></li>
+<li><p><strong>N_dict</strong> – </p></li>
+<li><p><strong>t1_delay_list</strong> – </p></li>
+<li><p><strong>t2_delay_list</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow.readout_calibration">
+<span id="pyqcat-flow-readout-calibration-module"></span><h2>pyQCat.flow.readout_calibration module<a class="headerlink" href="#module-pyQCat.flow.readout_calibration" title="永久链接至标题">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.probe_freq_cali">
+<span class="sig-name descname"><span class="pre">probe_freq_cali</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_diff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.probe_freq_cali" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.probe_freq.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>freq_list</strong> – freq list</p></li>
+<li><p><strong>sample</strong> – qubit.sample</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+<li><p><strong>fc_diff</strong> – diff threshold of 0, 1 fc value</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>calibrate freq value, qubit.probe_freq</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>freq_opt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.probe_power_cali">
+<span class="sig-name descname"><span class="pre">probe_power_cali</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F0_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F1_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.probe_power_cali" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.probe_power</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>power_list</strong> – list of probe power, [-35, -10, 1]</p></li>
+<li><p><strong>sample</strong> – qubit.sample</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+<li><p><strong>F0_threshold</strong> – threshold of F0, final probe power run single shot result</p></li>
+<li><p><strong>F1_threshold</strong> – threshold of F1, final probe power run single shot result</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>qubit.probe_power</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>power</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.probe_power_cali_other">
+<span class="sig-name descname"><span class="pre">probe_power_cali_other</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.probe_power_cali_other" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.probe_power</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>power</strong> – initial power execute SingleShot</p></li>
+<li><p><strong>sample</strong> – qubit.sample</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>qubit.probe_power</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>target_power</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.single_shot_experiment">
+<span class="sig-name descname"><span class="pre">single_shot_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_bin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F0_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F1_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.single_shot_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+<li><p><strong>save_bin</strong> – </p></li>
+<li><p><strong>is_check</strong> – </p></li>
+<li><p><strong>F0_threshold</strong> – </p></li>
+<li><p><strong>F1_threshold</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.readout_calibrate">
+<span class="sig-name descname"><span class="pre">readout_calibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.readout_calibrate" title="永久链接至目标">¶</a></dt>
+<dd><p>Calibrate qubit.probe_freq, qubit.probe_power</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>power</strong> – other method calibrate readout power, initial power of excute SingleShot</p></li>
+<li><p><strong>power_list</strong> – list of power, scan execute single shot power</p></li>
+<li><p><strong>sample_prefix</strong> – qubit.sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>calibrate freq value, qubit.probe_freq
+power: calibrate power value, qubit.probe_power
+dcm: IQdiscriminator object</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>freq</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.probe_power_bus_cali">
+<span class="sig-name descname"><span class="pre">probe_power_bus_cali</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_wave_amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F0_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F1_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.probe_power_bus_cali" title="永久链接至目标">¶</a></dt>
+<dd><p>Calibrate qubit probe power by qubit.Mwave.amp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>m_wave_amp_list</strong> – list of qubit.Mwave.amp, [0.1, 1, 0.05]</p></li>
+<li><p><strong>probe_power</strong> – qubit.probe_power</p></li>
+<li><p><strong>sample</strong> – qubit.sample</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+<li><p><strong>F0_threshold</strong> – threshold of F0, final probe power run single shot result</p></li>
+<li><p><strong>F1_threshold</strong> – threshold of F1, final probe power run single shot result</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyQCat.flow">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyQCat.flow" title="永久链接至标题">¶</a></h2>
+<div class="section" id="automated-testing-flow-pyqcat-flow">
+<h3>Automated Testing Flow (<a class="reference internal" href="../api/flow/index.html#module-pyQCat.flow" title="pyQCat.flow"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code></a>)<a class="headerlink" href="#automated-testing-flow-pyqcat-flow" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pyQCat.flow</span></code> 模块是对 <code class="docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code> 模块的扩展，将各个实验组合形成量子比特自动化测试及校准的流程，形成节点输出，
+用户可以通过自由组合 <code class="docutils literal notranslate"><span class="pre">node</span></code> 节点，实现自定义的自动化测试流程。</p>
+<div class="section" id="dag-node">
+<h4>Dag Node<a class="headerlink" href="#dag-node" title="永久链接至标题">¶</a></h4>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.dag_node.html#module-pyQCat.flow.dag_node" title="pyQCat.flow.dag_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dag_node</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.cavity_detection.html#module-pyQCat.flow.cavity_detection" title="pyQCat.flow.cavity_detection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cavity_detection</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.flux_regulation.html#module-pyQCat.flow.flux_regulation" title="pyQCat.flow.flux_regulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flux_regulation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.line_calibration.html#module-pyQCat.flow.line_calibration" title="pyQCat.flow.line_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">line_calibration</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.pi_pulse_detection.html#module-pyQCat.flow.pi_pulse_detection" title="pyQCat.flow.pi_pulse_detection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pi_pulse_detection</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.qtp.html#pyQCat.flow.qtp" title="pyQCat.flow.qtp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qtp</span></code></a>([yaml_path])</p></td>
+<td><p>自动化校准流程启动接口</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.qubit_correction.html#module-pyQCat.flow.qubit_correction" title="pyQCat.flow.qubit_correction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qubit_correction</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.qubit_detection.html#module-pyQCat.flow.qubit_detection" title="pyQCat.flow.qubit_detection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qubit_detection</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.qubit_freq_calibration.html#module-pyQCat.flow.qubit_freq_calibration" title="pyQCat.flow.qubit_freq_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qubit_freq_calibration</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.qubit_optimization.html#module-pyQCat.flow.qubit_optimization" title="pyQCat.flow.qubit_optimization"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qubit_optimization</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.readout_calibration.html#module-pyQCat.flow.readout_calibration" title="pyQCat.flow.readout_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readout_calibration</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../flow/stubs/pyQCat.flow.common.html#module-pyQCat.flow.common" title="pyQCat.flow.common"><code class="xref py py-obj docutils literal notranslate"><span class="pre">common</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.is_tunable">
+<span class="sig-name descname"><span class="pre">is_tunable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_bit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_f</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_flux</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">1.2,</span> <span class="pre">1.2,</span> <span class="pre">0.04)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.is_tunable" title="永久链接至目标">¶</a></dt>
+<dd><p>Whether the bit can be tunable</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]) – Qubit list</p></li>
+<li><p><strong>scan_f</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – freq scan range</p></li>
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – scan points</p></li>
+<li><p><strong>IFBW</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – The IF bandwidth of the network analyzer</p></li>
+<li><p><strong>probe_power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The power of network analyzer</p></li>
+<li><p><strong>scan_flux</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – scan dc list, (start, end, step)</p></li>
+<li><p><strong>network_analyzer</strong> – Network analyzer model. default ‘E5071C’</p></li>
+<li><p><strong>qaio_ip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Qaio IP</p></li>
+<li><p><strong>qaio_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Qaio type, {8, 30}, optional.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.is_goodness">
+<span class="sig-name descname"><span class="pre">is_goodness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">35</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-</span> <span class="pre">6,</span> <span class="pre">4]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hight_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.is_goodness" title="永久链接至目标">¶</a></dt>
+<dd><p>Whether the bit can be goodness</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit</strong> (<a class="reference internal" href="pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>) – Qubit</p></li>
+<li><p><strong>dc_correct</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>]) – Dc correct</p></li>
+<li><p><strong>high_power</strong> – Bit’s network analyzer scans high power values</p></li>
+<li><p><strong>low_power</strong> – Bit’s network analyzer scans low power values</p></li>
+<li><p><strong>points</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Scanning points.</p></li>
+<li><p><strong>scan_range</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – probe freq scan range, format:[scan_left, scan_right]</p></li>
+<li><p><strong>IFBW</strong> – The IF bandwidth of the network analyzer</p></li>
+<li><p><strong>network_analyzer</strong> – Network analyzer model. default ‘E5071C’</p></li>
+<li><p><strong>qaio_ip</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Qaio IP</p></li>
+<li><p><strong>qaio_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Qaio type, {8, 30}, optional.</p></li>
+<li><p><strong>root</strong> – sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.freq_preliminary">
+<span class="sig-name descname"><span class="pre">freq_preliminary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[4000,</span> <span class="pre">4005,</span> <span class="pre">4010,</span> <span class="pre">4015,</span> <span class="pre">4020,</span> <span class="pre">4025,</span> <span class="pre">4030,</span> <span class="pre">4035,</span> <span class="pre">4040,</span> <span class="pre">4045,</span> <span class="pre">4050,</span> <span class="pre">4055,</span> <span class="pre">4060,</span> <span class="pre">4065,</span> <span class="pre">4070,</span> <span class="pre">4075,</span> <span class="pre">4080,</span> <span class="pre">4085,</span> <span class="pre">4090,</span> <span class="pre">4095,</span> <span class="pre">4100,</span> <span class="pre">4105,</span> <span class="pre">4110,</span> <span class="pre">4115,</span> <span class="pre">4120,</span> <span class="pre">4125,</span> <span class="pre">4130,</span> <span class="pre">4135,</span> <span class="pre">4140,</span> <span class="pre">4145,</span> <span class="pre">4150,</span> <span class="pre">4155,</span> <span class="pre">4160,</span> <span class="pre">4165,</span> <span class="pre">4170,</span> <span class="pre">4175,</span> <span class="pre">4180,</span> <span class="pre">4185,</span> <span class="pre">4190,</span> <span class="pre">4195,</span> <span class="pre">4200,</span> <span class="pre">4205,</span> <span class="pre">4210,</span> <span class="pre">4215,</span> <span class="pre">4220,</span> <span class="pre">4225,</span> <span class="pre">4230,</span> <span class="pre">4235,</span> <span class="pre">4240,</span> <span class="pre">4245,</span> <span class="pre">4250,</span> <span class="pre">4255,</span> <span class="pre">4260,</span> <span class="pre">4265,</span> <span class="pre">4270,</span> <span class="pre">4275,</span> <span class="pre">4280,</span> <span class="pre">4285,</span> <span class="pre">4290,</span> <span class="pre">4295,</span> <span class="pre">4300,</span> <span class="pre">4305,</span> <span class="pre">4310,</span> <span class="pre">4315,</span> <span class="pre">4320,</span> <span class="pre">4325,</span> <span class="pre">4330,</span> <span class="pre">4335,</span> <span class="pre">4340,</span> <span class="pre">4345,</span> <span class="pre">4350,</span> <span class="pre">4355,</span> <span class="pre">4360,</span> <span class="pre">4365,</span> <span class="pre">4370,</span> <span class="pre">4375,</span> <span class="pre">4380,</span> <span class="pre">4385,</span> <span class="pre">4390,</span> <span class="pre">4395,</span> <span class="pre">4400,</span> <span class="pre">4405,</span> <span class="pre">4410,</span> <span class="pre">4415,</span> <span class="pre">4420,</span> <span class="pre">4425,</span> <span class="pre">4430,</span> <span class="pre">4435,</span> <span class="pre">4440,</span> <span class="pre">4445,</span> <span class="pre">4450,</span> <span class="pre">4455,</span> <span class="pre">4460,</span> <span class="pre">4465,</span> <span class="pre">4470,</span> <span class="pre">4475,</span> <span class="pre">4480,</span> <span class="pre">4485,</span> <span class="pre">4490,</span> <span class="pre">4495,</span> <span class="pre">4500,</span> <span class="pre">4505,</span> <span class="pre">4510,</span> <span class="pre">4515,</span> <span class="pre">4520,</span> <span class="pre">4525,</span> <span class="pre">4530,</span> <span class="pre">4535,</span> <span class="pre">4540,</span> <span class="pre">4545,</span> <span class="pre">4550,</span> <span class="pre">4555,</span> <span class="pre">4560,</span> <span class="pre">4565,</span> <span class="pre">4570,</span> <span class="pre">4575,</span> <span class="pre">4580,</span> <span class="pre">4585,</span> <span class="pre">4590,</span> <span class="pre">4595,</span> <span class="pre">4600,</span> <span class="pre">4605,</span> <span class="pre">4610,</span> <span class="pre">4615,</span> <span class="pre">4620,</span> <span class="pre">4625,</span> <span class="pre">4630,</span> <span class="pre">4635,</span> <span class="pre">4640,</span> <span class="pre">4645,</span> <span class="pre">4650,</span> <span class="pre">4655,</span> <span class="pre">4660,</span> <span class="pre">4665,</span> <span class="pre">4670,</span> <span class="pre">4675,</span> <span class="pre">4680,</span> <span class="pre">4685,</span> <span class="pre">4690,</span> <span class="pre">4695,</span> <span class="pre">4700,</span> <span class="pre">4705,</span> <span class="pre">4710,</span> <span class="pre">4715,</span> <span class="pre">4720,</span> <span class="pre">4725,</span> <span class="pre">4730,</span> <span class="pre">4735,</span> <span class="pre">4740,</span> <span class="pre">4745,</span> <span class="pre">4750,</span> <span class="pre">4755,</span> <span class="pre">4760,</span> <span class="pre">4765,</span> <span class="pre">4770,</span> <span class="pre">4775,</span> <span class="pre">4780,</span> <span class="pre">4785,</span> <span class="pre">4790,</span> <span class="pre">4795,</span> <span class="pre">4800,</span> <span class="pre">4805,</span> <span class="pre">4810,</span> <span class="pre">4815,</span> <span class="pre">4820,</span> <span class="pre">4825,</span> <span class="pre">4830,</span> <span class="pre">4835,</span> <span class="pre">4840,</span> <span class="pre">4845,</span> <span class="pre">4850,</span> <span class="pre">4855,</span> <span class="pre">4860,</span> <span class="pre">4865,</span> <span class="pre">4870,</span> <span class="pre">4875,</span> <span class="pre">4880,</span> <span class="pre">4885,</span> <span class="pre">4890,</span> <span class="pre">4895,</span> <span class="pre">4900,</span> <span class="pre">4905,</span> <span class="pre">4910,</span> <span class="pre">4915,</span> <span class="pre">4920,</span> <span class="pre">4925,</span> <span class="pre">4930,</span> <span class="pre">4935,</span> <span class="pre">4940,</span> <span class="pre">4945,</span> <span class="pre">4950,</span> <span class="pre">4955,</span> <span class="pre">4960,</span> <span class="pre">4965,</span> <span class="pre">4970,</span> <span class="pre">4975,</span> <span class="pre">4980,</span> <span class="pre">4985,</span> <span class="pre">4990,</span> <span class="pre">4995,</span> <span class="pre">5000,</span> <span class="pre">5005,</span> <span class="pre">5010,</span> <span class="pre">5015,</span> <span class="pre">5020,</span> <span class="pre">5025,</span> <span class="pre">5030,</span> <span class="pre">5035,</span> <span class="pre">5040,</span> <span class="pre">5045,</span> <span class="pre">5050,</span> <span class="pre">5055,</span> <span class="pre">5060,</span> <span class="pre">5065,</span> <span class="pre">5070,</span> <span class="pre">5075,</span> <span class="pre">5080,</span> <span class="pre">5085,</span> <span class="pre">5090,</span> <span class="pre">5095,</span> <span class="pre">5100,</span> <span class="pre">5105,</span> <span class="pre">5110,</span> <span class="pre">5115,</span> <span class="pre">5120,</span> <span class="pre">5125,</span> <span class="pre">5130,</span> <span class="pre">5135,</span> <span class="pre">5140,</span> <span class="pre">5145,</span> <span class="pre">5150,</span> <span class="pre">5155,</span> <span class="pre">5160,</span> <span class="pre">5165,</span> <span class="pre">5170,</span> <span class="pre">5175,</span> <span class="pre">5180,</span> <span class="pre">5185,</span> <span class="pre">5190,</span> <span class="pre">5195,</span> <span class="pre">5200,</span> <span class="pre">5205,</span> <span class="pre">5210,</span> <span class="pre">5215,</span> <span class="pre">5220,</span> <span class="pre">5225,</span> <span class="pre">5230,</span> <span class="pre">5235,</span> <span class="pre">5240,</span> <span class="pre">5245,</span> <span class="pre">5250,</span> <span class="pre">5255,</span> <span class="pre">5260,</span> <span class="pre">5265,</span> <span class="pre">5270,</span> <span class="pre">5275,</span> <span class="pre">5280,</span> <span class="pre">5285,</span> <span class="pre">5290,</span> <span class="pre">5295,</span> <span class="pre">5300,</span> <span class="pre">5305,</span> <span class="pre">5310,</span> <span class="pre">5315,</span> <span class="pre">5320,</span> <span class="pre">5325,</span> <span class="pre">5330,</span> <span class="pre">5335,</span> <span class="pre">5340,</span> <span class="pre">5345,</span> <span class="pre">5350,</span> <span class="pre">5355,</span> <span class="pre">5360,</span> <span class="pre">5365,</span> <span class="pre">5370,</span> <span class="pre">5375,</span> <span class="pre">5380,</span> <span class="pre">5385,</span> <span class="pre">5390,</span> <span class="pre">5395,</span> <span class="pre">5400,</span> <span class="pre">5405,</span> <span class="pre">5410,</span> <span class="pre">5415,</span> <span class="pre">5420,</span> <span class="pre">5425,</span> <span class="pre">5430,</span> <span class="pre">5435,</span> <span class="pre">5440,</span> <span class="pre">5445,</span> <span class="pre">5450,</span> <span class="pre">5455,</span> <span class="pre">5460,</span> <span class="pre">5465,</span> <span class="pre">5470,</span> <span class="pre">5475,</span> <span class="pre">5480,</span> <span class="pre">5485,</span> <span class="pre">5490,</span> <span class="pre">5495,</span> <span class="pre">5500,</span> <span class="pre">5505,</span> <span class="pre">5510,</span> <span class="pre">5515,</span> <span class="pre">5520,</span> <span class="pre">5525,</span> <span class="pre">5530,</span> <span class="pre">5535,</span> <span class="pre">5540,</span> <span class="pre">5545,</span> <span class="pre">5550,</span> <span class="pre">5555,</span> <span class="pre">5560,</span> <span class="pre">5565,</span> <span class="pre">5570,</span> <span class="pre">5575,</span> <span class="pre">5580,</span> <span class="pre">5585,</span> <span class="pre">5590,</span> <span class="pre">5595,</span> <span class="pre">5600,</span> <span class="pre">5605,</span> <span class="pre">5610,</span> <span class="pre">5615,</span> <span class="pre">5620,</span> <span class="pre">5625,</span> <span class="pre">5630,</span> <span class="pre">5635,</span> <span class="pre">5640,</span> <span class="pre">5645,</span> <span class="pre">5650,</span> <span class="pre">5655,</span> <span class="pre">5660,</span> <span class="pre">5665,</span> <span class="pre">5670,</span> <span class="pre">5675,</span> <span class="pre">5680,</span> <span class="pre">5685,</span> <span class="pre">5690,</span> <span class="pre">5695,</span> <span class="pre">5700,</span> <span class="pre">5705,</span> <span class="pre">5710,</span> <span class="pre">5715,</span> <span class="pre">5720,</span> <span class="pre">5725,</span> <span class="pre">5730,</span> <span class="pre">5735,</span> <span class="pre">5740,</span> <span class="pre">5745,</span> <span class="pre">5750,</span> <span class="pre">5755,</span> <span class="pre">5760,</span> <span class="pre">5765,</span> <span class="pre">5770,</span> <span class="pre">5775,</span> <span class="pre">5780,</span> <span class="pre">5785,</span> <span class="pre">5790,</span> <span class="pre">5795,</span> <span class="pre">5800,</span> <span class="pre">5805,</span> <span class="pre">5810,</span> <span class="pre">5815,</span> <span class="pre">5820,</span> <span class="pre">5825,</span> <span class="pre">5830,</span> <span class="pre">5835,</span> <span class="pre">5840,</span> <span class="pre">5845,</span> <span class="pre">5850,</span> <span class="pre">5855,</span> <span class="pre">5860,</span> <span class="pre">5865,</span> <span class="pre">5870,</span> <span class="pre">5875,</span> <span class="pre">5880,</span> <span class="pre">5885,</span> <span class="pre">5890,</span> <span class="pre">5895,</span> <span class="pre">5900,</span> <span class="pre">5905,</span> <span class="pre">5910,</span> <span class="pre">5915,</span> <span class="pre">5920,</span> <span class="pre">5925,</span> <span class="pre">5930,</span> <span class="pre">5935,</span> <span class="pre">5940,</span> <span class="pre">5945,</span> <span class="pre">5950,</span> <span class="pre">5955,</span> <span class="pre">5960,</span> <span class="pre">5965,</span> <span class="pre">5970,</span> <span class="pre">5975,</span> <span class="pre">5980,</span> <span class="pre">5985,</span> <span class="pre">5990,</span> <span class="pre">5995,</span> <span class="pre">6000]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[5,</span> <span class="pre">10,</span> <span class="pre">15,</span> <span class="pre">20,</span> <span class="pre">25,</span> <span class="pre">30,</span> <span class="pre">35,</span> <span class="pre">40,</span> <span class="pre">45,</span> <span class="pre">50,</span> <span class="pre">55,</span> <span class="pre">60,</span> <span class="pre">65,</span> <span class="pre">70,</span> <span class="pre">75,</span> <span class="pre">80,</span> <span class="pre">85,</span> <span class="pre">90,</span> <span class="pre">95,</span> <span class="pre">100,</span> <span class="pre">105,</span> <span class="pre">110,</span> <span class="pre">115,</span> <span class="pre">120,</span> <span class="pre">125,</span> <span class="pre">130,</span> <span class="pre">135,</span> <span class="pre">140,</span> <span class="pre">145,</span> <span class="pre">150,</span> <span class="pre">155,</span> <span class="pre">160,</span> <span class="pre">165,</span> <span class="pre">170,</span> <span class="pre">175,</span> <span class="pre">180,</span> <span class="pre">185,</span> <span class="pre">190,</span> <span class="pre">195,</span> <span class="pre">200]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rabi_beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.freq_preliminary" title="永久链接至目标">¶</a></dt>
+<dd><p>测量比特频率</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Insrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – chanel compensate</p></li>
+<li><p><strong>dc_correct</strong> – dc correct dict</p></li>
+<li><p><strong>fq_list</strong> – scan freq list</p></li>
+<li><p><strong>width_list</strong> – the scan width list of rabi</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>amp_coefficient</strong> – Amplitude coefficient, ranging from 0 to 1</p></li>
+<li><p><strong>power_step</strong> – Step size of qubit measurement</p></li>
+<li><p><strong>noise_percentage</strong> – Percentage of noise measurement</p></li>
+<li><p><strong>rabi_beta</strong> – enlargement factor of spectrum analysis</p></li>
+<li><p><strong>root</strong> – expand save file</p></li>
+<li><p><strong>log_path</strong> – qubit log path</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.cavity_freq_update">
+<span class="sig-name descname"><span class="pre">cavity_freq_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_freq_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.cavity_freq_update" title="永久链接至目标">¶</a></dt>
+<dd><p>Update cavity freq</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dc_correct</strong> – </p></li>
+<li><p><strong>scan_freq</strong> – scan freq range</p></li>
+<li><p><strong>scan_freq_step</strong> – scan freq step</p></li>
+<li><p><strong>root</strong> – sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.find_cavity_freq">
+<span class="sig-name descname"><span class="pre">find_cavity_freq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6300000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6600000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">15</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cavity_count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.find_cavity_freq" title="永久链接至目标">¶</a></dt>
+<dd><p>Get cavity freq</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubits</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]) – Qubit list</p></li>
+<li><p><strong>fc_start</strong> – scan freq start</p></li>
+<li><p><strong>fc_end</strong> – scan freq end</p></li>
+<li><p><strong>N</strong> – scan points</p></li>
+<li><p><strong>IFBW</strong> – The IF bandwidth of the network analyzer</p></li>
+<li><p><strong>probe_power</strong> – The power of network analyzer</p></li>
+<li><p><strong>network_analyzer</strong> – Network analyzer model. default ‘E5071C’</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qtp">
+<span class="sig-name descname"><span class="pre">qtp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">yaml_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qtp" title="永久链接至目标">¶</a></dt>
+<dd><p>自动化校准流程启动接口</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>yaml_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – </p>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

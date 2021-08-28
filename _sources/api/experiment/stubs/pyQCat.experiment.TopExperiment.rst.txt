@@ -1,0 +1,38 @@
+﻿pyQCat.experiment.TopExperiment
+===============================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: TopExperiment
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~TopExperiment.__init__
+      ~TopExperiment.acquire_pulse
+      ~TopExperiment.bind_probe_inst
+      ~TopExperiment.config_file_sys
+      ~TopExperiment.get_qubit_str
+      ~TopExperiment.init_readout
+      ~TopExperiment.play_pulse
+      ~TopExperiment.plot_schedule
+      ~TopExperiment.register
+      ~TopExperiment.run
+      ~TopExperiment.save_data
+      ~TopExperiment.save_parameters
+      ~TopExperiment.set_multiple_IF
+      ~TopExperiment.set_multiple_index
+      ~TopExperiment.set_readout2q_params
+      ~TopExperiment.set_readout_delay
+      ~TopExperiment.set_sweep_order
+   
+   
+
+   
+   
+   

@@ -1,0 +1,30 @@
+﻿pyQCat.flow.qubit\_freq\_calibration
+====================================
+
+.. automodule:: pyQCat.flow.qubit_freq_calibration
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      ramsey_cali_freq
+      ramsey_experiment
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

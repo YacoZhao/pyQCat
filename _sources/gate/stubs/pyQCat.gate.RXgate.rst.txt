@@ -1,0 +1,30 @@
+﻿pyQCat.gate.RXgate
+==================
+
+.. currentmodule:: pyQCat.gate
+
+.. autoclass:: RXgate
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RXgate.__init__
+      ~RXgate.to_pulse
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RXgate.matrix
+      ~RXgate.name
+   
+   

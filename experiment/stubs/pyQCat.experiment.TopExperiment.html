@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.experiment.TopExperiment &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.experiment.TopExperiment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-experiment-topexperiment">
+<h1>pyQCat.experiment.TopExperiment<a class="headerlink" href="#pyqcat-experiment-topexperiment" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">TopExperiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_drive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_readout_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sequence'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>量子比特实验基类</p>
+<p>量子比特测试及校准实验顶层接口，包含了量子比特测试实验所必须的属性和方法，如果你想实现新的实验，建议你继承此类，
+同时重写 <code class="docutils literal notranslate"><span class="pre">run()</span></code> 方法实现具体的操作</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> (<a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument"><em>Instrument</em></a>) – 设备对象，封装了实验相关参数的数据库映射对象，集成了各种数据交互操作</p></li>
+<li><p><strong>qubits</strong> (<a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit"><em>Qubit</em></a>) – 量子比特对象，封装了量子比特的待表征参数（如读取频率、读取功率、驱动频率、驱动功率、门操作脉冲参数等），它是
+量子比特测试及校准的核心对象</p></li>
+<li><p><strong>correct_dc</strong> (<em>Dict</em>) – 字典类型，字典的键为各个比特施加DC电压的通道值，字典的值表示施加到该比特位的DC电压值</p></li>
+<li><p><strong>compensate</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.PulseCorrection" title="pyQCat.PulseCorrection"><em>PulseCorrection</em></a><em>, </em><em>List</em><em>[</em><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.PulseCorrection" title="pyQCat.PulseCorrection"><em>PulseCorrection</em></a><em>]</em><em>]</em>) – 波形校准对象，用来加载畸变数据和由于硬件导致的波形延时数据,
+执行单比特实验时，我们只需要输入待测试比特对应的校准对象即可，而执行多比特实验时，我们需要输入每个比特对象的波形校准对象构成
+列表传入</p></li>
+<li><p><strong>repeat</strong> (<em>int</em>) – 实验重复次数，默认为1000。该属性可以理解为小循环，量子比特校准实验在每一个具体的扫描参数下都会重复执行 <code class="docutils literal notranslate"><span class="pre">repeat</span></code>
+次，比特具备一定数量的小循环次数，才可以统计出当前比特在 0 态和 1 态下的概率 <code class="docutils literal notranslate"><span class="pre">P0</span></code> 和 <code class="docutils literal notranslate"><span class="pre">P1</span></code></p></li>
+<li><p><strong>bind_dc</strong> (<em>bool</em>) – 是否为一体机绑定当前比特的初始电压，默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p><strong>bind_drive</strong> (<em>bool</em>) – 是否为一体机绑定当前比特的驱动参数（驱动频率、驱动功率），默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p><strong>bind_probe</strong> (<em>bool</em>) – 是否为一体机绑定当前比特的读取参数（读取频率、读取功率、采样延时、采样带宽），默认为 <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p><strong>discriminator</strong> (<em>Union</em><em>[</em><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.IQdiscriminator" title="pyQCat.IQdiscriminator"><em>IQdiscriminator</em></a><em>, </em><em>List</em><em>[</em><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.IQdiscriminator" title="pyQCat.IQdiscriminator"><em>IQdiscriminator</em></a><em>]</em><em>]</em>) – <cite>IQ</cite> 分类器，用来将实验测量结果进行分类
+从而以不同状态的概率呈现，如 <cite>P0-P1</cite> 。如果此参数为空，则会用 <cite>amp-phase</cite> 的方式展示实验测试结果</p></li>
+<li><p><strong>label</strong> (<em>str</em>) – 实验标签，可选参数，当需要为实验结果文件夹自定义名称时，可以自定义 <cite>label</cite> 传入</p></li>
+<li><p><strong>multi_readout_channels</strong> (<em>List</em>) – 列表类型，当实验需要多个读取通道时，一般通过自定义读取通道列表传入实验中，默认为空</p></li>
+<li><p><strong>schedule_type</strong> (<em>str</em>) – 绘制时序图的类型，决定以什么样的方式绘制波形时序图；默认为 <cite>sequence</cite> 类型，此外还可以设置为
+<cite>envelop</cite> ，如果为 <cite>envelop</cite> 类型，则对 <cite>XY</cite> 线的波形数据使用希尔伯特变换计算解析信号，然后再绘制时序图</p></li>
+<li><p><strong>id</strong> – 实验数据库映射类 ExperimentDoc 的数据库存储 id</p></li>
+<li><p><strong>analysis</strong> (<a class="reference internal" href="pyQCat.experiment.TopAnalysis.html#pyQCat.experiment.TopAnalysis" title="pyQCat.experiment.TopAnalysis"><em>TopAnalysis</em></a>) – 用于绑定实验结果分析类</p></li>
+<li><p><strong>qubit</strong> (<a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit"><em>Qubit</em></a>) – 当实验输出比特对象仅有一个（即单比特实验），该属性会被赋值，否则该属性为空</p></li>
+<li><p><strong>file</strong> (<a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.SaveFile" title="pyQCat.SaveFile"><em>SaveFile</em></a>) – 实验结果文件操作对象，实现了生成路径，数据保存等一系列功能</p></li>
+<li><p><strong>xy_pulses</strong> (<em>Dict</em>) – 字典类型，记录各个比特 <cite>XY</cite> 线上施加的波形，字典的键为比特对象，字典的值为波形对象或由波形对象构成的列表</p></li>
+<li><p><strong>z_pulses</strong> (<em>Dict</em>) – 字典类型，记录各个比特 <cite>Z</cite> 线上施加的波形，字典的键为比特对象，字典的值为波形对象或由波形对象构成的列表</p></li>
+<li><p><strong>readout_pulses</strong> (<em>List</em>) – 列表类型，记录读取通道上施加的波形</p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_drive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_readout_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sequence'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.__init__" title="永久链接至目标">¶</a></dt>
+<dd><p>Initialize method</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.__init__" title="pyQCat.experiment.TopExperiment.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(inst, *qubits[, correct_dc, …])</p></td>
+<td><p>Initialize method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.acquire_pulse" title="pyQCat.experiment.TopExperiment.acquire_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acquire_pulse</span></code></a>(acq_pulse[, qubit])</p></td>
+<td><p>设置读取波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.bind_probe_inst" title="pyQCat.experiment.TopExperiment.bind_probe_inst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bind_probe_inst</span></code></a>(qubit)</p></td>
+<td><p>为一体机读取模块绑定初始化参数。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.config_file_sys" title="pyQCat.experiment.TopExperiment.config_file_sys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_file_sys</span></code></a>([name, display])</p></td>
+<td><p>设置实验分析结果文件的保存路径</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.init_readout" title="pyQCat.experiment.TopExperiment.init_readout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_readout</span></code></a>([time, amp, IF, channel])</p></td>
+<td><p>初始化读取模块，为读取线添加波形</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.play_pulse" title="pyQCat.experiment.TopExperiment.play_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play_pulse</span></code></a>(name, qubit, pulse)</p></td>
+<td><p>给 XY 或 Z 线绑定波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.plot_schedule" title="pyQCat.experiment.TopExperiment.plot_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_schedule</span></code></a>([xy_index, is_save])</p></td>
+<td><p>绘制波形时序图</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.register" title="pyQCat.experiment.TopExperiment.register"><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code></a>([data_type, enable_one_sweep])</p></td>
+<td><p>注册实验</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.run" title="pyQCat.experiment.TopExperiment.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(*args, **kwargs)</p></td>
+<td><p>实验运行接口，具体实现流程由子类定义</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.save_data" title="pyQCat.experiment.TopExperiment.save_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_data</span></code></a>(*args[, file_name])</p></td>
+<td><p>保存自定义的数据到当前实验预先生成的结果路径下</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.save_parameters" title="pyQCat.experiment.TopExperiment.save_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_parameters</span></code></a>(**kwargs)</p></td>
+<td><p>保存实验参数到本地目录</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.set_multiple_IF" title="pyQCat.experiment.TopExperiment.set_multiple_IF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_multiple_IF</span></code></a>(*IF[, channel])</p></td>
+<td><p>联合读取实验中用来设置多个中频</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.set_multiple_index" title="pyQCat.experiment.TopExperiment.set_multiple_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_multiple_index</span></code></a>(*args[, channel])</p></td>
+<td><p>联合读取实验中用来设置各个比特波形的选择范围</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.set_readout2q_params" title="pyQCat.experiment.TopExperiment.set_readout2q_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_readout2q_params</span></code></a>([IF, channel])</p></td>
+<td><p>设置两比特联合读取波形</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.set_readout_delay" title="pyQCat.experiment.TopExperiment.set_readout_delay"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_readout_delay</span></code></a>(*delay[, channel])</p></td>
+<td><p>设置读取通道波形的脉冲触发延时</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.experiment.TopExperiment.set_sweep_order" title="pyQCat.experiment.TopExperiment.set_sweep_order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_sweep_order</span></code></a>(order_list)</p></td>
+<td><p>调整扫描参数的施加顺序</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.config_file_sys">
+<span class="sig-name descname"><span class="pre">config_file_sys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.config_file_sys" title="永久链接至目标">¶</a></dt>
+<dd><p>设置实验分析结果文件的保存路径</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – 自定义实验名称，默认为空。如果不为空，则结果文件会在最后新开辟一个以 <code class="docutils literal notranslate"><span class="pre">name</span></code> 命名的新文件夹来存放实验结果</p></li>
+<li><p><strong>display</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否将实验结果保存路径以日志的形式输出</p></li>
+</ul>
+</dd>
+</dl>
+<p>路径名称为: <code class="docutils literal notranslate"><span class="pre">sample/time/qubit/lable/time-name</span></code></p>
+<ul class="simple">
+<li><p><strong>sample:</strong> 从比特对象(Qubit)的 <code class="docutils literal notranslate"><span class="pre">sample</span></code> 属性中记录</p></li>
+<li><p><strong>time:</strong> 生成当前时间戳，转化为 <strong>年月日</strong> 字符串</p></li>
+<li><p><strong>qubit:</strong> 从当前 <code class="docutils literal notranslate"><span class="pre">qubits</span></code> 属性中生成的关于实验目标比特的字符串，如果 <code class="docutils literal notranslate"><span class="pre">q0</span></code> 、 <code class="docutils literal notranslate"><span class="pre">q0q1</span></code></p></li>
+<li><p><strong>label:</strong> 如果初始化实验的时候没有提供 <code class="docutils literal notranslate"><span class="pre">label</span></code> 属性，则默认将当前类名幅值给它</p></li>
+<li><p><strong>time-name:</strong> <code class="docutils literal notranslate"><span class="pre">time</span></code> 为当前时间戳转化为 <strong>年月日时分秒</strong> 的字符串，如果当前方法提供了 <code class="docutils literal notranslate"><span class="pre">name</span></code> 属性，则会       在 <code class="docutils literal notranslate"><span class="pre">time</span></code> 后面用 <code class="docutils literal notranslate"><span class="pre">-</span></code> 进行连接,生成 <code class="docutils literal notranslate"><span class="pre">time-name</span></code> 的形式</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">案例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>假设我们有：
+sample: D:\Qubit\D4
+time: 2021-08-18
+qubit: q0
+lable: XEB
+name: None
+则最终生成的存储文件路径为: ``D:\Qubit\D41-08-18\q0\XEB``
+</pre></div>
+</div>
+<p>你可以非常方便的在实验逻辑执行之前调用此方法，如：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">config_file_sys</span><span class="p">()</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">config_file_sys</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">display</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># 生成文件目录，但不打印日志</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.get_qubit_str">
+<span class="sig-name descname"><span class="pre">get_qubit_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.get_qubit_str" title="永久链接至目标">¶</a></dt>
+<dd><p>Get qubit str, an args qubit for SaveFile class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>string, use to create save data path.</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>qubit_str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.save_data">
+<span class="sig-name descname"><span class="pre">save_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.save_data" title="永久链接至目标">¶</a></dt>
+<dd><p>保存自定义的数据到当前实验预先生成的结果路径下</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – 期望保存的数据</p></li>
+<li><p><strong>file_name</strong> – 期望保存后的文件名称，默认为空，如果为空，则用 <code class="docutils literal notranslate"><span class="pre">0、1、2</span></code> 数字序列生成文件名</p></li>
+</ul>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">save_data</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>  <span class="c1"># 输出 0.dat</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">save_data</span><span class="p">(</span><span class="n">data2</span><span class="p">)</span>  <span class="c1"># 输出 1.dat</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">save_data</span><span class="p">(</span><span class="n">data3</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>  <span class="c1"># 输出 test.dat</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.errors.SaveFileError" title="pyQCat.errors.SaveFileError"><strong>SaveFileError</strong></a> – 保存数据的过程发成异常，并提示错误原因，通常情况下异常原因是在调用此方法之前没有初始化 <code class="docutils literal notranslate"><span class="pre">file</span></code> 属性</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.save_parameters">
+<span class="sig-name descname"><span class="pre">save_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.save_parameters" title="永久链接至目标">¶</a></dt>
+<dd><p>保存实验参数到本地目录</p>
+<p>调用此方法会将与当前实验绑定的实验参数 <code class="docutils literal notranslate"><span class="pre">MeasureAIODoc</span></code> 和量子比特对象 <code class="docutils literal notranslate"><span class="pre">QubitDoc</span></code> 以文件的形式存储
+到提前生成的实验结果路径中。其中测量参数 <code class="docutils literal notranslate"><span class="pre">MeasureAIODoc</span></code> 会保存成 <cite>json</cite> 文件， <code class="docutils literal notranslate"><span class="pre">Qubit</span></code> 参数
+会保存成 <cite>txt</cite> 文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>**kwargs</strong> – 实验测量参数，传入字典类型的数据。</p>
+</dd>
+<dt class="field-even">注意</dt>
+<dd class="field-even"><p>传入的 <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> 参数必须为 <code class="docutils literal notranslate"><span class="pre">MeasureAIODoc</span></code> 对象的属性</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.play_pulse">
+<span class="sig-name descname"><span class="pre">play_pulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pulse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.play_pulse" title="永久链接至目标">¶</a></dt>
+<dd><p>给 XY 或 Z 线绑定波形</p>
+<p>该方法主要完成线路波形的绑定，并未真正将波形参数下传至数据库，当前操作会给 <code class="docutils literal notranslate"><span class="pre">self.xy_pulses</span></code> 和 <code class="docutils literal notranslate"><span class="pre">self.z_pulses</span></code> 属
+性绑定好输出波形，改方法只支持 XY 线 和 Z 线，读取通道施加波形此方法并不支持</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 只能设置为 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">Z</span></code> ，单比特实验读取通道的波形在实验初始化时已经设置</p></li>
+<li><p><strong>qubit</strong> (<a class="reference internal" href="../../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>) – 比特对象，指明脉冲施加的对象。</p></li>
+<li><p><strong>pulse</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <a class="reference internal" href="../../_auto/pyQCat.pulse.html#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">PulseComponent</span></code></a>]) – 脉冲对象，封装了加载到硬件上的波形，支持波形列表</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NameError</strong> – 当 <code class="docutils literal notranslate"><span class="pre">name</span></code> 参数值既不是 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 也不是 <code class="docutils literal notranslate"><span class="pre">Z</span></code></p></li>
+<li><p><strong>TypeError</strong> – 当 <code class="docutils literal notranslate"><span class="pre">pulse</span></code> 参数不是期望的 <code class="docutils literal notranslate"><span class="pre">PulseComponent</span></code> 对象时</p></li>
+</ul>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p>在调用此方法之前，脉冲对象必须提前调用自己的 <code class="docutils literal notranslate"><span class="pre">get_pulse</span></code> 方法</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">play_pulse</span><span class="p">(</span><span class="s2">&quot;XY&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">qubit</span><span class="p">,</span> <span class="n">xy_pulse_list</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">play_pulse</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">qubit</span><span class="p">,</span> <span class="n">z_pulse_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.acquire_pulse">
+<span class="sig-name descname"><span class="pre">acquire_pulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acq_pulse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.acquire_pulse" title="永久链接至目标">¶</a></dt>
+<dd><p>设置读取波形</p>
+<p>执行单比特实验室，通常情况你不需要调用此方法，因为我们在初始化实验的时候就通过 <code class="docutils literal notranslate"><span class="pre">init_readout</span></code> 方法绑定了读取通道波形。
+当多比特实验，施加联合读取波形或者施加新的读取波形时，你可以调用此方法。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>acq_pulse</strong> (<a class="reference internal" href="../../_auto/pyQCat.pulse.html#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">PulseComponent</span></code></a>) – 读取波形对象</p></li>
+<li><p><strong>qubit</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="../../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>]) – 施加的 <code class="docutils literal notranslate"><span class="pre">Qubit</span></code> 对象，可以用来获取读取通道值，默认为空，如果为空，则从
+实验的 <code class="docutils literal notranslate"><span class="pre">qubits[0]</span></code> 属性中加载读取通道</p></li>
+</ul>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">amp_list</span><span class="p">,</span> <span class="n">IF_list</span><span class="p">,</span> <span class="n">index_list</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">qubit</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">qubits</span><span class="p">:</span>
+    <span class="n">amp_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qubit</span><span class="o">.</span><span class="n">union_readout</span><span class="o">.</span><span class="n">amp</span><span class="p">)</span>
+    <span class="n">IF_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qubit</span><span class="o">.</span><span class="n">union_readout</span><span class="o">.</span><span class="n">probe_IF</span><span class="p">)</span>
+    <span class="n">index_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">qubit</span><span class="o">.</span><span class="n">union_readout</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">union_readout_channel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">qubits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">readout_channel</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">set_multiple_IF</span><span class="p">(</span><span class="o">*</span><span class="n">IF_list</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">union_readout_channel</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">set_multiple_index</span><span class="p">(</span><span class="o">*</span><span class="n">index_list</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">union_readout_channel</span><span class="p">)</span>
+<span class="n">union_readout_pulse</span> <span class="o">=</span> <span class="n">AcquireSine</span><span class="p">(</span><span class="n">acq_time</span><span class="p">,</span> <span class="n">amp_list</span><span class="p">,</span> <span class="n">IF_list</span><span class="p">)</span>
+<span class="n">union_readout_pulse</span><span class="o">.</span><span class="n">get_pulse</span><span class="p">()</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">readout_pulses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">union_readout_pulse</span><span class="p">)</span>
+<span class="c1"># 施加联合读取波形</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">acquire_pulse</span><span class="p">(</span><span class="n">union_readout_pulse</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.set_multiple_IF">
+<span class="sig-name descname"><span class="pre">set_multiple_IF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">IF</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.set_multiple_IF" title="永久链接至目标">¶</a></dt>
+<dd><p>联合读取实验中用来设置多个中频</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*IF</strong> – 多个比特的中频</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 读取通道值，默认为1</p></li>
+</ul>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">IF_list</span> <span class="o">=</span> <span class="p">[</span><span class="mf">553.2</span><span class="p">,</span> <span class="mf">697.2</span><span class="p">]</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">set_multiple_IF</span><span class="p">(</span><span class="o">*</span><span class="n">IF_list</span><span class="p">,</span> <span class="n">channel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.set_multiple_index">
+<span class="sig-name descname"><span class="pre">set_multiple_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.set_multiple_index" title="永久链接至目标">¶</a></dt>
+<dd><p>联合读取实验中用来设置各个比特波形的选择范围</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*args</strong> – 由长度为2的列表组成的参数，列表中2个元素分别表示选择波形参数的起始索引和终止索引</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 通道值，默认为1</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – 如果提供的参数长度不为2</p>
+</dd>
+<dt class="field-odd">案例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">index1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">480.0</span><span class="p">,</span> <span class="mf">1760.0</span><span class="p">]</span>
+<span class="n">index2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">460.0</span><span class="p">,</span> <span class="mf">1560.0</span><span class="p">]</span>
+<span class="n">index_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">index1</span><span class="p">,</span> <span class="n">index2</span><span class="p">]</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">set_multiple_index</span><span class="p">(</span><span class="n">index_list</span><span class="p">,</span> <span class="n">channel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.set_readout_delay">
+<span class="sig-name descname"><span class="pre">set_readout_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">delay</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.set_readout_delay" title="永久链接至目标">¶</a></dt>
+<dd><p>设置读取通道波形的脉冲触发延时</p>
+<p>读取通道上的脉冲必须等到 XY 线和 Z 线波形施加完成才可以激发，因此需要给读取通道施加触发延时。</p>
+<p>你一般不需要调用此方法，因为我们在 self.register() 方法中几乎为所有的实验设置了默认的触发延时。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*delay</strong> – 延时时间</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – 通道值，默认为空，从实验的 <code class="docutils literal notranslate"><span class="pre">qubit</span></code> 属性和 <code class="docutils literal notranslate"><span class="pre">qubits</span></code> 属性中加载</p></li>
+</ul>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">set_readout_delay</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="n">channel</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.set_sweep_order">
+<span class="sig-name descname"><span class="pre">set_sweep_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">order_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.set_sweep_order" title="永久链接至目标">¶</a></dt>
+<dd><p>调整扫描参数的施加顺序</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>order_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 期望更改后的排列顺序，如[2, 1, 0, 3]</p>
+</dd>
+<dt class="field-even">说明</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sweep0</span> <span class="o">=</span> <span class="n">SweepDoc</span><span class="p">()</span>
+<span class="n">sweep1</span> <span class="o">=</span> <span class="n">SweepDoc</span><span class="p">()</span>
+<span class="n">sweep2</span> <span class="o">=</span> <span class="n">SweepDoc</span><span class="p">()</span>
+<span class="n">sweep3</span> <span class="o">=</span> <span class="n">SweepDoc</span><span class="p">()</span>
+<span class="c1"># 假设有</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">_experiment</span><span class="o">.</span><span class="n">sweep_control</span> <span class="o">=</span> <span class="p">[</span><span class="n">sweep0</span><span class="p">,</span> <span class="n">sweep1</span><span class="p">,</span> <span class="n">sweep2</span><span class="p">,</span> <span class="n">sweep3</span><span class="p">]</span>
+
+<span class="n">order_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># 测输出为</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">_experiment</span><span class="o">.</span><span class="n">sweep_control</span> <span class="o">=</span> <span class="p">[</span><span class="n">sweep2</span><span class="p">,</span> <span class="n">sweep1</span><span class="p">,</span> <span class="n">sweep0</span><span class="p">,</span> <span class="n">sweep3</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'amp_phase'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_one_sweep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.register" title="永久链接至目标">¶</a></dt>
+<dd><p>注册实验</p>
+<p>这一步是实验正常运行的关键，在子实验执行流程中，必须调用此接口，它实现的功能主要有：</p>
+<ul class="simple">
+<li><p>生成 Z 线路补偿脉冲</p></li>
+<li><p>注册 XY 线和 Z 线波形至一体机</p></li>
+<li><p>自动设置读取通道脉冲的触发延时</p></li>
+<li><p>扫描参数整理</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 实验结果分析类型，可选择 <code class="docutils literal notranslate"><span class="pre">amp-phase</span></code> 或 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code>, 默认为 <code class="docutils literal notranslate"><span class="pre">amp-phase</span></code> 类型。当选择 <code class="docutils literal notranslate"><span class="pre">amp-phase</span></code>
+类型时，实验结果范围幅值和相位信息，且从设置的重复实验次数中取平均值返回； 当选择 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 类型时，会根据 <code class="docutils literal notranslate"><span class="pre">IQ</span></code> 分类器对
+实验结果进行分析，形成当前比特处在0态的概率 <code class="docutils literal notranslate"><span class="pre">P0</span></code> 和处在1态的概率 <code class="docutils literal notranslate"><span class="pre">P1</span></code> 的形式范围结果，且会返回与重复实验次数相等
+规模的 <code class="docutils literal notranslate"><span class="pre">P0-P1</span></code> 数据</p></li>
+<li><p><strong>enable_one_sweep</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 决定单个波形是否以扫描的形式添加</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>SaveConditionError</strong> – 如果注册波形等数据的时候发生了错误</p></li>
+<li><p><strong>ValueError</strong> – 如果提供的数据类型既不是 <code class="docutils literal notranslate"><span class="pre">amp-phase</span></code> 也不是 <code class="docutils literal notranslate"><span class="pre">I-Q</span></code> 时，将会报错</p></li>
+</ul>
+</dd>
+<dt class="field-odd">案例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">data_type</span> <span class="o">=</span> <span class="s2">&quot;I_Q&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">data_type</span> <span class="o">=</span> <span class="s2">&quot;amp_phase&quot;</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">data_type</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.run" title="永久链接至目标">¶</a></dt>
+<dd><p>实验运行接口，具体实现流程由子类定义</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.plot_schedule">
+<span class="sig-name descname"><span class="pre">plot_schedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xy_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.plot_schedule" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制波形时序图</p>
+<p>你可以通过 xy_index 来选择你希望看到的波形时序图，前提条件必须保真 xy_index 小于扫描波形列表的长度。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xy_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 波形索引，默认为0，即选取属性 <code class="docutils literal notranslate"><span class="pre">self.xy_pluses</span></code> 中第一个元素， <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线和 <code class="docutils literal notranslate"><span class="pre">Z</span></code> 线公用一个索引，保证一致性</p></li>
+<li><p><strong>is_save</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否保存图片，默认保存</p></li>
+</ul>
+</dd>
+<dt class="field-even">注意</dt>
+<dd class="field-even"><p>此方法调用必须在 self.play_pulse() 方法之后，否则会接受不到脉冲波形数据</p>
+</dd>
+<dt class="field-odd">案例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">play_pulse</span><span class="p">(</span><span class="s2">&quot;XY&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">qubit</span><span class="p">,</span> <span class="n">detune_pulse_list</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">data_type</span> <span class="o">=</span> <span class="s2">&quot;I_Q&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">data_type</span> <span class="o">=</span> <span class="s2">&quot;amp_phase&quot;</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">data_type</span><span class="p">)</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">analysis</span> <span class="o">=</span> <span class="n">APEAnalysis</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">data_type</span><span class="p">,</span> <span class="n">detune_list</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">)</span>
+
+<span class="c1"># plot schedule</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">plot_schedule</span><span class="p">(</span><span class="n">xy_index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.set_readout2q_params">
+<span class="sig-name descname"><span class="pre">set_readout2q_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">IF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.set_readout2q_params" title="永久链接至目标">¶</a></dt>
+<dd><p>设置两比特联合读取波形</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>IF</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 中频频率，单位 <code class="docutils literal notranslate"><span class="pre">MHZ</span></code></p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – 读取通道，默认从 <code class="docutils literal notranslate"><span class="pre">qubits</span></code> 中的第一个 <code class="docutils literal notranslate"><span class="pre">qubit</span></code> 中读取</p></li>
+</ul>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 必须保证为多比特实验，实验定义时需要传入多个比特对象</span>
+<span class="n">exp</span> <span class="o">=</span> <span class="n">TopExperiment</span><span class="p">(</span><span class="n">inst</span><span class="p">,</span> <span class="n">qubit0</span><span class="p">,</span> <span class="n">qubit1</span><span class="p">,</span> <span class="n">correct_dc</span><span class="p">,</span> <span class="n">compensate</span><span class="p">,</span> <span class="n">discriminator</span><span class="p">)</span>
+<span class="n">exp</span><span class="o">.</span><span class="n">set_readout2q_params</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.bind_probe_inst">
+<span class="sig-name descname"><span class="pre">bind_probe_inst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.bind_probe_inst" title="永久链接至目标">¶</a></dt>
+<dd><p>为一体机读取模块绑定初始化参数。</p>
+<p>包含读取频率、读取功率、采样延时、采样带宽</p>
+<p>执行单比特实验时，你不需要调用此方法，因为再初始化实验的时候我们已经帮你实现过了绑定读取参数的流程，当你面对多比特实验，
+或者 <code class="docutils literal notranslate"><span class="pre">_bind_probe</span></code> 属性为 False 时，你需要手动调用这个方法。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>qubit</strong> (<a class="reference internal" href="../../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>) – 需要绑定的比特对象</p>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">bind_probe_inst</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">qubit</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.init_readout">
+<span class="sig-name descname"><span class="pre">init_readout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.init_readout" title="永久链接至目标">¶</a></dt>
+<dd><p>初始化读取模块，为读取线添加波形</p>
+<p>一般情况下，你不需要调用此方法，我们在执行单比特实验流程中，默认调用了此方法。当你执行单比特实验流程时，
+需要修改读取脉冲波形，你可以调用此方法实现修改操作。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – 波形的宽度，默认为 None，从 qubit 属性中获取</p></li>
+<li><p><strong>amp</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – 波形的幅值，默认为 None，从 qubit 属性中获取</p></li>
+<li><p><strong>IF</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – 波形中频，默认为 None，从 qubit 属性中获取</p></li>
+<li><p><strong>channel</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – 读取通道，默认为 None，从 qubit 属性中获取</p></li>
+</ul>
+</dd>
+<dt class="field-even">案例</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="o">=</span> <span class="mf">1500.0</span>
+<span class="n">amp</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">IF</span> <span class="o">=</span> <span class="mf">600.0</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">init_readout</span><span class="p">(</span><span class="n">time</span> <span class="o">=</span> <span class="n">time</span><span class="p">,</span> <span class="n">amp</span> <span class="o">=</span> <span class="n">amp</span><span class="p">,</span> <span class="n">IF</span> <span class="o">=</span> <span class="n">IF</span><span class="p">,</span> <span class="n">channel</span> <span class="o">=</span> <span class="n">channel</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

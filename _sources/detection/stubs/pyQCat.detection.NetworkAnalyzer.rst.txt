@@ -1,0 +1,26 @@
+﻿pyQCat.detection.NetworkAnalyzer
+================================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: NetworkAnalyzer
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~NetworkAnalyzer.__init__
+      ~NetworkAnalyzer.close
+      ~NetworkAnalyzer.read_result
+      ~NetworkAnalyzer.set_center_freq
+      ~NetworkAnalyzer.set_scan_param
+   
+   
+
+   
+   
+   

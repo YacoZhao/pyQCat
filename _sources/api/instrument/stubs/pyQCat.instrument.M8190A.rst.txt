@@ -1,0 +1,29 @@
+﻿pyQCat.instrument.M8190A
+========================
+
+.. automodule:: pyQCat.instrument.M8190A
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      M8190A
+   
+   
+
+   
+   
+   
+
+
+

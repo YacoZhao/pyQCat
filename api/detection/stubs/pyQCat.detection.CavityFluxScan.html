@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.detection.CavityFluxScan &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.detection.FindCavityFreq" href="pyQCat.detection.FindCavityFreq.html" />
+    <link rel="prev" title="pyQCat.detection.QubitPreliminary" href="pyQCat.detection.QubitPreliminary.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#preliminary-instrument">Preliminary Instrument</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#qubit-preliminary">Qubit Preliminary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.detection.CavityFluxScan</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-detection-cavityfluxscan">
+<h1>pyQCat.detection.CavityFluxScan<a class="headerlink" href="#pyqcat-detection-cavityfluxscan" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityFluxScan">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">CavityFluxScan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'qaio'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityFluxScan" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="../../../_auto/pyQCat.detection.qubit_preliminary.html#pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary" title="pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.detection.qubit_preliminary.preliminary_utility.QubitPreliminary</span></code></a></p>
+<p>使用网络分析仪实验腔频扫描实验</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>network_analyzer</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 网络分析仪名称</p></li>
+<li><p><strong>dc_source</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – DC 源，默认使用一体机</p></li>
+<li><p><strong>config_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – 配置文件路径</p></li>
+<li><p><strong>qaio_ip</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – 一体机 IP 地址</p></li>
+<li><p><strong>qaio_type</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – 一体机型号，8位或30位</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityFluxScan.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network_analyzer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'E5071C'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'qaio'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityFluxScan.__init__" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../detection/stubs/pyQCat.detection.CavityFluxScan.html#pyQCat.detection.CavityFluxScan.__init__" title="pyQCat.detection.CavityFluxScan.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([network_analyzer, dc_source, …])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../detection/stubs/pyQCat.detection.CavityFluxScan.html#pyQCat.detection.CavityFluxScan.run" title="pyQCat.detection.CavityFluxScan.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([dc_list, freq_list, dc_channel, …])</p></td>
+<td><p>腔频扫描实验启动接口</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_dc_source</span></code>([dc_source, qaio_ip, qaio_type])</p></td>
+<td><p>选择 DC 源</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_mic_source</span></code>(mic_source)</p></td>
+<td><p>选择微波源</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_net_analyzer</span></code>(net_analyzer)</p></td>
+<td><p>选择矢量网络分析仪</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_path</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dc_source</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mic_source</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">net_analyzer</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../detection/stubs/pyQCat.detection.CavityFluxScan.html#pyQCat.detection.CavityFluxScan.qaio" title="pyQCat.detection.CavityFluxScan.qaio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qaio</span></code></a></p></td>
+<td><p>返回电压源</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py property">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityFluxScan.qaio">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">qaio</span></span><a class="headerlink" href="#pyQCat.detection.CavityFluxScan.qaio" title="永久链接至目标">¶</a></dt>
+<dd><p>返回电压源</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.CavityFluxScan.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dc_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[-</span> <span class="pre">1.0,</span> <span class="pre">-</span> <span class="pre">0.98,</span> <span class="pre">-</span> <span class="pre">0.96,</span> <span class="pre">-</span> <span class="pre">0.94,</span> <span class="pre">-</span> <span class="pre">0.92,</span> <span class="pre">-</span> <span class="pre">0.9,</span> <span class="pre">-</span> <span class="pre">0.88,</span> <span class="pre">-</span> <span class="pre">0.86,</span> <span class="pre">-</span> <span class="pre">0.84,</span> <span class="pre">-</span> <span class="pre">0.82,</span> <span class="pre">-</span> <span class="pre">0.8,</span> <span class="pre">-</span> <span class="pre">0.78,</span> <span class="pre">-</span> <span class="pre">0.76,</span> <span class="pre">-</span> <span class="pre">0.74,</span> <span class="pre">-</span> <span class="pre">0.72,</span> <span class="pre">-</span> <span class="pre">0.7,</span> <span class="pre">-</span> <span class="pre">0.68,</span> <span class="pre">-</span> <span class="pre">0.66,</span> <span class="pre">-</span> <span class="pre">0.64,</span> <span class="pre">-</span> <span class="pre">0.62,</span> <span class="pre">-</span> <span class="pre">0.6,</span> <span class="pre">-</span> <span class="pre">0.58,</span> <span class="pre">-</span> <span class="pre">0.56,</span> <span class="pre">-</span> <span class="pre">0.54,</span> <span class="pre">-</span> <span class="pre">0.52,</span> <span class="pre">-</span> <span class="pre">0.5,</span> <span class="pre">-</span> <span class="pre">0.48,</span> <span class="pre">-</span> <span class="pre">0.46,</span> <span class="pre">-</span> <span class="pre">0.44,</span> <span class="pre">-</span> <span class="pre">0.42,</span> <span class="pre">-</span> <span class="pre">0.4,</span> <span class="pre">-</span> <span class="pre">0.38,</span> <span class="pre">-</span> <span class="pre">0.36,</span> <span class="pre">-</span> <span class="pre">0.34,</span> <span class="pre">-</span> <span class="pre">0.32,</span> <span class="pre">-</span> <span class="pre">0.3,</span> <span class="pre">-</span> <span class="pre">0.28,</span> <span class="pre">-</span> <span class="pre">0.26,</span> <span class="pre">-</span> <span class="pre">0.24,</span> <span class="pre">-</span> <span class="pre">0.22,</span> <span class="pre">-</span> <span class="pre">0.2,</span> <span class="pre">-</span> <span class="pre">0.18,</span> <span class="pre">-</span> <span class="pre">0.16,</span> <span class="pre">-</span> <span class="pre">0.14,</span> <span class="pre">-</span> <span class="pre">0.12,</span> <span class="pre">-</span> <span class="pre">0.1,</span> <span class="pre">-</span> <span class="pre">0.08,</span> <span class="pre">-</span> <span class="pre">0.06,</span> <span class="pre">-</span> <span class="pre">0.04,</span> <span class="pre">-</span> <span class="pre">0.02,</span> <span class="pre">0.0,</span> <span class="pre">0.02,</span> <span class="pre">0.04,</span> <span class="pre">0.06,</span> <span class="pre">0.08,</span> <span class="pre">0.1,</span> <span class="pre">0.12,</span> <span class="pre">0.14,</span> <span class="pre">0.16,</span> <span class="pre">0.18,</span> <span class="pre">0.2,</span> <span class="pre">0.22,</span> <span class="pre">0.24,</span> <span class="pre">0.26,</span> <span class="pre">0.28,</span> <span class="pre">0.3,</span> <span class="pre">0.32,</span> <span class="pre">0.34,</span> <span class="pre">0.36,</span> <span class="pre">0.38,</span> <span class="pre">0.4,</span> <span class="pre">0.42,</span> <span class="pre">0.44,</span> <span class="pre">0.46,</span> <span class="pre">0.48,</span> <span class="pre">0.5,</span> <span class="pre">0.52,</span> <span class="pre">0.54,</span> <span class="pre">0.56,</span> <span class="pre">0.58,</span> <span class="pre">0.6,</span> <span class="pre">0.62,</span> <span class="pre">0.64,</span> <span class="pre">0.66,</span> <span class="pre">0.68,</span> <span class="pre">0.7,</span> <span class="pre">0.72,</span> <span class="pre">0.74,</span> <span class="pre">0.76,</span> <span class="pre">0.78,</span> <span class="pre">0.8,</span> <span class="pre">0.82,</span> <span class="pre">0.84,</span> <span class="pre">0.86,</span> <span class="pre">0.88,</span> <span class="pre">0.9,</span> <span class="pre">0.92,</span> <span class="pre">0.94,</span> <span class="pre">0.96,</span> <span class="pre">0.98,</span> <span class="pre">1.0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[6400,</span> <span class="pre">6410,</span> <span class="pre">6420,</span> <span class="pre">6430,</span> <span class="pre">6440,</span> <span class="pre">6450,</span> <span class="pre">6460,</span> <span class="pre">6470,</span> <span class="pre">6480,</span> <span class="pre">6490,</span> <span class="pre">6500]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_channel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_IFBW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic_plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_q</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ATT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.CavityFluxScan.run" title="永久链接至目标">¶</a></dt>
+<dd><p>腔频扫描实验启动接口</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dc_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 扫描的电压列表</p></li>
+<li><p><strong>freq_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 扫描的频率列表</p></li>
+<li><p><strong>dc_channel</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – DC模块的通道值</p></li>
+<li><p><strong>net_IFBW</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 网络分析仪的中频带宽</p></li>
+<li><p><strong>net_power</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 网络分析仪的功率</p></li>
+<li><p><strong>dynamic_plot</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否进行动态绘图</p></li>
+<li><p><strong>fit_q</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否使用标准 Q 拟合方式</p></li>
+<li><p><strong>root</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <a class="reference internal" href="../../../_auto/pyQCat.qubit.html#pyQCat.qubit.qubit.Qubit" title="pyQCat.qubit.qubit.Qubit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Qubit</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]) – 实验结果存储路径</p></li>
+<li><p><strong>name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – 实验名称</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>DC_max和DC_min</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.detection.FindCavityFreq.html" class="btn btn-neutral float-right" title="pyQCat.detection.FindCavityFreq" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.detection.QubitPreliminary.html" class="btn btn-neutral float-left" title="pyQCat.detection.QubitPreliminary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

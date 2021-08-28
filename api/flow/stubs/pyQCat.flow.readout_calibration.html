@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.flow.readout_calibration &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.flow.common" href="pyQCat.flow.common.html" />
+    <link rel="prev" title="pyQCat.flow.qubit_optimization" href="pyQCat.flow.qubit_optimization.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#dag-node">Dag Node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.flow.readout_calibration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.flow.readout_calibration">
+<span id="pyqcat-flow-readout-calibration"></span><h1>pyQCat.flow.readout_calibration<a class="headerlink" href="#module-pyQCat.flow.readout_calibration" title="永久链接至标题">¶</a></h1>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.readout_calibration.html#pyQCat.flow.readout_calibration.probe_freq_cali" title="pyQCat.flow.readout_calibration.probe_freq_cali"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probe_freq_cali</span></code></a>(inst, qubit, compensate, dc, …)</p></td>
+<td><p>Update qubit.probe_freq.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.readout_calibration.html#pyQCat.flow.readout_calibration.probe_power_bus_cali" title="pyQCat.flow.readout_calibration.probe_power_bus_cali"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probe_power_bus_cali</span></code></a>(inst, qubit, …[, …])</p></td>
+<td><p>Calibrate qubit probe power by qubit.Mwave.amp.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.readout_calibration.html#pyQCat.flow.readout_calibration.probe_power_cali" title="pyQCat.flow.readout_calibration.probe_power_cali"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probe_power_cali</span></code></a>(inst, qubit, compensate, …)</p></td>
+<td><p>Update qubit.probe_power</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.readout_calibration.html#pyQCat.flow.readout_calibration.probe_power_cali_other" title="pyQCat.flow.readout_calibration.probe_power_cali_other"><code class="xref py py-obj docutils literal notranslate"><span class="pre">probe_power_cali_other</span></code></a>(inst, qubit, …)</p></td>
+<td><p>Update qubit.probe_power</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.readout_calibration.html#pyQCat.flow.readout_calibration.readout_calibrate" title="pyQCat.flow.readout_calibration.readout_calibrate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readout_calibrate</span></code></a>(inst, qubit, compensate, …)</p></td>
+<td><p>Calibrate qubit.probe_freq, qubit.probe_power</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.readout_calibration.html#pyQCat.flow.readout_calibration.single_shot_experiment" title="pyQCat.flow.readout_calibration.single_shot_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">single_shot_experiment</span></code></a>(inst, qubit, dc, …)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param inst</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.probe_freq_cali">
+<span class="sig-name descname"><span class="pre">probe_freq_cali</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fc_diff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.probe_freq_cali" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.probe_freq.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>freq_list</strong> – freq list</p></li>
+<li><p><strong>sample</strong> – qubit.sample</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+<li><p><strong>fc_diff</strong> – diff threshold of 0, 1 fc value</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>calibrate freq value, qubit.probe_freq</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>freq_opt</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.probe_power_cali">
+<span class="sig-name descname"><span class="pre">probe_power_cali</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F0_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F1_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.probe_power_cali" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.probe_power</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>power_list</strong> – list of probe power, [-35, -10, 1]</p></li>
+<li><p><strong>sample</strong> – qubit.sample</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+<li><p><strong>F0_threshold</strong> – threshold of F0, final probe power run single shot result</p></li>
+<li><p><strong>F1_threshold</strong> – threshold of F1, final probe power run single shot result</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>qubit.probe_power</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>power</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.probe_power_cali_other">
+<span class="sig-name descname"><span class="pre">probe_power_cali_other</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.probe_power_cali_other" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.probe_power</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>power</strong> – initial power execute SingleShot</p></li>
+<li><p><strong>sample</strong> – qubit.sample</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>qubit.probe_power</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>target_power</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.single_shot_experiment">
+<span class="sig-name descname"><span class="pre">single_shot_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_bin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F0_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F1_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.single_shot_experiment" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – </p></li>
+<li><p><strong>qubit</strong> – </p></li>
+<li><p><strong>dc</strong> – </p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>sample</strong> – </p></li>
+<li><p><strong>log_path</strong> – </p></li>
+<li><p><strong>save_bin</strong> – </p></li>
+<li><p><strong>is_check</strong> – </p></li>
+<li><p><strong>F0_threshold</strong> – </p></li>
+<li><p><strong>F1_threshold</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.readout_calibrate">
+<span class="sig-name descname"><span class="pre">readout_calibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.readout_calibrate" title="永久链接至目标">¶</a></dt>
+<dd><p>Calibrate qubit.probe_freq, qubit.probe_power</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>power</strong> – other method calibrate readout power, initial power of excute SingleShot</p></li>
+<li><p><strong>power_list</strong> – list of power, scan execute single shot power</p></li>
+<li><p><strong>sample_prefix</strong> – qubit.sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>calibrate freq value, qubit.probe_freq
+power: calibrate power value, qubit.probe_power
+dcm: IQdiscriminator object</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>freq</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.readout_calibration.probe_power_bus_cali">
+<span class="sig-name descname"><span class="pre">probe_power_bus_cali</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_wave_amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probe_power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F0_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F1_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.readout_calibration.probe_power_bus_cali" title="永久链接至目标">¶</a></dt>
+<dd><p>Calibrate qubit probe power by qubit.Mwave.amp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>m_wave_amp_list</strong> – list of qubit.Mwave.amp, [0.1, 1, 0.05]</p></li>
+<li><p><strong>probe_power</strong> – qubit.probe_power</p></li>
+<li><p><strong>sample</strong> – qubit.sample</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+<li><p><strong>F0_threshold</strong> – threshold of F0, final probe power run single shot result</p></li>
+<li><p><strong>F1_threshold</strong> – threshold of F1, final probe power run single shot result</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.flow.common.html" class="btn btn-neutral float-right" title="pyQCat.flow.common" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.flow.qubit_optimization.html" class="btn btn-neutral float-left" title="pyQCat.flow.qubit_optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

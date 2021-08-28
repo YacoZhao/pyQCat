@@ -1,0 +1,47 @@
+﻿pyQCat.pulse.Constant
+=====================
+
+.. currentmodule:: pyQCat.pulse
+
+.. autoclass:: Constant
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Constant.__init__
+      ~Constant.correct_ac_crosstalk
+      ~Constant.correct_compensate
+      ~Constant.correct_delay
+      ~Constant.correct_distortion
+      ~Constant.correct_pulse
+      ~Constant.get_pulse
+      ~Constant.get_raw_pulse
+      ~Constant.plot
+      ~Constant.validate_parameters
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Constant.amp
+      ~Constant.attach
+      ~Constant.bit
+      ~Constant.delay
+      ~Constant.envelop
+      ~Constant.id
+      ~Constant.parameters
+      ~Constant.pulse
+      ~Constant.raw_pulse
+      ~Constant.sweep
+      ~Constant.type
+   
+   

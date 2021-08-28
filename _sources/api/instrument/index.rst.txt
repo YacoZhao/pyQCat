@@ -1,0 +1,6 @@
+.. _instrument_api :
+
+.. automodule:: pyQCat.instrument
+   :no-members:
+   :no-inherited-members:
+   :no-special-members:

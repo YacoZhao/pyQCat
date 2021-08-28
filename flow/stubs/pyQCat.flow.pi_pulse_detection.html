@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.flow.pi_pulse_detection &mdash; pyQCat 0.0.8 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API 文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>pyQCat.flow.pi_pulse_detection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyQCat.flow.pi_pulse_detection">
+<span id="pyqcat-flow-pi-pulse-detection"></span><h1>pyQCat.flow.pi_pulse_detection<a class="headerlink" href="#module-pyQCat.flow.pi_pulse_detection" title="永久链接至标题">¶</a></h1>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.pi_pulse_detection.judge_background_noise" title="pyQCat.flow.pi_pulse_detection.judge_background_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">judge_background_noise</span></code></a>(inst, qubit, …[, …])</p></td>
+<td><p>Judge local noise.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.pi_pulse_detection.rabi_experiment" title="pyQCat.flow.pi_pulse_detection.rabi_experiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rabi_experiment</span></code></a>(inst, qubit, compensate, dc, …)</p></td>
+<td><p>Execute Rabi experiment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.pi_pulse_detection.rabi_scan_amp" title="pyQCat.flow.pi_pulse_detection.rabi_scan_amp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rabi_scan_amp</span></code></a>(inst, qubit, compensate, dc, …)</p></td>
+<td><p>Update qubit.XYwave.Xpi, qubit.XYwave.Xpi2, qubit.drive_drive_power.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.flow.pi_pulse_detection.rabi_sweep_width" title="pyQCat.flow.pi_pulse_detection.rabi_sweep_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rabi_sweep_width</span></code></a>(inst, qubit, compensate, …)</p></td>
+<td><p>Run Rabi with scan width, judge oscillation or not .</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.flow.pi_pulse_detection.rabi_update_xpi" title="pyQCat.flow.pi_pulse_detection.rabi_update_xpi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rabi_update_xpi</span></code></a>(inst, qubit, compensate, dc, …)</p></td>
+<td><p>Update qubit.XYwave.Xpi, qubit.XYwave.Xpi2, qubit.drive_drive_power.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.rabi_experiment">
+<span class="sig-name descname"><span class="pre">rabi_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Xpi'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.rabi_experiment" title="永久链接至目标">¶</a></dt>
+<dd><p>Execute Rabi experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – </p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>sweep_list</strong> – list, scan amp list, or width list</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>name</strong> – run Rabi select Xpi， Xpi/2 or width</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>list, value is rabi_exp.analysis.amp
+rabi_Xpi: rabi_exp.analysis.Xpi</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>rabi_amp_list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.judge_background_noise">
+<span class="sig-name descname"><span class="pre">judge_background_noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">judge_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.judge_background_noise" title="永久链接至目标">¶</a></dt>
+<dd><p>Judge local noise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>amp_list</strong> – list of amp, scan amp value</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>sample</strong> – qubit.sample prefix</p></li>
+<li><p><strong>judge_step</strong> – change drive power step</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>True or False, judge local noise, True means existence local noise.</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>background_noise_flag</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.rabi_update_xpi">
+<span class="sig-name descname"><span class="pre">rabi_update_xpi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expect_Xpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.rabi_update_xpi" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.XYwave.Xpi, qubit.XYwave.Xpi2, qubit.drive_drive_power.
+Judge Ax1 value range [0.7, 0.9], SinDamp fit.
+Directly, use Rabi experiment’s result of consine fit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>amp_list</strong> – list of amp, scan amp value</p></li>
+<li><p><strong>sample</strong> – qubit.sample prefix</p></li>
+<li><p><strong>expect_Xpi</strong> – expectation value of Xpi</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>True or False, True means update successfully.</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>xpi_flag</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.rabi_scan_amp">
+<span class="sig-name descname"><span class="pre">rabi_scan_amp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">judge_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expect_Xpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:/Qubit'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">qubit_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.rabi_scan_amp" title="永久链接至目标">¶</a></dt>
+<dd><p>Update qubit.XYwave.Xpi, qubit.XYwave.Xpi2, qubit.drive_drive_power.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>amp_list</strong> – list of amp value   (0, 1, 0.02V)</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>judge_step</strong> – judge background noise change drive power step</p></li>
+<li><p><strong>expect_Xpi</strong> – expectation value of Xpi</p></li>
+<li><p><strong>sample_prefix</strong> – qubit.sample prefix</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+<li><p><strong>qubit_state</strong> – (dict) qubit import from store or not</p></li>
+</ul>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.errors.InvalidValueError" title="pyQCat.errors.InvalidValueError"><strong>InvalidValueError</strong></a> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.pi_pulse_detection.rabi_sweep_width">
+<span class="sig-name descname"><span class="pre">rabi_sweep_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dcm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.pi_pulse_detection.rabi_sweep_width" title="永久链接至目标">¶</a></dt>
+<dd><p>Run Rabi with scan width, judge oscillation or not .</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Instrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – PulseCorrection object</p></li>
+<li><p><strong>dc</strong> – dict,</p></li>
+<li><p><strong>width_list</strong> – list, scan width list</p></li>
+<li><p><strong>sample</strong> – qubit.sample prefix</p></li>
+<li><p><strong>dcm</strong> – discriminator</p></li>
+<li><p><strong>beta</strong> – enlargement factor of spectrum analysis</p></li>
+<li><p><strong>log_path</strong> – save qubit info path</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>True or False, True means oscillation successfully.</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>osci_flag</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

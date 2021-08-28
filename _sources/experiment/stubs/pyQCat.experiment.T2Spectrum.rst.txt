@@ -1,0 +1,23 @@
+﻿pyQCat.experiment.T2Spectrum
+============================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: T2Spectrum
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~T2Spectrum.__init__
+      ~T2Spectrum.run
+   
+   
+
+   
+   
+   

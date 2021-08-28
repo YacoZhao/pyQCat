@@ -1,0 +1,23 @@
+﻿pyQCat.experiment.CavityPowerAnalysis
+=====================================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: CavityPowerAnalysis
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CavityPowerAnalysis.__init__
+      ~CavityPowerAnalysis.analyze
+   
+   
+
+   
+   
+   

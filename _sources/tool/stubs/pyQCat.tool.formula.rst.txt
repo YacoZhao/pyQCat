@@ -1,0 +1,49 @@
+﻿pyQCat.tool.formula
+===================
+
+.. automodule:: pyQCat.tool.formula
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      amp2cavity_freq_formula
+      amp2delta_freq_formula
+      amp2freq_formula
+      cosine
+      cosine_damping
+      delta_freq2amp_formula
+      fourier_cycle
+      freq2amp_formula
+      freq_flux
+      gauss
+      linear_formula
+      lorentzian
+      natural_exp
+      pseudo_voige
+      ramsey_photon
+      sine_damping
+      sine_damping_accessory
+      skewed_lorentzian
+      skewed_lorentzian_auxiliary
+      swap_formula
+      twin_lorentzian
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

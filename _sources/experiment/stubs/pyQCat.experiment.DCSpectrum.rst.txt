@@ -1,0 +1,30 @@
+﻿pyQCat.experiment.DCSpectrum
+============================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: DCSpectrum
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DCSpectrum.__init__
+      ~DCSpectrum.fit
+      ~DCSpectrum.guess_next_freq
+      ~DCSpectrum.plot
+      ~DCSpectrum.run
+      ~DCSpectrum.run_ramsey
+      ~DCSpectrum.solve_equations
+      ~DCSpectrum.update_fringe
+      ~DCSpectrum.validate_result
+   
+   
+
+   
+   
+   
