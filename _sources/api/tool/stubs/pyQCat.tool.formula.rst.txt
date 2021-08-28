@@ -18,7 +18,9 @@
       amp2freq_formula
       cosine
       cosine_damping
+      cross_entropy
       delta_freq2amp_formula
+      exp_decay_formula
       fourier_cycle
       freq2amp_formula
       freq_flux

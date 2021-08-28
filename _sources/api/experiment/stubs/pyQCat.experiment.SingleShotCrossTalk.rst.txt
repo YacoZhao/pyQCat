@@ -17,6 +17,7 @@
       ~SingleShotCrossTalk.acquire_pulse
       ~SingleShotCrossTalk.bind_probe_inst
       ~SingleShotCrossTalk.config_file_sys
+      ~SingleShotCrossTalk.get_qubit_str
       ~SingleShotCrossTalk.init_readout
       ~SingleShotCrossTalk.play_pulse
       ~SingleShotCrossTalk.plot_schedule

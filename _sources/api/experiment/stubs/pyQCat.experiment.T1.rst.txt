@@ -17,6 +17,7 @@
       ~T1.acquire_pulse
       ~T1.bind_probe_inst
       ~T1.config_file_sys
+      ~T1.get_qubit_str
       ~T1.init_readout
       ~T1.play_pulse
       ~T1.plot_schedule

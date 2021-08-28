@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.flow.common &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.flow.common &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -281,6 +281,27 @@ non-existing nodes is created.</p>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.common.bind_xy_IF">
+<span class="sig-name descname"><span class="pre">bind_xy_IF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_IF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.common.bind_xy_IF" title="永久链接至目标">¶</a></dt>
+<dd><p>Bind instrument XY control intermediate freq and qubit XYwave drive IF.
+:param inst: Instrument object
+:type inst: Instrument
+:param bit_list: list of bit
+:type bit_list: list
+:param drive_IF: drive_IF value from exp.yaml system.drive_IF
+:type drive_IF: float</p>
+<dl class="simple">
+<dt>Returns</dt><dd><p>new_inst (Instrument): Instrument object</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../_auto/pyQCat.html#pyQCat.errors.InvalidValueError" title="pyQCat.errors.InvalidValueError"><strong>InvalidValueError</strong></a> – if drive_IF value not conform to (400, 700, 0.001)</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -295,7 +316,7 @@ non-existing nodes is created.</p>
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

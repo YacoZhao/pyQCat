@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.flow.qubit_detection &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.flow.qubit_detection &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -105,6 +105,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="../index.html#dag-node">Dag Node</a></li>
@@ -198,47 +199,42 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.cavity_freq_update" title="pyQCat.flow.qubit_detection.cavity_freq_update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cavity_freq_update</span></code></a>(inst, qubit, compensate, …)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.anharmonicity_measure" title="pyQCat.flow.qubit_detection.anharmonicity_measure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">anharmonicity_measure</span></code></a>(inst, qubit, …[, …])</p></td>
+<td><p>Measure qubit freq f21</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.cavity_freq_update" title="pyQCat.flow.qubit_detection.cavity_freq_update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cavity_freq_update</span></code></a>(inst, qubit, compensate, …)</p></td>
 <td><p>Update cavity freq</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.find_peaks_dips" title="pyQCat.flow.qubit_detection.find_peaks_dips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_peaks_dips</span></code></a>(x, y[, interpolation_num, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.find_peaks_dips" title="pyQCat.flow.qubit_detection.find_peaks_dips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_peaks_dips</span></code></a>(x, y[, interpolation_num, …])</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">param x</dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
 </p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.freq_preliminary" title="pyQCat.flow.qubit_detection.freq_preliminary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freq_preliminary</span></code></a>(inst, qubit, compensate, …)</p></td>
-<td><p><dl class="field-list simple">
-<dt class="field-odd">param inst</dt>
-<dd class="field-odd"><p>Insrument object</p>
-</dd>
-</dl>
-</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.freq_preliminary" title="pyQCat.flow.qubit_detection.freq_preliminary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freq_preliminary</span></code></a>(inst, qubit, compensate, …)</p></td>
+<td><p>测量比特频率</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.judge_peak_dip" title="pyQCat.flow.qubit_detection.judge_peak_dip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">judge_peak_dip</span></code></a>(data)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.judge_peak_dip" title="pyQCat.flow.qubit_detection.judge_peak_dip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">judge_peak_dip</span></code></a>(data)</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">param data</dt>
 <dd class="field-odd"><p></p></dd>
 </dl>
 </p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.lorentz_fit" title="pyQCat.flow.qubit_detection.lorentz_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lorentz_fit</span></code></a>(x, y, *peaks[, twin])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.lorentz_fit" title="pyQCat.flow.qubit_detection.lorentz_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lorentz_fit</span></code></a>(x, y, *peaks[, twin])</p></td>
 <td><p>lorentz fit, Used for ‘twin_lorentz’ and ‘lorentz’</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../flow/stubs/pyQCat.flow.qubit_detection.html#pyQCat.flow.qubit_detection.plot_peaks" title="pyQCat.flow.qubit_detection.plot_peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_peaks</span></code></a>(data, peak_index, properties[, …])</p></td>
-<td><p><dl class="field-list simple">
-<dt class="field-odd">param data</dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
-</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_auto/pyQCat.flow.html#pyQCat.flow.qubit_detection.plot_peaks" title="pyQCat.flow.qubit_detection.plot_peaks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_peaks</span></code></a>(x, y, init_x, init_y, peak_index, …)</p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.freq_preliminary">
-<span class="sig-name descname"><span class="pre">freq_preliminary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f02_measure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.freq_preliminary" title="永久链接至目标">¶</a></dt>
-<dd><dl class="field-list simple">
+<span class="sig-name descname"><span class="pre">freq_preliminary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fq_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[4000,</span> <span class="pre">4005,</span> <span class="pre">4010,</span> <span class="pre">4015,</span> <span class="pre">4020,</span> <span class="pre">4025,</span> <span class="pre">4030,</span> <span class="pre">4035,</span> <span class="pre">4040,</span> <span class="pre">4045,</span> <span class="pre">4050,</span> <span class="pre">4055,</span> <span class="pre">4060,</span> <span class="pre">4065,</span> <span class="pre">4070,</span> <span class="pre">4075,</span> <span class="pre">4080,</span> <span class="pre">4085,</span> <span class="pre">4090,</span> <span class="pre">4095,</span> <span class="pre">4100,</span> <span class="pre">4105,</span> <span class="pre">4110,</span> <span class="pre">4115,</span> <span class="pre">4120,</span> <span class="pre">4125,</span> <span class="pre">4130,</span> <span class="pre">4135,</span> <span class="pre">4140,</span> <span class="pre">4145,</span> <span class="pre">4150,</span> <span class="pre">4155,</span> <span class="pre">4160,</span> <span class="pre">4165,</span> <span class="pre">4170,</span> <span class="pre">4175,</span> <span class="pre">4180,</span> <span class="pre">4185,</span> <span class="pre">4190,</span> <span class="pre">4195,</span> <span class="pre">4200,</span> <span class="pre">4205,</span> <span class="pre">4210,</span> <span class="pre">4215,</span> <span class="pre">4220,</span> <span class="pre">4225,</span> <span class="pre">4230,</span> <span class="pre">4235,</span> <span class="pre">4240,</span> <span class="pre">4245,</span> <span class="pre">4250,</span> <span class="pre">4255,</span> <span class="pre">4260,</span> <span class="pre">4265,</span> <span class="pre">4270,</span> <span class="pre">4275,</span> <span class="pre">4280,</span> <span class="pre">4285,</span> <span class="pre">4290,</span> <span class="pre">4295,</span> <span class="pre">4300,</span> <span class="pre">4305,</span> <span class="pre">4310,</span> <span class="pre">4315,</span> <span class="pre">4320,</span> <span class="pre">4325,</span> <span class="pre">4330,</span> <span class="pre">4335,</span> <span class="pre">4340,</span> <span class="pre">4345,</span> <span class="pre">4350,</span> <span class="pre">4355,</span> <span class="pre">4360,</span> <span class="pre">4365,</span> <span class="pre">4370,</span> <span class="pre">4375,</span> <span class="pre">4380,</span> <span class="pre">4385,</span> <span class="pre">4390,</span> <span class="pre">4395,</span> <span class="pre">4400,</span> <span class="pre">4405,</span> <span class="pre">4410,</span> <span class="pre">4415,</span> <span class="pre">4420,</span> <span class="pre">4425,</span> <span class="pre">4430,</span> <span class="pre">4435,</span> <span class="pre">4440,</span> <span class="pre">4445,</span> <span class="pre">4450,</span> <span class="pre">4455,</span> <span class="pre">4460,</span> <span class="pre">4465,</span> <span class="pre">4470,</span> <span class="pre">4475,</span> <span class="pre">4480,</span> <span class="pre">4485,</span> <span class="pre">4490,</span> <span class="pre">4495,</span> <span class="pre">4500,</span> <span class="pre">4505,</span> <span class="pre">4510,</span> <span class="pre">4515,</span> <span class="pre">4520,</span> <span class="pre">4525,</span> <span class="pre">4530,</span> <span class="pre">4535,</span> <span class="pre">4540,</span> <span class="pre">4545,</span> <span class="pre">4550,</span> <span class="pre">4555,</span> <span class="pre">4560,</span> <span class="pre">4565,</span> <span class="pre">4570,</span> <span class="pre">4575,</span> <span class="pre">4580,</span> <span class="pre">4585,</span> <span class="pre">4590,</span> <span class="pre">4595,</span> <span class="pre">4600,</span> <span class="pre">4605,</span> <span class="pre">4610,</span> <span class="pre">4615,</span> <span class="pre">4620,</span> <span class="pre">4625,</span> <span class="pre">4630,</span> <span class="pre">4635,</span> <span class="pre">4640,</span> <span class="pre">4645,</span> <span class="pre">4650,</span> <span class="pre">4655,</span> <span class="pre">4660,</span> <span class="pre">4665,</span> <span class="pre">4670,</span> <span class="pre">4675,</span> <span class="pre">4680,</span> <span class="pre">4685,</span> <span class="pre">4690,</span> <span class="pre">4695,</span> <span class="pre">4700,</span> <span class="pre">4705,</span> <span class="pre">4710,</span> <span class="pre">4715,</span> <span class="pre">4720,</span> <span class="pre">4725,</span> <span class="pre">4730,</span> <span class="pre">4735,</span> <span class="pre">4740,</span> <span class="pre">4745,</span> <span class="pre">4750,</span> <span class="pre">4755,</span> <span class="pre">4760,</span> <span class="pre">4765,</span> <span class="pre">4770,</span> <span class="pre">4775,</span> <span class="pre">4780,</span> <span class="pre">4785,</span> <span class="pre">4790,</span> <span class="pre">4795,</span> <span class="pre">4800,</span> <span class="pre">4805,</span> <span class="pre">4810,</span> <span class="pre">4815,</span> <span class="pre">4820,</span> <span class="pre">4825,</span> <span class="pre">4830,</span> <span class="pre">4835,</span> <span class="pre">4840,</span> <span class="pre">4845,</span> <span class="pre">4850,</span> <span class="pre">4855,</span> <span class="pre">4860,</span> <span class="pre">4865,</span> <span class="pre">4870,</span> <span class="pre">4875,</span> <span class="pre">4880,</span> <span class="pre">4885,</span> <span class="pre">4890,</span> <span class="pre">4895,</span> <span class="pre">4900,</span> <span class="pre">4905,</span> <span class="pre">4910,</span> <span class="pre">4915,</span> <span class="pre">4920,</span> <span class="pre">4925,</span> <span class="pre">4930,</span> <span class="pre">4935,</span> <span class="pre">4940,</span> <span class="pre">4945,</span> <span class="pre">4950,</span> <span class="pre">4955,</span> <span class="pre">4960,</span> <span class="pre">4965,</span> <span class="pre">4970,</span> <span class="pre">4975,</span> <span class="pre">4980,</span> <span class="pre">4985,</span> <span class="pre">4990,</span> <span class="pre">4995,</span> <span class="pre">5000,</span> <span class="pre">5005,</span> <span class="pre">5010,</span> <span class="pre">5015,</span> <span class="pre">5020,</span> <span class="pre">5025,</span> <span class="pre">5030,</span> <span class="pre">5035,</span> <span class="pre">5040,</span> <span class="pre">5045,</span> <span class="pre">5050,</span> <span class="pre">5055,</span> <span class="pre">5060,</span> <span class="pre">5065,</span> <span class="pre">5070,</span> <span class="pre">5075,</span> <span class="pre">5080,</span> <span class="pre">5085,</span> <span class="pre">5090,</span> <span class="pre">5095,</span> <span class="pre">5100,</span> <span class="pre">5105,</span> <span class="pre">5110,</span> <span class="pre">5115,</span> <span class="pre">5120,</span> <span class="pre">5125,</span> <span class="pre">5130,</span> <span class="pre">5135,</span> <span class="pre">5140,</span> <span class="pre">5145,</span> <span class="pre">5150,</span> <span class="pre">5155,</span> <span class="pre">5160,</span> <span class="pre">5165,</span> <span class="pre">5170,</span> <span class="pre">5175,</span> <span class="pre">5180,</span> <span class="pre">5185,</span> <span class="pre">5190,</span> <span class="pre">5195,</span> <span class="pre">5200,</span> <span class="pre">5205,</span> <span class="pre">5210,</span> <span class="pre">5215,</span> <span class="pre">5220,</span> <span class="pre">5225,</span> <span class="pre">5230,</span> <span class="pre">5235,</span> <span class="pre">5240,</span> <span class="pre">5245,</span> <span class="pre">5250,</span> <span class="pre">5255,</span> <span class="pre">5260,</span> <span class="pre">5265,</span> <span class="pre">5270,</span> <span class="pre">5275,</span> <span class="pre">5280,</span> <span class="pre">5285,</span> <span class="pre">5290,</span> <span class="pre">5295,</span> <span class="pre">5300,</span> <span class="pre">5305,</span> <span class="pre">5310,</span> <span class="pre">5315,</span> <span class="pre">5320,</span> <span class="pre">5325,</span> <span class="pre">5330,</span> <span class="pre">5335,</span> <span class="pre">5340,</span> <span class="pre">5345,</span> <span class="pre">5350,</span> <span class="pre">5355,</span> <span class="pre">5360,</span> <span class="pre">5365,</span> <span class="pre">5370,</span> <span class="pre">5375,</span> <span class="pre">5380,</span> <span class="pre">5385,</span> <span class="pre">5390,</span> <span class="pre">5395,</span> <span class="pre">5400,</span> <span class="pre">5405,</span> <span class="pre">5410,</span> <span class="pre">5415,</span> <span class="pre">5420,</span> <span class="pre">5425,</span> <span class="pre">5430,</span> <span class="pre">5435,</span> <span class="pre">5440,</span> <span class="pre">5445,</span> <span class="pre">5450,</span> <span class="pre">5455,</span> <span class="pre">5460,</span> <span class="pre">5465,</span> <span class="pre">5470,</span> <span class="pre">5475,</span> <span class="pre">5480,</span> <span class="pre">5485,</span> <span class="pre">5490,</span> <span class="pre">5495,</span> <span class="pre">5500,</span> <span class="pre">5505,</span> <span class="pre">5510,</span> <span class="pre">5515,</span> <span class="pre">5520,</span> <span class="pre">5525,</span> <span class="pre">5530,</span> <span class="pre">5535,</span> <span class="pre">5540,</span> <span class="pre">5545,</span> <span class="pre">5550,</span> <span class="pre">5555,</span> <span class="pre">5560,</span> <span class="pre">5565,</span> <span class="pre">5570,</span> <span class="pre">5575,</span> <span class="pre">5580,</span> <span class="pre">5585,</span> <span class="pre">5590,</span> <span class="pre">5595,</span> <span class="pre">5600,</span> <span class="pre">5605,</span> <span class="pre">5610,</span> <span class="pre">5615,</span> <span class="pre">5620,</span> <span class="pre">5625,</span> <span class="pre">5630,</span> <span class="pre">5635,</span> <span class="pre">5640,</span> <span class="pre">5645,</span> <span class="pre">5650,</span> <span class="pre">5655,</span> <span class="pre">5660,</span> <span class="pre">5665,</span> <span class="pre">5670,</span> <span class="pre">5675,</span> <span class="pre">5680,</span> <span class="pre">5685,</span> <span class="pre">5690,</span> <span class="pre">5695,</span> <span class="pre">5700,</span> <span class="pre">5705,</span> <span class="pre">5710,</span> <span class="pre">5715,</span> <span class="pre">5720,</span> <span class="pre">5725,</span> <span class="pre">5730,</span> <span class="pre">5735,</span> <span class="pre">5740,</span> <span class="pre">5745,</span> <span class="pre">5750,</span> <span class="pre">5755,</span> <span class="pre">5760,</span> <span class="pre">5765,</span> <span class="pre">5770,</span> <span class="pre">5775,</span> <span class="pre">5780,</span> <span class="pre">5785,</span> <span class="pre">5790,</span> <span class="pre">5795,</span> <span class="pre">5800,</span> <span class="pre">5805,</span> <span class="pre">5810,</span> <span class="pre">5815,</span> <span class="pre">5820,</span> <span class="pre">5825,</span> <span class="pre">5830,</span> <span class="pre">5835,</span> <span class="pre">5840,</span> <span class="pre">5845,</span> <span class="pre">5850,</span> <span class="pre">5855,</span> <span class="pre">5860,</span> <span class="pre">5865,</span> <span class="pre">5870,</span> <span class="pre">5875,</span> <span class="pre">5880,</span> <span class="pre">5885,</span> <span class="pre">5890,</span> <span class="pre">5895,</span> <span class="pre">5900,</span> <span class="pre">5905,</span> <span class="pre">5910,</span> <span class="pre">5915,</span> <span class="pre">5920,</span> <span class="pre">5925,</span> <span class="pre">5930,</span> <span class="pre">5935,</span> <span class="pre">5940,</span> <span class="pre">5945,</span> <span class="pre">5950,</span> <span class="pre">5955,</span> <span class="pre">5960,</span> <span class="pre">5965,</span> <span class="pre">5970,</span> <span class="pre">5975,</span> <span class="pre">5980,</span> <span class="pre">5985,</span> <span class="pre">5990,</span> <span class="pre">5995,</span> <span class="pre">6000]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[5,</span> <span class="pre">10,</span> <span class="pre">15,</span> <span class="pre">20,</span> <span class="pre">25,</span> <span class="pre">30,</span> <span class="pre">35,</span> <span class="pre">40,</span> <span class="pre">45,</span> <span class="pre">50,</span> <span class="pre">55,</span> <span class="pre">60,</span> <span class="pre">65,</span> <span class="pre">70,</span> <span class="pre">75,</span> <span class="pre">80,</span> <span class="pre">85,</span> <span class="pre">90,</span> <span class="pre">95,</span> <span class="pre">100,</span> <span class="pre">105,</span> <span class="pre">110,</span> <span class="pre">115,</span> <span class="pre">120,</span> <span class="pre">125,</span> <span class="pre">130,</span> <span class="pre">135,</span> <span class="pre">140,</span> <span class="pre">145,</span> <span class="pre">150,</span> <span class="pre">155,</span> <span class="pre">160,</span> <span class="pre">165,</span> <span class="pre">170,</span> <span class="pre">175,</span> <span class="pre">180,</span> <span class="pre">185,</span> <span class="pre">190,</span> <span class="pre">195,</span> <span class="pre">200]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_percentage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rabi_beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.freq_preliminary" title="永久链接至目标">¶</a></dt>
+<dd><p>测量比特频率</p>
+<dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>inst</strong> – Insrument object</p></li>
@@ -246,16 +242,38 @@
 <li><p><strong>compensate</strong> – chanel compensate</p></li>
 <li><p><strong>dc_correct</strong> – dc correct dict</p></li>
 <li><p><strong>fq_list</strong> – scan freq list</p></li>
+<li><p><strong>width_list</strong> – the scan width list of rabi</p></li>
 <li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>amp_coefficient</strong> – Amplitude coefficient, ranging from 0 to 1</p></li>
 <li><p><strong>power_step</strong> – Step size of qubit measurement</p></li>
 <li><p><strong>noise_percentage</strong> – Percentage of noise measurement</p></li>
-<li><p><strong>f02_measure</strong> – f02 measure flag, bool,</p></li>
-<li><p><strong>root</strong> – </p></li>
-<li><p><strong>log_path</strong> – </p></li>
+<li><p><strong>rabi_beta</strong> – enlargement factor of spectrum analysis</p></li>
+<li><p><strong>root</strong> – expand save file</p></li>
+<li><p><strong>log_path</strong> – qubit log path</p></li>
 </ul>
 </dd>
 </dl>
-<p>Returns:</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.anharmonicity_measure">
+<span class="sig-name descname"><span class="pre">anharmonicity_measure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_correct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drive_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f02_freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(150,</span> <span class="pre">80)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.anharmonicity_measure" title="永久链接至目标">¶</a></dt>
+<dd><p>Measure qubit freq f21</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – Insrument object</p></li>
+<li><p><strong>qubit</strong> – Qubit object</p></li>
+<li><p><strong>compensate</strong> – chanel compensate</p></li>
+<li><p><strong>dc_correct</strong> – dc correct dict</p></li>
+<li><p><strong>drive_power</strong> – drive power</p></li>
+<li><p><strong>amp_coefficient</strong> – Amplitude coefficient</p></li>
+<li><p><strong>power_step</strong> – Step size of qubit measurement</p></li>
+<li><p><strong>root</strong> – expand save file</p></li>
+<li><p><strong>log_path</strong> – qubit log path</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -267,7 +285,8 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>x</strong> – The abscissa of the fit</p></li>
 <li><p><strong>y</strong> – The ordinate of the fit</p></li>
-<li><p><strong>twin</strong> – Bool, False or True, Is “false” to fit “lorentz”, otherwise to fit ‘twin_lorent’</p></li>
+<li><p><strong>twin</strong> – Bool, False or True, Is “false” to fit “lorentz”, otherwise to
+fit ‘twin_lorent’</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回</dt>
@@ -321,22 +340,6 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.plot_peaks">
-<span class="sig-name descname"><span class="pre">plot_peaks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.plot_peaks" title="永久链接至目标">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">参数</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> – </p></li>
-<li><p><strong>peak_index</strong> – </p></li>
-<li><p><strong>properties</strong> – </p></li>
-<li><p><strong>file_path</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<p>Returns:</p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.flow.qubit_detection.judge_peak_dip">
 <span class="sig-name descname"><span class="pre">judge_peak_dip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.flow.qubit_detection.judge_peak_dip" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -365,7 +368,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

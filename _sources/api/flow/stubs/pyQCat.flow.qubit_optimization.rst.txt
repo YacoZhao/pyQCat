@@ -20,6 +20,7 @@
       single_qubit_adjust
       t1_experiment
       t2_experiment
+      xeb_experiment
    
    
 

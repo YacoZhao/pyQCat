@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.experiment.QubitSpectrumAnalysis &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.experiment.QubitSpectrumAnalysis &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -174,29 +174,15 @@
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">QubitSpectrumAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrumAnalysis" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="../../_auto/pyQCat.experiment.html#pyQCat.experiment.top_analysis.TopAnalysis" title="pyQCat.experiment.top_analysis.TopAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_analysis.TopAnalysis</span></code></a></p>
 <p>比特能谱实验结果分析</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrumAnalysis.x_list">
-<span class="sig-name descname"><span class="pre">x_list</span></span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrumAnalysis.x_list" title="永久链接至目标">¶</a></dt>
-<dd><p>实验扫描频率列表</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Iterable</p>
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_list</strong> (<em>Iterable</em>) – 实验扫描频率列表</p></li>
+<li><p><strong>z_amp</strong> – Z 线施加的幅值参数</p></li>
+<li><p><strong>fq</strong> – 实验寻找到的比特频率</p></li>
+</ul>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrumAnalysis.z_amp">
-<span class="sig-name descname"><span class="pre">z_amp</span></span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrumAnalysis.z_amp" title="永久链接至目标">¶</a></dt>
-<dd><p>Z 线施加的幅值参数</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrumAnalysis.fq">
-<span class="sig-name descname"><span class="pre">fq</span></span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrumAnalysis.fq" title="永久链接至目标">¶</a></dt>
-<dd><p>实验寻找到的比特频率</p>
-</dd></dl>
-
 <p>Initialize method</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrumAnalysis.__init__">
@@ -294,7 +280,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

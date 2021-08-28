@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.instrument.Instrument &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.instrument.Instrument &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -257,16 +257,16 @@
 <td><p>连接远程设备上的 mongo 数据库</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.instrument.Instrument.output_off" title="pyQCat.instrument.Instrument.output_off"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_off</span></code></a>(**kwargs)</p></td>
-<td><p>关闭一体机指定通道</p></td>
+<td><p>仪器模式接口：关闭一体机指定通道</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.instrument.Instrument.output_on" title="pyQCat.instrument.Instrument.output_on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_on</span></code></a>(**kwargs)</p></td>
-<td><p>打开一体机的指定通道</p></td>
+<td><p>仪器模式接口：打开一体机的指定通道</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.instrument.Instrument.select" title="pyQCat.instrument.Instrument.select"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select</span></code></a>(**kwargs)</p></td>
 <td><p>初始化测量参数模板</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pyQCat.instrument.Instrument.set_control_channel" title="pyQCat.instrument.Instrument.set_control_channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_control_channel</span></code></a>(**kwargs)</p></td>
-<td><p>为指定模块设置通道</p></td>
+<td><p>仪器模式接口：为指定模块设置通道</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.instrument.Instrument.set_custom_waveform" title="pyQCat.instrument.Instrument.set_custom_waveform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_custom_waveform</span></code></a>(module, channel, wavedata)</p></td>
 <td><p>一体机 <cite>AWG/RF/ADDA</cite> 模块设置自定义波形</p></td>
@@ -1047,7 +1047,8 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.Instrument.output_on">
 <span class="sig-name descname"><span class="pre">output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.output_on" title="永久链接至目标">¶</a></dt>
-<dd><p>打开一体机的指定通道</p>
+<dd><p>仪器模式接口：打开一体机的指定通道</p>
+<p>InstrumentAIODoc 状态设置为 1</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道值，当状态设置为1即为开启通道</p>
@@ -1056,7 +1057,7 @@
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
 </dd>
 <dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>设备数据库映射对象存储id</p>
+<dd class="field-odd"><p>设备数据库映射对象 InstrumentAIODoc 的存储id</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1064,7 +1065,8 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.Instrument.output_off">
 <span class="sig-name descname"><span class="pre">output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.output_off" title="永久链接至目标">¶</a></dt>
-<dd><p>关闭一体机指定通道</p>
+<dd><p>仪器模式接口：关闭一体机指定通道</p>
+<p>InstrumentAIODoc 状态设置为 4</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道值，当状态设置为4即为关闭通道</p>
@@ -1073,7 +1075,7 @@
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></p>
 </dd>
 <dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>设备数据库映射对象存储id</p>
+<dd class="field-odd"><p>设备数据库映射对象 InstrumentAIODoc 的存储id</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1088,11 +1090,13 @@
 <dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_output">
 <span class="sig-name descname"><span class="pre">set_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_output" title="永久链接至目标">¶</a></dt>
 <dd><p>设置一体机数据库映射对象 <cite>InstrumentAIODoc</cite> 状态</p>
+<p>如果当前 InstrumentAIODoc 的 id 属性为空，则直接修改属性保存至数据库，
+如果 id 属性不为空，则去数据库中的更新参数值</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>status</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 状态值</p></li>
-<li><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道值</p></li>
+<li><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道列表</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回类型</dt>
@@ -1110,7 +1114,8 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.instrument.Instrument.set_control_channel">
 <span class="sig-name descname"><span class="pre">set_control_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.instrument.Instrument.set_control_channel" title="永久链接至目标">¶</a></dt>
-<dd><p>为指定模块设置通道</p>
+<dd><p>仪器模式接口：为指定模块设置通道</p>
+<p>仪器模式使用数据库映射类 InstrumentAIODoc 与数据库产生交互</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><p><strong>**kwargs</strong> – 字典类型，键为模块名称，值为通道值</p>
@@ -1390,7 +1395,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

@@ -17,6 +17,7 @@
       ~AmpOptimize.acquire_pulse
       ~AmpOptimize.bind_probe_inst
       ~AmpOptimize.config_file_sys
+      ~AmpOptimize.get_qubit_str
       ~AmpOptimize.init_readout
       ~AmpOptimize.play_pulse
       ~AmpOptimize.plot_schedule

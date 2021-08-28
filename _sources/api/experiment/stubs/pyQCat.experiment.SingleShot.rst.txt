@@ -17,6 +17,7 @@
       ~SingleShot.acquire_pulse
       ~SingleShot.bind_probe_inst
       ~SingleShot.config_file_sys
+      ~SingleShot.get_qubit_str
       ~SingleShot.init_readout
       ~SingleShot.play_pulse
       ~SingleShot.plot_schedule

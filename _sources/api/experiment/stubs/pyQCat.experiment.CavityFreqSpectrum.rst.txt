@@ -17,6 +17,7 @@
       ~CavityFreqSpectrum.acquire_pulse
       ~CavityFreqSpectrum.bind_probe_inst
       ~CavityFreqSpectrum.config_file_sys
+      ~CavityFreqSpectrum.get_qubit_str
       ~CavityFreqSpectrum.init_readout
       ~CavityFreqSpectrum.play_pulse
       ~CavityFreqSpectrum.plot_schedule

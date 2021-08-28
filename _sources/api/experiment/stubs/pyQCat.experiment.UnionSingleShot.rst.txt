@@ -17,6 +17,7 @@
       ~UnionSingleShot.acquire_pulse
       ~UnionSingleShot.bind_probe_inst
       ~UnionSingleShot.config_file_sys
+      ~UnionSingleShot.get_qubit_str
       ~UnionSingleShot.init_readout
       ~UnionSingleShot.play_pulse
       ~UnionSingleShot.plot_schedule

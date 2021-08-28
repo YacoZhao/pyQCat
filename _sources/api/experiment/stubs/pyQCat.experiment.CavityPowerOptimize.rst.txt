@@ -17,6 +17,7 @@
       ~CavityPowerOptimize.acquire_pulse
       ~CavityPowerOptimize.bind_probe_inst
       ~CavityPowerOptimize.config_file_sys
+      ~CavityPowerOptimize.get_qubit_str
       ~CavityPowerOptimize.init_readout
       ~CavityPowerOptimize.play_pulse
       ~CavityPowerOptimize.plot_schedule

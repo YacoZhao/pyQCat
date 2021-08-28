@@ -17,6 +17,7 @@
       ~SpinEcho.acquire_pulse
       ~SpinEcho.bind_probe_inst
       ~SpinEcho.config_file_sys
+      ~SpinEcho.get_qubit_str
       ~SpinEcho.get_xy_pulse
       ~SpinEcho.get_z_pulse
       ~SpinEcho.init_readout

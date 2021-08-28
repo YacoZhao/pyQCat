@@ -18,6 +18,7 @@
       ~APE.bind_probe_inst
       ~APE.config_file_sys
       ~APE.get_coincident_points_path
+      ~APE.get_qubit_str
       ~APE.init_readout
       ~APE.play_pulse
       ~APE.plot_schedule

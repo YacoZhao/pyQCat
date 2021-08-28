@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.experiment.XYZTiming &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.experiment.XYZTiming &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -215,7 +215,7 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>([data_type, enable_one_sweep])</p></td>
 <td><p>注册实验</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.XYZTiming.run" title="pyQCat.experiment.XYZTiming.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(delay_list[, z_amp, schedule_index, is_save])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyQCat.experiment.XYZTiming.run" title="pyQCat.experiment.XYZTiming.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(delay_list[, z_amp, const_delay, …])</p></td>
 <td><p>XYZTiming 实验执行方法</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_data</span></code>(*args[, file_name])</p></td>
@@ -243,13 +243,14 @@
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.XYZTiming.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.XYZTiming.run" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.XYZTiming.run" title="永久链接至目标">¶</a></dt>
 <dd><p>XYZTiming 实验执行方法</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>delay_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – 扫描延时列表</p></li>
 <li><p><strong>z_amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Z 线施加的幅值</p></li>
+<li><p><strong>const_delay</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 固定延时</p></li>
 <li><p><strong>schedule_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 绘制波形时序图索引</p></li>
 <li><p><strong>is_save</strong> – 是否保存延时数据</p></li>
 </ul>
@@ -273,7 +274,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

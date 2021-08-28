@@ -17,6 +17,7 @@
       ~Rabi.acquire_pulse
       ~Rabi.bind_probe_inst
       ~Rabi.config_file_sys
+      ~Rabi.get_qubit_str
       ~Rabi.init_readout
       ~Rabi.play_pulse
       ~Rabi.plot_schedule

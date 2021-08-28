@@ -16,12 +16,14 @@
       ac_crosstalk_node
       ac_spectrum_node
       amp_opt_node
+      anharmonicity_measure_node
       ape_experiment_node
       cavity_freq_update_node
       dc_crosstalk_node
       dc_spectrum_node
       distortion_node
       execute_rb_node
+      execute_xeb_node
       initial_qubit_node
       initial_store_node
       is_tunable_node

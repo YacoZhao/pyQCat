@@ -1,36 +1,38 @@
-﻿pyQCat.tool.savefile
+﻿pyQCat.tool.SaveFile
 ====================
 
-.. automodule:: pyQCat.tool.savefile
+.. currentmodule:: pyQCat.tool
+
+.. autoclass:: SaveFile
 
    
-   
-   
+   .. automethod:: __init__
 
    
-   
-   
-
-   
-   
-   .. rubric:: Classes
+   .. rubric:: Methods
 
    .. autosummary::
    
-      CFile
-      SaveFile
+      ~SaveFile.__init__
+      ~SaveFile.get
+      ~SaveFile.reset
+      ~SaveFile.save
+      ~SaveFile.save_param
+      ~SaveFile.set
+      ~SaveFile.show
    
    
 
    
    
-   .. rubric:: Exceptions
+   .. rubric:: Attributes
 
    .. autosummary::
    
-      SaveFileError
+      ~SaveFile.dirs
+      ~SaveFile.qubit
+      ~SaveFile.root
+      ~SaveFile.sample
+      ~SaveFile.task
    
    
-
-
-

@@ -1,0 +1,24 @@
+﻿pyQCat.detection.AWG33522A
+==========================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: AWG33522A
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~AWG33522A.__init__
+      ~AWG33522A.close
+      ~AWG33522A.set_dc
+   
+   
+
+   
+   
+   

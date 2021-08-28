@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Quantum Detection (pyQCat.detection) &mdash; pyQCat 0.0.6 文档</title>
+  <title>Quantum Detection (pyQCat.detection) &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -46,7 +46,9 @@
 
     
     <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" /> 
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="pyQCat.detection.InstConnect" href="stubs/pyQCat.detection.InstConnect.html" />
+    <link rel="prev" title="API 文档" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -70,7 +72,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -95,12 +97,30 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../help.html">获取帮助</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../user/index.html">用户指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../community/index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/index.html">结构及数据流程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">API 文档</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#preliminary-instrument">Preliminary Instrument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qubit-preliminary">Qubit Preliminary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../changes/index.html">版本记录</a></li>
 </ul>
 
@@ -150,6 +170,8 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="../index.html">API 文档</a> &raquo;</li>
+        
       <li>Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</li>
     
     
@@ -170,44 +192,66 @@
   <span class="target" id="module-pyQCat.detection"><span id="detection-api"></span></span><div class="section" id="quantum-detection-pyqcat-detection">
 <h1>Quantum Detection (<a class="reference internal" href="#module-pyQCat.detection" title="pyQCat.detection"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code></a>)<a class="headerlink" href="#quantum-detection-pyqcat-detection" title="永久链接至标题">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">pyQCat.detection</span></code> 模块封装了量子比特芯片初步探测（包括扫腔频、扫比特能谱等等），用户可以直接进行调用</p>
-<div class="section" id="cavity-detection">
-<h2>Cavity Detection<a class="headerlink" href="#cavity-detection" title="永久链接至标题">¶</a></h2>
+<div class="section" id="preliminary-instrument">
+<h2>Preliminary Instrument<a class="headerlink" href="#preliminary-instrument" title="永久链接至标题">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.CavityDetection.html#pyQCat.detection.CavityDetection" title="pyQCat.detection.CavityDetection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CavityDetection</span></code></a></p></td>
-<td><p>腔频检查</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.InstConnect.html#pyQCat.detection.InstConnect" title="pyQCat.detection.InstConnect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InstConnect</span></code></a></p></td>
+<td><p>仪器父类</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.QAIO.html#pyQCat.detection.QAIO" title="pyQCat.detection.QAIO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">QAIO</span></code></a></p></td>
+<td><p>一体机仪器模式封装接口</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.DcFlux.html#pyQCat.detection.DcFlux" title="pyQCat.detection.DcFlux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DcFlux</span></code></a></p></td>
+<td><p>商用仪器电塔源封装类，可以根据初始化的 <code class="docutils literal notranslate"><span class="pre">instrument_model</span></code> 属性，选择期望的电压源</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.CB2902A.html#pyQCat.detection.CB2902A" title="pyQCat.detection.CB2902A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CB2902A</span></code></a></p></td>
+<td><p>商用仪器电压源 CB2902A</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.AWG33522A.html#pyQCat.detection.AWG33522A" title="pyQCat.detection.AWG33522A"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AWG33522A</span></code></a></p></td>
+<td><p>商用仪器电压源 AWG33522A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.MicSource.html#pyQCat.detection.MicSource" title="pyQCat.detection.MicSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MicSource</span></code></a></p></td>
+<td><p>微波源</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.NetworkAnalyzer.html#pyQCat.detection.NetworkAnalyzer" title="pyQCat.detection.NetworkAnalyzer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NetworkAnalyzer</span></code></a></p></td>
+<td><p>网络分析仪</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="detection-interface">
-<h2>Detection Interface<a class="headerlink" href="#detection-interface" title="永久链接至标题">¶</a></h2>
+<div class="section" id="qubit-preliminary">
+<h2>Qubit Preliminary<a class="headerlink" href="#qubit-preliminary" title="永久链接至标题">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.DetectionBase.html#pyQCat.detection.DetectionBase" title="pyQCat.detection.DetectionBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DetectionBase</span></code></a></p></td>
-<td><p>检测基类</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.QubitPreliminary.html#pyQCat.detection.QubitPreliminary" title="pyQCat.detection.QubitPreliminary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">QubitPreliminary</span></code></a></p></td>
+<td><p>比特初步探测实验基类</p></td>
 </tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="z-line-detection">
-<h2>Z Line Detection<a class="headerlink" href="#z-line-detection" title="永久链接至标题">¶</a></h2>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.ZlineDetection.html#pyQCat.detection.ZlineDetection" title="pyQCat.detection.ZlineDetection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZlineDetection</span></code></a></p></td>
-<td><p><cite>Z</cite> 线检测</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.CavityFluxScan.html#pyQCat.detection.CavityFluxScan" title="pyQCat.detection.CavityFluxScan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CavityFluxScan</span></code></a></p></td>
+<td><p>使用网络分析仪实验腔频扫描实验</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.FindCavityFreq.html#pyQCat.detection.FindCavityFreq" title="pyQCat.detection.FindCavityFreq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FindCavityFreq</span></code></a></p></td>
+<td><p>使用矢量网络分析仪寻找比特腔频</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.FindQubitFreq.html#pyQCat.detection.FindQubitFreq" title="pyQCat.detection.FindQubitFreq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FindQubitFreq</span></code></a></p></td>
+<td><p>使用网络分析仪寻找比特频率</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.FixedFlux.html#pyQCat.detection.FixedFlux" title="pyQCat.detection.FixedFlux"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FixedFlux</span></code></a></p></td>
+<td><p>使用商用仪器实现微波源功率及频率的联合扫描</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.FixedFq.html#pyQCat.detection.FixedFq" title="pyQCat.detection.FixedFq"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FixedFq</span></code></a></p></td>
+<td><p>使用商用仪器联合扫描dc电压和微波源的功率</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../detection/stubs/pyQCat.detection.ZeroDetuning.html#pyQCat.detection.ZeroDetuning" title="pyQCat.detection.ZeroDetuning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ZeroDetuning</span></code></a></p></td>
+<td><p>使用商用仪器实现***</p></td>
 </tr>
 </tbody>
 </table>
@@ -219,6 +263,10 @@
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="stubs/pyQCat.detection.InstConnect.html" class="btn btn-neutral float-right" title="pyQCat.detection.InstConnect" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="API 文档" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
 
   <hr/>
 
@@ -226,7 +274,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

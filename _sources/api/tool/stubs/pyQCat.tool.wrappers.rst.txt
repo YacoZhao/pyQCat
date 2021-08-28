@@ -13,6 +13,7 @@
 
    .. autosummary::
    
+      collect_qubit_data
       remote_connection
       set_file
       statistics_time

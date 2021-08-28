@@ -1,0 +1,45 @@
+﻿pyQCat.experiment.XEB
+=====================
+
+.. currentmodule:: pyQCat.experiment
+
+.. autoclass:: XEB
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~XEB.__init__
+      ~XEB.acquire_pulse
+      ~XEB.bind_probe_inst
+      ~XEB.config_file_sys
+      ~XEB.get_qubit_str
+      ~XEB.init_readout
+      ~XEB.play_pulse
+      ~XEB.plot_schedule
+      ~XEB.register
+      ~XEB.run
+      ~XEB.save_data
+      ~XEB.save_parameters
+      ~XEB.set_multiple_IF
+      ~XEB.set_multiple_index
+      ~XEB.set_readout2q_params
+      ~XEB.set_readout_delay
+      ~XEB.set_sweep_order
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~XEB.gate_map
+      ~XEB.gate_set
+   
+   

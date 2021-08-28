@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.experiment.QubitSpectrum &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.experiment.QubitSpectrum &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -105,6 +105,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../index.html#base-experiment-template">Base Experiment Template</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#cavityfreqspectrum">CavityFreqSpectrum</a></li>
@@ -119,6 +120,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../index.html#t1">T1</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#t2">T2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#randomizedbenchmarking">RandomizedBenchmarking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#xeb">XEB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#modulation-spectrum">Modulation Spectrum</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#circuit-compensation">Circuit Compensation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#crosstalk">Crosstalk</a></li>
@@ -238,11 +240,17 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">acquire_pulse</span></code>(acq_pulse[, qubit])</p></td>
 <td><p>设置读取波形</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bind_probe_inst</span></code>(qubit)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../experiment/stubs/pyQCat.experiment.QubitSpectrum.html#pyQCat.experiment.QubitSpectrum.amp_coefficient_check" title="pyQCat.experiment.QubitSpectrum.amp_coefficient_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">amp_coefficient_check</span></code></a>([amp_coefficient])</p></td>
+<td><p>更新比特能谱实验线路幅值。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bind_probe_inst</span></code>(qubit)</p></td>
 <td><p>为一体机读取模块绑定初始化参数。</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_file_sys</span></code>([name, display])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">config_file_sys</span></code>([name, display])</p></td>
 <td><p>设置实验分析结果文件的保存路径</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_qubit_str</span></code>()</p></td>
+<td><p>Get qubit str, an args qubit for SaveFile class.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_readout</span></code>([time, amp, IF, channel])</p></td>
 <td><p>初始化读取模块，为读取线添加波形</p></td>
@@ -256,8 +264,8 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">register</span></code>([data_type, enable_one_sweep])</p></td>
 <td><p>注册实验</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../experiment/stubs/pyQCat.experiment.QubitSpectrum.html#pyQCat.experiment.QubitSpectrum.run" title="pyQCat.experiment.QubitSpectrum.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(fq_list[, power, z_amp])</p></td>
-<td><p>执行比特能谱实验</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../experiment/stubs/pyQCat.experiment.QubitSpectrum.html#pyQCat.experiment.QubitSpectrum.run" title="pyQCat.experiment.QubitSpectrum.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(fq_list[, power, z_amp, use_square])</p></td>
+<td><p>比特能谱实验执行函数</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_data</span></code>(*args[, file_name])</p></td>
 <td><p>保存自定义的数据到当前实验预先生成的结果路径下</p></td>
@@ -311,14 +319,16 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrum.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrum.run" title="永久链接至目标">¶</a></dt>
-<dd><p>执行比特能谱实验</p>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_square</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrum.run" title="永久链接至目标">¶</a></dt>
+<dd><p>比特能谱实验执行函数</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>fq_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>) – 扫描的驱动频率列表</p></li>
+<li><p><strong>fq_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>) – 扫描参数(驱动频率 <code class="docutils literal notranslate"><span class="pre">drive_freq</span></code>)</p></li>
 <li><p><strong>power</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – 驱动功率</p></li>
-<li><p><strong>z_amp</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Z线幅值，默认为空</p></li>
+<li><p><strong>z_amp</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Z线幅值</p></li>
+<li><p><strong>use_square</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否使用方波，如果为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线上施加等频率的方波，如果为 <code class="docutils literal notranslate"><span class="pre">False</span></code> , 则
+线上变频方波</p></li>
 </ul>
 </dd>
 </dl>
@@ -342,6 +352,25 @@
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrum.amp_coefficient_check">
+<span class="sig-name descname"><span class="pre">amp_coefficient_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrum.amp_coefficient_check" title="永久链接至目标">¶</a></dt>
+<dd><p>更新比特能谱实验线路幅值。</p>
+<p>驱动功率最小只能提供 -40dB，因为不同样本的线路配置不同，这个功率有时还是很高的。
+所以它需要在驱动功率之外额外乘以一个幅值系数，用来进一步降低幅值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>amp_coefficient</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值系数 0-1</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference internal" href="../../../_auto/pyQCat.html#pyQCat.errors.ExperimentError" title="pyQCat.errors.ExperimentError"><strong>ExperimentError</strong></a> – 幅值系数在 0-1 范围之外</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -362,7 +391,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

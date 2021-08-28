@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.tool package &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.tool package &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -174,6 +174,17 @@
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html">pyQCat.tool.experiment_result_output package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.exception">pyQCat.tool.experiment_result_output.exception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.experiment_result_output">pyQCat.tool.experiment_result_output.experiment_result_output module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.experimental_picture_arrangement">pyQCat.tool.experiment_result_output.experimental_picture_arrangement module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.qubit_para_collection">pyQCat.tool.experiment_result_output.qubit_para_collection module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.run_output_result">pyQCat.tool.experiment_result_output.run_output_result module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.setting">pyQCat.tool.experiment_result_output.setting module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="pyQCat.tool.gui.html">pyQCat.tool.gui package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.gui.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pyQCat.tool.gui.html#module-pyQCat.tool.gui.gui">pyQCat.tool.gui.gui module</a></li>
@@ -610,6 +621,18 @@ val = &amp;\frac{A\_gf\_over\_2}{\pi} * \frac{kappa\_gf\_over\_2}{(f - f0\_gf\_o
 \[y = k * x + b\]</div>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.exp_decay_formula">
+<span class="sig-name descname"><span class="pre">exp_decay_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.exp_decay_formula" title="永久链接至目标">¶</a></dt>
+<dd><p>Exponential decay fit formula</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.formula.cross_entropy">
+<span class="sig-name descname"><span class="pre">cross_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.formula.cross_entropy" title="永久链接至目标">¶</a></dt>
+<dd><p>Calculate cross entropy</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-pyQCat.tool.iqprobability">
 <span id="pyqcat-tool-iqprobability-module"></span><h2>pyQCat.tool.iqprobability module<a class="headerlink" href="#module-pyQCat.tool.iqprobability" title="永久链接至标题">¶</a></h2>
@@ -878,6 +901,11 @@ Please put “0”state first
 <span class="sig-name descname"><span class="pre">linear_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.linear_fit" title="永久链接至目标">¶</a></dt>
 <dd><p>线性拟合方法</p>
 </dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.param_fit.exp_decay_fit">
+<span class="sig-name descname"><span class="pre">exp_decay_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.param_fit.exp_decay_fit" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 <div class="section" id="module-pyQCat.tool.parse_yaml">
@@ -1546,66 +1574,197 @@ It is recommended to fit S21^(-1)
 </div>
 <div class="section" id="module-pyQCat.tool.savefile">
 <span id="pyqcat-tool-savefile-module"></span><h2>pyQCat.tool.savefile module<a class="headerlink" href="#module-pyQCat.tool.savefile" title="永久链接至标题">¶</a></h2>
-<p>该模块定义了存储路径操作的常用方法</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SaveFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.dat'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>文件存储功能类</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 根路径，<strong>pyQCat</strong> 的实验模板中默认中从 Qubit 对象的 <code class="docutils literal notranslate"><span class="pre">sample</span></code> 属性获取， <strong>必须设置</strong></p></li>
+<li><p><strong>sample</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 比特标签，默认为空字符串</p></li>
+<li><p><strong>qubit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 比特字符串，一般以 <code class="docutils literal notranslate"><span class="pre">q</span></code> 加上具体的比特位构成，如 <code class="docutils literal notranslate"><span class="pre">q0</span></code> 、 <code class="docutils literal notranslate"><span class="pre">q1</span></code> ，默认为空字符串</p></li>
+<li><p><strong>task</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 任务描述，一般用于任务描述</p></li>
+<li><p><strong>savemode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 数据存储格式, 默认为 <code class="docutils literal notranslate"><span class="pre">.dat</span></code> ， 你还可以设置为 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> 、 <code class="docutils literal notranslate"><span class="pre">.ini</span></code> 等</p></li>
+</ul>
+</dd>
+</dl>
+<p>初始化 <strong>SaveFile</strong> 对象时，会默认将输出的路径参数组合成路径地址保存至 <code class="docutils literal notranslate"><span class="pre">path</span></code> 属性中，当你输入路径为</p>
+<ul class="simple">
+<li><p>root: <code class="docutils literal notranslate"><span class="pre">D:\Qubit\D4\2021-08-18</span></code></p></li>
+<li><p>sample: <code class="docutils literal notranslate"><span class="pre">author</span></code></p></li>
+<li><p>qubit: <code class="docutils literal notranslate"><span class="pre">q0</span></code></p></li>
+<li><p>task: <code class="docutils literal notranslate"><span class="pre">XEB</span></code></p></li>
+</ul>
+<p>则拼接后的路径为 <code class="docutils literal notranslate"><span class="pre">D:\Qubit\D4\2021-08-18\author\q0\XEB</span></code> , 它将赋值给 <code class="docutils literal notranslate"><span class="pre">path</span></code> 属性</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="o">=</span> <span class="n">qubit</span><span class="o">.</span><span class="n">sample</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">qs</span> <span class="o">=</span> <span class="s1">&#39;q&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">qubit</span><span class="o">.</span><span class="n">bit</span><span class="p">)</span>
+
+<span class="n">file_sys</span> <span class="o">=</span> <span class="n">SaveFile</span><span class="p">(</span>
+    <span class="n">root</span><span class="o">=</span><span class="n">sample</span><span class="p">,</span>
+    <span class="n">qubit</span><span class="o">=</span><span class="n">qs</span><span class="p">,</span>
+    <span class="n">savemode</span><span class="o">=</span><span class="s1">&#39;.dat&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.root">
 <span class="sig-name descname"><span class="pre">root</span></span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.root" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>根路径</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.sample">
 <span class="sig-name descname"><span class="pre">sample</span></span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.sample" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>比特标签</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.qubit">
 <span class="sig-name descname"><span class="pre">qubit</span></span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.qubit" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>比特字符串</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.task">
 <span class="sig-name descname"><span class="pre">task</span></span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.task" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>任务描述</p>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.dirs">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dirs</span></span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.dirs" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>获取当前的存储路径</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.set">
 <span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.set" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>在初始 <code class="docutils literal notranslate"><span class="pre">path</span></code> 的基础上新增子文件夹</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 新增的文件名</p></li>
+<li><p><strong>time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否添加以时间戳命名的子文件目录，默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> , 即不添加时间</p></li>
+</ul>
+</dd>
+</dl>
+<p>假设现在有 <strong>SaveFile</strong> 的 <code class="docutils literal notranslate"><span class="pre">path</span></code> 属性为 <code class="docutils literal notranslate"><span class="pre">D:\Qubit\D4\2021-08-18\author\q0\XEB</span></code> ，如果我们希望新增子目录，
+可以通过当前的 <cite>set</cite> 方法，使用方法如下：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_sys</span> <span class="o">=</span> <span class="n">SaveFile</span><span class="p">(</span>
+    <span class="n">root</span><span class="o">=</span><span class="n">sample</span><span class="p">,</span>
+    <span class="n">qubit</span><span class="o">=</span><span class="n">qs</span><span class="p">,</span>
+    <span class="n">savemode</span><span class="o">=</span><span class="s1">&#39;.dat&#39;</span>
+<span class="p">)</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">file_sys</span><span class="o">.</span><span class="n">dirs</span>
+<span class="c1"># 输出为：D:\Qubit\D4\2021-08-18\author\q0\XEB\test</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">file_sys</span><span class="o">.</span><span class="n">dirs</span>
+<span class="c1"># 输出为： D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.get" title="永久链接至目标">¶</a></dt>
-<dd><p>Deprecated, use <code class="docutils literal notranslate"><span class="pre">dirs</span></code> instead.</p>
+<dd><p>已废弃，使用 <code class="docutils literal notranslate"><span class="pre">dirs</span></code> 代替</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.reset" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>重置文件存储类</p>
+<p>当你需要更新你的存储路径时，不需要重新定义 <strong>SaveFile</strong> 对象，你只需要使用这个方法，即可将与此对象绑定
+存储路径 <code class="docutils literal notranslate"><span class="pre">dirs</span></code> 属性清空，但仍然会持有 <code class="docutils literal notranslate"><span class="pre">path</span></code> 属性，你可再次调用 <code class="docutils literal notranslate"><span class="pre">set()</span></code> 方法，新增你期望的路径</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.save">
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.save" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>保存数据</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*data</strong> – 待存储的数据</p></li>
+<li><p><strong>name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – 文件名称</p></li>
+</ul>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code> 属性为你期望保存的文件名称，我们在初始化方法中提供了 <code class="docutils literal notranslate"><span class="pre">savemode</span></code> 属性供你设置存储文件类型，我们默认为
+<code class="docutils literal notranslate"><span class="pre">.dat</span></code> 文件，如果你没有提供了 <code class="docutils literal notranslate"><span class="pre">name</span></code> 值，那么它将以数字 <code class="docutils literal notranslate"><span class="pre">0/1/2/3/4...</span></code> 来给文件命名</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_sys</span><span class="o">.</span><span class="n">dirs</span>
+<span class="c1"># D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;measure1&quot;</span><span class="p">)</span>
+<span class="c1"># data数据存储的绝对路径为 D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33\measure1.dat</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># data数据存储的绝对路径为 D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33\0.dat</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># data数据存储的绝对路径为 D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33\1.dat</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.save_param">
 <span class="sig-name descname"><span class="pre">save_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.save_param" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>保存参数</p>
+<p>将指定参数写进当前路径下，并保存成 json 或 txt 文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>as_json</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否保存为 json 格式，默认为 True，即保存为 json 文件</p></li>
+<li><p><strong>**kwargs</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.savefile.SaveFile.show">
 <span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.savefile.SaveFile.show" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>展示当前对象中路径的层级结构</p>
+<dl class="field-list simple">
+<dt class="field-odd">案例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>假设 self.dirs = r&#39;D:\Qubit\D41-08-23\q0&#39;
+
+调用方法 ``file_sys.show()`` , 结果分级展示所有子文件
+
+q0/
+    RandomizedBenchmarking/
+        2021-08-23 09.10.56/
+    XEB/
+        2021-08-23 09.06.51/
+        2021-08-23 09.07.38/
+            schedule/
+                Q0 pulse schedule_2021-08-23 09.07.42.png
+                Q0 pulse schedule_2021-08-23 09.07.43.png
+                Q0 pulse schedule_2021-08-23 09.07.44.png
+                Q0 pulse schedule_2021-08-23 09.07.45.png
+        2021-08-23 09.09.02/
+            schedule/
+                Q0 pulse schedule_2021-08-23 09.09.06.png
+                Q0 pulse schedule_2021-08-23 09.09.07.png
+                Q0 pulse schedule_2021-08-23 09.09.08.png
+                Q0 pulse schedule_2021-08-23 09.09.09.png
+        2021-08-23 09.11.38/
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -1783,9 +1942,6 @@ First, query by file name, if exist update, else create a new object.</p>
 <dd><p><code class="docutils literal notranslate"><span class="pre">smooth</span></code> 函数，用于对数据进行平滑处理</p>
 </dd></dl>
 
-</div>
-<div class="section" id="module-pyQCat.tool.test">
-<span id="pyqcat-tool-test-module"></span><h2>pyQCat.tool.test module<a class="headerlink" href="#module-pyQCat.tool.test" title="永久链接至标题">¶</a></h2>
 </div>
 <div class="section" id="module-pyQCat.tool.utlis">
 <span id="pyqcat-tool-utlis-module"></span><h2>pyQCat.tool.utlis module<a class="headerlink" href="#module-pyQCat.tool.utlis" title="永久链接至标题">¶</a></h2>
@@ -2268,6 +2424,11 @@ First, query by file name, if exist update, else create a new object.</p>
 <span class="sig-name descname"><span class="pre">whether_import_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.wrappers.whether_import_save" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.tool.wrappers.collect_qubit_data">
+<span class="sig-name descname"><span class="pre">collect_qubit_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.wrappers.collect_qubit_data" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-pyQCat.tool">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyQCat.tool" title="永久链接至标题">¶</a></h2>
@@ -2292,7 +2453,7 @@ First, query by file name, if exist update, else create a new object.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="../tool/stubs/pyQCat.tool.parse_yaml.html#module-pyQCat.tool.parse_yaml" title="pyQCat.tool.parse_yaml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_yaml</span></code></a></p></td>
 <td><p>该模块定义了解析yaml文件的模板方法</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../tool/stubs/pyQCat.tool.smooth.html#pyQCat.tool.smooth" title="pyQCat.tool.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a>(x[, frac])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../tool/stubs/pyQCat.tool.smooth.html#pyQCat.tool.smooth" title="pyQCat.tool.smooth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth</span></code></a></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">smooth</span></code> 函数，用于对数据进行平滑处理</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../tool/stubs/pyQCat.tool.iqprobability.html#module-pyQCat.tool.iqprobability" title="pyQCat.tool.iqprobability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iqprobability</span></code></a></p></td>
@@ -2310,8 +2471,8 @@ First, query by file name, if exist update, else create a new object.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="../tool/stubs/pyQCat.tool.resonator_fit_calibration.html#module-pyQCat.tool.resonator_fit_calibration" title="pyQCat.tool.resonator_fit_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resonator_fit_calibration</span></code></a></p></td>
 <td><p>TODO</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../tool/stubs/pyQCat.tool.savefile.html#module-pyQCat.tool.savefile" title="pyQCat.tool.savefile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">savefile</span></code></a></p></td>
-<td><p>该模块定义了存储路径操作的常用方法</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/tool/stubs/pyQCat.tool.SaveFile.html#pyQCat.tool.SaveFile" title="pyQCat.tool.SaveFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaveFile</span></code></a></p></td>
+<td><p>文件存储功能类</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../tool/stubs/pyQCat.tool.set_config.html#module-pyQCat.tool.set_config" title="pyQCat.tool.set_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_config</span></code></a></p></td>
 <td><p>该模块定义了与配置文件操作相关的方法</p></td>
@@ -2584,61 +2745,193 @@ It is recommended to fit S21^(-1)
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SaveFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savemode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.dat'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.SaveFile" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>文件存储功能类</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 根路径，<strong>pyQCat</strong> 的实验模板中默认中从 Qubit 对象的 <code class="docutils literal notranslate"><span class="pre">sample</span></code> 属性获取， <strong>必须设置</strong></p></li>
+<li><p><strong>sample</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 比特标签，默认为空字符串</p></li>
+<li><p><strong>qubit</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 比特字符串，一般以 <code class="docutils literal notranslate"><span class="pre">q</span></code> 加上具体的比特位构成，如 <code class="docutils literal notranslate"><span class="pre">q0</span></code> 、 <code class="docutils literal notranslate"><span class="pre">q1</span></code> ，默认为空字符串</p></li>
+<li><p><strong>task</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 任务描述，一般用于任务描述</p></li>
+<li><p><strong>savemode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 数据存储格式, 默认为 <code class="docutils literal notranslate"><span class="pre">.dat</span></code> ， 你还可以设置为 <code class="docutils literal notranslate"><span class="pre">.txt</span></code> 、 <code class="docutils literal notranslate"><span class="pre">.ini</span></code> 等</p></li>
+</ul>
+</dd>
+</dl>
+<p>初始化 <strong>SaveFile</strong> 对象时，会默认将输出的路径参数组合成路径地址保存至 <code class="docutils literal notranslate"><span class="pre">path</span></code> 属性中，当你输入路径为</p>
+<ul class="simple">
+<li><p>root: <code class="docutils literal notranslate"><span class="pre">D:\Qubit\D4\2021-08-18</span></code></p></li>
+<li><p>sample: <code class="docutils literal notranslate"><span class="pre">author</span></code></p></li>
+<li><p>qubit: <code class="docutils literal notranslate"><span class="pre">q0</span></code></p></li>
+<li><p>task: <code class="docutils literal notranslate"><span class="pre">XEB</span></code></p></li>
+</ul>
+<p>则拼接后的路径为 <code class="docutils literal notranslate"><span class="pre">D:\Qubit\D4\2021-08-18\author\q0\XEB</span></code> , 它将赋值给 <code class="docutils literal notranslate"><span class="pre">path</span></code> 属性</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="o">=</span> <span class="n">qubit</span><span class="o">.</span><span class="n">sample</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">qs</span> <span class="o">=</span> <span class="s1">&#39;q&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">qubit</span><span class="o">.</span><span class="n">bit</span><span class="p">)</span>
+
+<span class="n">file_sys</span> <span class="o">=</span> <span class="n">SaveFile</span><span class="p">(</span>
+    <span class="n">root</span><span class="o">=</span><span class="n">sample</span><span class="p">,</span>
+    <span class="n">qubit</span><span class="o">=</span><span class="n">qs</span><span class="p">,</span>
+    <span class="n">savemode</span><span class="o">=</span><span class="s1">&#39;.dat&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.root">
 <span class="sig-name descname"><span class="pre">root</span></span><a class="headerlink" href="#pyQCat.tool.SaveFile.root" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>根路径</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.sample">
 <span class="sig-name descname"><span class="pre">sample</span></span><a class="headerlink" href="#pyQCat.tool.SaveFile.sample" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>比特标签</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.qubit">
 <span class="sig-name descname"><span class="pre">qubit</span></span><a class="headerlink" href="#pyQCat.tool.SaveFile.qubit" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>比特字符串</p>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.task">
 <span class="sig-name descname"><span class="pre">task</span></span><a class="headerlink" href="#pyQCat.tool.SaveFile.task" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>任务描述</p>
+</dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.dirs">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">dirs</span></span><a class="headerlink" href="#pyQCat.tool.SaveFile.dirs" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>获取当前的存储路径</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.set">
 <span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.SaveFile.set" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>在初始 <code class="docutils literal notranslate"><span class="pre">path</span></code> 的基础上新增子文件夹</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 新增的文件名</p></li>
+<li><p><strong>time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否添加以时间戳命名的子文件目录，默认为 <code class="docutils literal notranslate"><span class="pre">False</span></code> , 即不添加时间</p></li>
+</ul>
+</dd>
+</dl>
+<p>假设现在有 <strong>SaveFile</strong> 的 <code class="docutils literal notranslate"><span class="pre">path</span></code> 属性为 <code class="docutils literal notranslate"><span class="pre">D:\Qubit\D4\2021-08-18\author\q0\XEB</span></code> ，如果我们希望新增子目录，
+可以通过当前的 <cite>set</cite> 方法，使用方法如下：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_sys</span> <span class="o">=</span> <span class="n">SaveFile</span><span class="p">(</span>
+    <span class="n">root</span><span class="o">=</span><span class="n">sample</span><span class="p">,</span>
+    <span class="n">qubit</span><span class="o">=</span><span class="n">qs</span><span class="p">,</span>
+    <span class="n">savemode</span><span class="o">=</span><span class="s1">&#39;.dat&#39;</span>
+<span class="p">)</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">file_sys</span><span class="o">.</span><span class="n">dirs</span>
+<span class="c1"># 输出为：D:\Qubit\D4\2021-08-18\author\q0\XEB\test</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">file_sys</span><span class="o">.</span><span class="n">dirs</span>
+<span class="c1"># 输出为： D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.SaveFile.get" title="永久链接至目标">¶</a></dt>
-<dd><p>Deprecated, use <code class="docutils literal notranslate"><span class="pre">dirs</span></code> instead.</p>
+<dd><p>已废弃，使用 <code class="docutils literal notranslate"><span class="pre">dirs</span></code> 代替</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.reset">
 <span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.SaveFile.reset" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>重置文件存储类</p>
+<p>当你需要更新你的存储路径时，不需要重新定义 <strong>SaveFile</strong> 对象，你只需要使用这个方法，即可将与此对象绑定
+存储路径 <code class="docutils literal notranslate"><span class="pre">dirs</span></code> 属性清空，但仍然会持有 <code class="docutils literal notranslate"><span class="pre">path</span></code> 属性，你可再次调用 <code class="docutils literal notranslate"><span class="pre">set()</span></code> 方法，新增你期望的路径</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.save">
 <span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.SaveFile.save" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>保存数据</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>*data</strong> – 待存储的数据</p></li>
+<li><p><strong>name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – 文件名称</p></li>
+</ul>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code> 属性为你期望保存的文件名称，我们在初始化方法中提供了 <code class="docutils literal notranslate"><span class="pre">savemode</span></code> 属性供你设置存储文件类型，我们默认为
+<code class="docutils literal notranslate"><span class="pre">.dat</span></code> 文件，如果你没有提供了 <code class="docutils literal notranslate"><span class="pre">name</span></code> 值，那么它将以数字 <code class="docutils literal notranslate"><span class="pre">0/1/2/3/4...</span></code> 来给文件命名</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file_sys</span><span class="o">.</span><span class="n">dirs</span>
+<span class="c1"># D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s2">&quot;measure1&quot;</span><span class="p">)</span>
+<span class="c1"># data数据存储的绝对路径为 D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33\measure1.dat</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># data数据存储的绝对路径为 D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33\0.dat</span>
+
+<span class="n">file_sys</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># data数据存储的绝对路径为 D:\Qubit\D4\2021-08-18\author\q0\XEB\test\2021-08-28 12.45.33\1.dat</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.save_param">
 <span class="sig-name descname"><span class="pre">save_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">as_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.SaveFile.save_param" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>保存参数</p>
+<p>将指定参数写进当前路径下，并保存成 json 或 txt 文件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>as_json</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否保存为 json 格式，默认为 True，即保存为 json 文件</p></li>
+<li><p><strong>**kwargs</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.tool.SaveFile.show">
 <span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.tool.SaveFile.show" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><p>展示当前对象中路径的层级结构</p>
+<dl class="field-list simple">
+<dt class="field-odd">案例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>假设 self.dirs = r&#39;D:\Qubit\D41-08-23\q0&#39;
+
+调用方法 ``file_sys.show()`` , 结果分级展示所有子文件
+
+q0/
+    RandomizedBenchmarking/
+        2021-08-23 09.10.56/
+    XEB/
+        2021-08-23 09.06.51/
+        2021-08-23 09.07.38/
+            schedule/
+                Q0 pulse schedule_2021-08-23 09.07.42.png
+                Q0 pulse schedule_2021-08-23 09.07.43.png
+                Q0 pulse schedule_2021-08-23 09.07.44.png
+                Q0 pulse schedule_2021-08-23 09.07.45.png
+        2021-08-23 09.09.02/
+            schedule/
+                Q0 pulse schedule_2021-08-23 09.09.06.png
+                Q0 pulse schedule_2021-08-23 09.09.07.png
+                Q0 pulse schedule_2021-08-23 09.09.08.png
+                Q0 pulse schedule_2021-08-23 09.09.09.png
+        2021-08-23 09.11.38/
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -3428,7 +3721,7 @@ parameters. 2012. Computational Optimization and Applications.
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.pulse package &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.pulse package &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -181,24 +181,14 @@
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
 <p>波形的抽象基类</p>
 <p>波形可以通过控制电子设备传输到该设备上</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.base_pulse.PulseComponent.time">
-<span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#pyQCat.pulse.base_pulse.PulseComponent.time" title="永久链接至目标">¶</a></dt>
-<dd><p>波形持续时间</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.base_pulse.PulseComponent.sample_rate">
-<span class="sig-name descname"><span class="pre">sample_rate</span></span><a class="headerlink" href="#pyQCat.pulse.base_pulse.PulseComponent.sample_rate" title="永久链接至目标">¶</a></dt>
-<dd><p>采样率，默认为1.6，单位为 <cite>GHz</cite></p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.base_pulse.PulseComponent.correction">
-<span class="sig-name descname"><span class="pre">correction</span></span><a class="headerlink" href="#pyQCat.pulse.base_pulse.PulseComponent.correction" title="永久链接至目标">¶</a></dt>
-<dd><p>用于连接 <cite>PulseCorrection</cite> 对象，进行波形校准</p>
-</dd></dl>
-
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<em>float</em>) – 波形持续时间</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – 脉冲类型，可以选择 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Z</span></code> 、 <code class="docutils literal notranslate"><span class="pre">M</span></code></p></li>
+</ul>
+</dd>
+</dl>
 <p>Initialize method</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.pulse.base_pulse.PulseComponent.type">
@@ -488,10 +478,11 @@
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值</p></li>
-<li><p><strong>sigma</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
-<li><p><strong>fast_m</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – </p></li>
-<li><p><strong>name</strong> – 默认为 <cite>Z</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时宽</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – </p></li>
+<li><p><strong>fast_m</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 作用对象，默认为 <cite>Z</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -541,14 +532,15 @@
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>freq</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 波形频率，单位 <cite>GHz</cite></p></li>
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 波形幅值</p></li>
-<li><p><strong>phase</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 波形相位</p></li>
-<li><p><strong>alpha</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
-<li><p><strong>delta</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
-<li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 波形偏移量</p></li>
-<li><p><strong>detune</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
-<li><p><strong>name</strong> – 默认为 <cite>XY</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉时宽</p></li>
+<li><p><strong>freq</strong> (<em>float</em>) – 波形频率，单位 <cite>GHz</cite></p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 波形幅值</p></li>
+<li><p><strong>detune</strong> (<em>float</em>) – 失谐量</p></li>
+<li><p><strong>freq</strong> – 频率</p></li>
+<li><p><strong>phase</strong> (<em>float</em>) – 波形相位</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – </p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – </p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>XY</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -599,9 +591,10 @@
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 幅值列表</p></li>
-<li><p><strong>IF_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 中频列表（单位为 <cite>MHz</cite>）</p></li>
-<li><p><strong>name</strong> – 默认为 <cite>M</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时长</p></li>
+<li><p><strong>amp_list</strong> (<em>List</em>) – 幅值列表</p></li>
+<li><p><strong>IF_list</strong> (<em>List</em>) – 中频列表（单位为 <cite>MHz</cite>）</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 作用对象，默认为 <cite>M</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -656,17 +649,18 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.FlatTopGaussian">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FlatTopGaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Z'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.pulse_lib.FlatTopGaussian" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FlatTopGaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Z'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.pulse_lib.FlatTopGaussian" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.pulse.base_pulse.PulseComponent</span></code></a></p>
 <p>FlatTopGaussian波形， 作用于 <cite>Z</cite> 线</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp</strong> – 幅值</p></li>
-<li><p><strong>is_control</strong> – </p></li>
-<li><p><strong>sigma</strong> – </p></li>
-<li><p><strong>buffer</strong> – </p></li>
-<li><p><strong>name</strong> – 默认为 <cite>Z</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时长</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – </p></li>
+<li><p><strong>buffer</strong> (<em>float</em>) – </p></li>
+<li><p><strong>is_control</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>Z</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -738,9 +732,9 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值</p></li>
-<li><p><strong>time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 时宽</p></li>
-<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 默认为 <cite>Z</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时长</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>Z</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -798,15 +792,16 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.SquareEnvelop">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SquareEnvelop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'XY'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.pulse_lib.SquareEnvelop" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.pulse.base_pulse.PulseComponent</span></code></a></p>
-<p><cite>SquareEnvelop</cite> 波形，作用于 <cite>XY</cite> 线</p>
+<p><strong>SquareEnvelop</strong> 波形，又称方波，作用于 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 时宽</p></li>
-<li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 偏移</p></li>
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值</p></li>
-<li><p><strong>freq</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 频率</p></li>
-<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 默认为 <cite>XY</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 时宽</p></li>
+<li><p><strong>offset</strong> (<em>float</em>) – 偏移</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>detune</strong> (<em>float</em>) – 失谐量</p></li>
+<li><p><strong>freq</strong> (<em>float</em>) – 频率</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>XY</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -830,7 +825,10 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.SquareEnvelop.validate_parameters">
 <span class="sig-name descname"><span class="pre">validate_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.pulse_lib.SquareEnvelop.validate_parameters" title="永久链接至目标">¶</a></dt>
 <dd><p>校验参数</p>
-<p>幅值不可以大于1，频率范围为 <cite>400-700MHz</cite></p>
+<ul class="simple">
+<li><p>幅值的绝对值不可以大于1</p></li>
+<li><p>频率范围为 [400, 700] MHZ</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">引发</dt>
 <dd class="field-odd"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.PulseError" title="pyQCat.errors.PulseError"><strong>PulseError</strong></a> – 波形参数不满足要求</p>
@@ -844,6 +842,72 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.SquareEnvelop.get_pulse">
 <span class="sig-name descname"><span class="pre">get_pulse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.pulse_lib.SquareEnvelop.get_pulse" title="永久链接至目标">¶</a></dt>
+<dd><p>计算获取波形的数值序列</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.VarFreqEnvelop">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">VarFreqEnvelop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'XY'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.pulse_lib.VarFreqEnvelop" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.pulse.base_pulse.PulseComponent</span></code></a></p>
+<p><strong>VarFreqEnvelop</strong> 波形，又称变频方波，作用于 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线</p>
+<p>变频方法源自方法，区别为方波 <strong>SquareEnvelop</strong> 在整个脉冲周期内，脉冲频率固定不变，
+而变频方波的频率对着时间成线性增长。我们在比特能谱 <code class="docutils literal notranslate"><span class="pre">chirp</span></code> 方案中用到了这个波形。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时长</p></li>
+<li><p><strong>offset</strong> (<em>float</em>) – 偏移</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>detune</strong> (<em>float</em>) – 失谐量</p></li>
+<li><p><strong>freq</strong> (<em>float</em>) – 频率</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 作用对象，默认为 <cite>XY</cite></p></li>
+</ul>
+</dd>
+</dl>
+<p>Initialize method</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.VarFreqEnvelop.band_width">
+<span class="sig-name descname"><span class="pre">band_width</span></span><em class="property"> <span class="pre">=</span> <span class="pre">100</span></em><a class="headerlink" href="#pyQCat.pulse.pulse_lib.VarFreqEnvelop.band_width" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.VarFreqEnvelop.parameters">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="pre">:</span> <span class="pre">Dict[str,</span> <span class="pre">Any]</span></em><a class="headerlink" href="#pyQCat.pulse.pulse_lib.VarFreqEnvelop.parameters" title="永久链接至目标">¶</a></dt>
+<dd><p>返回 <cite>VarFreqEnvelop</cite> 波形参数</p>
+<dl class="simple">
+<dt>Returns：</dt><dd><p>Dict: <cite>VarFreqEnvelop</cite> 波形参数字典</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.VarFreqEnvelop.validate_parameters">
+<span class="sig-name descname"><span class="pre">validate_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.pulse_lib.VarFreqEnvelop.validate_parameters" title="永久链接至目标">¶</a></dt>
+<dd><p>校验参数</p>
+<ul class="simple">
+<li><p>幅值的绝对值不可以大于1</p></li>
+<li><p>频率范围为 [400, 700] MHZ</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">引发</dt>
+<dd class="field-odd"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.PulseError" title="pyQCat.errors.PulseError"><strong>PulseError</strong></a> – 校验失败</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.pulse.pulse_lib.VarFreqEnvelop.get_pulse">
+<span class="sig-name descname"><span class="pre">get_pulse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.pulse_lib.VarFreqEnvelop.get_pulse" title="永久链接至目标">¶</a></dt>
 <dd><p>计算获取波形的数值序列</p>
 </dd></dl>
 
@@ -954,10 +1018,10 @@ f\left(x\right)      ,  elsewhere\]</div>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseComponent.html#pyQCat.pulse.PulseComponent" title="pyQCat.pulse.PulseComponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PulseComponent</span></code></a>(time, type_)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseComponent.html#pyQCat.pulse.PulseComponent" title="pyQCat.pulse.PulseComponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PulseComponent</span></code></a></p></td>
 <td><p>波形的抽象基类</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.PulseCorrection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PulseCorrection</span></code></a>(bit, hardware_dir)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseCorrection.html#pyQCat.pulse.PulseCorrection" title="pyQCat.pulse.PulseCorrection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PulseCorrection</span></code></a></p></td>
 <td><p>波形修正类</p></td>
 </tr>
 </tbody>
@@ -971,34 +1035,34 @@ f\left(x\right)      ,  elsewhere\]</div>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.Drag.html#pyQCat.pulse.Drag" title="pyQCat.pulse.Drag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Drag</span></code></a>(time, offset, amp, detune, freq[, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.Drag.html#pyQCat.pulse.Drag" title="pyQCat.pulse.Drag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Drag</span></code></a></p></td>
 <td><p>Drag波形， 作用于 <cite>XY</cite> 线</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.GaussianSquare.html#pyQCat.pulse.GaussianSquare" title="pyQCat.pulse.GaussianSquare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GaussianSquare</span></code></a>(time, amp[, sigma, fast_m, name])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.GaussianSquare.html#pyQCat.pulse.GaussianSquare" title="pyQCat.pulse.GaussianSquare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GaussianSquare</span></code></a></p></td>
 <td><p>高斯方波，作用于 <cite>Z</cite> 线</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.FlatTopGaussian.html#pyQCat.pulse.FlatTopGaussian" title="pyQCat.pulse.FlatTopGaussian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FlatTopGaussian</span></code></a>(time, amp[, sigma, buffer, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.FlatTopGaussian.html#pyQCat.pulse.FlatTopGaussian" title="pyQCat.pulse.FlatTopGaussian"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FlatTopGaussian</span></code></a></p></td>
 <td><p>FlatTopGaussian波形， 作用于 <cite>Z</cite> 线</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.AcquireSine.html#pyQCat.pulse.AcquireSine" title="pyQCat.pulse.AcquireSine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AcquireSine</span></code></a>(time, amp_list, IF_list[, name])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.AcquireSine.html#pyQCat.pulse.AcquireSine" title="pyQCat.pulse.AcquireSine"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AcquireSine</span></code></a></p></td>
 <td><p>AcquireSine， 作用于读取通道</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseComponent.html#pyQCat.pulse.PulseComponent" title="pyQCat.pulse.PulseComponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PulseComponent</span></code></a>(time, type_)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.PulseComponent.html#pyQCat.pulse.PulseComponent" title="pyQCat.pulse.PulseComponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PulseComponent</span></code></a></p></td>
 <td><p>波形的抽象基类</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.Constant.html#pyQCat.pulse.Constant" title="pyQCat.pulse.Constant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Constant</span></code></a>(time, amp[, name])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.Constant.html#pyQCat.pulse.Constant" title="pyQCat.pulse.Constant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Constant</span></code></a></p></td>
 <td><p><cite>Constant</cite> 波形，作用于 <cite>Z</cite> 线</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.SquareEnvelop.html#pyQCat.pulse.SquareEnvelop" title="pyQCat.pulse.SquareEnvelop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SquareEnvelop</span></code></a>(time, offset, amp, detune, freq)</p></td>
-<td><p><cite>SquareEnvelop</cite> 波形，作用于 <cite>XY</cite> 线</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.SquareEnvelop.html#pyQCat.pulse.SquareEnvelop" title="pyQCat.pulse.SquareEnvelop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SquareEnvelop</span></code></a></p></td>
+<td><p><strong>SquareEnvelop</strong> 波形，又称方波，作用于 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.half_pi_pulse.html#pyQCat.pulse.half_pi_pulse" title="pyQCat.pulse.half_pi_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">half_pi_pulse</span></code></a>(qubit)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.half_pi_pulse.html#pyQCat.pulse.half_pi_pulse" title="pyQCat.pulse.half_pi_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">half_pi_pulse</span></code></a></p></td>
 <td><p>获取 <cite>half pi pulse</cite> 将比特激发到赤道平面</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.pi_pulse.html#pyQCat.pulse.pi_pulse" title="pyQCat.pulse.pi_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pi_pulse</span></code></a>(qubit)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.pi_pulse.html#pyQCat.pulse.pi_pulse" title="pyQCat.pulse.pi_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pi_pulse</span></code></a></p></td>
 <td><p>获取 <cite>pi pulse</cite> 将比特激发到1态</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.zero_pulse.html#pyQCat.pulse.zero_pulse" title="pyQCat.pulse.zero_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zero_pulse</span></code></a>(qubit)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.zero_pulse.html#pyQCat.pulse.zero_pulse" title="pyQCat.pulse.zero_pulse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zero_pulse</span></code></a></p></td>
 <td><p>获取幅值为一直为0的波形</p></td>
 </tr>
 </tbody>
@@ -1012,7 +1076,7 @@ f\left(x\right)      ,  elsewhere\]</div>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.Schedule.html#pyQCat.pulse.Schedule" title="pyQCat.pulse.Schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Schedule</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../pulse/stubs/pyQCat.pulse.Schedule.html#pyQCat.pulse.Schedule" title="pyQCat.pulse.Schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Schedule</span></code></a></p></td>
 <td><p>绘制波形时序图功能类</p></td>
 </tr>
 </tbody>
@@ -1025,14 +1089,15 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>freq</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 波形频率，单位 <cite>GHz</cite></p></li>
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 波形幅值</p></li>
-<li><p><strong>phase</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 波形相位</p></li>
-<li><p><strong>alpha</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
-<li><p><strong>delta</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
-<li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 波形偏移量</p></li>
-<li><p><strong>detune</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
-<li><p><strong>name</strong> – 默认为 <cite>XY</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉时宽</p></li>
+<li><p><strong>freq</strong> (<em>float</em>) – 波形频率，单位 <cite>GHz</cite></p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 波形幅值</p></li>
+<li><p><strong>detune</strong> (<em>float</em>) – 失谐量</p></li>
+<li><p><strong>freq</strong> – 频率</p></li>
+<li><p><strong>phase</strong> (<em>float</em>) – 波形相位</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – </p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – </p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>XY</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -1083,10 +1148,11 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值</p></li>
-<li><p><strong>sigma</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – </p></li>
-<li><p><strong>fast_m</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – </p></li>
-<li><p><strong>name</strong> – 默认为 <cite>Z</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时宽</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – </p></li>
+<li><p><strong>fast_m</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 作用对象，默认为 <cite>Z</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -1130,17 +1196,18 @@ f\left(x\right)      ,  elsewhere\]</div>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.pulse.FlatTopGaussian">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FlatTopGaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Z'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.FlatTopGaussian" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FlatTopGaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Z'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.FlatTopGaussian" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.pulse.base_pulse.PulseComponent</span></code></a></p>
 <p>FlatTopGaussian波形， 作用于 <cite>Z</cite> 线</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp</strong> – 幅值</p></li>
-<li><p><strong>is_control</strong> – </p></li>
-<li><p><strong>sigma</strong> – </p></li>
-<li><p><strong>buffer</strong> – </p></li>
-<li><p><strong>name</strong> – 默认为 <cite>Z</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时长</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – </p></li>
+<li><p><strong>buffer</strong> (<em>float</em>) – </p></li>
+<li><p><strong>is_control</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>Z</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -1208,9 +1275,10 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 幅值列表</p></li>
-<li><p><strong>IF_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – 中频列表（单位为 <cite>MHz</cite>）</p></li>
-<li><p><strong>name</strong> – 默认为 <cite>M</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时长</p></li>
+<li><p><strong>amp_list</strong> (<em>List</em>) – 幅值列表</p></li>
+<li><p><strong>IF_list</strong> (<em>List</em>) – 中频列表（单位为 <cite>MHz</cite>）</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 作用对象，默认为 <cite>M</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -1269,24 +1337,14 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
 <p>波形的抽象基类</p>
 <p>波形可以通过控制电子设备传输到该设备上</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.time">
-<span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#pyQCat.pulse.PulseComponent.time" title="永久链接至目标">¶</a></dt>
-<dd><p>波形持续时间</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.sample_rate">
-<span class="sig-name descname"><span class="pre">sample_rate</span></span><a class="headerlink" href="#pyQCat.pulse.PulseComponent.sample_rate" title="永久链接至目标">¶</a></dt>
-<dd><p>采样率，默认为1.6，单位为 <cite>GHz</cite></p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.correction">
-<span class="sig-name descname"><span class="pre">correction</span></span><a class="headerlink" href="#pyQCat.pulse.PulseComponent.correction" title="永久链接至目标">¶</a></dt>
-<dd><p>用于连接 <cite>PulseCorrection</cite> 对象，进行波形校准</p>
-</dd></dl>
-
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<em>float</em>) – 波形持续时间</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – 脉冲类型，可以选择 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Z</span></code> 、 <code class="docutils literal notranslate"><span class="pre">M</span></code></p></li>
+</ul>
+</dd>
+</dl>
 <p>Initialize method</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.type">
@@ -1605,9 +1663,9 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值</p></li>
-<li><p><strong>time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 时宽</p></li>
-<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 默认为 <cite>Z</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时长</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>Z</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -1688,15 +1746,16 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dt class="sig sig-object py" id="pyQCat.pulse.SquareEnvelop">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SquareEnvelop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'XY'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.SquareEnvelop" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.pulse.base_pulse.PulseComponent</span></code></a></p>
-<p><cite>SquareEnvelop</cite> 波形，作用于 <cite>XY</cite> 线</p>
+<p><strong>SquareEnvelop</strong> 波形，又称方波，作用于 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 时宽</p></li>
-<li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 偏移</p></li>
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值</p></li>
-<li><p><strong>freq</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 频率</p></li>
-<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 默认为 <cite>XY</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 时宽</p></li>
+<li><p><strong>offset</strong> (<em>float</em>) – 偏移</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>detune</strong> (<em>float</em>) – 失谐量</p></li>
+<li><p><strong>freq</strong> (<em>float</em>) – 频率</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>XY</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -1720,7 +1779,10 @@ f\left(x\right)      ,  elsewhere\]</div>
 <dt class="sig sig-object py" id="pyQCat.pulse.SquareEnvelop.validate_parameters">
 <span class="sig-name descname"><span class="pre">validate_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.SquareEnvelop.validate_parameters" title="永久链接至目标">¶</a></dt>
 <dd><p>校验参数</p>
-<p>幅值不可以大于1，频率范围为 <cite>400-700MHz</cite></p>
+<ul class="simple">
+<li><p>幅值的绝对值不可以大于1</p></li>
+<li><p>频率范围为 [400, 700] MHZ</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">引发</dt>
 <dd class="field-odd"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.PulseError" title="pyQCat.errors.PulseError"><strong>PulseError</strong></a> – 波形参数不满足要求</p>
@@ -1793,7 +1855,7 @@ f\left(x\right)      ,  elsewhere\]</div>
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

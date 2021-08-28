@@ -107,3 +107,17 @@ version 0.0.4
 **自动化测试GUI界面更新**
 
 10. flow GUI界面添加sweet point参数选项
+
+## version 0.0.8
+
+**日期：2021年8月25日**
+
+
+
+1. 新增XEB实验、flow执行节点、更新exp.yaml
+2. RB实验结果拟合方法提取到 param_fit 模块中
+3. 将非谐测试独立出来形成 anharmonicity meansure node，更新exp.yaml
+4. 比特能谱实验中幅值系数设置参数 amp_coefficient，更新exp.yaml
+5. 加入串扰严重时的比特频率过滤方案，采用ramsey加入zamp的方式进行判断
+6. Goodness节点提取出扫描范围的接口到yaml文件
+7. 比特频率优化节点提取出freq_threshold参数到yaml文件

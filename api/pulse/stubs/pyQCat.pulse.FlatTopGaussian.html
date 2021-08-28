@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.pulse.FlatTopGaussian &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.pulse.FlatTopGaussian &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -105,6 +105,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
@@ -195,24 +196,25 @@
 <h1>pyQCat.pulse.FlatTopGaussian<a class="headerlink" href="#pyqcat-pulse-flattopgaussian" title="永久链接至标题">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.pulse.FlatTopGaussian">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FlatTopGaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Z'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.FlatTopGaussian" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">FlatTopGaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Z'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.FlatTopGaussian" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="../../../_auto/pyQCat.pulse.html#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.pulse.base_pulse.PulseComponent</span></code></a></p>
 <p>FlatTopGaussian波形， 作用于 <cite>Z</cite> 线</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>amp</strong> – 幅值</p></li>
-<li><p><strong>is_control</strong> – </p></li>
-<li><p><strong>sigma</strong> – </p></li>
-<li><p><strong>buffer</strong> – </p></li>
-<li><p><strong>name</strong> – 默认为 <cite>Z</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 脉冲时长</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>sigma</strong> (<em>float</em>) – </p></li>
+<li><p><strong>buffer</strong> (<em>float</em>) – </p></li>
+<li><p><strong>is_control</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>Z</cite></p></li>
 </ul>
 </dd>
 </dl>
 <p>Initialize method</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.pulse.FlatTopGaussian.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Z'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.FlatTopGaussian.__init__" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_control</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Z'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.FlatTopGaussian.__init__" title="永久链接至目标">¶</a></dt>
 <dd><p>Initialize method</p>
 </dd></dl>
 
@@ -370,7 +372,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.pulse.SquareEnvelop &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.pulse.SquareEnvelop &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -72,7 +72,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -105,6 +105,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../detection/index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
@@ -197,15 +198,16 @@
 <dt class="sig sig-object py" id="pyQCat.pulse.SquareEnvelop">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">SquareEnvelop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detune</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'XY'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.SquareEnvelop" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="../../../_auto/pyQCat.pulse.html#pyQCat.pulse.base_pulse.PulseComponent" title="pyQCat.pulse.base_pulse.PulseComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.pulse.base_pulse.PulseComponent</span></code></a></p>
-<p><cite>SquareEnvelop</cite> 波形，作用于 <cite>XY</cite> 线</p>
+<p><strong>SquareEnvelop</strong> 波形，又称方波，作用于 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 时宽</p></li>
-<li><p><strong>offset</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 偏移</p></li>
-<li><p><strong>amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值</p></li>
-<li><p><strong>freq</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 频率</p></li>
-<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – 默认为 <cite>XY</cite></p></li>
+<li><p><strong>time</strong> (<em>int</em>) – 时宽</p></li>
+<li><p><strong>offset</strong> (<em>float</em>) – 偏移</p></li>
+<li><p><strong>amp</strong> (<em>float</em>) – 幅值</p></li>
+<li><p><strong>detune</strong> (<em>float</em>) – 失谐量</p></li>
+<li><p><strong>freq</strong> (<em>float</em>) – 频率</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – 施加对象，默认为 <cite>XY</cite></p></li>
 </ul>
 </dd>
 </dl>
@@ -313,7 +315,10 @@
 <dt class="sig sig-object py" id="pyQCat.pulse.SquareEnvelop.validate_parameters">
 <span class="sig-name descname"><span class="pre">validate_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.pulse.SquareEnvelop.validate_parameters" title="永久链接至目标">¶</a></dt>
 <dd><p>校验参数</p>
-<p>幅值不可以大于1，频率范围为 <cite>400-700MHz</cite></p>
+<ul class="simple">
+<li><p>幅值的绝对值不可以大于1</p></li>
+<li><p>频率范围为 [400, 700] MHZ</p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">引发</dt>
 <dd class="field-odd"><p><a class="reference internal" href="../../../_auto/pyQCat.html#pyQCat.errors.PulseError" title="pyQCat.errors.PulseError"><strong>PulseError</strong></a> – 波形参数不满足要求</p>
@@ -350,7 +355,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

@@ -15,8 +15,10 @@
    
       ~QubitSpectrum.__init__
       ~QubitSpectrum.acquire_pulse
+      ~QubitSpectrum.amp_coefficient_check
       ~QubitSpectrum.bind_probe_inst
       ~QubitSpectrum.config_file_sys
+      ~QubitSpectrum.get_qubit_str
       ~QubitSpectrum.init_readout
       ~QubitSpectrum.play_pulse
       ~QubitSpectrum.plot_schedule

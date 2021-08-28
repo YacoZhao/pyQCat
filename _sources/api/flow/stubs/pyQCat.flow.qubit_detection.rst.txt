@@ -13,6 +13,7 @@
 
    .. autosummary::
    
+      anharmonicity_measure
       cavity_freq_update
       find_peaks_dips
       freq_preliminary

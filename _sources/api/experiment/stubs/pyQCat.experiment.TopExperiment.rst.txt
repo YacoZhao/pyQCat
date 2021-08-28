@@ -17,6 +17,7 @@
       ~TopExperiment.acquire_pulse
       ~TopExperiment.bind_probe_inst
       ~TopExperiment.config_file_sys
+      ~TopExperiment.get_qubit_str
       ~TopExperiment.init_readout
       ~TopExperiment.play_pulse
       ~TopExperiment.plot_schedule

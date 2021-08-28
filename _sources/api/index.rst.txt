@@ -7,6 +7,7 @@ API 文档
 ----
 **pyQCat** 由多个部分构成，他们分别为：
 
+- **Quantum Detection:** 使用商用仪器进实现对量子比特的初步探测。
 - **Quantum Experiment:** 负责量子比特实验，实现量子比特的测量及参数校准。
 - **Automated Testing Flow:** 负责量子比特自动化测试及校准流程。
 - **Measurement Instrument:** 负责量子比特实验参数下传及数据接受。
@@ -23,6 +24,7 @@ API 文档
    :maxdepth: 1
    :includehidden:
 
+   detection/index
    experiment/index
    flow/index
    instrument/index

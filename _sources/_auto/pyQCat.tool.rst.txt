@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
    :maxdepth: 10
 
+   pyQCat.tool.experiment_result_output
    pyQCat.tool.gui
    pyQCat.tool.pyqst
 
@@ -105,14 +106,6 @@ pyQCat.tool.smooth module
 -------------------------
 
 .. automodule:: pyQCat.tool.smooth
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-pyQCat.tool.test module
------------------------
-
-.. automodule:: pyQCat.tool.test
    :members:
    :undoc-members:
    :show-inheritance:

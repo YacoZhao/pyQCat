@@ -1,0 +1,23 @@
+﻿pyQCat.detection.InstConnect
+============================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: InstConnect
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~InstConnect.__init__
+      ~InstConnect.close
+   
+   
+
+   
+   
+   

@@ -17,6 +17,7 @@
       ~XYZTiming.acquire_pulse
       ~XYZTiming.bind_probe_inst
       ~XYZTiming.config_file_sys
+      ~XYZTiming.get_qubit_str
       ~XYZTiming.init_readout
       ~XYZTiming.play_pulse
       ~XYZTiming.plot_schedule

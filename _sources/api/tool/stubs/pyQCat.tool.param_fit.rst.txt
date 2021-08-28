@@ -17,6 +17,7 @@
       amp2cavity_freq_fit
       cosine_fit
       curve_fit_step
+      exp_decay_fit
       freq_flux_fit
       least_sq_fit_step
       linear_fit

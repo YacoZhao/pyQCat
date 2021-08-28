@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.pulse.PulseComponent &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.pulse.PulseComponent &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -175,24 +175,14 @@
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
 <p>波形的抽象基类</p>
 <p>波形可以通过控制电子设备传输到该设备上</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.time">
-<span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#pyQCat.pulse.PulseComponent.time" title="永久链接至目标">¶</a></dt>
-<dd><p>波形持续时间</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.sample_rate">
-<span class="sig-name descname"><span class="pre">sample_rate</span></span><a class="headerlink" href="#pyQCat.pulse.PulseComponent.sample_rate" title="永久链接至目标">¶</a></dt>
-<dd><p>采样率，默认为1.6，单位为 <cite>GHz</cite></p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.correction">
-<span class="sig-name descname"><span class="pre">correction</span></span><a class="headerlink" href="#pyQCat.pulse.PulseComponent.correction" title="永久链接至目标">¶</a></dt>
-<dd><p>用于连接 <cite>PulseCorrection</cite> 对象，进行波形校准</p>
-</dd></dl>
-
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time</strong> (<em>float</em>) – 波形持续时间</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – 脉冲类型，可以选择 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Z</span></code> 、 <code class="docutils literal notranslate"><span class="pre">M</span></code></p></li>
+</ul>
+</dd>
+</dl>
 <p>Initialize method</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.pulse.PulseComponent.__init__">
@@ -546,7 +536,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -70,7 +70,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -204,16 +204,24 @@
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.detection.html#module-pyQCat.detection.z_line_detection">pyQCat.detection.z_line_detection module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.detection.html#module-pyQCat.detection">Module contents</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="pyQCat.detection.html#quantum-detection-pyqcat-detection">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="pyQCat.detection.html#cavity-detection">Cavity Detection</a><ul>
-<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.CavityDetection.html">pyQCat.detection.CavityDetection</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.detection.html#preliminary-instrument">Preliminary Instrument</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.InstConnect.html">pyQCat.detection.InstConnect</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.QAIO.html">pyQCat.detection.QAIO</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.DcFlux.html">pyQCat.detection.DcFlux</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.CB2902A.html">pyQCat.detection.CB2902A</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.AWG33522A.html">pyQCat.detection.AWG33522A</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.MicSource.html">pyQCat.detection.MicSource</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.NetworkAnalyzer.html">pyQCat.detection.NetworkAnalyzer</a></li>
 </ul>
 </li>
-<li class="toctree-l6"><a class="reference internal" href="pyQCat.detection.html#detection-interface">Detection Interface</a><ul>
-<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.DetectionBase.html">pyQCat.detection.DetectionBase</a></li>
-</ul>
-</li>
-<li class="toctree-l6"><a class="reference internal" href="pyQCat.detection.html#z-line-detection">Z Line Detection</a><ul>
-<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.ZlineDetection.html">pyQCat.detection.ZlineDetection</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.detection.html#qubit-preliminary">Qubit Preliminary</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.QubitPreliminary.html">pyQCat.detection.QubitPreliminary</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.CavityFluxScan.html">pyQCat.detection.CavityFluxScan</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.FindCavityFreq.html">pyQCat.detection.FindCavityFreq</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.FindQubitFreq.html">pyQCat.detection.FindQubitFreq</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.FixedFlux.html">pyQCat.detection.FixedFlux</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.FixedFq.html">pyQCat.detection.FixedFq</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../detection/stubs/pyQCat.detection.ZeroDetuning.html">pyQCat.detection.ZeroDetuning</a></li>
 </ul>
 </li>
 </ul>
@@ -250,6 +258,7 @@
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.experiment.html#module-pyQCat.experiment.timing">pyQCat.experiment.timing module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.experiment.html#module-pyQCat.experiment.top_analysis">pyQCat.experiment.top_analysis module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.experiment.html#module-pyQCat.experiment.top_experiment">pyQCat.experiment.top_experiment module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pyQCat.experiment.html#module-pyQCat.experiment.xeb">pyQCat.experiment.xeb module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.experiment.html#module-pyQCat.experiment.xyz_timing">pyQCat.experiment.xyz_timing module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.experiment.html#module-pyQCat.experiment.z_compensate">pyQCat.experiment.z_compensate module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.experiment.html#module-pyQCat.experiment.z_distortion">pyQCat.experiment.z_distortion module</a></li>
@@ -318,6 +327,11 @@
 <li class="toctree-l6"><a class="reference internal" href="pyQCat.experiment.html#randomizedbenchmarking">RandomizedBenchmarking</a><ul>
 <li class="toctree-l7"><a class="reference internal" href="../experiment/stubs/pyQCat.experiment.RandomizedBenchmarking.html">pyQCat.experiment.RandomizedBenchmarking</a></li>
 <li class="toctree-l7"><a class="reference internal" href="../experiment/stubs/pyQCat.experiment.RandomizedBenchmarkingAnalysis.html">pyQCat.experiment.RandomizedBenchmarkingAnalysis</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.experiment.html#xeb">XEB</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../experiment/stubs/pyQCat.experiment.XEB.html">pyQCat.experiment.XEB</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../experiment/stubs/pyQCat.experiment.XEBAnalysis.html">pyQCat.experiment.XEBAnalysis</a></li>
 </ul>
 </li>
 <li class="toctree-l6"><a class="reference internal" href="pyQCat.experiment.html#modulation-spectrum">Modulation Spectrum</a><ul>
@@ -402,7 +416,6 @@
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.gate.html#module-pyQCat.gate">Module contents</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="pyQCat.gate.html#quantum-gate-pyqcat-gate">Quantum Gate (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.gate</span></code>)</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="pyQCat.gate.html#notable-gate">Notable Gate</a><ul>
-<li class="toctree-l7"><a class="reference internal" href="../gate/stubs/pyQCat.gate.SingleQgate.html">pyQCat.gate.SingleQgate</a></li>
 <li class="toctree-l7"><a class="reference internal" href="../gate/stubs/pyQCat.gate.Xgate.html">pyQCat.gate.Xgate</a></li>
 <li class="toctree-l7"><a class="reference internal" href="../gate/stubs/pyQCat.gate.Ygate.html">pyQCat.gate.Ygate</a></li>
 <li class="toctree-l7"><a class="reference internal" href="../gate/stubs/pyQCat.gate.RXgate.html">pyQCat.gate.RXgate</a></li>
@@ -412,7 +425,6 @@
 <li class="toctree-l7"><a class="reference internal" href="../gate/stubs/pyQCat.gate.Cphase_gate.html">pyQCat.gate.Cphase_gate</a></li>
 </ul>
 </li>
-<li class="toctree-l6"><a class="reference internal" href="pyQCat.gate.html#id1">Notable Gate</a></li>
 </ul>
 </li>
 </ul>
@@ -571,6 +583,17 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pyQCat.tool.html">pyQCat.tool package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html">pyQCat.tool.experiment_result_output package</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#submodules">Submodules</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.exception">pyQCat.tool.experiment_result_output.exception module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.experiment_result_output">pyQCat.tool.experiment_result_output.experiment_result_output module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.experimental_picture_arrangement">pyQCat.tool.experiment_result_output.experimental_picture_arrangement module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.qubit_para_collection">pyQCat.tool.experiment_result_output.qubit_para_collection module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.run_output_result">pyQCat.tool.experiment_result_output.run_output_result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output.setting">pyQCat.tool.experiment_result_output.setting module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.experiment_result_output.html#module-pyQCat.tool.experiment_result_output">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l5"><a class="reference internal" href="pyQCat.tool.gui.html">pyQCat.tool.gui package</a><ul>
 <li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.gui.html#submodules">Submodules</a></li>
 <li class="toctree-l6"><a class="reference internal" href="pyQCat.tool.gui.html#module-pyQCat.tool.gui.gui">pyQCat.tool.gui.gui module</a></li>
@@ -598,7 +621,6 @@
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.html#module-pyQCat.tool.savefile">pyQCat.tool.savefile module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.html#module-pyQCat.tool.set_config">pyQCat.tool.set_config module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.html#module-pyQCat.tool.smooth">pyQCat.tool.smooth module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.html#module-pyQCat.tool.test">pyQCat.tool.test module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.html#module-pyQCat.tool.utlis">pyQCat.tool.utlis module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.html#module-pyQCat.tool.wrappers">pyQCat.tool.wrappers module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pyQCat.tool.html#module-pyQCat.tool">Module contents</a><ul>
@@ -613,7 +635,6 @@
 <li class="toctree-l6"><a class="reference internal" href="../tool/stubs/pyQCat.tool.parsefile.html">pyQCat.tool.parsefile</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../tool/stubs/pyQCat.tool.plot_data.html">pyQCat.tool.plot_data</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../tool/stubs/pyQCat.tool.resonator_fit_calibration.html">pyQCat.tool.resonator_fit_calibration</a></li>
-<li class="toctree-l6"><a class="reference internal" href="../tool/stubs/pyQCat.tool.savefile.html">pyQCat.tool.savefile</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../tool/stubs/pyQCat.tool.set_config.html">pyQCat.tool.set_config</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../tool/stubs/pyQCat.tool.utlis.html">pyQCat.tool.utlis</a></li>
 <li class="toctree-l6"><a class="reference internal" href="../tool/stubs/pyQCat.tool.wrappers.html">pyQCat.tool.wrappers</a></li>
@@ -659,7 +680,7 @@
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

@@ -212,6 +212,14 @@ pyQCat.experiment.top\_experiment module
    :undoc-members:
    :show-inheritance:
 
+pyQCat.experiment.xeb module
+----------------------------
+
+.. automodule:: pyQCat.experiment.xeb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyQCat.experiment.xyz\_timing module
 ------------------------------------
 

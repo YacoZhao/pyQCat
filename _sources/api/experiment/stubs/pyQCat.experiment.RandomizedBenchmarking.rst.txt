@@ -21,6 +21,7 @@
       ~RandomizedBenchmarking.get_clifford_matrix_set
       ~RandomizedBenchmarking.get_quantum_circuits
       ~RandomizedBenchmarking.get_quantum_pulses
+      ~RandomizedBenchmarking.get_qubit_str
       ~RandomizedBenchmarking.init_readout
       ~RandomizedBenchmarking.play_pulse
       ~RandomizedBenchmarking.plot_schedule

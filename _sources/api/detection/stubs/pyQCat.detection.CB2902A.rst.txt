@@ -1,0 +1,24 @@
+﻿pyQCat.detection.CB2902A
+========================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: CB2902A
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~CB2902A.__init__
+      ~CB2902A.close
+      ~CB2902A.set_dc
+   
+   
+
+   
+   
+   

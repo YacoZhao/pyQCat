@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>pyQCat.experiment package &mdash; pyQCat 0.0.6 文档</title>
+  <title>pyQCat.experiment package &mdash; pyQCat 0.0.7 文档</title>
   
 
   
@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                0.0.6
+                0.0.7
               </div>
             
           
@@ -1276,7 +1276,7 @@ between the drive frequency and the qubit real frequency.</p></li>
 <span id="pyqcat-experiment-dc-crosstalk-module"></span><h2>pyQCat.experiment.dc_crosstalk module<a class="headerlink" href="#module-pyQCat.experiment.dc_crosstalk" title="永久链接至标题">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.experiment.dc_crosstalk.DCCrosstalk">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DCCrosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias_qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_spectrum_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_v_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">20,</span> <span class="pre">30)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.dc_crosstalk.DCCrosstalk" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DCCrosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias_qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_spectrum_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_v_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">20,</span> <span class="pre">30)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.dc_crosstalk.DCCrosstalk" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p><cite>DC</cite> 串扰实验</p>
 <p>DC Crosstalk理论上可以采用和AC Crosstalk类似的方法，主要问题在于DC Crosstalk
@@ -1455,7 +1455,33 @@ between the drive frequency and the qubit real frequency.</p></li>
 <dd><p>实验重复次数</p>
 </dd></dl>
 
-<p>Initialize method</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument"><em>Instrument</em></a>) – <cite>pyQCat.Instrument</cite> object which is used for hardware settings.</p></li>
+<li><p><strong>target_qubit</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit"><em>Qubit</em></a>) – <cite>pyQCat.Qubit</cite> object. The target qubit.</p></li>
+<li><p><strong>bias_qubit</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit"><em>Qubit</em></a>) – <cite>pyQCat.Qubit</cite> object. The bias qubit.</p></li>
+<li><p><strong>init_fringe</strong> (<em>float</em>) – The initialize value of fringe.</p></li>
+<li><p><strong>delay_list</strong> (<em>list</em><em>, </em><em>np.ndarray</em>) – Ramsey experiment time list.</p></li>
+<li><p><strong>dc_spectrum_params</strong> (<em>list</em><em>, </em><em>np.ndarray</em>) – The fitted parameters of DC spectrum.</p></li>
+<li><p><strong>ac_coefficient</strong> (<em>float</em>) – The coefficient of AC Crosstalk.</p></li>
+<li><p><strong>bit_list</strong> (<em>list</em>) – get corrected_dc use, list of all bits.</p></li>
+<li><p><strong>freq_offset</strong> (<em>float</em>) – The offset value of qubit at sweet spot deviates from target qubit.</p></li>
+<li><p><strong>freq_bound</strong> (<em>float</em>) – Experiment will be stopped when qubit’s frequency delta value
+lower than this value.</p></li>
+<li><p><strong>init_v_bias</strong> (<em>float</em>) – The initialize value of bias voltage.</p></li>
+<li><p><strong>freq_threshold</strong> (<em>tuple</em>) – The frequency range of target qubit.</p></li>
+<li><p><strong>v_bias_bound</strong> (<em>float</em>) – The bias voltage value range of bias qubit.</p></li>
+<li><p><strong>points</strong> (<em>int</em>) – sweep points.</p></li>
+<li><p><strong>correct_dc</strong> (<em>Dict</em>) – The final voltage applied to the qubit. The key of dict represent
+instrument channel when the value of dict represent voltage.</p></li>
+<li><p><strong>compensate</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.PulseCorrection" title="pyQCat.PulseCorrection"><em>PulseCorrection</em></a>) – <cite>pyQCat.PulseCorrection</cite> object.</p></li>
+<li><p><strong>discriminator</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.IQdiscriminator" title="pyQCat.IQdiscriminator"><em>IQdiscriminator</em></a>) – <cite>pyQCat.IQdiscriminator</cite> object.
+A discriminator that classifies the results of a measurement.</p></li>
+<li><p><strong>repeat</strong> (<em>int</em>) – The number of repetitions of the experiment.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.dc_crosstalk.DCCrosstalk.run">
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.dc_crosstalk.DCCrosstalk.run" title="永久链接至目标">¶</a></dt>
@@ -1543,7 +1569,7 @@ between the drive frequency and the qubit real frequency.</p></li>
 <span id="pyqcat-experiment-dc-spectrum-module"></span><h2>pyQCat.experiment.dc_spectrum module<a class="headerlink" href="#module-pyQCat.experiment.dc_spectrum" title="永久链接至标题">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.experiment.dc_spectrum.DCSpectrum">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DCSpectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc_freq_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_shot_repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.dc_spectrum.DCSpectrum" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DCSpectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc_freq_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_shot_repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.dc_spectrum.DCSpectrum" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="#pyQCat.experiment.ac_spectrum.ACSpectrum" title="pyQCat.experiment.ac_spectrum.ACSpectrum"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.ac_spectrum.ACSpectrum</span></code></a></p>
 <p><cite>DC</cite> 谱实验</p>
 <p>DC调制谱理论上可以和AC调制谱一样用Ramsey实验进行测试，主要问题在于
@@ -1822,14 +1848,16 @@ between the drive frequency and the qubit real frequency.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.qubit_spectrum.QubitSpectrum.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.QubitSpectrum.run" title="永久链接至目标">¶</a></dt>
-<dd><p>执行比特能谱实验</p>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_square</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.QubitSpectrum.run" title="永久链接至目标">¶</a></dt>
+<dd><p>比特能谱实验执行函数</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>fq_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>) – 扫描的驱动频率列表</p></li>
+<li><p><strong>fq_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>) – 扫描参数(驱动频率 <code class="docutils literal notranslate"><span class="pre">drive_freq</span></code>)</p></li>
 <li><p><strong>power</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – 驱动功率</p></li>
-<li><p><strong>z_amp</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Z线幅值，默认为空</p></li>
+<li><p><strong>z_amp</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Z线幅值</p></li>
+<li><p><strong>use_square</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否使用方波，如果为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线上施加等频率的方波，如果为 <code class="docutils literal notranslate"><span class="pre">False</span></code> , 则
+线上变频方波</p></li>
 </ul>
 </dd>
 </dl>
@@ -1853,6 +1881,25 @@ between the drive frequency and the qubit real frequency.</p></li>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.qubit_spectrum.QubitSpectrum.amp_coefficient_check">
+<span class="sig-name descname"><span class="pre">amp_coefficient_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.QubitSpectrum.amp_coefficient_check" title="永久链接至目标">¶</a></dt>
+<dd><p>更新比特能谱实验线路幅值。</p>
+<p>驱动功率最小只能提供 -40dB，因为不同样本的线路配置不同，这个功率有时还是很高的。
+所以它需要在驱动功率之外额外乘以一个幅值系数，用来进一步降低幅值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>amp_coefficient</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值系数 0-1</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.ExperimentError" title="pyQCat.errors.ExperimentError"><strong>ExperimentError</strong></a> – 幅值系数在 0-1 范围之外</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -1860,29 +1907,15 @@ between the drive frequency and the qubit real frequency.</p></li>
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">QubitSpectrumAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.QubitSpectrumAnalysis" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="#pyQCat.experiment.top_analysis.TopAnalysis" title="pyQCat.experiment.top_analysis.TopAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_analysis.TopAnalysis</span></code></a></p>
 <p>比特能谱实验结果分析</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.qubit_spectrum.QubitSpectrumAnalysis.x_list">
-<span class="sig-name descname"><span class="pre">x_list</span></span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.QubitSpectrumAnalysis.x_list" title="永久链接至目标">¶</a></dt>
-<dd><p>实验扫描频率列表</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Iterable</p>
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_list</strong> (<em>Iterable</em>) – 实验扫描频率列表</p></li>
+<li><p><strong>z_amp</strong> – Z 线施加的幅值参数</p></li>
+<li><p><strong>fq</strong> – 实验寻找到的比特频率</p></li>
+</ul>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.qubit_spectrum.QubitSpectrumAnalysis.z_amp">
-<span class="sig-name descname"><span class="pre">z_amp</span></span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.QubitSpectrumAnalysis.z_amp" title="永久链接至目标">¶</a></dt>
-<dd><p>Z 线施加的幅值参数</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.qubit_spectrum.QubitSpectrumAnalysis.fq">
-<span class="sig-name descname"><span class="pre">fq</span></span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.QubitSpectrumAnalysis.fq" title="永久链接至目标">¶</a></dt>
-<dd><p>实验寻找到的比特频率</p>
-</dd></dl>
-
 <p>Initialize method</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.qubit_spectrum.QubitSpectrumAnalysis.analyze">
@@ -1907,7 +1940,7 @@ between the drive frequency and the qubit real frequency.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.experiment.qubit_spectrum.qubit_spectrum_zamp">
-<span class="sig-name descname"><span class="pre">qubit_spectrum_zamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_spectrum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zamp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.qubit_spectrum_zamp" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">qubit_spectrum_zamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit_spectrum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zamp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">40</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.qubit_spectrum.qubit_spectrum_zamp" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -2280,6 +2313,20 @@ Paramter <cite>fringe</cite> must be smaller than half of sampling rate.</p>
 <dt class="sig sig-object py" id="pyQCat.experiment.ramsey.RamseyCrosstalk.get_bias_pulse">
 <span class="sig-name descname"><span class="pre">get_bias_pulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.ramsey.RamseyCrosstalk.get_bias_pulse" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.ramsey.RamseyCrosstalk.get_qubit_str">
+<span class="sig-name descname"><span class="pre">get_qubit_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.ramsey.RamseyCrosstalk.get_qubit_str" title="永久链接至目标">¶</a></dt>
+<dd><p>Get qubit str, an args qubit for SaveFile class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>string, use to create save data path.</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>qubit_str</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -3364,7 +3411,7 @@ T1实验中，首先利用一个 <code class="docutils literal notranslate"><spa
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyQCat.experiment.t1.t1_spectrum">
-<span class="sig-name descname"><span class="pre">t1_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t1_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zamp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_documents/config'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.t1.t1_spectrum" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">t1_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t1_exp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zamp_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'D:\\\\work_loc\\\\pyqcat\\\\pyqcat_codes/config'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.t1.t1_spectrum" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -3968,6 +4015,20 @@ name: None
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.top_experiment.TopExperiment.get_qubit_str">
+<span class="sig-name descname"><span class="pre">get_qubit_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.top_experiment.TopExperiment.get_qubit_str" title="永久链接至目标">¶</a></dt>
+<dd><p>Get qubit str, an args qubit for SaveFile class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>string, use to create save data path.</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>qubit_str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.top_experiment.TopExperiment.save_data">
 <span class="sig-name descname"><span class="pre">save_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.top_experiment.TopExperiment.save_data" title="永久链接至目标">¶</a></dt>
 <dd><p>保存自定义的数据到当前实验预先生成的结果路径下</p>
@@ -3975,7 +4036,7 @@ name: None
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>*args</strong> – 期望保存的数据</p></li>
-<li><p><strong>file_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – 期望保存后的文件名称，默认为空，如果为空，则用 <code class="docutils literal notranslate"><span class="pre">0、1、2</span></code> 数字序列生成文件名</p></li>
+<li><p><strong>file_name</strong> – 期望保存后的文件名称，默认为空，如果为空，则用 <code class="docutils literal notranslate"><span class="pre">0、1、2</span></code> 数字序列生成文件名</p></li>
 </ul>
 </dd>
 <dt class="field-even">案例</dt>
@@ -4379,6 +4440,66 @@ name: None
 </dd></dl>
 
 </div>
+<div class="section" id="module-pyQCat.experiment.xeb">
+<span id="pyqcat-experiment-xeb-module"></span><h2>pyQCat.experiment.xeb module<a class="headerlink" href="#module-pyQCat.experiment.xeb" title="永久链接至标题">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.xeb.XEB">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">XEB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_drive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_readout_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sequence'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.xeb.XEB" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.experiment.top_experiment.TopExperiment" title="pyQCat.experiment.top_experiment.TopExperiment"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_experiment.TopExperiment</span></code></a></p>
+<p>Single qubit XEB experiment</p>
+<p>Initialize method</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.xeb.XEB.gate_set">
+<span class="sig-name descname"><span class="pre">gate_set</span></span><em class="property"> <span class="pre">=</span> <span class="pre">['X/2',</span> <span class="pre">'Y/2',</span> <span class="pre">'-X/2',</span> <span class="pre">'-Y/2',</span> <span class="pre">'X/4',</span> <span class="pre">'Y/4',</span> <span class="pre">'-X/4',</span> <span class="pre">'-Y/4']</span></em><a class="headerlink" href="#pyQCat.experiment.xeb.XEB.gate_set" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.xeb.XEB.gate_map">
+<span class="sig-name descname"><span class="pre">gate_map</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'-X/2':</span> <span class="pre">R_φ180.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">7.07106781e-01+0.j</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-8.65956056e-17+0.70710678j]</span>&#160; <span class="pre">[</span> <span class="pre">8.65956056e-17+0.70710678j</span>&#160; <span class="pre">7.07106781e-01+0.j</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">]]),</span> <span class="pre">'-X/4':</span> <span class="pre">R_φ225.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.j</span>&#160;&#160; <span class="pre">0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">+0.5j]</span>&#160; <span class="pre">[-0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">+0.5j</span>&#160; <span class="pre">0.70710678+0.j</span> <span class="pre">]]),</span> <span class="pre">'-Y/2':</span> <span class="pre">R_φ-90.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.00000000e+00j</span>&#160; <span class="pre">0.70710678-4.32978028e-17j]</span>&#160; <span class="pre">[-0.70710678-4.32978028e-17j</span>&#160; <span class="pre">0.70710678+0.00000000e+00j]]),</span> <span class="pre">'-Y/4':</span> <span class="pre">R_φ315.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.j</span>&#160;&#160; <span class="pre">0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.5j]</span>&#160; <span class="pre">[-0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.5j</span>&#160; <span class="pre">0.70710678+0.j</span> <span class="pre">]]),</span> <span class="pre">'X/2':</span> <span class="pre">R_φ0.0°_θ90.0°,</span> <span class="pre">matrix=[[0.70710678+0.j</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">0.</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.70710678j]</span>&#160; <span class="pre">[0.</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.70710678j</span> <span class="pre">0.70710678+0.j</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">]]),</span> <span class="pre">'X/4':</span> <span class="pre">R_φ45.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.j</span>&#160; <span class="pre">-0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.5j]</span>&#160; <span class="pre">[</span> <span class="pre">0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.5j</span>&#160; <span class="pre">0.70710678+0.j</span> <span class="pre">]]),</span> <span class="pre">'Y/2':</span> <span class="pre">R_φ90.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.00000000e+00j</span> <span class="pre">-0.70710678-4.32978028e-17j]</span>&#160; <span class="pre">[</span> <span class="pre">0.70710678-4.32978028e-17j</span>&#160; <span class="pre">0.70710678+0.00000000e+00j]]),</span> <span class="pre">'Y/4':</span> <span class="pre">R_φ135.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.j</span>&#160; <span class="pre">-0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">+0.5j]</span>&#160; <span class="pre">[</span> <span class="pre">0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">+0.5j</span>&#160; <span class="pre">0.70710678+0.j</span> <span class="pre">]])}</span></em><a class="headerlink" href="#pyQCat.experiment.xeb.XEB.gate_map" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.xeb.XEB.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit_depth_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_times</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.xeb.XEB.run" title="永久链接至目标">¶</a></dt>
+<dd><p>Start XEB experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit_depth_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – Number of individuals extracted from Clifford cluster at a time</p></li>
+<li><p><strong>random_times</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Random number of times at each depth</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.xeb.XEBAnalysis">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">XEBAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_times</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.xeb.XEBAnalysis" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.experiment.top_analysis.TopAnalysis" title="pyQCat.experiment.top_analysis.TopAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_analysis.TopAnalysis</span></code></a></p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.xeb.XEBAnalysis.analyze">
+<span class="sig-name descname"><span class="pre">analyze</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.xeb.XEBAnalysis.analyze" title="永久链接至目标">¶</a></dt>
+<dd><p>分析实验结果，具体实现过程由子类实现</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.experiment.xeb.get_su_gate">
+<span class="sig-name descname"><span class="pre">get_su_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantum_circuit_cache</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.xeb.get_su_gate" title="永久链接至目标">¶</a></dt>
+<dd><p>Get su gate for random module</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyQCat.experiment.xeb.vz_transform">
+<span class="sig-name descname"><span class="pre">vz_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.xeb.vz_transform" title="永久链接至目标">¶</a></dt>
+<dd><p>Virtual z gate transform</p>
+</dd></dl>
+
+</div>
 <div class="section" id="module-pyQCat.experiment.xyz_timing">
 <span id="pyqcat-experiment-xyz-timing-module"></span><h2>pyQCat.experiment.xyz_timing module<a class="headerlink" href="#module-pyQCat.experiment.xyz_timing" title="永久链接至标题">¶</a></h2>
 <dl class="py class">
@@ -4392,13 +4513,14 @@ name: None
 <p>Initialize method</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.xyz_timing.XYZTiming.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.xyz_timing.XYZTiming.run" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.xyz_timing.XYZTiming.run" title="永久链接至目标">¶</a></dt>
 <dd><p>XYZTiming 实验执行方法</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>delay_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – 扫描延时列表</p></li>
 <li><p><strong>z_amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Z 线施加的幅值</p></li>
+<li><p><strong>const_delay</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 固定延时</p></li>
 <li><p><strong>schedule_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 绘制波形时序图索引</p></li>
 <li><p><strong>is_save</strong> – 是否保存延时数据</p></li>
 </ul>
@@ -5049,6 +5171,23 @@ ZZTiming实验正是用来校准不同比特间的相对延时。</p>
 </tbody>
 </table>
 </div>
+<div class="section" id="xeb">
+<h4>XEB<a class="headerlink" href="#xeb" title="永久链接至标题">¶</a></h4>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../experiment/stubs/pyQCat.experiment.XEB.html#pyQCat.experiment.XEB" title="pyQCat.experiment.XEB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XEB</span></code></a></p></td>
+<td><p>Single qubit XEB experiment</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../experiment/stubs/pyQCat.experiment.XEBAnalysis.html#pyQCat.experiment.XEBAnalysis" title="pyQCat.experiment.XEBAnalysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XEBAnalysis</span></code></a></p></td>
+<td><p>Initialize method</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="modulation-spectrum">
 <h4>Modulation Spectrum<a class="headerlink" href="#modulation-spectrum" title="永久链接至标题">¶</a></h4>
 <table class="longtable docutils align-default">
@@ -5236,6 +5375,20 @@ name: None
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.get_qubit_str">
+<span class="sig-name descname"><span class="pre">get_qubit_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.get_qubit_str" title="永久链接至目标">¶</a></dt>
+<dd><p>Get qubit str, an args qubit for SaveFile class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>string, use to create save data path.</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>qubit_str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.TopExperiment.save_data">
 <span class="sig-name descname"><span class="pre">save_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.TopExperiment.save_data" title="永久链接至目标">¶</a></dt>
 <dd><p>保存自定义的数据到当前实验预先生成的结果路径下</p>
@@ -5243,7 +5396,7 @@ name: None
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>*args</strong> – 期望保存的数据</p></li>
-<li><p><strong>file_name</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – 期望保存后的文件名称，默认为空，如果为空，则用 <code class="docutils literal notranslate"><span class="pre">0、1、2</span></code> 数字序列生成文件名</p></li>
+<li><p><strong>file_name</strong> – 期望保存后的文件名称，默认为空，如果为空，则用 <code class="docutils literal notranslate"><span class="pre">0、1、2</span></code> 数字序列生成文件名</p></li>
 </ul>
 </dd>
 <dt class="field-even">案例</dt>
@@ -6105,14 +6258,16 @@ phase；否则 x 表示 I 值， y 表示 Q 值。</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrum.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrum.run" title="永久链接至目标">¶</a></dt>
-<dd><p>执行比特能谱实验</p>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_square</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrum.run" title="永久链接至目标">¶</a></dt>
+<dd><p>比特能谱实验执行函数</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>fq_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>) – 扫描的驱动频率列表</p></li>
+<li><p><strong>fq_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Iterable</span></code>) – 扫描参数(驱动频率 <code class="docutils literal notranslate"><span class="pre">drive_freq</span></code>)</p></li>
 <li><p><strong>power</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – 驱动功率</p></li>
-<li><p><strong>z_amp</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Z线幅值，默认为空</p></li>
+<li><p><strong>z_amp</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Z线幅值</p></li>
+<li><p><strong>use_square</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>) – 是否使用方波，如果为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则 <code class="docutils literal notranslate"><span class="pre">XY</span></code> 线上施加等频率的方波，如果为 <code class="docutils literal notranslate"><span class="pre">False</span></code> , 则
+线上变频方波</p></li>
 </ul>
 </dd>
 </dl>
@@ -6136,6 +6291,25 @@ phase；否则 x 表示 I 值， y 表示 Q 值。</p>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrum.amp_coefficient_check">
+<span class="sig-name descname"><span class="pre">amp_coefficient_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amp_coefficient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrum.amp_coefficient_check" title="永久链接至目标">¶</a></dt>
+<dd><p>更新比特能谱实验线路幅值。</p>
+<p>驱动功率最小只能提供 -40dB，因为不同样本的线路配置不同，这个功率有时还是很高的。
+所以它需要在驱动功率之外额外乘以一个幅值系数，用来进一步降低幅值。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><p><strong>amp_coefficient</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – 幅值系数 0-1</p>
+</dd>
+<dt class="field-even">引发</dt>
+<dd class="field-even"><p><a class="reference internal" href="pyQCat.html#pyQCat.errors.ExperimentError" title="pyQCat.errors.ExperimentError"><strong>ExperimentError</strong></a> – 幅值系数在 0-1 范围之外</p>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
@@ -6143,29 +6317,15 @@ phase；否则 x 表示 I 值， y 表示 Q 值。</p>
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">QubitSpectrumAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrumAnalysis" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="#pyQCat.experiment.top_analysis.TopAnalysis" title="pyQCat.experiment.top_analysis.TopAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_analysis.TopAnalysis</span></code></a></p>
 <p>比特能谱实验结果分析</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrumAnalysis.x_list">
-<span class="sig-name descname"><span class="pre">x_list</span></span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrumAnalysis.x_list" title="永久链接至目标">¶</a></dt>
-<dd><p>实验扫描频率列表</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>Iterable</p>
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_list</strong> (<em>Iterable</em>) – 实验扫描频率列表</p></li>
+<li><p><strong>z_amp</strong> – Z 线施加的幅值参数</p></li>
+<li><p><strong>fq</strong> – 实验寻找到的比特频率</p></li>
+</ul>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrumAnalysis.z_amp">
-<span class="sig-name descname"><span class="pre">z_amp</span></span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrumAnalysis.z_amp" title="永久链接至目标">¶</a></dt>
-<dd><p>Z 线施加的幅值参数</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrumAnalysis.fq">
-<span class="sig-name descname"><span class="pre">fq</span></span><a class="headerlink" href="#pyQCat.experiment.QubitSpectrumAnalysis.fq" title="永久链接至目标">¶</a></dt>
-<dd><p>实验寻找到的比特频率</p>
-</dd></dl>
-
 <p>Initialize method</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.QubitSpectrumAnalysis.analyze">
@@ -7620,7 +7780,7 @@ T1实验中，首先利用一个 <code class="docutils literal notranslate"><spa
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.experiment.DCSpectrum">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DCSpectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc_freq_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_shot_repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.DCSpectrum" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DCSpectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T2_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc_freq_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_shot_repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_node_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.DCSpectrum" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<a class="reference internal" href="#pyQCat.experiment.ac_spectrum.ACSpectrum" title="pyQCat.experiment.ac_spectrum.ACSpectrum"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.ac_spectrum.ACSpectrum</span></code></a></p>
 <p><cite>DC</cite> 谱实验</p>
 <p>DC调制谱理论上可以和AC调制谱一样用Ramsey实验进行测试，主要问题在于
@@ -8064,6 +8224,51 @@ F1: 1态保真度</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.XEB">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">XEB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_drive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_probe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_readout_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sequence'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.XEB" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.experiment.top_experiment.TopExperiment" title="pyQCat.experiment.top_experiment.TopExperiment"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_experiment.TopExperiment</span></code></a></p>
+<p>Single qubit XEB experiment</p>
+<p>Initialize method</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.XEB.gate_set">
+<span class="sig-name descname"><span class="pre">gate_set</span></span><em class="property"> <span class="pre">=</span> <span class="pre">['X/2',</span> <span class="pre">'Y/2',</span> <span class="pre">'-X/2',</span> <span class="pre">'-Y/2',</span> <span class="pre">'X/4',</span> <span class="pre">'Y/4',</span> <span class="pre">'-X/4',</span> <span class="pre">'-Y/4']</span></em><a class="headerlink" href="#pyQCat.experiment.XEB.gate_set" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyQCat.experiment.XEB.gate_map">
+<span class="sig-name descname"><span class="pre">gate_map</span></span><em class="property"> <span class="pre">=</span> <span class="pre">{'-X/2':</span> <span class="pre">R_φ180.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">7.07106781e-01+0.j</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-8.65956056e-17+0.70710678j]</span>&#160; <span class="pre">[</span> <span class="pre">8.65956056e-17+0.70710678j</span>&#160; <span class="pre">7.07106781e-01+0.j</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">]]),</span> <span class="pre">'-X/4':</span> <span class="pre">R_φ225.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.j</span>&#160;&#160; <span class="pre">0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">+0.5j]</span>&#160; <span class="pre">[-0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">+0.5j</span>&#160; <span class="pre">0.70710678+0.j</span> <span class="pre">]]),</span> <span class="pre">'-Y/2':</span> <span class="pre">R_φ-90.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.00000000e+00j</span>&#160; <span class="pre">0.70710678-4.32978028e-17j]</span>&#160; <span class="pre">[-0.70710678-4.32978028e-17j</span>&#160; <span class="pre">0.70710678+0.00000000e+00j]]),</span> <span class="pre">'-Y/4':</span> <span class="pre">R_φ315.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.j</span>&#160;&#160; <span class="pre">0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.5j]</span>&#160; <span class="pre">[-0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.5j</span>&#160; <span class="pre">0.70710678+0.j</span> <span class="pre">]]),</span> <span class="pre">'X/2':</span> <span class="pre">R_φ0.0°_θ90.0°,</span> <span class="pre">matrix=[[0.70710678+0.j</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">0.</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.70710678j]</span>&#160; <span class="pre">[0.</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.70710678j</span> <span class="pre">0.70710678+0.j</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">]]),</span> <span class="pre">'X/4':</span> <span class="pre">R_φ45.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.j</span>&#160; <span class="pre">-0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.5j]</span>&#160; <span class="pre">[</span> <span class="pre">0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">-0.5j</span>&#160; <span class="pre">0.70710678+0.j</span> <span class="pre">]]),</span> <span class="pre">'Y/2':</span> <span class="pre">R_φ90.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.00000000e+00j</span> <span class="pre">-0.70710678-4.32978028e-17j]</span>&#160; <span class="pre">[</span> <span class="pre">0.70710678-4.32978028e-17j</span>&#160; <span class="pre">0.70710678+0.00000000e+00j]]),</span> <span class="pre">'Y/4':</span> <span class="pre">R_φ135.0°_θ90.0°,</span> <span class="pre">matrix=[[</span> <span class="pre">0.70710678+0.j</span>&#160; <span class="pre">-0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">+0.5j]</span>&#160; <span class="pre">[</span> <span class="pre">0.5</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">+0.5j</span>&#160; <span class="pre">0.70710678+0.j</span> <span class="pre">]])}</span></em><a class="headerlink" href="#pyQCat.experiment.XEB.gate_map" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.XEB.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit_depth_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_times</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.XEB.run" title="永久链接至目标">¶</a></dt>
+<dd><p>Start XEB experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit_depth_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>) – Number of individuals extracted from Clifford cluster at a time</p></li>
+<li><p><strong>random_times</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Random number of times at each depth</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.experiment.XEBAnalysis">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">XEBAnalysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_times</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.XEBAnalysis" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#pyQCat.experiment.top_analysis.TopAnalysis" title="pyQCat.experiment.top_analysis.TopAnalysis"><code class="xref py py-class docutils literal notranslate"><span class="pre">pyQCat.experiment.top_analysis.TopAnalysis</span></code></a></p>
+<p>Initialize method</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.experiment.XEBAnalysis.analyze">
+<span class="sig-name descname"><span class="pre">analyze</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.XEBAnalysis.analyze" title="永久链接至目标">¶</a></dt>
+<dd><p>分析实验结果，具体实现过程由子类实现</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.experiment.Distortion">
 <em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">Distortion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">correct_dc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.Distortion" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
@@ -8244,13 +8449,14 @@ control pulses in a quantum processor</p>
 <p>Initialize method</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.XYZTiming.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.XYZTiming.run" title="永久链接至目标">¶</a></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_amp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">const_delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schedule_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.XYZTiming.run" title="永久链接至目标">¶</a></dt>
 <dd><p>XYZTiming 实验执行方法</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>delay_list</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>) – 扫描延时列表</p></li>
 <li><p><strong>z_amp</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Z 线施加的幅值</p></li>
+<li><p><strong>const_delay</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 固定延时</p></li>
 <li><p><strong>schedule_index</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – 绘制波形时序图索引</p></li>
 <li><p><strong>is_save</strong> – 是否保存延时数据</p></li>
 </ul>
@@ -8555,7 +8761,7 @@ between the drive frequency and the qubit real frequency.</p></li>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyQCat.experiment.DCCrosstalk">
-<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DCCrosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias_qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_spectrum_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_v_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">20,</span> <span class="pre">30)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.DCCrosstalk" title="永久链接至目标">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">DCCrosstalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inst</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bias_qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_fringe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dc_spectrum_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bit_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_v_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">800</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">20,</span> <span class="pre">30)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_bias_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compensate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discriminator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweet_point</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.DCCrosstalk" title="永久链接至目标">¶</a></dt>
 <dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p><cite>DC</cite> 串扰实验</p>
 <p>DC Crosstalk理论上可以采用和AC Crosstalk类似的方法，主要问题在于DC Crosstalk
@@ -8734,7 +8940,33 @@ between the drive frequency and the qubit real frequency.</p></li>
 <dd><p>实验重复次数</p>
 </dd></dl>
 
-<p>Initialize method</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Instrument" title="pyQCat.Instrument"><em>Instrument</em></a>) – <cite>pyQCat.Instrument</cite> object which is used for hardware settings.</p></li>
+<li><p><strong>target_qubit</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit"><em>Qubit</em></a>) – <cite>pyQCat.Qubit</cite> object. The target qubit.</p></li>
+<li><p><strong>bias_qubit</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.Qubit" title="pyQCat.Qubit"><em>Qubit</em></a>) – <cite>pyQCat.Qubit</cite> object. The bias qubit.</p></li>
+<li><p><strong>init_fringe</strong> (<em>float</em>) – The initialize value of fringe.</p></li>
+<li><p><strong>delay_list</strong> (<em>list</em><em>, </em><em>np.ndarray</em>) – Ramsey experiment time list.</p></li>
+<li><p><strong>dc_spectrum_params</strong> (<em>list</em><em>, </em><em>np.ndarray</em>) – The fitted parameters of DC spectrum.</p></li>
+<li><p><strong>ac_coefficient</strong> (<em>float</em>) – The coefficient of AC Crosstalk.</p></li>
+<li><p><strong>bit_list</strong> (<em>list</em>) – get corrected_dc use, list of all bits.</p></li>
+<li><p><strong>freq_offset</strong> (<em>float</em>) – The offset value of qubit at sweet spot deviates from target qubit.</p></li>
+<li><p><strong>freq_bound</strong> (<em>float</em>) – Experiment will be stopped when qubit’s frequency delta value
+lower than this value.</p></li>
+<li><p><strong>init_v_bias</strong> (<em>float</em>) – The initialize value of bias voltage.</p></li>
+<li><p><strong>freq_threshold</strong> (<em>tuple</em>) – The frequency range of target qubit.</p></li>
+<li><p><strong>v_bias_bound</strong> (<em>float</em>) – The bias voltage value range of bias qubit.</p></li>
+<li><p><strong>points</strong> (<em>int</em>) – sweep points.</p></li>
+<li><p><strong>correct_dc</strong> (<em>Dict</em>) – The final voltage applied to the qubit. The key of dict represent
+instrument channel when the value of dict represent voltage.</p></li>
+<li><p><strong>compensate</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.PulseCorrection" title="pyQCat.PulseCorrection"><em>PulseCorrection</em></a>) – <cite>pyQCat.PulseCorrection</cite> object.</p></li>
+<li><p><strong>discriminator</strong> (<a class="reference internal" href="pyQCat.html#pyQCat.IQdiscriminator" title="pyQCat.IQdiscriminator"><em>IQdiscriminator</em></a>) – <cite>pyQCat.IQdiscriminator</cite> object.
+A discriminator that classifies the results of a measurement.</p></li>
+<li><p><strong>repeat</strong> (<em>int</em>) – The number of repetitions of the experiment.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyQCat.experiment.DCCrosstalk.run">
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.experiment.DCCrosstalk.run" title="永久链接至目标">¶</a></dt>
@@ -9251,7 +9483,7 @@ Parking Qubit 不是必须的，注意施加 Parking Qubit 的前提条件</p>
     <p>
         &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
       <span class="lastupdated">
-        最后更新于 2021/08/23.
+        最后更新于 2021/08/28.
       </span>
 
     </p>

@@ -1,0 +1,22 @@
+﻿pyQCat.detection.DcFlux
+=======================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: DcFlux
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DcFlux.__init__
+   
+   
+
+   
+   
+   

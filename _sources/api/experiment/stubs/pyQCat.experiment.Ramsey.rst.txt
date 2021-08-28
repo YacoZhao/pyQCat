@@ -17,6 +17,7 @@
       ~Ramsey.acquire_pulse
       ~Ramsey.bind_probe_inst
       ~Ramsey.config_file_sys
+      ~Ramsey.get_qubit_str
       ~Ramsey.get_xy_pulse
       ~Ramsey.get_z_pulse
       ~Ramsey.init_readout

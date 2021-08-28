@@ -18,6 +18,7 @@
       ~ZZTiming.bind_probe_inst
       ~ZZTiming.cal_xy_pulse
       ~ZZTiming.config_file_sys
+      ~ZZTiming.get_qubit_str
       ~ZZTiming.get_xy_pulse
       ~ZZTiming.get_z_pulse
       ~ZZTiming.init_readout

@@ -12,7 +12,7 @@ pyQCat中所有的实验都可以继承``TopExperiment``类实现通用的功能
 
 如果你想要自定义一个完整的实验，你必须提前实例化下面一些对象：
 
-- **inst：** 设备对象[Instrument](../api/instrument/stubs/pyQCat.instrument.Instrument.html)，封装了实验参数的设置方法，集成了各种数据交互操作。它帮助你完成脉冲信号的施加并接受量子比特返回的数据。
+- **inst：** 设备对象[Instrument](../instrument/stubs/pyQCat.instrument.INSTRUMENT.html#pyQCat.instrument.Instrument)，封装了实验参数的设置方法，集成了各种数据交互操作。它帮助你完成脉冲信号的施加并接受量子比特返回的数据。
 - **qubits：** 量子比特对象[Qubit](../api/qubit/stubs/pyQCat.qubit.Qubit.html)，定义了量子比特的常见参数，自动化校准流程的核心对象。它支持多比特实验，只需要你以元组的形式传入比特对象即可。
 
 当然，通常比特测试实验需要更丰富的功能，我们为你提供了丰富的参数选项：

@@ -1,0 +1,35 @@
+﻿pyQCat.detection.ZeroDetuning
+=============================
+
+.. currentmodule:: pyQCat.detection
+
+.. autoclass:: ZeroDetuning
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ZeroDetuning.__init__
+      ~ZeroDetuning.run
+      ~ZeroDetuning.select_dc_source
+      ~ZeroDetuning.select_mic_source
+      ~ZeroDetuning.select_net_analyzer
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ZeroDetuning.config_path
+      ~ZeroDetuning.dc_source
+      ~ZeroDetuning.mic_source
+      ~ZeroDetuning.net_analyzer
+   
+   

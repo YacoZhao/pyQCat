@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>pyQCat.detection.QAIO &mdash; pyQCat 0.0.7 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/pyQCat.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="pyQCat.detection.DcFlux" href="pyQCat.detection.DcFlux.html" />
+    <link rel="prev" title="pyQCat.detection.InstConnect" href="pyQCat.detection.InstConnect.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> pyQCat
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">获取帮助</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user/index.html">用户指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../community/index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset/index.html">结构及数据流程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API 文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#id2">说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#id3">目录</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#preliminary-instrument">Preliminary Instrument</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#qubit-preliminary">Qubit Preliminary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../experiment/index.html">Quantum Experiment (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.experiment</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../flow/index.html">Automated Testing Flow (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.flow</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instrument/index.html">Measurement Instrument (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.instrument</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pulse/index.html">Quantum Circuits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.pulse</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qubit/index.html">Quantum Bits (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.qubit</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tool/index.html">Auxiliary Tools (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.tool</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../parameters.html">Experiment Parameters (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.parameters</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changes/index.html">版本记录</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyQCat</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">API 文档</a> &raquo;</li>
+        
+          <li><a href="../index.html">Quantum Detection (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pyQCat.detection</span></code>)</a> &raquo;</li>
+        
+      <li>pyQCat.detection.QAIO</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyqcat-detection-qaio">
+<h1>pyQCat.detection.QAIO<a class="headerlink" href="#pyqcat-detection-qaio" title="永久链接至标题">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyQCat.detection.QAIO">
+<em class="property"><span class="pre">class</span> </em><span class="sig-name descname"><span class="pre">QAIO</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.QAIO" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>一体机仪器模式封装接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.QAIO.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qaio_ip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qaio_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.QAIO.__init__" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../detection/stubs/pyQCat.detection.QAIO.html#pyQCat.detection.QAIO.__init__" title="pyQCat.detection.QAIO.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([qaio_ip, qaio_type])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../detection/stubs/pyQCat.detection.QAIO.html#pyQCat.detection.QAIO.close" title="pyQCat.detection.QAIO.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
+<td><p>关闭连接</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../detection/stubs/pyQCat.detection.QAIO.html#pyQCat.detection.QAIO.output_off" title="pyQCat.detection.QAIO.output_off"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_off</span></code></a>(channel)</p></td>
+<td><p>关闭DC模块通道</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../detection/stubs/pyQCat.detection.QAIO.html#pyQCat.detection.QAIO.output_on" title="pyQCat.detection.QAIO.output_on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">output_on</span></code></a>(channel)</p></td>
+<td><p>打开DC模块通道</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../detection/stubs/pyQCat.detection.QAIO.html#pyQCat.detection.QAIO.set_dc" title="pyQCat.detection.QAIO.set_dc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_dc</span></code></a>(channel, vol)</p></td>
+<td><p>设置DC电压</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.QAIO.output_on">
+<span class="sig-name descname"><span class="pre">output_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.QAIO.output_on" title="永久链接至目标">¶</a></dt>
+<dd><p>打开DC模块通道</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.QAIO.output_off">
+<span class="sig-name descname"><span class="pre">output_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.QAIO.output_off" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭DC模块通道</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.QAIO.set_dc">
+<span class="sig-name descname"><span class="pre">set_dc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.QAIO.set_dc" title="永久链接至目标">¶</a></dt>
+<dd><p>设置DC电压</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyQCat.detection.QAIO.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyQCat.detection.QAIO.close" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭连接</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pyQCat.detection.DcFlux.html" class="btn btn-neutral float-right" title="pyQCat.detection.DcFlux" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pyQCat.detection.InstConnect.html" class="btn btn-neutral float-left" title="pyQCat.detection.InstConnect" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2017-2021 inclusive, Origin Quantum Developer.
+      <span class="lastupdated">
+        最后更新于 2021/08/28.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
