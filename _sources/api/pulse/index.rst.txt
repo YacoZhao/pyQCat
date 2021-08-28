@@ -1,6 +1,0 @@
-.. _pulse_api :
-
-.. automodule:: pyQCat.pulse
-   :no-members:
-   :no-inherited-members:
-   :no-special-members:

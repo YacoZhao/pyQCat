@@ -1,6 +1,0 @@
-﻿pyQCat.pulse.zero\_pulse
-========================
-
-.. currentmodule:: pyQCat.pulse
-
-.. autofunction:: zero_pulse

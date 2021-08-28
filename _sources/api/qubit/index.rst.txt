@@ -1,6 +1,0 @@
-.. _qubit_api :
-
-.. automodule:: pyQCat.qubit
-   :no-members:
-   :no-inherited-members:
-   :no-special-members:

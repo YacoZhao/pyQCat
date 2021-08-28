@@ -1,6 +1,0 @@
-﻿pyQCat.tool.smooth
-==================
-
-.. currentmodule:: pyQCat.tool
-
-.. autofunction:: smooth

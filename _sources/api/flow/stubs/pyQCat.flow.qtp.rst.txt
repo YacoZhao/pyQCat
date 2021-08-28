@@ -1,6 +1,0 @@
-﻿pyQCat.flow.qtp
-===============
-
-.. currentmodule:: pyQCat.flow
-
-.. autofunction:: qtp
